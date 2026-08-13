@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { markdownRoutes, routes, type Locale } from "../data/site";
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const conclusions = pt ? [
+  ["Desacelerar a corrida", "O Brasil deve apoiar limites recíprocos e verificáveis para o desenvolvimento e a implantação de sistemas que ultrapassem limiares de risco."],
+  ["Abrir canais entre potências", "A diplomacia brasileira pode aproximar Estados Unidos e China em torno de avaliações, incidentes graves e condições para interromper uma escalada."],
+  ["Transformar energia em soberania", "Rede e data centers criam poder de barganha quando contratos garantem inferência, auditoria e continuidade para usuários brasileiros."],
+] : [
+  ["Slow the race", "Brazil should support reciprocal and verifiable limits on the development and deployment of systems that cross agreed risk thresholds."],
+  ["Open channels between major powers", "Brazilian diplomacy can bring the United States and China together around evaluations, severe incidents, and conditions for interrupting escalation."],
+  ["Turn energy into sovereignty", "Grid access and data centers create bargaining power when contracts guarantee inference, audit rights, and continuity for Brazilian users."],
+];
+const years = pt ? [
+  ["2026", "Alertas cibernéticos mostram que uma corrida externa já pode atingir sistemas brasileiros.", "fact", "Fato + cenário"],
+  ["2027", "Uma crise amplia a demanda por defesas estrangeiras e aprofunda a dependência.", "scenario", "Invenção"],
+  ["2028", "O Brasil tenta abrir um canal de segurança entre Estados Unidos e China.", "scenario", "Invenção"],
+  ["2029", "A coordenação falha, um tier limita a inferência e a vulnerabilidade brasileira aparece.", "open", "Hipótese central"],
+  ["2030", "Acordos limitados reduzem parte do risco; contratos de infraestrutura criam soberania de inferência parcial.", "estimate", "Resultado modal"],
+] : [
+  ["2026", "Cyber warnings show how an external race can already reach Brazilian systems.", "fact", "Fact + scenario"],
+  ["2027", "A crisis raises demand for foreign defenses and deepens dependency.", "scenario", "Invention"],
+  ["2028", "Brazil tries to open a safety channel between the United States and China.", "scenario", "Invention"],
+  ["2029", "Coordination fails, a tier caps inference, and Brazil's vulnerability becomes visible.", "open", "Core hypothesis"],
+  ["2030", "Limited agreements reduce part of the risk; infrastructure contracts create partial inference sovereignty.", "estimate", "Modal result"],
+];
+---
+<BaseLayout locale={locale} pageKey="summary" markdownHref={markdownRoutes[locale].summary} title={pt ? "Resumo" : "Summary"}>
+  <PageHero locale={locale} eyebrow={pt ? "Leitura em cinco minutos" : "A five-minute read"} title={pt ? "O Brasil precisa de tempo e poder de barganha" : "Brazil needs time and bargaining power"} intro={pt ? "A aceleração aumenta o risco de ataques e falhas. A dependência estrangeira pode deixar o país sem as melhores ferramentas de defesa quando mais precisar delas." : "Acceleration raises the risk of attacks and failures. Foreign dependency may leave Brazil without the best defensive tools when it needs them most."} />
+  <div class="page-content">
+    <div class="callout">{pt ? "O Brasil deve ajudar a desacelerar a corrida, preparar-se para uma falha de coordenação e transformar energia em soberania de inferência." : "Brazil should help slow the race, prepare for coordination failure, and turn energy into inference sovereignty."}</div>
+    <section aria-labelledby="conclusions-title">
+      <h2 id="conclusions-title">{pt ? "Três compromissos públicos" : "Three public commitments"}</h2>
+      <div class="summary-grid">
+        {conclusions.map(([title, body], index) => <article class="summary-card"><span class="card-index">0{index + 1}</span><h3>{title}</h3><p>{body}</p></article>)}
+      </div>
+    </section>
+    <section aria-labelledby="timeline-title">
+      <h2 id="timeline-title">{pt ? "A trajetória" : "The path"}</h2>
+      <div class="year-map">
+        {years.map(([year, body, kind, label]) => <div class="year-row"><time>{year}</time><p>{body}</p><span class={`tag ${kind}`}>{label}</span></div>)}
+      </div>
+    </section>
+    <section class="narrow-content">
+      <h2>{pt ? "O seguro contra uma falha de coordenação" : "Insurance against coordination failure"}</h2>
+      <p>{pt ? "A diplomacia pode chegar tarde ou produzir um acordo fraco. O Brasil precisa inventariar dependências, testar modelos usados em serviços críticos, exercitar respostas a ataques e reservar capacidade defensiva antes da crise." : "Diplomacy may arrive late or produce a weak agreement. Brazil needs to inventory dependencies, test models used in critical services, exercise attack response, and reserve defensive capacity before a crisis."}</p>
+      <p><a class="button-link primary" href={routes[locale].strategy}>{pt ? "Ver a estratégia" : "Read the strategy"}</a></p>
+    </section>
+  </div>
+</BaseLayout>

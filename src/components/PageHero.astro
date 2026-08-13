@@ -1,0 +1,19 @@
+---
+import { siteCopy, type Locale } from "../data/site";
+interface Props { locale: Locale; eyebrow: string; title: string; intro: string; compact?: boolean; }
+const { locale, eyebrow, title, intro, compact = false } = Astro.props;
+const copy = siteCopy[locale];
+---
+<header class:list={["page-hero", { compact }]}>
+  <div class="page-hero-inner">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="page-intro">{intro}</p>
+    <div class="status-line" style="margin-top: 1.7rem">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>{copy.status}</span>
+      <span class="status-separator" aria-hidden="true"></span>
+      <time datetime="2026-08-07">{copy.updated}</time>
+    </div>
+  </div>
+</header>

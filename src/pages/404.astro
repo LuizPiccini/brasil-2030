@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { markdownRoutes, routes } from "../data/site";
+---
+<BaseLayout locale="pt" pageKey="scenario" markdownHref={markdownRoutes.pt.scenario} title="Página não encontrada">
+  <div class="page-content narrow-content" style="min-height: 65vh; padding-top: 8rem">
+    <p class="eyebrow">Erro 404</p>
+    <h1 style="font-size: clamp(3rem, 8vw, 6rem); margin: 0 0 1.5rem; line-height: 1">Esta página não existe.</h1>
+    <p>O endereço pode ter mudado durante a revisão do documento.</p>
+    <p><a class="button-link primary" href={routes.pt.scenario}>Voltar ao cenário</a></p>
+  </div>
+</BaseLayout>

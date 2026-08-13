@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { contributors, markdownRoutes, type Locale } from "../data/site";
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+---
+<BaseLayout locale={locale} pageKey="about" markdownHref={markdownRoutes[locale].about} title={pt ? "Sobre" : "About"}>
+  <PageHero locale={locale} eyebrow={pt ? "Projeto Brasil 20XX" : "Brasil 20XX project"} title={pt ? "Um cenário para testar decisões" : "A scenario for testing decisions"} intro={pt ? "Brasil 2030 conecta risco catastrófico, coordenação internacional e soberania de inferência numa trajetória que o público pode criticar." : "Brazil 2030 connects catastrophic risk, international coordination, and inference sovereignty in a path the public can challenge."} />
+  <div class="page-content narrow-content">
+    <h2>{pt ? "O que este projeto tenta fazer" : "Purpose"}</h2>
+    <p>{pt ? "Modelos desenvolvidos fora do Brasil podem ampliar ataques e falhas dentro do país. A dependência estrangeira pode limitar as ferramentas de defesa durante uma crise. O cenário conecta esses dois problemas à vantagem brasileira em energia e infraestrutura." : "Models developed outside Brazil can increase attacks and failures inside the country. Foreign dependency may restrict defensive tools during a crisis. The scenario connects those problems to Brazil's advantage in energy and infrastructure."}</p>
+    <p>{pt ? "A equipe trabalha com uma trajetória modal de 2026 a 2030 e mantém seus pontos de decisão visíveis. O objetivo não é atribuir probabilidade ao conjunto inteiro. O cenário permite testar desaceleração, preparação doméstica e contratos de infraestrutura sob o mesmo futuro." : "The team works with one modal path from 2026 to 2030 and keeps its decision points visible. The goal is not to assign a probability to the whole story. The scenario tests slowdown, domestic preparation, and infrastructure contracts within the same future."}</p>
+
+    <h2>{pt ? "Método editorial" : "Editorial method"}</h2>
+    <p>{pt ? "A cronologia consolida o trabalho de Danilo Naiff com a continuação estrutural preparada por Luiz Piccini e Apollo. A equipe separa fatos observados, estimativas, premissas emprestadas e invenções narrativas. A página de Evidências registra a fonte e a última verificação de cada afirmação central." : "The chronology combines Danilo Naiff's work with the structural continuation prepared by Luiz Piccini and Apollo. The team separates observed facts, estimates, borrowed assumptions, and narrative inventions. The Evidence page records the source and review date of each central claim."}</p>
+    <p>{pt ? "A edição portuguesa orienta o trabalho; a equipe sincroniza a versão inglesa depois de cada revisão. O modelo de 2030, os instrumentos jurídicos e a carta aberta ainda precisam de aprovação antes da publicação final." : "The Portuguese edition leads the work; the team synchronizes the English version after each revision. The 2030 model, legal instruments, and open letter still need approval before final publication."}</p>
+
+    <h2>{pt ? "Equipe" : "Team"}</h2>
+    <p>{pt ? "As funções abaixo refletem contribuições confirmadas no plano de trabalho atual. Tomás foi convidado a oferecer fontes, crítica e apoio de distribuição; sua participação não aparece como coautoria." : "The roles below reflect confirmed contributions in the current work plan. Tomás has been invited to offer sources, criticism, and distribution support; the site does not list him as a co-author."}</p>
+    <ul class="team-list">
+      {contributors.map((person) => <li><strong>{person.name}</strong><span>{pt ? person.rolePt : person.roleEn}</span></li>)}
+    </ul>
+
+    <h2>{pt ? "Influências" : "Influences"}</h2>
+    <p>{pt ? <>O formato se inspira em <a href="https://ai-2027.com/">AI 2027</a>, <a href="https://ai-2040.com/">AI 2040</a> e <a href="https://europe2031.ai/">Europe 2031</a>. Brasil 2030 não possui afiliação com esses projetos.</> : <>The format draws on <a href="https://ai-2027.com/">AI 2027</a>, <a href="https://ai-2040.com/">AI 2040</a>, and <a href="https://europe2031.ai/">Europe 2031</a>. Brazil 2030 is not affiliated with those projects.</>}</p>
+
+    <h2>{pt ? "Perguntas frequentes" : "Frequently asked questions"}</h2>
+    <h3>{pt ? "Isto é uma previsão?" : "Is this a forecast?"}</h3>
+    <p>{pt ? "Não. A equipe construiu uma trajetória possível para testar decisões. A página de Evidências marca os fatos, as estimativas e as invenções." : "No. The team constructed one possible path to test decisions. The Evidence page marks facts, estimates, and inventions."}</p>
+    <h3>{pt ? "O Brasil precisa construir um modelo de fronteira?" : "Does Brazil need to build a frontier model?"}</h3>
+    <p>{pt ? "A estratégia não depende disso. Ela busca acesso contratável, continuidade e capacidade de avaliação, mesmo quando modelos e chips vêm do exterior." : "The strategy does not depend on that outcome. It seeks contractable access, continuity, and evaluation capacity even when models and chips come from abroad."}</p>
+    <h3>{pt ? "Energia basta?" : "Is energy enough?"}</h3>
+    <p>{pt ? "Energia cria uma posição de negociação. Transmissão e contratos convertem essa posição em capacidade. Sem acesso reservado, auditoria e continuidade, um data center no Brasil pode servir apenas a usuários estrangeiros." : "Energy creates a negotiating position. Transmission and contracts convert that position into capability. Without reserved access, audit rights, and continuity, a data center in Brazil may serve foreign users alone."}</p>
+    <h3>{pt ? "O que significa soberania de inferência?" : "What does inference sovereignty mean?"}</h3>
+    <p>{pt ? "Empresas, universidades e órgãos públicos brasileiros conseguem contratar capacidade avançada, avaliar sistemas críticos e manter serviços durante uma restrição externa. O conceito não exige que o Brasil possua um modelo de fronteira." : "Brazilian firms, universities, and public agencies can contract advanced capability, evaluate critical systems, and maintain services during a foreign restriction. The concept does not require Brazil to own a frontier model."}</p>
+  </div>
+</BaseLayout>

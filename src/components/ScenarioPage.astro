@@ -1,0 +1,200 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ScenarioPt from "../content/scenario-pt.md";
+import ScenarioEn from "../content/scenario-en.md";
+import { markdownRoutes, routes, siteCopy, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = siteCopy[locale];
+const ScenarioContent = locale === "pt" ? ScenarioPt : ScenarioEn;
+const chapters = locale === "pt" ? [
+  { year: "2026", label: "A corrida", href: "#2026-a-corrida-chega-ao-brasil" },
+  { year: "2027", label: "Ciberdefesa", href: "#2027-a-defesa-aprofunda-a-dependência" },
+  { year: "2028", label: "Coordenação", href: "#2028-uma-tentativa-de-coordenação" },
+  { year: "2029", label: "Tier 2", href: "#2029-tier-2" },
+  { year: "2029", label: "Inventário", href: "#2029-um-governo-sem-inventário" },
+  { year: "2030", label: "Escolha", href: "#2030-energia-para-escolher" },
+] : [
+  { year: "2026", label: "The race", href: "#2026-the-race-reaches-brazil" },
+  { year: "2027", label: "Cyberdefense", href: "#2027-defense-deepens-dependency" },
+  { year: "2028", label: "Coordination", href: "#2028-an-attempt-at-coordination" },
+  { year: "2029", label: "Tier 2", href: "#2029-tier-2" },
+  { year: "2029", label: "Inventory", href: "#2029-a-government-without-an-inventory" },
+  { year: "2030", label: "Choice", href: "#2030-the-energy-to-choose" },
+];
+
+const text = locale === "pt" ? {
+  eyebrow: "Um cenário para o Brasil",
+  titleCountry: "Brasil 2030",
+  titleLine: "Energia para Escolher",
+  deck: "Como o Brasil pode ajudar a desacelerar uma corrida perigosa, proteger infraestrutura crítica e usar energia para conquistar soberania de inferência.",
+  read: "Ler o cenário",
+  short: "Resumo de 5 minutos",
+  panelTitle: "A estratégia brasileira",
+  panelStatus: "hipótese de trabalho",
+  levers: [
+    ["Risco global", "Capacidades avançam mais rápido que salvaguardas"],
+    ["Coordenação", "Desaceleração verificável e diálogo entre potências"],
+    ["Resiliência", "Defesa, avaliação e continuidade no Brasil"],
+    ["Alavanca física", "Energia, rede e implantação de data centers"],
+    ["Soberania de inferência", "Acesso contratado para usos críticos"],
+  ],
+  disclaimer: "Este é um cenário, não uma previsão. Os fatos de 2026 são documentados; os eventos de 2027 a 2030 formam uma trajetória possível construída para testar escolhas disponíveis hoje. A edição em português orienta o trabalho editorial.",
+  timeline: "Linha do tempo",
+  aside: "Tese de leitura",
+  equation: "O Brasil deve ajudar a desacelerar a corrida, preparar-se para uma falha de coordenação e usar energia para garantir acesso defensivo.",
+  asideCopy: "A corrida cria o risco; a dependência amplia o dano. Energia e data centers geram soberania quando contratos reservam acesso, auditoria e continuidade.",
+  metrics: [["Coordenação global", "em construção"], ["Soberania de inferência", "não medida"], ["Status editorial", "rascunho"]],
+  key: "Fatos de 2026 aparecem com fontes. Os choques posteriores recebem rótulos de cenário ou invenção narrativa.",
+  current: "Capítulo",
+} : {
+  eyebrow: "A scenario for Brazil",
+  titleCountry: "Brazil 2030",
+  titleLine: "The Energy to Choose",
+  deck: "How Brazil can help slow a dangerous race, protect critical infrastructure, and use energy to secure inference sovereignty.",
+  read: "Read the scenario",
+  short: "Five-minute summary",
+  panelTitle: "The Brazilian strategy",
+  panelStatus: "working hypothesis",
+  levers: [
+    ["Global risk", "Capabilities advance faster than safeguards"],
+    ["Coordination", "Verifiable slowdown and dialogue among major powers"],
+    ["Resilience", "Defense, evaluation, and continuity in Brazil"],
+    ["Physical leverage", "Energy, grid access, and data-center deployment"],
+    ["Inference sovereignty", "Contracted access for critical uses"],
+  ],
+  disclaimer: "This is a scenario, not a forecast. The 2026 conditions are documented; the events from 2027 to 2030 form one possible path designed to test choices available today.",
+  timeline: "Timeline",
+  aside: "Reading thesis",
+  equation: "Brazil should help slow the race, prepare for coordination failure, and use energy to secure defensive access.",
+  asideCopy: "The race creates risk; dependency increases the damage. Energy and data centers produce sovereignty when contracts reserve access, audit rights, and continuity.",
+  metrics: [["Global coordination", "in development"], ["Inference sovereignty", "not measured"], ["Editorial status", "draft"]],
+  key: "Observed 2026 claims include sources. Later shocks carry scenario or narrative-invention labels.",
+  current: "Chapter",
+};
+---
+
+<BaseLayout locale={locale} pageKey="scenario" markdownHref={markdownRoutes[locale].scenario} bodyClass="scenario-page">
+  <section class="scenario-hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">{text.eyebrow}</p>
+        <h1>{text.titleCountry}<span>{text.titleLine}</span></h1>
+        <p class="hero-deck">{text.deck}</p>
+        <div class="status-line">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>{copy.status}</span>
+          <span class="status-separator" aria-hidden="true"></span>
+          <time datetime="2026-08-07">{copy.updated}</time>
+        </div>
+        <div class="hero-actions">
+          <a class="button-link primary" href={chapters[0].href}>{text.read}</a>
+          <a class="button-link" href={routes[locale].summary}>{text.short}</a>
+        </div>
+      </div>
+
+      <div class="leverage-panel" aria-label={text.panelTitle}>
+        <p class="leverage-panel-title"><span>{text.panelTitle}</span><span>{text.panelStatus}</span></p>
+        <ol class="leverage-chain">
+          {text.levers.map(([title, detail]) => (
+            <li><div class="lever-copy"><strong>{title}</strong><span>{detail}</span></div></li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="scenario-disclaimer" aria-label={locale === "pt" ? "Nota editorial" : "Editorial note"}>
+    <p>{text.disclaimer}</p>
+  </section>
+
+  <div class="reading-layout">
+    <nav class="chapter-nav" aria-label={text.timeline}>
+      <span class="chapter-nav-label">{text.timeline}</span>
+      <ol>
+        {chapters.map((chapter, index) => (
+          <li>
+            <a
+              class={index === 0 ? "is-active" : ""}
+              href={chapter.href}
+              data-chapter-label={`${chapter.year}: ${chapter.label}`}
+              aria-current={index === 0 ? "location" : undefined}
+            >
+              <span>{chapter.year}</span><span>{chapter.label}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+
+    <article class="scenario-prose">
+      <ScenarioContent />
+    </article>
+
+    <aside class="reading-aside">
+      <div class="reading-aside-inner">
+        <span class="aside-label">{text.aside}</span>
+        <p class="thesis-equation">{text.equation}</p>
+        <p class="aside-copy">{text.asideCopy}</p>
+        <dl class="metric-list">
+          {text.metrics.map(([label, value]) => <div class="metric-row"><dt>{label}</dt><dd>{value}</dd></div>)}
+        </dl>
+        <div class="evidence-key"><strong>{locale === "pt" ? "Como ler as evidências" : "How to read the evidence"}</strong>{text.key}</div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="mobile-chapter-bar" aria-live="polite">
+    <span>{text.current}</span>
+    <span data-current-chapter>{chapters[0].year}: {chapters[0].label}</span>
+    <a href="#main-content" aria-label={locale === "pt" ? "Voltar ao início" : "Back to top"}>↑</a>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const navLinks = Array.from(document.querySelectorAll('.chapter-nav a'));
+      const mobileLabel = document.querySelector('[data-current-chapter]');
+      const chapterEntries = navLinks.map((link) => {
+        const id = link.getAttribute('href')?.slice(1);
+        return id ? { link, section: document.getElementById(id) } : null;
+      }).filter((entry) => entry?.section);
+      if (!chapterEntries.length) return;
+
+      const updateActiveChapter = () => {
+        const readingLine = Math.max(96, window.innerHeight * 0.18);
+        let activeEntry = chapterEntries[0];
+        chapterEntries.forEach((entry) => {
+          if (entry.section.getBoundingClientRect().top <= readingLine) activeEntry = entry;
+        });
+        navLinks.forEach((link) => {
+          const active = link === activeEntry.link;
+          link.classList.toggle('is-active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        if (mobileLabel) {
+          mobileLabel.textContent = activeEntry.link.getAttribute('data-chapter-label') || '';
+        }
+      };
+
+      let framePending = false;
+      const requestUpdate = () => {
+        if (framePending) return;
+        framePending = true;
+        window.requestAnimationFrame(() => {
+          updateActiveChapter();
+          framePending = false;
+        });
+      };
+
+      window.addEventListener('scroll', requestUpdate, { passive: true });
+      window.addEventListener('resize', requestUpdate);
+      window.addEventListener('hashchange', requestUpdate);
+      window.addEventListener('load', requestUpdate, { once: true });
+      window.requestAnimationFrame(updateActiveChapter);
+      window.setTimeout(updateActiveChapter, 250);
+      document.fonts?.ready.then(requestUpdate);
+    })();
+  </script>
+</BaseLayout>

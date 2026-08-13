@@ -1,0 +1,50 @@
+---
+import { routes, siteCopy, type Locale, type PageKey } from "../data/site";
+
+interface Props {
+  locale: Locale;
+  pageKey: PageKey;
+  markdownHref: string;
+}
+
+const { locale, pageKey, markdownHref } = Astro.props;
+const copy = siteCopy[locale];
+const navKeys: PageKey[] = ["scenario", "summary", "evidence", "strategy", "letter", "about"];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href={routes[locale].scenario} aria-label={copy.title}>
+      <span class="wordmark-country">{locale === "pt" ? "BRASIL" : "BRAZIL"}</span>
+      <span class="wordmark-year">2030</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : "Primary navigation"}>
+      {navKeys.map((key) => (
+        <a href={routes[locale][key]} aria-current={pageKey === key ? "page" : undefined}>
+          {copy.nav[key as keyof typeof copy.nav]}
+        </a>
+      ))}
+    </nav>
+
+    <div class="header-tools">
+      <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
+        <a href={routes.pt[pageKey]} lang="pt-BR" aria-current={locale === "pt" ? "true" : undefined}>PT</a>
+        <span aria-hidden="true">/</span>
+        <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
+      </div>
+      <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>
+      <details class="mobile-menu">
+        <summary aria-label={copy.menu}><span></span><span></span><span></span></summary>
+        <nav aria-label={locale === "pt" ? "Navegação móvel" : "Mobile navigation"}>
+          {navKeys.map((key) => (
+            <a href={routes[locale][key]} aria-current={pageKey === key ? "page" : undefined}>
+              {copy.nav[key as keyof typeof copy.nav]}
+            </a>
+          ))}
+          <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

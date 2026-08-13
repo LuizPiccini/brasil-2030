@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { markdownRoutes, type Locale } from "../data/site";
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+---
+<BaseLayout locale={locale} pageKey="letter" markdownHref={markdownRoutes[locale].letter} title={pt ? "Carta aberta" : "Open letter"}>
+  <PageHero locale={locale} eyebrow={pt ? "Em elaboração" : "In development"} title={pt ? "Uma carta aos candidatos de 2026" : "A letter to Brazil's 2026 candidates"} intro={pt ? "Este texto transforma a pesquisa do cenário em pedidos que uma candidatura pode assumir e um governo pode medir. A equipe ainda revisa o conteúdo." : "This text turns the scenario research into requests a campaign can adopt and a government can measure. The team is still reviewing the content."} />
+  <div class="page-content">
+    <article class="letter-sheet">
+      <p class="letter-meta">{pt ? "Rascunho para revisão da equipe · 7 de agosto de 2026 · Não representa endosso eleitoral" : "Team review draft · 7 August 2026 · No electoral endorsement"}</p>
+      <h2>{pt ? "Tempo para negociar e energia para escolher" : "Time to negotiate and energy to choose"}</h2>
+      {pt ? <>
+        <p>Às candidaturas à Presidência da República,</p>
+        <p>Os sistemas de inteligência artificial avançam mais rápido que as salvaguardas. Eles já ampliam capacidades cibernéticas e podem elevar riscos para infraestrutura, saúde pública e segurança internacional. O Brasil sofrerá as consequências dessa corrida mesmo sem liderar o desenvolvimento de modelos de fronteira.</p>
+        <p>O país também depende de empresas e governos estrangeiros para obter as ferramentas usadas em produtividade, serviços públicos e ciberdefesa. Uma crise geopolítica pode limitar o acesso brasileiro às melhores capacidades no momento em que elas se tornarem essenciais.</p>
+        <p>Pedimos que cada candidatura assuma quatro compromissos para o próximo mandato:</p>
+        <ol>
+          <li>Defender limites recíprocos e verificáveis para treinamento e implantação de sistemas que ultrapassem limiares acordados de risco.</li>
+          <li>Usar a diplomacia brasileira para aproximar China e Estados Unidos em torno de avaliações comuns, comunicação de incidentes graves e condições para interromper uma escalada.</li>
+          <li>Preparar o Brasil para uma falha de coordenação com inventários de dependência, exercícios de crise e capacidade independente de avaliar modelos usados em serviços críticos.</li>
+          <li>Expandir energia, transmissão e data centers sob contratos que garantam inferência para usuários brasileiros, prioridade em emergências, auditoria segura, portabilidade e continuidade.</li>
+        </ol>
+        <p>O Brasil pode ajudar a reduzir o risco global e preparar-se para o fracasso da cooperação. Sua energia limpa e seu mercado oferecem uma oportunidade de negociação. A política pública precisa converter essa oportunidade em soberania de inferência antes que o capital esteja instalado e uma crise determine os termos.</p>
+        <p>Brasil 2030<br />Grupo de trabalho Brasil 20XX</p>
+      </> : <>
+        <p>To Brazil's presidential candidates,</p>
+        <p>Artificial-intelligence systems are advancing faster than safeguards. They already increase cyber capabilities and may raise risks to infrastructure, public health, and international security. Brazil will bear consequences from this race even without leading frontier-model development.</p>
+        <p>The country also depends on foreign companies and governments for tools used in productivity, public services, and cyberdefense. A geopolitical crisis may restrict Brazilian access to the strongest capabilities when they become essential.</p>
+        <p>We ask each campaign to adopt four commitments for the next presidential term:</p>
+        <ol>
+          <li>Support reciprocal and verifiable limits on training and deployment for systems that cross agreed risk thresholds.</li>
+          <li>Use Brazilian diplomacy to bring China and the United States together around shared evaluations, severe-incident communication, and conditions for interrupting escalation.</li>
+          <li>Prepare Brazil for coordination failure through dependency inventories, crisis exercises, and independent capacity to evaluate models used in critical services.</li>
+          <li>Expand energy, transmission, and data centers through contracts that guarantee inference for Brazilian users, emergency priority, secure audits, portability, and continuity.</li>
+        </ol>
+        <p>Brazil can help reduce global risk and prepare for cooperation to fail. Its clean power and market create a negotiating opportunity. Public policy must convert that opportunity into inference sovereignty before capital is installed and a crisis sets the terms.</p>
+        <p>Brazil 2030<br />Brasil 20XX working group</p>
+      </>}
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,25 @@
+# Brasil 2030: Energia para Escolher
+
+> Working scenario about how Brazil can argue for a global AI slowdown, mediate US-China talks, and turn energy and data centers into bargaining power and inference sovereignty. Public draft, last updated 2026-08-07.
+
+## Portuguese, default
+
+- [Cenário completo](https://brasil-2030.piccini.app/cenario.md)
+- [Resumo](https://brasil-2030.piccini.app/resumo.md)
+- [Evidências](https://brasil-2030.piccini.app/evidencias.md)
+- [Estratégia](https://brasil-2030.piccini.app/estrategia.md)
+- [Carta aberta, em elaboração](https://brasil-2030.piccini.app/carta-aberta.md)
+- [Sobre e método](https://brasil-2030.piccini.app/sobre.md)
+
+## English
+
+- [Full scenario](https://brasil-2030.piccini.app/en/scenario.md)
+- [Summary](https://brasil-2030.piccini.app/en/summary.md)
+- [Evidence](https://brasil-2030.piccini.app/en/evidence.md)
+- [Strategy](https://brasil-2030.piccini.app/en/strategy.md)
+- [Open letter, in development](https://brasil-2030.piccini.app/en/open-letter.md)
+- [About and method](https://brasil-2030.piccini.app/en/about.md)
+
+## Evidence warning
+
+Observed facts, author estimates, and narrative inventions carry separate labels. The Brazilian mediation channel, limited 2030 protocol, and 2029 inference-tier mechanism are scenario inventions. Pedro's 2030 compute-model values remain open.
