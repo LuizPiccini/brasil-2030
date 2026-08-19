@@ -1,6 +1,6 @@
 # Brasil 2030: Energia para Escolher
 
-> Working scenario about how Brazil can argue for a global AI slowdown, mediate US-China talks, and turn energy and data centers into bargaining power and inference sovereignty. Public draft, last updated 2026-08-07.
+> Working scenario about how Brazil can argue for a global AI slowdown, mediate US-China talks, and turn energy and data centers into bargaining power and inference sovereignty. Public draft, last updated 2026-08-19.
 
 ## Portuguese, default
 
@@ -22,4 +22,4 @@
 
 ## Evidence warning
 
-Observed facts, author estimates, and narrative inventions carry separate labels. The Brazilian mediation channel, limited 2030 protocol, and 2029 inference-tier mechanism are scenario inventions. Pedro's 2030 compute-model values remain open.
+Observed facts, developer claims, author estimates, and narrative inventions carry separate labels. The September 2026 Camila and Lourdes scene, Brazilian mediation channel, limited 2030 protocol, and 2029 inference-tier mechanism are scenario inventions. Pedro's 2030 compute-model values remain open.

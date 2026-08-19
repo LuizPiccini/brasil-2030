@@ -1,6 +1,6 @@
 ## 2026: A corrida chega ao Brasil
 
-> **Fronteira da evidência:** condições observadas até 7 de agosto de 2026. A cronologia política e os eventos posteriores formam o cenário.
+> **Fronteira da evidência:** condições observadas até 19 de agosto de 2026. A cronologia política e os eventos posteriores formam o cenário.
 
 O Brasil chega à eleição de 2026 com duas crises que ocupam mais espaço político do que inteligência artificial. O crime organizado amplia sua presença na economia e no território. O orçamento federal deixa pouco espaço para projetos novos. O debate público sobre IA se concentra em deepfakes, manipulação eleitoral e proteção de dados.
 
@@ -16,7 +16,137 @@ O Congresso discute duas peças do futuro sistema. O PL 2338 busca criar um marc
 
 A construção do campus da ByteDance começa em Pecém, no Ceará. As reportagens descrevem uma primeira fase de cerca de 200 MW e uma possível expansão para perto de 1 GW. Um contrato de vinte anos fornece energia eólica ao projeto.<sup><a id="ref-pecem" href="#nota-pecem" aria-label="Nota 6">6</a></sup> O governo celebra investimento, empregos e demanda por energia limpa. Nenhum compromisso público encontrado até esta revisão reserva capacidade para compradores brasileiros.
 
+O projeto também concentra custos que o discurso de investimento não resolve. O CONAMA pede salvaguardas nacionais para consumo de água e energia, emissões, impactos territoriais, tarifas e participação pública. A Semace registra água, energia, áreas protegidas e povos indígenas entre os temas do licenciamento de data centers.<sup><a id="ref-ambiente" href="#nota-ambiente" aria-label="Nota 7">7</a></sup> A ByteDance afirma que o campus usará energia renovável e tecnologia de resfriamento com reuso de água. A alegação não substitui dados sobre a fonte, a reposição durante secas, o limite de retirada ou as obrigações que sobrevivem ao anúncio.<sup><a id="ref-reuso" href="#nota-reuso" aria-label="Nota 8">8</a></sup>
+
+O sistema elétrico enfrenta sua própria decisão. A EPE propõe R$ 5,68 bilhões em novas instalações de transmissão para conectar até 4 GW de cargas eletrointensivas no Ceará e no Piauí, incluindo data centers e plantas de hidrogênio. A maior parte do investimento dependeria da confirmação das cargas.<sup><a id="ref-transmissao" href="#nota-transmissao" aria-label="Nota 9">9</a></sup> O planejamento reduz o risco de obras ociosas, mas não encerra a disputa sobre quem paga, quem recebe prioridade e quais benefícios permanecem no país.
+
 O campus torna visível uma distinção que as estatísticas costumam esconder. Uma máquina pode operar no Brasil, consumir energia brasileira e continuar sob controle comercial de uma empresa estrangeira. Capacidade hospedada, acesso contratável e controle político medem coisas diferentes.
+
+<div class="narrative-kicker">Invenção narrativa · setembro de 2026</div>
+
+### Água, emprego e a contrapartida pública
+
+A televisão da recepção ficava sem som até alguém pedir. Naquela manhã, um paciente esperava a cardiologista e pediu para aumentar o volume. Lourdes procurou o controle embaixo de duas pranchetas, apertou o botão errado e abriu o menu. Entregou o aparelho a Joana, da recepção.
+
+O governador aparecia diante de um telão com uma imagem do Complexo do Pecém. A faixa na parte de baixo anunciava investimento, energia limpa e milhares de empregos. A reportagem cortou para uma imagem de arquivo: um homem de capacete branco caminhava entre fileiras de servidores.
+
+“Isso aí é computador?”, perguntou o paciente.
+
+Joana respondeu que era um galpão cheio deles.
+
+Lourdes ficou parada por alguns segundos. Tia Célia tinha um filho procurando emprego desde que a oficina fechara. Ela pegou o celular e fotografou a tela quando apareceu o nome do projeto. A imagem saiu com o reflexo da janela, mas dava para ler Pecém.
+
+No fim da reportagem, uma mulher falou de água. A matéria cortou para uma comunidade no Ceará e mostrou cartazes contra a obra. Lourdes ouviu “seca”, “energia” e “povo Anacé” enquanto o telefone da clínica tocava. Baixou o volume e atendeu.
+
+Em Brasília, Camila recebeu a mesma notícia num grupo do gabinete. Filha de Lourdes, trabalhava como secretária parlamentar e assessora de um deputado cearense de segundo mandato, integrante da CCTI e candidato à reeleição. A assessoria de imprensa queria uma frase dele. O deputado estava no Ceará, entre uma visita a um hospital municipal e uma caminhada com um prefeito aliado.
+
+Camila escreveu:
+
+> O Ceará tem energia limpa, conexão internacional e trabalhadores preparados para receber investimentos em infraestrutura digital. O mandato apoia projetos que tragam emprego, inovação e desenvolvimento para o estado.
+
+O chefe de gabinete respondeu:
+
+> Vê se precisa falar de sustentabilidade.
+
+Ela acrescentou “com responsabilidade ambiental” depois de “infraestrutura digital”. O deputado aprovou o texto pelo celular.
+
+Naquela tarde, Camila desceu para uma sala de reunião da CCTI. A comissão tinha organizado uma conversa técnica sobre os projetos de data centers. Não havia imprensa. Alguns deputados participavam por vídeo; os assessores ocupavam quase todas as cadeiras.
+
+O diretor de uma empresa do consórcio abriu a apresentação. Mostrou cabos submarinos, parques eólicos e o mapa do Pecém. Disse que o sistema de resfriamento reutilizaria água e que o empreendimento compraria energia renovável. Falou dos empregos na construção e da cadeia de fornecedores que atenderia o campus durante a operação.
+
+O deputado de Camila entrou quando a apresentação chegava ao último slide. Sentou ao lado dela e perguntou baixo:
+
+“Perdi alguma coisa?”
+
+“A parte da água. Disseram que o sistema reaproveita.”
+
+“Então resolveu.”
+
+Camila apontou para a mesa. Uma técnica ligada à gestão hídrica do Ceará tinha pedido a palavra.
+
+Ela perguntou qual seria a fonte da água, quanto o projeto precisaria retirar durante os meses mais quentes e qual regra valeria em período de escassez. Explicou que “circuito fechado” descrevia uma parte do sistema. O licenciamento ainda precisava considerar reposição, limpeza, instalações auxiliares e a pegada hídrica da energia contratada.
+
+O diretor respondeu que a engenharia buscava reduzir o consumo e que o projeto cumpriria as exigências do órgão ambiental. A técnica pediu os dados do projeto executivo. Ele disse que a equipe apresentaria os documentos nas etapas previstas.
+
+Uma representante Anacé falou por videoconferência. A imagem travou duas vezes. Ela esperou a conexão voltar e repetiu que a comunidade não aceitava conhecer as decisões pela imprensa. Queria consulta antes das licenças que afetassem o território, a água e a rotina das famílias.
+
+O deputado de Camila cruzou os braços.
+
+“Se a gente amarrar esse projeto em exigência que nenhum outro lugar faz, ele vai embora”, disse para Camila. “Aí ficamos sem o investimento e sem condição nenhuma para negociar.”
+
+Camila reconhecia o risco. O projeto podia mudar de estado ou de país. O Ceará competia com lugares que ofereciam licença, energia e conexão à rede. Cada mês de atraso custava dinheiro. Ela anotou a frase do deputado antes de pedir a palavra.
+
+“Tenho duas perguntas”, disse. “A primeira é sobre benefício local. Quantos dos empregos anunciados permanecem depois da construção?”
+
+O diretor explicou que a operação empregaria técnicos, pessoal de segurança, manutenção e fornecedores. A empresa publicaria os números conforme o projeto avançasse.
+
+“E a capacidade instalada?”, perguntou Camila. “Alguma parte poderá ser contratada por empresas ou pelo governo brasileiro se houver restrição de oferta no exterior?”
+
+O diretor respondeu que os clientes negociariam capacidade pelas regras comerciais do operador. O contrato principal e a legislação da Zona de Processamento de Exportação limitavam o que ele podia antecipar.
+
+Camila escreveu duas frases na margem da apresentação:
+
+> Água: dados depois.
+>
+> Acesso brasileiro: contrato depois.
+
+Um representante do setor elétrico lembrou que os data centers poderiam comprar energia que o sistema desperdiçava em horários de excesso de geração. Também poderiam justificar novas linhas de transmissão. A técnica do Ceará perguntou quem pagaria por essas linhas se parte dos projetos anunciados não saísse do papel.
+
+O presidente da reunião encerrou vinte minutos depois do horário. Pediu que os convidados enviassem contribuições por escrito. Os assessores recolheram cartões, apresentações e nomes para uma audiência futura.
+
+No corredor, o deputado devolveu a pasta a Camila.
+
+“A pergunta dos empregos é boa”, disse. “A de reservar máquina pode matar o projeto.”
+
+“Eu não falei em reserva obrigatória.”
+
+“Falou em restrição no exterior. Parece que a gente já está esperando uma guerra.”
+
+Camila disse que podia trocar a reserva por uma opção de compra. O governo ou empresas brasileiras pagariam para conservar o direito de contratar capacidade em condições definidas. O deputado olhou o relógio.
+
+“Pede uma nota para a Consultoria. Coloca a parte da água também. Sem virar manifesto contra data center.”
+
+“E custo de conexão à rede.”
+
+“Camila.”
+
+“Para saber, não para proibir.”
+
+Ele autorizou com um gesto e entrou no elevador.
+
+Lourdes ligou quando Camila ainda estava na Câmara. Começou perguntando pelo emprego.
+
+“Você sabe onde manda currículo para aquele negócio do Pecém?”
+
+“Qual negócio?”
+
+“O dos computadores. Passou no jornal. O filho da Célia podia tentar.”
+
+Camila disse que a obra ainda levaria tempo e prometeu procurar. Lourdes contou que tinham falado em milhares de vagas. Depois perguntou:
+
+“Isso vai usar água daqui?”
+
+“Vai usar água, mãe. A empresa diz que reaproveita.”
+
+“Reaproveita como?”
+
+“Eu ainda não sei.”
+
+“Porque quando falta, falta para a gente.”
+
+Camila olhou as anotações da reunião. Quase respondeu que Fortaleza não retirava água de uma única fonte e que o projeto dependeria de licença, outorga e tecnologia de resfriamento. Lourdes não tinha pedido uma explicação sobre o sistema hídrico.
+
+“Vou procurar isso também.”
+
+“E vê o emprego. O menino está parado.”
+
+Lourdes perguntou se Camila já tinha comprado a passagem para o aniversário de tia Célia. Camila não tinha.
+
+Antes de sair, Camila abriu um pedido para a Consultoria Legislativa. O primeiro rascunho solicitava análise de inventário de capacidade, opções de compra e condições associadas a incentivos públicos. Ela acrescentou quatro pontos: fonte e limite de uso da água, regra para períodos de escassez, custo da conexão elétrica e separação entre empregos temporários e permanentes.
+
+O gabinete apoiava o investimento sem conhecer a fonte da água, o custo da rede ou os direitos de acesso às máquinas. A consulta pedia essas respostas. Camila salvou o documento como `Pecém - contrapartidas e acesso - consulta`.
+
+---
 
 ## 2027: A defesa aprofunda a dependência
 
@@ -60,7 +190,7 @@ O país ainda fornece algo que os laboratórios desejam. O acordo de dados de 20
 
 ## 2029: Tier 2
 
-> **Status:** invenção central do cenário. O regime americano de 2025 criou tiers para chips, pesos e treinamento; a extensão para serviços de inferência não ocorreu até agosto de 2026.<sup><a id="ref-diffusion" href="#nota-diffusion" aria-label="Nota 7">7</a></sup>
+> **Status:** invenção central do cenário. O regime americano de 2025 criou tiers para chips, pesos e treinamento; a extensão para serviços de inferência não ocorreu até agosto de 2026.<sup><a id="ref-diffusion" href="#nota-diffusion" aria-label="Nota 10">10</a></sup>
 
 Robôs aparecem em bairros ricos, fábricas e armazéns. Governos estaduais compram drones e sistemas terrestres para operações contra organizações criminosas. Salvaguardas legais chegam depois da compra. O governo federal evita confrontar governadores que alegam salvar vidas policiais.
 
@@ -90,7 +220,7 @@ O governo tenta agregar a demanda federal e negociar como um comprador único. A
 
 Diplomatas abrem uma segunda negociação com Washington. Os Estados Unidos pedem controles contra desvio de chips, atestações de segurança e limites a equipamentos chineses em novos projetos críticos. Exportadores de commodities resistem. Órgãos de segurança argumentam que o Tier 2 enfraquece a defesa da própria infraestrutura brasileira.
 
-O Congresso tenta acrescentar condições de acesso doméstico aos incentivos para data centers. Operadores assinaram contratos e financiaram projetos sob regras anteriores. Os requisitos alcançam projetos futuros. Novas conexões à rede e benefícios fiscais passam a exigir opções de compra para brasileiros, garantias de serviço e marcos de entrega.
+O Congresso tenta acrescentar condições de acesso doméstico e desempenho socioambiental aos incentivos para data centers. Operadores assinaram contratos e financiaram projetos sob regras anteriores. Os requisitos alcançam projetos futuros. Novas conexões à rede e benefícios fiscais passam a exigir opções de compra para brasileiros, garantias de serviço, limites públicos de uso da água, consulta às comunidades afetadas, regras para períodos de escassez e marcos de entrega.
 
 Tribunais de contas examinam incentivos concedidos aos campi. Estados descobrem que subsidiaram máquinas que seus órgãos não conseguem contratar. O problema externo se torna uma disputa federativa.
 
@@ -108,7 +238,7 @@ Os totais não descrevem quem pode usar as máquinas. Operadores estrangeiros co
 
 Multinacionais brasileiras preservam serviços de fronteira por subsidiárias Tier 1. Empresas médias usam modelos limitados. Universidades dependem de programas de pesquisa. Órgãos públicos distribuem sua melhor capacidade entre defesa digital, saúde e benefícios.
 
-O Congresso aprova um programa de acesso para novos data centers. Operadores disputam conexões à rede e incentivos oferecendo opções de compra, créditos e capacidade de longo prazo a usuários brasileiros. Revisores independentes comparam cada subsídio com o custo e a confiabilidade da nuvem importada. O programa inclui datas de expiração porque a economia dos chips muda mais rápido do que a legislação de infraestrutura.
+O Congresso aprova um programa de acesso para novos data centers. Operadores disputam conexões à rede e incentivos oferecendo opções de compra, créditos e capacidade de longo prazo a usuários brasileiros. Cada projeto publica fonte e consumo de água, custo da conexão, empregos permanentes e regras de operação durante escassez. Revisores independentes comparam o benefício público com o custo fiscal, ambiental e elétrico. O programa inclui datas de expiração porque a economia dos chips muda mais rápido do que a legislação de infraestrutura.
 
 A instituição de avaliação ganha credibilidade depois de encontrar uma falha num modelo usado por um serviço público crítico. O órgão responsável corrige a implantação antes de um incidente grave. O país continua dependente de modelos estrangeiros, mas passa a testar alguns dos sistemas dos quais o Estado depende.
 
@@ -135,16 +265,16 @@ O cenário usa oito escolhas que a equipe pode alterar sem reconstruir a cronolo
 
 1. **Ritmo da fronteira em 2027 e 2028.** China e Estados Unidos podem aceitar limiares verificáveis, manter apenas conversas técnicas ou continuar sem coordenação.
 2. **Mediação brasileira.** O Brasil pode investir em capacidade técnica para sustentar o canal ou limitar-se a declarações diplomáticas.
-3. **Condições do REDATA em 2026 e 2027.** O Congresso pode exigir acesso contratável antes que os projetos recebam incentivos.
+3. **Condições do REDATA em 2026 e 2027.** O Congresso pode exigir acesso contratável, transparência hídrica, consulta e alocação clara dos custos da rede antes que os projetos recebam incentivos.
 4. **Inferência chinesa em 2028.** O governo pode aceitar, rejeitar ou limitar a parceria antes de medir sua exposição às regras americanas.
 5. **Tier de inferência em 2029.** A regra americana pode manter APIs abertas. Nesse caso, preço, jurisdição e continuidade carregam o problema.
 6. **Preço do alinhamento em 2029.** O Brasil pode aceitar condições americanas, recusá-las ou buscar o acordo parcial usado nesta versão.
-7. **Alavanca da rede.** O governo pode trocar acesso por velocidade de construção ou exigir opções de compra para usuários brasileiros.
+7. **Alavanca da rede.** O governo pode trocar acesso por velocidade de construção ou exigir opções de compra, limites ambientais e contrapartidas locais.
 8. **Capacidade de avaliação.** O governo pode concentrar recursos em uma instituição ou fragmentá-los entre órgãos.
 
 ## Fronteira da evidência
 
-Os fatos observados incluem o PBIA, os projetos de lei, as restrições de transmissão, o projeto de Pecém, a baixa e incerta participação brasileira na computação global, o International AI Safety Report 2026, o Diálogo Global da ONU e a história dos tiers americanos.
+Os fatos observados incluem o PBIA, os projetos de lei, as restrições de transmissão, o projeto e a controvérsia socioambiental de Pecém, a baixa e incerta participação brasileira na computação global, o International AI Safety Report 2026, o Diálogo Global da ONU e a história dos tiers americanos.
 
 O cenário inventa o modelo aberto de 2027, a troca de dados por ciberdefesa, a mediação brasileira, o acordo chinês, o tier de inferência americano, o protocolo limitado de 2030 e as respostas políticas posteriores. Essas invenções servem para testar decisões. Elas não constituem previsões.
 
@@ -157,6 +287,9 @@ O cenário inventa o modelo aberto de 2027, a troca de dados por ciberdefesa, a 
     <li id="nota-pbia"><p><a href="https://www.gov.br/mcti/pt-br/centrais-de-conteudo/publicacoes-mcti/plano-brasileiro-de-inteligencia-artificial/pbia_mcti_2025.pdf">MCTI, Plano Brasileiro de Inteligência Artificial</a>. <a href="#ref-pbia" aria-label="Voltar à referência 4">↩</a></p></li>
     <li id="nota-redata"><p><a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">Senado Federal, PL 278/2026</a>. <a href="#ref-redata" aria-label="Voltar à referência 5">↩</a></p></li>
     <li id="nota-pecem"><p><a href="https://www.bloomberg.com/news/articles/2026-07-01/bytedance-escolhe-brasil-para-maior-data-center-fora-da-china">Bloomberg, projeto da ByteDance no Brasil</a> e <a href="https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/">w.media, início da construção</a>. <a href="#ref-pecem" aria-label="Voltar à referência 6">↩</a></p></li>
-    <li id="nota-diffusion"><p><a href="https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion">Federal Register, Framework for Artificial Intelligence Diffusion</a>. <a href="#ref-diffusion" aria-label="Voltar à referência 7">↩</a></p></li>
+    <li id="nota-ambiente"><p><a href="https://conama.mma.gov.br/?id=858&amp;option=com_sisconama&amp;task=arquivo.download">CONAMA, Moção nº 147/2026</a> e <a href="https://www.ce.gov.br/semace/2026/05/29/semace-destaca-experiencia-do-ceara-no-licenciamento-ambiental-de-data-centers-em-congresso-nacional/">Semace, licenciamento ambiental de data centers</a>. <a href="#ref-ambiente" aria-label="Voltar à referência 7">↩</a></p></li>
+    <li id="nota-reuso"><p><a href="https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-r-200-billhoes?lang=pt-BR">TikTok, anúncio do projeto do Pecém</a>. <a href="#ref-reuso" aria-label="Voltar à referência 8">↩</a></p></li>
+    <li id="nota-transmissao"><p><a href="https://www.epe.gov.br/pt/imprensa/noticias/epe-propoe-solucao-de-transmissao-flexivel-e-escalonavel-para-atendimento-a-ate-4gw-de-cargas-eletrointensivas-no-ceara-e-piaui">EPE, solução de transmissão para cargas eletrointensivas no Ceará e no Piauí</a>. <a href="#ref-transmissao" aria-label="Voltar à referência 9">↩</a></p></li>
+    <li id="nota-diffusion"><p><a href="https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion">Federal Register, Framework for Artificial Intelligence Diffusion</a>. <a href="#ref-diffusion" aria-label="Voltar à referência 10">↩</a></p></li>
   </ol>
 </section>

@@ -8,7 +8,7 @@ export const siteCopy = {
     title: "Brasil 2030: Energia para Escolher",
     description: "Um cenário sobre como o Brasil pode ajudar a desacelerar a corrida da IA, proteger sua infraestrutura e transformar energia em soberania de inferência.",
     status: "Rascunho de trabalho",
-    updated: "7 ago 2026",
+    updated: "19 ago 2026",
     nav: {
       scenario: "Cenário",
       summary: "Resumo",
@@ -28,7 +28,7 @@ export const siteCopy = {
     title: "Brazil 2030: The Energy to Choose",
     description: "A scenario about how Brazil can help slow the AI race, protect critical infrastructure, and turn energy into inference sovereignty.",
     status: "Working draft",
-    updated: "7 Aug 2026",
+    updated: "19 Aug 2026",
     nav: {
       scenario: "Scenario",
       summary: "Summary",

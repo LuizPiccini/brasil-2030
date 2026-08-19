@@ -1,6 +1,6 @@
 ## 2026: The race reaches Brazil
 
-> **Evidence boundary:** observed conditions through 7 August 2026. The political chronology and later events form the scenario.
+> **Evidence boundary:** observed conditions through 19 August 2026. The political chronology and later events form the scenario.
 
 Brazil enters the 2026 election with two crises that command more attention than artificial intelligence. Organized crime has expanded its influence over parts of the economy and territory. The federal budget leaves little room for new projects. Public debate about AI concentrates on deepfakes, electoral manipulation, and data protection.
 
@@ -16,7 +16,137 @@ Congress debates two pieces of the future system. PL 2338 seeks a general framew
 
 Construction begins at Pecém, Ceará, on ByteDance's largest data center outside China. Reports describe a first phase of about 200 MW and a possible expansion toward 1 GW. A twenty-year agreement supplies wind power to the campus.[^pecem] Officials celebrate the investment, jobs, and clean-energy demand. This review found no public commitment reserving capacity for Brazilian buyers.
 
+The project also concentrates costs that investment announcements do not resolve. CONAMA has called for national safeguards covering water and electricity consumption, emissions, territorial impacts, tariffs, and public participation. Semace lists water, energy, protected areas, and Indigenous peoples among the live licensing questions for data centers.[^environment] ByteDance says the campus will use renewable energy and cooling technology that reuses water. That claim leaves open the source, drought-period replenishment, withdrawal limits, and the obligations that will survive the announcement.[^reuse]
+
+The power system faces a related choice. EPE proposes R$5.68 billion in new transmission assets to connect up to 4 GW of electro-intensive loads in Ceará and Piauí, including data centers and hydrogen plants. Most of the investment would proceed only if the loads materialize.[^transmission] That sequencing reduces stranded-asset risk. It does not settle who pays, who receives priority, or which benefits remain in Brazil.
+
 The campus makes one distinction visible. A machine can operate in Brazil, consume Brazilian power, and remain under the commercial control of a foreign company. Hosted capacity, contractable access, and political control measure different assets.
+
+<div class="narrative-kicker">Narrative invention · September 2026</div>
+
+### Water, jobs, and the public bargain
+
+The television in the clinic's reception area stayed muted unless someone asked for sound. That morning, a patient waiting for the cardiologist asked Lourdes to turn up the volume. She found the remote under two clipboards, pressed the wrong button, and opened the menu. She handed it to Joana at reception.
+
+The governor stood in front of an image of the Pecém Industrial and Port Complex. The banner promised investment, clean energy, and thousands of jobs. The report cut to stock footage of a man in a white helmet walking between rows of servers.
+
+“Are those computers?” the patient asked.
+
+Joana said it was a warehouse full of them.
+
+Lourdes stopped to watch. Her sister Célia had a son looking for work since the repair shop closed. Lourdes took a picture when the name of the project appeared. The window reflected across the screen, but Pecém remained legible.
+
+Near the end, a woman started talking about water. The report showed a community in Ceará and signs opposing the project. Lourdes caught the words “drought,” “energy,” and “Anacé” before the clinic phone rang. She lowered the volume and answered.
+
+In Brasília, Camila received the same report in a staff group. Lourdes's daughter worked as a parliamentary secretary and adviser to a second-term federal deputy from Ceará who sat on the CCTI and faced reelection. The press team wanted a statement. The deputy was in Ceará, between a visit to a municipal hospital and a campaign walk with an allied mayor.
+
+Camila wrote:
+
+> Ceará has clean energy, international connectivity, and workers prepared for investment in digital infrastructure. Our office supports projects that bring jobs, innovation, and development to the state.
+
+The chief of staff replied:
+
+> See if we need to mention sustainability.
+
+She added “with environmental responsibility” after “digital infrastructure.” The deputy approved the statement on his phone.
+
+That afternoon, Camila went downstairs to a CCTI meeting room. The committee had arranged a technical discussion about data-center projects. No journalists attended. A few deputies joined by video; staff filled most of the seats.
+
+A director from one of the consortium's companies opened the presentation. He showed submarine cables, wind farms, and a map of Pecém. The cooling system would reuse water, he said, and the project would buy renewable power. He described construction jobs and the suppliers that would serve the campus after it opened.
+
+Camila's deputy arrived during the final slide. He sat beside her and spoke under his breath.
+
+“Did I miss anything?”
+
+“The water section. They say the system reuses it.”
+
+“Then they solved it.”
+
+Camila pointed to the table. A specialist connected to Ceará's water-management system had requested the floor.
+
+She asked where the water would come from, how much the project would need during the hottest months, and which rule would apply during scarcity. A closed loop described one part of the system, she said. Licensing still had to account for replenishment, cleaning, auxiliary facilities, and the water footprint of contracted electricity.
+
+The director said the engineers intended to reduce consumption and that the project would comply with environmental requirements. The specialist asked for the engineering data. He said the team would submit the documents during the required stages.
+
+An Anacé representative joined by video. Her image froze twice. She waited for the connection and repeated that the community should not learn about decisions through the press. Consultation had to come before licenses affecting the territory, water, and family life.
+
+Camila's deputy folded his arms.
+
+“If we tie this project to requirements no other place has, it leaves,” he told Camila. “Then we lose the investment and any chance to negotiate.”
+
+Camila recognized the risk. The project could move to another state or country. Ceará competed with places offering permits, power, and grid connections. Each month of delay cost money. She wrote down the deputy's argument before requesting the floor.
+
+“I have two questions,” she said. “The first concerns local benefits. How many of the announced jobs remain after construction?”
+
+The director said the operating campus would employ technicians, security staff, maintenance workers, and suppliers. The company would publish numbers as the project advanced.
+
+“And the installed capacity?” Camila asked. “Could Brazilian firms or the government contract part of it during a foreign supply restriction?”
+
+The director said clients would negotiate under the operator's commercial rules. The main contract and the Export Processing Zone rules limited what he could discuss.
+
+Camila wrote two lines in the margin:
+
+> Water: data later.
+>
+> Brazilian access: contract later.
+
+An electricity-sector representative said data centers could buy power that generators lost during periods of excess supply. They could also justify new transmission lines. The Ceará specialist asked who would pay for those lines if some announced projects never materialized.
+
+The chair ended the meeting twenty minutes late and asked the guests for written submissions. Staff collected cards, presentations, and names for a future hearing.
+
+In the corridor, the deputy handed Camila the folder.
+
+“The jobs question is good,” he said. “Reserving machines could kill the project.”
+
+“I didn't propose a mandatory reservation.”
+
+“You talked about foreign restrictions. It sounds like we're waiting for a war.”
+
+Camila suggested a purchase option instead. The government or Brazilian firms would pay to preserve the right to contract capacity under defined conditions. The deputy checked the time.
+
+“Ask the legislative consultants for a note. Include the water issue. Don't turn it into a manifesto against data centers.”
+
+“And the grid-connection cost.”
+
+“Camila.”
+
+“To understand it, not prohibit it.”
+
+He waved his approval and stepped into the elevator.
+
+Lourdes called while Camila was still in the Chamber. She began with the job.
+
+“Do you know where someone sends a résumé for that thing in Pecém?”
+
+“Which thing?”
+
+“The computers. It was on the news. Célia's son could try.”
+
+Camila said construction would take time and promised to look. Lourdes said the report had mentioned thousands of jobs. Then she asked:
+
+“Will it use our water?”
+
+“It will use water, Mom. The company says it reuses it.”
+
+“How?”
+
+“I don't know yet.”
+
+“Because when it runs out, we're the ones who go without.”
+
+Camila looked at her meeting notes. She almost explained that Fortaleza drew from more than one source and that the project would depend on permits, water rights, and cooling technology. Lourdes had not asked for a lecture on the water system.
+
+“I'll find out.”
+
+“And check the job. The boy has no work.”
+
+Lourdes asked whether Camila had bought her ticket for Célia's birthday. She had not.
+
+Before leaving, Camila opened a request to the Chamber's legislative consultants. The first draft asked for an analysis of a compute inventory, purchase options, and conditions attached to public incentives. She added four items: the water source and withdrawal limit, scarcity-period rules, the cost of the grid connection, and separate counts for temporary and permanent jobs.
+
+The office supported the investment without knowing the water source, the grid cost, or the rights to use the machines. The request sought those answers. Camila saved it as `Pecém - public obligations and access - consultation`.
+
+---
 
 ## 2027: Defense deepens dependency
 
@@ -90,7 +220,7 @@ The government tries to aggregate federal demand and negotiate as one buyer. Bra
 
 Diplomats open a second negotiation with Washington. The United States asks for chip-diversion controls, security attestations, and limits on Chinese equipment in new critical projects. Commodity exporters resist. Security agencies argue that Tier 2 weakens the systems needed to protect Brazilian infrastructure.
 
-Congress tries to add domestic-access conditions to data-center incentives. Operators signed contracts and financed projects under older rules. The new requirements reach future projects. Grid connections and tax benefits now require purchase options for Brazilian users, service guarantees, and delivery milestones.
+Congress tries to add domestic-access and environmental-performance conditions to data-center incentives. Operators signed contracts and financed projects under older rules. The new requirements reach future projects. Grid connections and tax benefits now require purchase options for Brazilian users, service guarantees, public water-use limits, consultation with affected communities, scarcity-period rules, and delivery milestones.
 
 State audit courts examine incentives granted to campuses. States discover that public subsidies helped finance machines their own agencies cannot contract. The external problem becomes a federal dispute.
 
@@ -108,7 +238,7 @@ Those totals do not describe who can use the machines. Foreign operators control
 
 Brazilian multinationals preserve frontier services through Tier 1 subsidiaries. Mid-sized firms work with capped models. Universities depend on research programs. Public agencies allocate their best access across cyberdefense, health, and benefits.
 
-Congress approves a compute-access program for new data centers. Operators compete for grid connections and incentives by offering purchase options, credits, and long-term capacity to Brazilian users. Independent reviewers compare each subsidy with the cost and reliability of imported cloud. The program contains expiry dates because chip economics change faster than infrastructure law.
+Congress approves a compute-access program for new data centers. Operators compete for grid connections and incentives by offering purchase options, credits, and long-term capacity to Brazilian users. Each project publishes its water source and consumption, grid-connection cost, permanent jobs, and scarcity-period operating rules. Independent reviewers compare public benefits with fiscal, environmental, and electricity-system costs. The program contains expiry dates because chip economics change faster than infrastructure law.
 
 The evaluation institution earns credibility after it finds a failure in a model used by a critical public service. The responsible agency fixes the deployment before a major incident. Brazil still depends on foreign models, but officials can test some of the systems on which the state relies.
 
@@ -135,16 +265,16 @@ The scenario uses eight choices the team can change without rebuilding the chron
 
 1. **Frontier pacing.** States can accept reciprocal, verifiable limits on the most dangerous capability race or continue relying on unilateral promises.
 2. **Brazilian mediation.** Brazil can keep a useful US-China channel open without pretending to be neutral about catastrophic risk.
-3. **REDATA conditions in 2026 and 2027.** Congress can require contractable access before projects receive incentives.
+3. **REDATA conditions in 2026 and 2027.** Congress can require contractable access, water transparency, consultation, and clear allocation of grid costs before projects receive incentives.
 4. **Chinese inference in 2028.** The government can accept, reject, or limit the partnership before measuring exposure to US rules.
 5. **Inference tiering in 2029.** The US regime may leave APIs open. Price, jurisdiction, and continuity would then carry the dependency mechanism.
 6. **The price of alignment in 2029.** Brazil can accept US conditions, refuse them, or seek the partial settlement used here.
-7. **Grid leverage.** The government can trade grid access for construction speed or secure purchase options for Brazilian users.
+7. **Grid leverage.** The government can trade grid access for construction speed or secure purchase options, environmental limits, and local obligations.
 8. **Evaluation capacity.** The government can concentrate resources in one institution or fragment them across agencies.
 
 ## Evidence boundary
 
-Observed conditions through 7 August 2026 include the PBIA, current bills, transmission constraints, the Pecém project, Brazil's low and uncertain share of global compute, documented AI use in cyber operations, the UN Global Dialogue, and the history of US country tiers.
+Observed conditions through 19 August 2026 include the PBIA, current bills, transmission constraints, the Pecém project and its environmental controversy, Brazil's low and uncertain share of global compute, documented AI use in cyber operations, the UN Global Dialogue, and the history of US country tiers.
 
 The scenario invents the 2027 open model, the data-for-cyberdefense bargain, the Chinese agreement, the Brazilian mediation channel, the limited 2030 protocol, US inference tiering, and the political responses of 2029 and 2030. These inventions test decisions. They are not forecasts.
 
@@ -154,4 +284,7 @@ The scenario invents the 2027 open model, the data-for-cyberdefense bargain, the
 [^pbia]: [MCTI, Brazilian Artificial Intelligence Plan](https://www.gov.br/mcti/pt-br/centrais-de-conteudo/publicacoes-mcti/plano-brasileiro-de-inteligencia-artificial/pbia_mcti_2025.pdf).
 [^redata]: [Federal Senate, PL 278/2026](https://www25.senado.leg.br/web/atividade/materias/-/materia/172786).
 [^pecem]: [Bloomberg, ByteDance project in Brazil](https://www.bloomberg.com/news/articles/2026-07-01/bytedance-escolhe-brasil-para-maior-data-center-fora-da-china) and [w.media, construction begins](https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/).
+[^environment]: [CONAMA Motion No. 147/2026](https://conama.mma.gov.br/?id=858&option=com_sisconama&task=arquivo.download) and [Semace on data-center environmental licensing](https://www.ce.gov.br/semace/2026/05/29/semace-destaca-experiencia-do-ceara-no-licenciamento-ambiental-de-data-centers-em-congresso-nacional/).
+[^reuse]: [TikTok, announcement of the Pecém project](https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-r-200-billhoes?lang=pt-BR).
+[^transmission]: [EPE, transmission solution for electro-intensive loads in Ceará and Piauí](https://www.epe.gov.br/pt/imprensa/noticias/epe-propoe-solucao-de-transmissao-flexivel-e-escalonavel-para-atendimento-a-ate-4gw-de-cargas-eletrointensivas-no-ceara-e-piaui).
 [^diffusion]: [Federal Register, Framework for Artificial Intelligence Diffusion](https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion).

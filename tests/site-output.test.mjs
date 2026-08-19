@@ -61,7 +61,7 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
     assert.ok(html.includes(`id="${id}"`), `scenario must contain #${id}`);
   }
   assert.match(pt, /id="notas-label">Notas</);
-  assert.match(pt, /aria-label="Voltar à referência 7"/);
+  assert.match(pt, /aria-label="Voltar à referência 10"/);
   assert.doesNotMatch(pt, />Footnotes<|Back to reference/);
 });
 
@@ -83,7 +83,7 @@ test("all Markdown documents exist and disclose draft status", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /status: (rascunho-de-trabalho|working-draft)/);
-    assert.match(markdown, /sourceRevision: 2026-08-07-risk-sovereignty-scenario-v0\.2/);
+    assert.match(markdown, /sourceRevision: 2026-08-19-pecem-public-bargain-v0\.3/);
   }
 });
 
