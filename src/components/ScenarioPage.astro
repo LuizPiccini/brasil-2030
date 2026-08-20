@@ -42,11 +42,6 @@ const text = locale === "pt" ? {
   ],
   disclaimer: "Este é um cenário, não uma previsão. Os fatos de 2026 são documentados; os eventos de 2027 a 2030 formam uma trajetória possível construída para testar escolhas disponíveis hoje. A edição em português orienta o trabalho editorial.",
   timeline: "Linha do tempo",
-  aside: "Tese de leitura",
-  equation: "O Brasil deve ajudar a desacelerar a corrida, preparar-se para uma falha de coordenação e usar energia para garantir acesso defensivo.",
-  asideCopy: "A corrida cria o risco; a dependência amplia o dano. Energia e data centers geram soberania quando contratos reservam acesso e os projetos assumem custos hídricos, elétricos e territoriais.",
-  metrics: [["Coordenação global", "em construção"], ["Soberania de inferência", "não medida"], ["Status editorial", "rascunho"]],
-  key: "Fatos de 2026 aparecem com fontes. Os choques posteriores recebem rótulos de cenário ou invenção narrativa.",
   current: "Capítulo",
 } : {
   eyebrow: "A scenario for Brazil",
@@ -66,13 +61,190 @@ const text = locale === "pt" ? {
   ],
   disclaimer: "This is a scenario, not a forecast. The 2026 conditions are documented; the events from 2027 to 2030 form one possible path designed to test choices available today.",
   timeline: "Timeline",
-  aside: "Reading thesis",
-  equation: "Brazil should help slow the race, prepare for coordination failure, and use energy to secure defensive access.",
-  asideCopy: "The race creates risk; dependency increases the damage. Energy and data centers produce sovereignty when contracts reserve access and projects bear their water, power-system, and territorial costs.",
-  metrics: [["Global coordination", "in development"], ["Inference sovereignty", "not measured"], ["Editorial status", "draft"]],
-  key: "Observed 2026 claims include sources. Later shocks carry scenario or narrative-invention labels.",
   current: "Chapter",
 };
+
+const dashboard = locale === "pt" ? {
+  eyebrow: "Estado do Brasil",
+  qualifier: "trajetória qualitativa",
+  scale: "Escala de cenário, 1 a 5",
+  scoreUnit: "de 5",
+  changed: "O que mudou",
+  chainLabel: "Como energia vira soberania",
+  chain: ["Energia", "Rede", "Computação", "Acesso"],
+  note: "O painel resume esta trajetória narrativa. Não mede o Brasil real.",
+  states: [
+    {
+      date: "Ago 2026",
+      title: "Energia sem garantia de acesso",
+      summary: "Projetos chegam antes de o governo medir a capacidade instalada ou negociar direitos de uso.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 2, value: "em alta" },
+        { key: "leverage", label: "Alavanca brasileira", score: 2, value: "potencial" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 1, value: "fraca" },
+      ],
+      facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "Pecém anunciado"], ["Acesso", "sem reserva pública"]],
+      focus: "Camila pergunta quem usa as máquinas. Lourdes pergunta quem fica com a água e os empregos.",
+      mobile: "Risco em alta · Soberania fraca",
+    },
+    {
+      date: "Fim 2027",
+      title: "A defesa aprofunda a dependência",
+      summary: "Agentes defensivos estrangeiros contêm ataques e recebem dados operacionais brasileiros.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 4, value: "alto" },
+        { key: "leverage", label: "Alavanca brasileira", score: 2, value: "física" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 1, value: "dependente" },
+      ],
+      facts: [["Coordenação", "sem limite comum"], ["Infraestrutura", "Pecém opera"], ["Acesso", "defesa importada"]],
+      focus: "A resposta funciona, mas transfere dados e deixa o país sem os pesos ou a infraestrutura que a sustentam.",
+      mobile: "Risco alto · Defesa importada",
+    },
+    {
+      date: "2028",
+      title: "Mediação com autonomia parcial",
+      summary: "O Brasil abre um canal técnico e contrata inferência local de uma empresa chinesa.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 4, value: "alto" },
+        { key: "leverage", label: "Alavanca brasileira", score: 3, value: "em negociação" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 2, value: "parcial" },
+      ],
+      facts: [["Coordenação", "canal brasileiro"], ["Infraestrutura", "acordo local"], ["Acesso", "exposto a dois blocos"]],
+      focus: "O país ganha margem operacional e assume um novo custo geopolítico.",
+      mobile: "Mediação ativa · Autonomia parcial",
+    },
+    {
+      date: "Abr 2029",
+      title: "Máquinas aqui, decisão lá fora",
+      summary: "O Tier 2 limita serviços para brasileiros enquanto a capacidade física continua operando no Ceará.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 5, value: "crítico" },
+        { key: "leverage", label: "Alavanca brasileira", score: 3, value: "subutilizada" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 1, value: "restrita" },
+      ],
+      facts: [["Coordenação", "corrida continua"], ["Infraestrutura", "escala no Ceará"], ["Acesso", "limitado por tier"]],
+      focus: "Território e energia não garantem uso. Operadores e jurisdições estrangeiras controlam a alocação.",
+      mobile: "Tier 2 · Acesso restrito",
+    },
+    {
+      date: "Fim 2029",
+      title: "O governo mede tarde",
+      summary: "A crise força um inventário e condições novas para projetos futuros, sem alterar contratos antigos.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 5, value: "crítico" },
+        { key: "leverage", label: "Alavanca brasileira", score: 3, value: "acionável" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 2, value: "em construção" },
+      ],
+      facts: [["Coordenação", "nova negociação"], ["Infraestrutura", "inventário incompleto"], ["Acesso", "opções futuras"]],
+      focus: "O país começa a converter rede, incentivos e demanda pública em condições contratuais.",
+      mobile: "Inventário tardio · Novas condições",
+    },
+    {
+      date: "2030",
+      title: "Energia começa a gerar escolha",
+      summary: "Contratos, fiscalização e contrapartidas transformam parte da presença física em acesso defensivo.",
+      tracks: [
+        { key: "risk", label: "Risco sistêmico", score: 4, value: "ainda alto" },
+        { key: "leverage", label: "Alavanca brasileira", score: 4, value: "ativa" },
+        { key: "sovereignty", label: "Soberania de inferência", score: 3, value: "parcial" },
+      ],
+      facts: [["Coordenação", "protocolo limitado"], ["Infraestrutura", "rede ampliada"], ["Acesso", "proteção contratada"]],
+      focus: "O Brasil não controla a fronteira. Ganha escolha nos projetos em que negociou acesso antes de entregar energia e incentivos.",
+      mobile: "Alavanca ativa · Proteção parcial",
+    },
+  ],
+} : {
+  eyebrow: "State of Brazil",
+  qualifier: "qualitative trajectory",
+  scale: "Scenario scale, 1 to 5",
+  scoreUnit: "of 5",
+  changed: "What changed",
+  chainLabel: "How energy becomes sovereignty",
+  chain: ["Energy", "Grid", "Compute", "Access"],
+  note: "This panel summarizes the narrative trajectory. It does not measure real-world Brazil.",
+  states: [
+    {
+      date: "Aug 2026",
+      title: "Energy without guaranteed access",
+      summary: "Projects arrive before the government measures installed capacity or negotiates usage rights.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 2, value: "rising" },
+        { key: "leverage", label: "Brazilian leverage", score: 2, value: "potential" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 1, value: "weak" },
+      ],
+      facts: [["Coordination", "early dialogue"], ["Infrastructure", "Pecém announced"], ["Access", "no public reserve"]],
+      focus: "Camila asks who can use the machines. Lourdes asks who gets the water and the jobs.",
+      mobile: "Risk rising · Sovereignty weak",
+    },
+    {
+      date: "Late 2027",
+      title: "Defense deepens dependency",
+      summary: "Foreign defensive agents contain attacks and receive Brazilian operational data.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 4, value: "high" },
+        { key: "leverage", label: "Brazilian leverage", score: 2, value: "physical" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 1, value: "dependent" },
+      ],
+      facts: [["Coordination", "no common limit"], ["Infrastructure", "Pecém online"], ["Access", "imported defense"]],
+      focus: "The response works, but transfers data and leaves Brazil without the weights or infrastructure behind it.",
+      mobile: "Risk high · Defense imported",
+    },
+    {
+      date: "2028",
+      title: "Mediation with partial autonomy",
+      summary: "Brazil opens a technical channel and contracts local inference from a Chinese company.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 4, value: "high" },
+        { key: "leverage", label: "Brazilian leverage", score: 3, value: "in negotiation" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 2, value: "partial" },
+      ],
+      facts: [["Coordination", "Brazilian channel"], ["Infrastructure", "local agreement"], ["Access", "exposed to two blocs"]],
+      focus: "The country gains operating room and takes on a new geopolitical cost.",
+      mobile: "Mediation active · Autonomy partial",
+    },
+    {
+      date: "Apr 2029",
+      title: "Machines here, decisions abroad",
+      summary: "Tier 2 limits services for Brazilians while physical capacity keeps operating in Ceará.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 5, value: "critical" },
+        { key: "leverage", label: "Brazilian leverage", score: 3, value: "underused" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 1, value: "restricted" },
+      ],
+      facts: [["Coordination", "race continues"], ["Infrastructure", "scale in Ceará"], ["Access", "limited by tier"]],
+      focus: "Territory and energy do not guarantee use. Foreign operators and jurisdictions control allocation.",
+      mobile: "Tier 2 · Access restricted",
+    },
+    {
+      date: "Late 2029",
+      title: "The government measures too late",
+      summary: "The crisis forces an inventory and new conditions for future projects without changing old contracts.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 5, value: "critical" },
+        { key: "leverage", label: "Brazilian leverage", score: 3, value: "actionable" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 2, value: "under construction" },
+      ],
+      facts: [["Coordination", "new negotiation"], ["Infrastructure", "incomplete inventory"], ["Access", "future options"]],
+      focus: "Brazil starts turning grid access, incentives, and public demand into contractual terms.",
+      mobile: "Inventory late · New conditions",
+    },
+    {
+      date: "2030",
+      title: "Energy starts to create choice",
+      summary: "Contracts, oversight, and public terms convert some physical presence into defensive access.",
+      tracks: [
+        { key: "risk", label: "Systemic risk", score: 4, value: "still high" },
+        { key: "leverage", label: "Brazilian leverage", score: 4, value: "active" },
+        { key: "sovereignty", label: "Inference sovereignty", score: 3, value: "partial" },
+      ],
+      facts: [["Coordination", "limited protocol"], ["Infrastructure", "grid expanded"], ["Access", "contracted protection"]],
+      focus: "Brazil does not control the frontier. It gains choice where it negotiated access before supplying energy and incentives.",
+      mobile: "Leverage active · Protection partial",
+    },
+  ],
+};
+
+const initialDashboardState = dashboard.states[0];
 ---
 
 <BaseLayout locale={locale} pageKey="scenario" markdownHref={markdownRoutes[locale].scenario} bodyClass="scenario-page">
@@ -133,21 +305,76 @@ const text = locale === "pt" ? {
     </article>
 
     <aside class="reading-aside">
-      <div class="reading-aside-inner">
-        <span class="aside-label">{text.aside}</span>
-        <p class="thesis-equation">{text.equation}</p>
-        <p class="aside-copy">{text.asideCopy}</p>
-        <dl class="metric-list">
-          {text.metrics.map(([label, value]) => <div class="metric-row"><dt>{label}</dt><dd>{value}</dd></div>)}
+      <section
+        class="scenario-dashboard"
+        data-scenario-dashboard
+        data-states={JSON.stringify(dashboard.states)}
+        data-score-unit={dashboard.scoreUnit}
+        aria-labelledby="scenario-dashboard-title"
+      >
+        <header class="dashboard-header">
+          <div>
+            <span class="dashboard-eyebrow">{dashboard.eyebrow}</span>
+            <span class="dashboard-qualifier">{dashboard.qualifier}</span>
+          </div>
+          <time data-dashboard-date>{initialDashboardState.date}</time>
+        </header>
+
+        <div class="dashboard-copy">
+          <h2 id="scenario-dashboard-title" data-dashboard-title>{initialDashboardState.title}</h2>
+          <p data-dashboard-summary>{initialDashboardState.summary}</p>
+        </div>
+
+        <div class="dashboard-tracks" aria-label={dashboard.scale}>
+          {initialDashboardState.tracks.map((track) => (
+            <div class={`dashboard-track dashboard-track-${track.key}`} data-dashboard-track={track.key}>
+              <div class="dashboard-track-label">
+                <span>{track.label}</span>
+                <strong data-track-value>{track.value}</strong>
+              </div>
+              <div
+                class="dashboard-track-dots"
+                data-track-dots
+                role="img"
+                aria-label={`${track.label}: ${track.value}, ${track.score} ${dashboard.scoreUnit}`}
+              >
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <span class={index < track.score ? "is-filled" : ""} data-track-dot aria-hidden="true"></span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <dl class="dashboard-facts">
+          {initialDashboardState.facts.map(([label, value]) => (
+            <div><dt>{label}</dt><dd data-dashboard-fact>{value}</dd></div>
+          ))}
         </dl>
-        <div class="evidence-key"><strong>{locale === "pt" ? "Como ler as evidências" : "How to read the evidence"}</strong>{text.key}</div>
-      </div>
+
+        <div class="dashboard-chain" aria-label={dashboard.chainLabel}>
+          <span>{dashboard.chainLabel}</span>
+          <ol>
+            {dashboard.chain.map((step) => <li>{step}</li>)}
+          </ol>
+        </div>
+
+        <div class="dashboard-focus">
+          <span>{dashboard.changed}</span>
+          <p data-dashboard-focus>{initialDashboardState.focus}</p>
+        </div>
+
+        <p class="dashboard-note">{dashboard.note}</p>
+      </section>
     </aside>
   </div>
 
   <div class="mobile-chapter-bar" aria-live="polite">
     <span>{text.current}</span>
-    <span data-current-chapter>{chapters[0].year}: {chapters[0].label}</span>
+    <span class="mobile-chapter-copy">
+      <span data-current-chapter>{chapters[0].year}: {chapters[0].label}</span>
+      <small data-mobile-state>{initialDashboardState.mobile}</small>
+    </span>
     <a href="#main-content" aria-label={locale === "pt" ? "Voltar ao início" : "Back to top"}>↑</a>
   </div>
 
@@ -155,11 +382,49 @@ const text = locale === "pt" ? {
     (() => {
       const navLinks = Array.from(document.querySelectorAll('.chapter-nav a'));
       const mobileLabel = document.querySelector('[data-current-chapter]');
+      const mobileState = document.querySelector('[data-mobile-state]');
+      const dashboard = document.querySelector('[data-scenario-dashboard]');
+      const scoreUnit = dashboard?.getAttribute('data-score-unit') || '';
+      let dashboardStates = [];
+      try {
+        dashboardStates = JSON.parse(dashboard?.getAttribute('data-states') || '[]');
+      } catch {
+        dashboardStates = [];
+      }
       const chapterEntries = navLinks.map((link) => {
         const id = link.getAttribute('href')?.slice(1);
         return id ? { link, section: document.getElementById(id) } : null;
       }).filter((entry) => entry?.section);
       if (!chapterEntries.length) return;
+
+      const updateDashboard = (index) => {
+        const state = dashboardStates[index];
+        if (!dashboard || !state) return;
+        const setText = (selector, value) => {
+          const element = dashboard.querySelector(selector);
+          if (element) element.textContent = value;
+        };
+        setText('[data-dashboard-date]', state.date);
+        setText('[data-dashboard-title]', state.title);
+        setText('[data-dashboard-summary]', state.summary);
+        setText('[data-dashboard-focus]', state.focus);
+        dashboard.querySelectorAll('[data-dashboard-track]').forEach((trackElement, trackIndex) => {
+          const track = state.tracks[trackIndex];
+          if (!track) return;
+          const value = trackElement.querySelector('[data-track-value]');
+          if (value) value.textContent = track.value;
+          const dots = trackElement.querySelectorAll('[data-track-dot]');
+          dots.forEach((dot, dotIndex) => dot.classList.toggle('is-filled', dotIndex < track.score));
+          const dotGroup = trackElement.querySelector('[data-track-dots]');
+          if (dotGroup) dotGroup.setAttribute('aria-label', `${track.label}: ${track.value}, ${track.score} ${scoreUnit}`);
+        });
+        dashboard.querySelectorAll('[data-dashboard-fact]').forEach((fact, factIndex) => {
+          const nextFact = state.facts[factIndex];
+          if (nextFact) fact.textContent = nextFact[1];
+        });
+        dashboard.setAttribute('data-state-index', String(index));
+        if (mobileState) mobileState.textContent = state.mobile;
+      };
 
       const updateActiveChapter = () => {
         const readingLine = Math.max(96, window.innerHeight * 0.18);
@@ -176,6 +441,7 @@ const text = locale === "pt" ? {
         if (mobileLabel) {
           mobileLabel.textContent = activeEntry.link.getAttribute('data-chapter-label') || '';
         }
+        updateDashboard(chapterEntries.indexOf(activeEntry));
       };
 
       let framePending = false;

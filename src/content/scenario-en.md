@@ -22,6 +22,45 @@ The power system faces a related choice. EPE proposes R$5.68 billion in new tran
 
 The campus makes one distinction visible. A machine can operate in Brazil, consume Brazilian power, and remain under the commercial control of a foreign company. Hosted capacity, contractable access, and political control measure different assets.
 
+<figure class="scenario-visual visual-bargain" aria-labelledby="visual-bargain-title-en">
+  <figcaption>
+    <span class="visual-kicker">Visual 01 · 2026</span>
+    <strong id="visual-bargain-title-en">A data center becomes leverage only through public terms</strong>
+    <small>Energy and territory attract investment. The public bargain determines what remains in Brazil.</small>
+  </figcaption>
+  <div class="bargain-flow">
+    <section class="bargain-side bargain-offer" aria-label="What Brazil offers">
+      <span>Brazil offers</span>
+      <ul>
+        <li>renewable energy</li>
+        <li>grid connection</li>
+        <li>permits and incentives</li>
+        <li>market and territory</li>
+      </ul>
+    </section>
+    <section class="bargain-gate" aria-label="Terms of the public bargain">
+      <span>Public bargain</span>
+      <ol>
+        <li><b>01</b> water limit and drought rule</li>
+        <li><b>02</b> published grid costs</li>
+        <li><b>03</b> community consultation</li>
+        <li><b>04</b> permanent jobs measured</li>
+        <li><b>05</b> Brazilian purchase option</li>
+      </ol>
+    </section>
+    <section class="bargain-side bargain-return" aria-label="What Brazil receives">
+      <span>Brazil receives</span>
+      <ul>
+        <li>contractable access</li>
+        <li>critical continuity</li>
+        <li>auditable local benefits</li>
+        <li>bargaining power</li>
+      </ul>
+    </section>
+  </div>
+  <p class="visual-note"><strong>Reading:</strong> hosting without access transfers costs and preserves operator control. The terms must arrive before the permit, grid connection, and incentive.</p>
+</figure>
+
 <div class="narrative-kicker">Narrative invention · September 2026</div>
 
 ### Water, jobs, and the public bargain
@@ -166,6 +205,41 @@ The United States and China then restrict frontier open-weight releases after au
 
 Pecém's first phase begins operating near the end of the year. The amount of compute on Brazilian soil rises. ByteDance decides which workloads run on the machines.
 
+<figure class="scenario-visual visual-cascade" aria-labelledby="visual-cascade-title-en">
+  <figcaption>
+    <span class="visual-kicker">Visual 02 · 2027</span>
+    <strong id="visual-cascade-title-en">One attack, four points of view</strong>
+    <small>The crisis connects Lourdes's routine to technical, corporate, and legislative decisions.</small>
+  </figcaption>
+  <ol class="cascade-flow" aria-label="Cyber incident chain">
+    <li class="cascade-origin">
+      <span class="cascade-number">01</span>
+      <strong>Offensive agent adapted</strong>
+      <small>Reconnaissance, credentials, and lateral movement begin running in sequence.</small>
+    </li>
+    <li class="cascade-targets">
+      <span class="cascade-number">02</span>
+      <strong>The same attack appears as different crises</strong>
+      <div class="target-grid">
+        <span><b>Lourdes</b> scheduling and records fail</span>
+        <span><b>Rafael</b> incidents pile up at CTIR</span>
+        <span><b>André</b> the bank contains fraud and intrusion</span>
+        <span><b>Camila</b> procurement and law arrive late</span>
+      </div>
+    </li>
+    <li class="cascade-decision">
+      <span class="cascade-number">03</span>
+      <strong>The foreign defense is far better</strong>
+      <small>It blocks the attack but requires deep integration and retention of operational data.</small>
+    </li>
+  </ol>
+  <div class="cascade-outcomes">
+    <section><span>Immediate gain</span><strong>less damage and faster recovery</strong></section>
+    <section><span>Accumulated cost</span><strong>more data abroad and less domestic capacity</strong></section>
+  </div>
+  <p class="visual-note"><strong>Status:</strong> narrative invention designed to show how a technical crisis becomes political dependency.</p>
+</figure>
+
 ## 2028: An attempt at coordination
 
 > **Status:** scenario. The diplomatic channel and its outcomes are inventions, while the risks motivating it are evidence-based.
@@ -207,6 +281,35 @@ Cyberdefense produces the first visible losses. Attackers obtain frontier servic
 The 2027 bargain now carries a different meaning. Brazilian companies supplied data that improved foreign systems. Those systems defend Tier 1 clients with capabilities that many Brazilian customers cannot buy.
 
 Pecém sharpens the contradiction. Its machines run in Ceará and consume Brazilian power. ByteDance controls their allocation. The campus also strengthens the view among US officials that Brazil has become exposed to Chinese infrastructure.
+
+<figure class="scenario-visual visual-capacity" aria-labelledby="visual-capacity-title-en">
+  <figcaption>
+    <span class="visual-kicker">Visual 03 · 2029</span>
+    <strong id="visual-capacity-title-en">Physical capacity is not usable capacity</strong>
+    <small>The diagram shows inclusion, not volume. The 2030 figures remain under development.</small>
+  </figcaption>
+  <div class="capacity-set" role="img" aria-label="Usable capacity and protected continuity are subsets of physical capacity installed in Brazil">
+    <div class="capacity-layer capacity-physical">
+      <span>Physical capacity in Brazil</span>
+      <small>machines, energy, and territory</small>
+      <div class="capacity-layer capacity-usable">
+        <span>Contractable by Brazilians</span>
+        <small>price, quota, and permission</small>
+        <div class="capacity-layer capacity-protected">
+          <span>Protected continuity</span>
+          <small>usage rights during restrictions</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <dl class="control-ledger">
+    <div><dt>Location</dt><dd>Brazil</dd></div>
+    <div><dt>Machine allocation</dt><dd>operator</dd></div>
+    <div><dt>Chip rules</dt><dd>foreign jurisdiction</dd></div>
+    <div><dt>Energy, grid, and permits</dt><dd>Brazilian leverage</dd></div>
+  </dl>
+  <p class="visual-note"><strong>Conclusion:</strong> sovereignty exists only in the share that combines contractual access, technical capacity, and protection from foreign interruption.</p>
+</figure>
 
 ## 2029: A government without an inventory
 
@@ -256,6 +359,34 @@ At the end of the year, the government publishes its first national compute scor
 | National evaluation and adaptation | Fragmented | One institution with limited reach |
 | Continuity under foreign restriction | Untested | Measured as poor, with partial protection |
 | Bargaining power over operators | Little contracted leverage | Leverage over future projects and grid access |
+
+<figure class="scenario-visual visual-leverage" aria-labelledby="visual-leverage-title-en">
+  <figcaption>
+    <span class="visual-kicker">Visual 04 · 2030</span>
+    <strong id="visual-leverage-title-en">Brazil's negotiation map</strong>
+    <small>Brazil gains influence where it controls a needed resource and converts that control into verifiable terms.</small>
+  </figcaption>
+  <div class="leverage-map">
+    <section class="leverage-counterpart leverage-us">
+      <span>United States</span>
+      <dl><div><dt>Controls</dt><dd>chips, tiers, and frontier models</dd></div><div><dt>Brazil asks</dt><dd>exceptions and critical continuity</dd></div></dl>
+    </section>
+    <section class="leverage-center">
+      <span>Brazil brings</span>
+      <ul><li>energy</li><li>grid</li><li>market</li><li>diplomacy</li></ul>
+      <strong>The energy to choose</strong>
+    </section>
+    <section class="leverage-counterpart leverage-china">
+      <span>China</span>
+      <dl><div><dt>Controls</dt><dd>operators and a local alternative</dd></div><div><dt>Brazil asks</dt><dd>access, price, and service commitments</dd></div></dl>
+    </section>
+    <section class="leverage-counterpart leverage-operators">
+      <span>Operators</span>
+      <dl><div><dt>Need</dt><dd>energy, connection, permits, and incentives</dd></div><div><dt>Brazil requires</dt><dd>water transparency, consultation, jobs, and purchase options</dd></div></dl>
+    </section>
+  </div>
+  <div class="leverage-limit"><span>Limit of the strategy</span><p>Brazil still does not control the technological frontier. Its influence depends on contracts signed before capital and energy become committed.</p></div>
+</figure>
 
 Brazil ends 2030 as a middle power with more infrastructure and technical capacity. Frontier-model development and foreign access rules remain outside its control. Brazil gains choice where it used energy, grid access, and demand as negotiating assets.
 

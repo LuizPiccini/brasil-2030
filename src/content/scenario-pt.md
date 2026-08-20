@@ -22,6 +22,45 @@ O sistema elétrico enfrenta sua própria decisão. A EPE propõe R$ 5,68 bilhõ
 
 O campus torna visível uma distinção que as estatísticas costumam esconder. Uma máquina pode operar no Brasil, consumir energia brasileira e continuar sob controle comercial de uma empresa estrangeira. Capacidade hospedada, acesso contratável e controle político medem coisas diferentes.
 
+<figure class="scenario-visual visual-bargain" aria-labelledby="visual-bargain-title-pt">
+  <figcaption>
+    <span class="visual-kicker">Visual 01 · 2026</span>
+    <strong id="visual-bargain-title-pt">O data center só vira alavanca com contrapartidas</strong>
+    <small>Energia e território atraem o investimento. O acordo público determina o que permanece no Brasil.</small>
+  </figcaption>
+  <div class="bargain-flow">
+    <section class="bargain-side bargain-offer" aria-label="O que o Brasil oferece">
+      <span>Brasil oferece</span>
+      <ul>
+        <li>energia renovável</li>
+        <li>conexão à rede</li>
+        <li>licenças e incentivos</li>
+        <li>mercado e território</li>
+      </ul>
+    </section>
+    <section class="bargain-gate" aria-label="Condições do acordo público">
+      <span>Acordo público</span>
+      <ol>
+        <li><b>01</b> limite hídrico e regra para secas</li>
+        <li><b>02</b> custo da rede publicado</li>
+        <li><b>03</b> consulta às comunidades</li>
+        <li><b>04</b> empregos permanentes medidos</li>
+        <li><b>05</b> opção brasileira de compra</li>
+      </ol>
+    </section>
+    <section class="bargain-side bargain-return" aria-label="O que o Brasil recebe">
+      <span>Brasil recebe</span>
+      <ul>
+        <li>acesso contratável</li>
+        <li>continuidade crítica</li>
+        <li>benefício local auditável</li>
+        <li>poder de barganha</li>
+      </ul>
+    </section>
+  </div>
+  <p class="visual-note"><strong>Leitura:</strong> hospedagem sem acesso transfere custos e preserva o controle do operador. As condições precisam entrar antes da licença, da conexão e do incentivo.</p>
+</figure>
+
 <div class="narrative-kicker">Invenção narrativa · setembro de 2026</div>
 
 ### Água, emprego e a contrapartida pública
@@ -166,6 +205,41 @@ Estados Unidos e China restringem novas publicações de pesos de fronteira depo
 
 A primeira fase de Pecém começa a operar no fim do ano. O volume de computação em solo brasileiro cresce. A ByteDance decide quais cargas usam as máquinas.
 
+<figure class="scenario-visual visual-cascade" aria-labelledby="visual-cascade-title-pt">
+  <figcaption>
+    <span class="visual-kicker">Visual 02 · 2027</span>
+    <strong id="visual-cascade-title-pt">Um ataque, quatro pontos de vista</strong>
+    <small>A crise conecta a rotina de Lourdes às decisões técnicas, empresariais e legislativas.</small>
+  </figcaption>
+  <ol class="cascade-flow" aria-label="Cadeia do incidente cibernético">
+    <li class="cascade-origin">
+      <span class="cascade-number">01</span>
+      <strong>Agente ofensivo adaptado</strong>
+      <small>Reconhecimento, credenciais e movimentação passam a rodar em sequência.</small>
+    </li>
+    <li class="cascade-targets">
+      <span class="cascade-number">02</span>
+      <strong>O mesmo ataque aparece como crises diferentes</strong>
+      <div class="target-grid">
+        <span><b>Lourdes</b> agenda e prontuários falham</span>
+        <span><b>Rafael</b> incidentes se acumulam no CTIR</span>
+        <span><b>André</b> o banco contém fraude e intrusão</span>
+        <span><b>Camila</b> contratação e lei chegam tarde</span>
+      </div>
+    </li>
+    <li class="cascade-decision">
+      <span class="cascade-number">03</span>
+      <strong>A defesa estrangeira é muito melhor</strong>
+      <small>Ela bloqueia o ataque, mas exige integração profunda e retenção de dados operacionais.</small>
+    </li>
+  </ol>
+  <div class="cascade-outcomes">
+    <section><span>Ganho imediato</span><strong>menos dano e recuperação mais rápida</strong></section>
+    <section><span>Custo acumulado</span><strong>mais dados fora e menos capacidade própria</strong></section>
+  </div>
+  <p class="visual-note"><strong>Status:</strong> invenção narrativa construída para mostrar como uma crise técnica se transforma em dependência política.</p>
+</figure>
+
 ## 2028: Uma tentativa de coordenação
 
 > **Status:** cenário. A mediação brasileira, seus resultados e os efeitos sobre trabalho e contratos formam invenções narrativas.
@@ -207,6 +281,35 @@ A ciberdefesa mostra as primeiras perdas. Atacantes compram serviços de frontei
 O acordo de 2027 ganha outro significado. Empresas brasileiras forneceram dados para melhorar sistemas estrangeiros. Os mesmos sistemas defendem clientes Tier 1 com capacidades que muitos brasileiros não conseguem comprar.
 
 Pecém expõe a contradição. As máquinas funcionam no Ceará e consomem energia brasileira. A ByteDance controla sua alocação. A escala do campus também reforça, entre autoridades americanas, a percepção de exposição do Brasil à infraestrutura chinesa.
+
+<figure class="scenario-visual visual-capacity" aria-labelledby="visual-capacity-title-pt">
+  <figcaption>
+    <span class="visual-kicker">Visual 03 · 2029</span>
+    <strong id="visual-capacity-title-pt">Capacidade física não é capacidade utilizável</strong>
+    <small>O diagrama mostra relações de inclusão, não volumes. Os números de 2030 continuam em modelagem.</small>
+  </figcaption>
+  <div class="capacity-set" role="img" aria-label="A capacidade utilizável e a continuidade protegida são subconjuntos da capacidade física instalada no Brasil">
+    <div class="capacity-layer capacity-physical">
+      <span>Capacidade física no Brasil</span>
+      <small>máquinas, energia e território</small>
+      <div class="capacity-layer capacity-usable">
+        <span>Contratável por brasileiros</span>
+        <small>preço, cota e permissão</small>
+        <div class="capacity-layer capacity-protected">
+          <span>Continuidade protegida</span>
+          <small>direito de uso durante restrições</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <dl class="control-ledger">
+    <div><dt>Localização</dt><dd>Brasil</dd></div>
+    <div><dt>Alocação das máquinas</dt><dd>operador</dd></div>
+    <div><dt>Regras dos chips</dt><dd>jurisdição estrangeira</dd></div>
+    <div><dt>Energia, rede e licença</dt><dd>alavanca brasileira</dd></div>
+  </dl>
+  <p class="visual-note"><strong>Conclusão:</strong> soberania aparece apenas na parcela que combina acesso contratual, capacidade técnica e proteção contra interrupção externa.</p>
+</figure>
 
 ## 2029: Um governo sem inventário
 
@@ -256,6 +359,34 @@ No fim do ano, o governo publica o primeiro placar nacional de computação. O d
 | Avaliação e adaptação nacional | Fragmentada | Uma instituição com alcance limitado |
 | Continuidade sob restrição externa | Não testada | Medida como fraca, com proteção parcial |
 | Barganha com operadores | Pouco acesso contratado | Alavanca sobre projetos futuros e rede |
+
+<figure class="scenario-visual visual-leverage" aria-labelledby="visual-leverage-title-pt">
+  <figcaption>
+    <span class="visual-kicker">Visual 04 · 2030</span>
+    <strong id="visual-leverage-title-pt">O mapa da negociação brasileira</strong>
+    <small>O Brasil ganha influência onde controla um recurso necessário e consegue converter esse controle em termos verificáveis.</small>
+  </figcaption>
+  <div class="leverage-map">
+    <section class="leverage-counterpart leverage-us">
+      <span>Estados Unidos</span>
+      <dl><div><dt>Controlam</dt><dd>chips, tiers e modelos de fronteira</dd></div><div><dt>Brasil pede</dt><dd>exceções e continuidade crítica</dd></div></dl>
+    </section>
+    <section class="leverage-center">
+      <span>Brasil leva à mesa</span>
+      <ul><li>energia</li><li>rede</li><li>mercado</li><li>diplomacia</li></ul>
+      <strong>Energia para escolher</strong>
+    </section>
+    <section class="leverage-counterpart leverage-china">
+      <span>China</span>
+      <dl><div><dt>Controla</dt><dd>operadores e alternativa local</dd></div><div><dt>Brasil pede</dt><dd>acesso, preço e compromisso de serviço</dd></div></dl>
+    </section>
+    <section class="leverage-counterpart leverage-operators">
+      <span>Operadores</span>
+      <dl><div><dt>Precisam</dt><dd>energia, conexão, licença e incentivos</dd></div><div><dt>Brasil exige</dt><dd>água transparente, consulta, empregos e opção de compra</dd></div></dl>
+    </section>
+  </div>
+  <div class="leverage-limit"><span>Limite da estratégia</span><p>O país continua sem controlar a fronteira tecnológica. Sua influência depende de contratos assinados antes que o capital e a energia fiquem comprometidos.</p></div>
+</figure>
 
 O país encerra 2030 como potência média, com mais infraestrutura e capacidade técnica. O desenvolvimento de modelos de fronteira e as regras estrangeiras continuam fora de seu controle. O Brasil ganha escolha onde usou energia, rede e demanda como ativos de negociação.
 

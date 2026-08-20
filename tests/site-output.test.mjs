@@ -65,6 +65,43 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
   assert.doesNotMatch(pt, />Footnotes<|Back to reference/);
 });
 
+test("scenario dashboard is bilingual, scroll-linked, and explicit about uncertainty", () => {
+  const pt = readFileSync(new URL("index.html", root), "utf8");
+  const en = readFileSync(new URL("en/index.html", root), "utf8");
+  assert.match(pt, /data-scenario-dashboard/);
+  assert.match(pt, /Estado do Brasil/);
+  assert.match(pt, /O painel resume esta trajetória narrativa\. Não mede o Brasil real\./);
+  assert.match(pt, /Risco sistêmico/);
+  assert.match(pt, /Soberania de inferência/);
+  assert.match(en, /State of Brazil/);
+  assert.match(en, /This panel summarizes the narrative trajectory\. It does not measure real-world Brazil\./);
+  assert.match(en, /Systemic risk/);
+  assert.match(en, /Inference sovereignty/);
+  assert.match(pt, /updateDashboard\(chapterEntries\.indexOf\(activeEntry\)\)/);
+  assert.match(en, /updateDashboard\(chapterEntries\.indexOf\(activeEntry\)\)/);
+});
+
+test("the complete scenario visual system renders in both languages", () => {
+  const pt = readFileSync(new URL("index.html", root), "utf8");
+  const en = readFileSync(new URL("en/index.html", root), "utf8");
+  for (const html of [pt, en]) {
+    assert.equal((html.match(/class="scenario-visual /g) || []).length, 4);
+    assert.match(html, /visual-bargain/);
+    assert.match(html, /visual-cascade/);
+    assert.match(html, /visual-capacity/);
+    assert.match(html, /visual-leverage/);
+    assert.doesNotMatch(html, /<svg|<canvas/);
+  }
+  assert.match(pt, /O data center só vira alavanca com contrapartidas/);
+  assert.match(pt, /Um ataque, quatro pontos de vista/);
+  assert.match(pt, /Capacidade física não é capacidade utilizável/);
+  assert.match(pt, /O mapa da negociação brasileira/);
+  assert.match(en, /A data center becomes leverage only through public terms/);
+  assert.match(en, /One attack, four points of view/);
+  assert.match(en, /Physical capacity is not usable capacity/);
+  assert.match(en, /Brazil's negotiation map/);
+});
+
 test("core pages remain discoverable and progressive enhancement is explicit", () => {
   const ptEvidence = readFileSync(new URL("evidencias/index.html", root), "utf8");
   const enEvidence = readFileSync(new URL("en/evidence/index.html", root), "utf8");
@@ -83,7 +120,7 @@ test("all Markdown documents exist and disclose draft status", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /status: (rascunho-de-trabalho|working-draft)/);
-    assert.match(markdown, /sourceRevision: 2026-08-19-pecem-public-bargain-v0\.3/);
+    assert.match(markdown, /sourceRevision: 2026-08-19-visual-system-v0\.4/);
   }
 });
 
