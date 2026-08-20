@@ -191,19 +191,87 @@ O gabinete apoiava o investimento sem conhecer a fonte da água, o custo da rede
 
 > **Status:** invenção narrativa construída a partir das tendências de cibersegurança e dependência observadas em 2026.
 
-Agentes de IA passam a executar tarefas digitais mais longas e a encontrar vulnerabilidades que antes exigiam equipes especializadas. Um laboratório publica pesos abertos de um modelo próximo ao benchmark fictício Mythos.
+O prometido "ciberapocalipse" chegou.
 
-Grupos criminosos adaptam o modelo em poucas semanas. Equipes de ransomware automatizam reconhecimento, roubo de credenciais, escalada de privilégios e movimentação dentro de redes. Atacam universidades, hospitais, sistemas municipais e empresas médias. Muitos alvos brasileiros ainda usam software antigo, controles de identidade frágeis e monitoramento fragmentado.
+Em dezembro, um laboratório chinês publicou pesos abertos de um modelo com capacidades ofensivas comparáveis às do Mythos. Ou seja, a princípio, qualquer um poderia baixar essa inteligência artificial e rodá-la em sua própria máquina.
 
-Bancos e empresas grandes compram agentes defensivos avançados. Organizações menores enfrentam preços altos e integração difícil. Órgãos públicos levam meses para contratar enquanto os ataques continuam.
+Há medidas de mitigação, claro. Primeiramente, o modelo original liberado é treinado para se recusar a colaborar com ataques cibernéticos, por princípio. Logo, não é como se alguém leigo pudesse apenas rodar essa IA para cometer um ataque hacker a partir de seu próprio computador.
 
-Provedores americanos e chineses oferecem uma saída. Eles vendem defesa automatizada por preços que clientes brasileiros conseguem pagar, desde que possam reter dados empresariais para treinamento. Conselhos de administração aceitam. Os agentes reduzem o dano, isolam máquinas e fecham brechas antes que equipes humanas consigam agir.
+Porém, os atacantes não são leigos.
 
-As empresas brasileiras adiam parte do custo financeiro e entregam anos de dados operacionais. Os laboratórios aprendem com registros de compras, logística, finanças e atendimento. Seus clientes no Brasil recebem um serviço. Eles não recebem os pesos, a infraestrutura ou as equipes necessárias para reproduzi-lo.
+Se você tiver acesso aos pesos de um modelo de IA, é fácil fazer com que esse modelo deixe de recusar seus pedidos maliciosos.<sup><a id="ref-abliteracao" href="#nota-abliteracao" aria-label="Nota 10">10</a></sup> Quanto a rodar esses modelos, grupos cibercriminosos internacionais têm se preparado há anos para esse dia. Seja preparando máquinas locais para que estas possam rodar essas inteligências artificiais de forma anônima, ou usando serviços de aluguel de máquinas de forma anônima, esses criminosos já eram experientes no uso de IA para cometer cibercrimes.<sup><a id="ref-cibercrime" href="#nota-cibercrime" aria-label="Nota 11">11</a></sup>
 
-Estados Unidos e China restringem novas publicações de pesos de fronteira depois que ataques autônomos se espalham. O Brasil perde a rota mais barata para adaptar modelos sob controle local. Projetos nacionais continuam, mas seus orçamentos de computação ficam mais distantes da fronteira.
+O número de fraudes contra cidadãos explode. A maioria dos brasileiros usa, em seus e-mails e aplicativos críticos, as mesmas senhas que usa para acessar serviços menos seguros, senhas que hoje vazam como água pela internet. A autenticação de dois fatores não os salva: muitas dessas estão atreladas ao número de telefone, porém, eventos de SIM swap automatizados são comuns: é muito fácil convencer um funcionário de operadora de telefonia a liberar o seu número para um dispositivo novo, quando do outro lado está uma IA convincente e persistente que sabe todos os seus dados pessoais. Transferências ilícitas, cartões clonados, golpes do WhatsApp, esses se tornam comuns, com cada membro da população desesperado, temendo quando será a sua vez de ter a sua conta bancária drenada.
 
-A primeira fase de Pecém começa a operar no fim do ano. O volume de computação em solo brasileiro cresce. A ByteDance decide quais cargas usam as máquinas.
+Porém, ainda mais assustadora é a onda de ransomware que assola o país.<sup><a id="ref-ransomware" href="#nota-ransomware" aria-label="Nota 12">12</a></sup> Empresas, universidades, hospitais, prefeituras, constantemente se veem sem acesso aos seus serviços, vendo apenas um endereço de carteira de criptomoedas a ser pago a um criminoso. Muitos alvos brasileiros ainda usam software antigo, controles de identidade frágeis e monitoramento fragmentado. Se mesmo com toda essa fragilidade, antigamente era preciso que uma invasão a um sistema envolvesse um trabalho especializado nesse tipo de crime, hoje basta pagar o custo financeiro e energético de rodar uma IA maliciosa para realizar esses ataques. Eventualmente, a maioria desses grupos será pega em investigações, porém os mais bem equipados deles se encontram em jurisdições amigáveis como a Rússia, ou mesmo são atores estatais como a Coreia do Norte.<sup><a id="ref-jurisdicoes" href="#nota-jurisdicoes" aria-label="Nota 13">13</a></sup> E o custo de um ransomware é muito maior do que apenas o resgate a ser pago: operações críticas são paralisadas e, constantemente, serviços são interrompidos.
+
+Há ainda maior medo de que ocorram verdadeiros eventos de ciberterrorismo. A interrupção do sistema financeiro nacional, do fornecimento de água,<sup><a id="ref-agua" href="#nota-agua" aria-label="Nota 14">14</a></sup> das cadeias de suprimento logísticas, tudo devido a ataques violentos que não têm outro objetivo senão causar o caos. Lobos solitários, se estiverem dispostos a pagar, podem acessar serviços de IA maliciosos no mercado negro. Assim como hoje um usuário pode pedir que o seu Claude Code ou OpenAI Codex faça um serviço, como organizar seu e-mail, um desses terroristas pode pedir para que uma IA maliciosa derrube o sistema de uma empresa de transporte que abastece uma grande cidade. Por sorte, isso não ocorre: esses serviços são eventualmente desligados por uma série de operações globais, envolvendo vários países, todos temendo esse tipo de ciberterrorismo.
+
+Eventualmente, as fraudes em massa também diminuem: operadoras de telefonia adotam critérios muito mais rigorosos para que se possa mudar de operadora, envolvendo a presença física dos clientes, e a população aprende a ser muito mais cuidadosa com o seu comportamento na internet, em grande parte com a ajuda de um grande programa de governo. Não cessam, claro, e a sensação geral é que a era de ouro dos serviços digitais acabou: a internet é hoje um lugar extremamente inseguro, e os atacantes ainda rondam constantemente.
+
+Quanto às empresas e universidades, uma saída é oferecida por provedores de IA americanos e chineses: sistemas de defesa automatizada, capazes de resistir à ofensa constante de atacantes cibernéticos, são oferecidos a um preço que clientes brasileiros podem pagar, em um plano especial, de custo reduzido, que permite que esses provedores retenham dados empresariais para treinamento. Conselhos de administração aceitam. Isso seria considerado, em outra ocasião, uma rendição inaceitável de segredos empresariais. Porém, hoje, que escolha elas têm?
+
+O contrato é assinado rápido. As empresas brasileiras adiam parte do custo financeiro e entregam anos de dados operacionais: registros de compras, rotas de logística, planilhas de crédito, atendimento ao cliente, tudo aquilo que descreve como uma economia grande realmente funciona. Os provedores estrangeiros recebem um retrato de setores que nenhum benchmark cobre. Os clientes brasileiros recebem um serviço. Eles não recebem os pesos, não recebem a infraestrutura, e não recebem as equipes necessárias para reproduzi-lo.
+
+O setor público não consegue nem esse acordo. Uma prefeitura de porte médio não tem dado nenhum que interesse a um provedor de defesa automatizada, e a contratação ainda passa por pregão, parecer jurídico e dotação orçamentária, um processo que leva meses enquanto o ataque leva minutos. Hospitais universitários e secretarias estaduais descobrem que a proteção comprada pelos bancos está fora do seu alcance. Alguns pagam o resgate em silêncio e registram a despesa como serviço de tecnologia.
+
+A crise, não foi apenas nacional, mas global. Os temidos ataques ciberterroristas, se não acabaram ocorrendo no Brasil, ocorreram em outros países como Índia, Nigéria, Polónia, entre outros. Nenhum deles chegou ao nível de ter uma contaminação no suprimento de água de uma cidade, mas criou caos e interrupções críticas que gerou um pânico na população. Eventualmente, devido a essa crise global, os Estados Unidos e China restringem novas publicações de pesos abertos de fronteira, após essa onda de ataque. Os modelos que já estão abertos os continuarão cedo, mas a fronteira entre modelos privados e modelos públicos aumentará cada vez mais. O risco é muito grande, e a preocupação é de a sociedade vivenciar um terror muito maior do que o vivido no momento, quando os ataques virarem ataques bioterroristas, dado que os modelos de fronteira (ainda fechados) já mostram a capacidade de automatizar toda uma cadeia de geração de virus autônomos.
+
+Infelizmente, modelos de IA nas mão erradas já são considerados armas de destruição em massa.
+
+Uma consequência disso é que o Brasil perdeu o rota mais barata de ter os seus próprios modelos: adaptar modelos de fonte aberta. Projetos nacionais continuam, mas esses são apenas uma ilusão. Não diferente de planos como termos uma cadeia de semicondutores nacionais. Na prática, o plano de uma IA totalmente nacional acabou por hora.
+
+
+<div class="narrative-kicker">Invenção narrativa · agosto de 2027</div>
+
+### A clínica e a resposta da consultoria
+
+O aviso plastificado da recepção tinha três linhas: a clínica não cobrava taxa de agendamento, não pedia código por telefone e não mandava boleto por WhatsApp. Joana tinha impresso o aviso em fevereiro, depois que a filha de um paciente pagou uma taxa que não existia. Em agosto, ninguém mais perguntava sobre o aviso. As pessoas liam e balançavam a cabeça.
+
+Confirmar consulta tinha virado a parte mais lenta do dia. Os pacientes não atendiam número desconhecido. Joana ligava, caía na caixa postal, mandava mensagem, esperava. Dona Marlene, de 71 anos, só atendia ligação depois de uma mensagem com a palavra que tinha combinado com a neta. Alguns pacientes antigos tinham voltado a pagar em dinheiro, porque desativaram o aplicativo do banco depois do susto de um vizinho. No banco ao lado, a fila dobrava o quarteirão nos dias de pagamento. Não era falta de sistema. As pessoas queriam resolver as coisas no guichê, onde dava para ver quem atendia.
+
+Na segunda-feira, o sistema da clínica não abriu. A tela do computador da recepção mostrava um texto em inglês e um endereço de carteira. Joana ligou para o suporte, que ligou para a empresa que instalara o sistema, que respondeu que o problema não era local.
+
+Lourdes achou numa gaveta a agenda de papel de 2019 e passou o dia anotando nomes. A agenda dos três cardiologistas estava dentro do sistema. Os laudos também. Dona Marlene chegou com um pedido de cateterismo marcado havia dois meses e voltou para casa sem data. Na saída, perguntou a Joana de que número a clínica ligaria quando tivesse uma data nova. Joana não soube responder.
+
+O criminoso atendia por um chat. Escrevia em português correto, respondia a qualquer hora e chamava o diretor pelo nome. No terceiro dia, ofereceu desconto por pagamento rápido e um canal de suporte para a recuperação dos arquivos. O diretor pagou no quinto dia. O valor equivalia a quatro meses de faturamento. Ele não registrou ocorrência policial, porque um conhecido comentou que isso atrapalharia o seguro.
+
+O sistema voltou no fim da semana. Os laudos de três pacientes voltaram corrompidos. Não havia a quem reclamar.
+
+Em Brasília, Camila recebeu a resposta da Consultoria Legislativa que pedira em setembro. O documento tinha trinta e uma páginas. Dizia que não havia inventário público da capacidade de computação instalada no país, que os contratos do Complexo do Pecém não eram públicos, e que a legislação vigente não obrigava o empreendedor a reservar capacidade para compradores nacionais.
+
+A resposta chegou numa semana em que o gabinete não falava de outra coisa. A prefeitura do prefeito aliado estava sem folha de pagamento havia nove dias. Secretários municipais ligavam pedindo indicação de empresa de recuperação de dados, como quem pede indicação de médico.
+
+O deputado leu as trinta e uma páginas em pé, pulando parágrafos.
+
+“Aquela sua pergunta do ano passado. A que ia matar o projeto.”
+
+“A da capacidade.”
+
+“Escreve de novo. Como requerimento.”
+
+Na mesma semana, o relator do REDATA circulou uma nova versão do parecer. O argumento tinha mudado de lugar: antes, os incentivos atrairiam investimento; agora, eram questão de segurança nacional. Quanto mais computação em solo brasileiro, melhor. A nova versão continuava sem dizer quem poderia contratar essa computação, em que condições e a que preço.
+
+“Todo mundo virou entusiasta de data center”, disse o chefe de gabinete. “A crise fez a propaganda.”
+
+Camila pensou no sistema da clínica da mãe, fora do ar por uma semana. A crise fazia propaganda de uma proteção que nenhuma clínica poderia contratar.
+
+Camila leu a conclusão da Consultoria duas vezes. Depois ligou para a mãe. O celular tocou até cair na caixa postal: Lourdes não atendia mais número desconhecido, e o número novo de Camila era do gabinete. Ligou para o fixo da recepção, e Lourdes atendeu no segundo toque.
+
+Disse que estava tudo bem, que tinha sido só um problema no computador, que já tinha passado. Perguntou se Camila tinha comprado a passagem para o aniversário de tia Célia. Este ano, Camila tinha.
+
+“O menino da Célia entrou na obra do Pecém”, contou Lourdes. “De capacete branco e tudo. A Célia mandou foto.”
+
+“Que bom, mãe.”
+
+“Contrato de dois anos. Depois eles veem.”
+
+Camila não perguntou o que acontecia depois.
+
+Antes de sair, escreveu o requerimento que o deputado tinha pedido. Solicitava audiência pública sobre acesso contratável à capacidade de computação instalada no país, com as perguntas da consulta de setembro anexadas. Salvou o arquivo como `Pecém - acesso e contrapartidas - requerimento`.
+
+Depois imprimiu as trinta e uma páginas e guardou na pasta. Tinha aprendido, naquele ano, a não confiar que os arquivos estariam no lugar no dia seguinte.
+
 
 <figure class="scenario-visual visual-cascade" aria-labelledby="visual-cascade-title-pt">
   <figcaption>
@@ -264,7 +332,7 @@ O país ainda fornece algo que os laboratórios desejam. O acordo de dados de 20
 
 ## 2029: Tier 2
 
-> **Status:** invenção central do cenário. O regime americano de 2025 criou tiers para chips, pesos e treinamento; a extensão para serviços de inferência não ocorreu até agosto de 2026.<sup><a id="ref-diffusion" href="#nota-diffusion" aria-label="Nota 10">10</a></sup>
+> **Status:** invenção central do cenário. O regime americano de 2025 criou tiers para chips, pesos e treinamento; a extensão para serviços de inferência não ocorreu até agosto de 2026.<sup><a id="ref-diffusion" href="#nota-diffusion" aria-label="Nota 15">15</a></sup>
 
 Robôs aparecem em bairros ricos, fábricas e armazéns. Governos estaduais compram drones e sistemas terrestres para operações contra organizações criminosas. Salvaguardas legais chegam depois da compra. O governo federal evita confrontar governadores que alegam salvar vidas policiais.
 
@@ -421,6 +489,11 @@ O cenário inventa o modelo aberto de 2027, a troca de dados por ciberdefesa, a 
     <li id="nota-ambiente"><p><a href="https://conama.mma.gov.br/?id=858&amp;option=com_sisconama&amp;task=arquivo.download">CONAMA, Moção nº 147/2026</a> e <a href="https://www.ce.gov.br/semace/2026/05/29/semace-destaca-experiencia-do-ceara-no-licenciamento-ambiental-de-data-centers-em-congresso-nacional/">Semace, licenciamento ambiental de data centers</a>. <a href="#ref-ambiente" aria-label="Voltar à referência 7">↩</a></p></li>
     <li id="nota-reuso"><p><a href="https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-r-200-billhoes?lang=pt-BR">TikTok, anúncio do projeto do Pecém</a>. <a href="#ref-reuso" aria-label="Voltar à referência 8">↩</a></p></li>
     <li id="nota-transmissao"><p><a href="https://www.epe.gov.br/pt/imprensa/noticias/epe-propoe-solucao-de-transmissao-flexivel-e-escalonavel-para-atendimento-a-ate-4gw-de-cargas-eletrointensivas-no-ceara-e-piaui">EPE, solução de transmissão para cargas eletrointensivas no Ceará e no Piauí</a>. <a href="#ref-transmissao" aria-label="Voltar à referência 9">↩</a></p></li>
-    <li id="nota-diffusion"><p><a href="https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion">Federal Register, Framework for Artificial Intelligence Diffusion</a>. <a href="#ref-diffusion" aria-label="Voltar à referência 10">↩</a></p></li>
+    <li id="nota-abliteracao"><p><a href="https://webdecoy.com/blog/wtf-are-abliterated-models-uncensored-llms-explained/">WebDecoy, modelos abliterados e a remoção de recusas em modelos abertos</a> e <a href="https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/">OpenAI, estimativa dos riscos de pior caso em modelos de pesos abertos</a>. <a href="#ref-abliteracao" aria-label="Voltar à referência 10">↩</a></p></li>
+    <li id="nota-cibercrime"><p><a href="https://www.trellix.com/blogs/research/weaponized-ai-commoditization-of-cybercrime/">Trellix, IA armada e a comoditização do cibercrime</a>, <a href="https://research.checkpoint.com/2026/ai-threat-landscape-digest-january-february-2026/">Check Point, panorama de ameaças com IA, janeiro e fevereiro de 2026</a> e <a href="https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/the-state-of-criminal-ai">Trend Micro, o estado da IA criminosa</a>. <a href="#ref-cibercrime" aria-label="Voltar à referência 11">↩</a></p></li>
+    <li id="nota-ransomware"><p><a href="https://www.chainalysis.com/blog/2026-crypto-crime-report-introduction/">Chainalysis, Crypto Crime Report 2026</a>. <a href="#ref-ransomware" aria-label="Voltar à referência 12">↩</a></p></li>
+    <li id="nota-jurisdicoes"><p><a href="https://www.chainalysis.com/blog/ofac-targets-russian-cybercrime-infrastructure-ransomware-november-2025/">Chainalysis, sanções da OFAC contra infraestrutura de cibercrime na Rússia</a> e <a href="https://www.38north.org/2026/01/from-digital-kleptocracy-to-rogue-crypto-superpower/">38 North, da cleptocracia digital à superpotência cripto</a>. <a href="#ref-jurisdicoes" aria-label="Voltar à referência 13">↩</a></p></li>
+    <li id="nota-agua"><p><a href="https://abc7ny.com/post/water-system-hacking-fbi-investigates-cyberattacks-michigan-minnesota-amid-warning-possible-iran-hackers/19614740/">ABC7, FBI investiga ataques cibernéticos a sistemas de água em Michigan e Minnesota</a>. <a href="#ref-agua" aria-label="Voltar à referência 14">↩</a></p></li>
+    <li id="nota-diffusion"><p><a href="https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion">Federal Register, Framework for Artificial Intelligence Diffusion</a>. <a href="#ref-diffusion" aria-label="Voltar à referência 15">↩</a></p></li>
   </ol>
 </section>
