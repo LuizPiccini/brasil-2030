@@ -172,9 +172,66 @@ Eventualmente, as fraudes em massa também diminuem: operadoras de telefonia ado
 
 Quanto às empresas e universidades, uma saída é oferecida por provedores de IA americanos e chineses: sistemas de defesa automatizada, capazes de resistir à ofensa constante de atacantes cibernéticos, são oferecidos a um preço que clientes brasileiros podem pagar, em um plano especial, de custo reduzido, que permite que esses provedores retenham dados empresariais para treinamento. Conselhos de administração aceitam. Isso seria considerado, em outra ocasião, uma rendição inaceitável de segredos empresariais. Porém, hoje, que escolha elas têm?
 
-Devido a essa crise global, eventualmente os Estados Unidos e a China restringem novas publicações de pesos de fronteira depois que ataques autônomos se espalham. O Brasil perde a rota mais barata para adaptar modelos sob controle local. Projetos nacionais continuam, mas seus orçamentos de computação ficam mais distantes da fronteira.
+O contrato é assinado rápido. As empresas brasileiras adiam parte do custo financeiro e entregam anos de dados operacionais: registros de compras, rotas de logística, planilhas de crédito, atendimento ao cliente, tudo aquilo que descreve como uma economia grande realmente funciona. Os provedores estrangeiros recebem um retrato de setores que nenhum benchmark cobre. Os clientes brasileiros recebem um serviço. Eles não recebem os pesos, não recebem a infraestrutura, e não recebem as equipes necessárias para reproduzi-lo.
 
-A primeira fase de Pecém começa a operar no fim do ano. O volume de computação em solo brasileiro cresce. A ByteDance decide quais cargas usam as máquinas.
+O setor público não consegue nem esse acordo. Uma prefeitura de porte médio não tem dado nenhum que interesse a um provedor de defesa automatizada, e a contratação ainda passa por pregão, parecer jurídico e dotação orçamentária, um processo que leva meses enquanto o ataque leva minutos. Hospitais universitários e secretarias estaduais descobrem que a proteção comprada pelos bancos está fora do seu alcance. Alguns pagam o resgate em silêncio e registram a despesa como serviço de tecnologia.
+
+A crise, não foi apenas nacional, mas global. Os temidos ataques ciberterroristas, se não acabaram ocorrendo no Brasil, ocorreram em outros países como Índia, Nigéria, Polónia, entre outros. Nenhum deles chegou ao nível de ter uma contaminação no suprimento de água de uma cidade, mas criou caos e interrupções críticas que gerou um pânico na população. Eventualmente, devido a essa crise global, os Estados Unidos e China restringem novas publicações de pesos abertos de fronteira, após essa onda de ataque. Os modelos que já estão abertos os continuarão cedo, mas a fronteira entre modelos privados e modelos públicos aumentará cada vez mais. O risco é muito grande, e a preocupação é de a sociedade vivenciar um terror muito maior do que o vivido no momento, quando os ataques virarem ataques bioterroristas, dado que os modelos de fronteira (ainda fechados) já mostram a capacidade de automatizar toda uma cadeia de geração de virus autônomos.
+
+Infelizmente, modelos de IA nas mão erradas já são considerados armas de destruição em massa.
+
+Uma consequência disso é que o Brasil perdeu o rota mais barata de ter os seus próprios modelos: adaptar modelos de fonte aberta. Projetos nacionais continuam, mas esses são apenas uma ilusão. Não diferente de planos como termos uma cadeia de semicondutores nacionais. Na prática, o plano de uma IA totalmente nacional acabou por hora.
+
+
+<div class="narrative-kicker">Invenção narrativa · agosto de 2027</div>
+
+### A clínica e a resposta da consultoria
+
+O aviso plastificado da recepção tinha três linhas: a clínica não cobrava taxa de agendamento, não pedia código por telefone e não mandava boleto por WhatsApp. Joana tinha impresso o aviso em fevereiro, depois que a filha de um paciente pagou uma taxa que não existia. Em agosto, ninguém mais perguntava sobre o aviso. As pessoas liam e balançavam a cabeça.
+
+Confirmar consulta tinha virado a parte mais lenta do dia. Os pacientes não atendiam número desconhecido. Joana ligava, caía na caixa postal, mandava mensagem, esperava. Dona Marlene, de 71 anos, só atendia ligação depois de uma mensagem com a palavra que tinha combinado com a neta. Alguns pacientes antigos tinham voltado a pagar em dinheiro, porque desativaram o aplicativo do banco depois do susto de um vizinho. No banco ao lado, a fila dobrava o quarteirão nos dias de pagamento. Não era falta de sistema. As pessoas queriam resolver as coisas no guichê, onde dava para ver quem atendia.
+
+Na segunda-feira, o sistema da clínica não abriu. A tela do computador da recepção mostrava um texto em inglês e um endereço de carteira. Joana ligou para o suporte, que ligou para a empresa que instalara o sistema, que respondeu que o problema não era local.
+
+Lourdes achou numa gaveta a agenda de papel de 2019 e passou o dia anotando nomes. A agenda dos três cardiologistas estava dentro do sistema. Os laudos também. Dona Marlene chegou com um pedido de cateterismo marcado havia dois meses e voltou para casa sem data. Na saída, perguntou a Joana de que número a clínica ligaria quando tivesse uma data nova. Joana não soube responder.
+
+O criminoso atendia por um chat. Escrevia em português correto, respondia a qualquer hora e chamava o diretor pelo nome. No terceiro dia, ofereceu desconto por pagamento rápido e um canal de suporte para a recuperação dos arquivos. O diretor pagou no quinto dia. O valor equivalia a quatro meses de faturamento. Ele não registrou ocorrência policial, porque um conhecido comentou que isso atrapalharia o seguro.
+
+O sistema voltou no fim da semana. Os laudos de três pacientes voltaram corrompidos. Não havia a quem reclamar.
+
+Em Brasília, Camila recebeu a resposta da Consultoria Legislativa que pedira em setembro. O documento tinha trinta e uma páginas. Dizia que não havia inventário público da capacidade de computação instalada no país, que os contratos do Complexo do Pecém não eram públicos, e que a legislação vigente não obrigava o empreendedor a reservar capacidade para compradores nacionais.
+
+A resposta chegou numa semana em que o gabinete não falava de outra coisa. A prefeitura do prefeito aliado estava sem folha de pagamento havia nove dias. Secretários municipais ligavam pedindo indicação de empresa de recuperação de dados, como quem pede indicação de médico.
+
+O deputado leu as trinta e uma páginas em pé, pulando parágrafos.
+
+“Aquela sua pergunta do ano passado. A que ia matar o projeto.”
+
+“A da capacidade.”
+
+“Escreve de novo. Como requerimento.”
+
+Na mesma semana, o relator do REDATA circulou uma nova versão do parecer. O argumento tinha mudado de lugar: antes, os incentivos atrairiam investimento; agora, eram questão de segurança nacional. Quanto mais computação em solo brasileiro, melhor. A nova versão continuava sem dizer quem poderia contratar essa computação, em que condições e a que preço.
+
+“Todo mundo virou entusiasta de data center”, disse o chefe de gabinete. “A crise fez a propaganda.”
+
+Camila pensou no sistema da clínica da mãe, fora do ar por uma semana. A crise fazia propaganda de uma proteção que nenhuma clínica poderia contratar.
+
+Camila leu a conclusão da Consultoria duas vezes. Depois ligou para a mãe. O celular tocou até cair na caixa postal: Lourdes não atendia mais número desconhecido, e o número novo de Camila era do gabinete. Ligou para o fixo da recepção, e Lourdes atendeu no segundo toque.
+
+Disse que estava tudo bem, que tinha sido só um problema no computador, que já tinha passado. Perguntou se Camila tinha comprado a passagem para o aniversário de tia Célia. Este ano, Camila tinha.
+
+“O menino da Célia entrou na obra do Pecém”, contou Lourdes. “De capacete branco e tudo. A Célia mandou foto.”
+
+“Que bom, mãe.”
+
+“Contrato de dois anos. Depois eles veem.”
+
+Camila não perguntou o que acontecia depois.
+
+Antes de sair, escreveu o requerimento que o deputado tinha pedido. Solicitava audiência pública sobre acesso contratável à capacidade de computação instalada no país, com as perguntas da consulta de setembro anexadas. Salvou o arquivo como `Pecém - acesso e contrapartidas - requerimento`.
+
+Depois imprimiu as trinta e uma páginas e guardou na pasta. Tinha aprendido, naquele ano, a não confiar que os arquivos estariam no lugar no dia seguinte.
 
 
 ## 2028: Uma tentativa de coordenação
