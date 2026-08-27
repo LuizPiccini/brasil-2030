@@ -7,6 +7,18 @@ const { locale } = Astro.props;
 const pt = locale === "pt";
 const evidence = [
   {
+    kind: "fact", labelPt: "Situação legislativa", labelEn: "Legislative status", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Em 27 de agosto de 2026, o PL 278/2026 estava no Plenário do Senado, sem relator definido e com 22 emendas. A Presidência do Senado anunciou a matéria entre as prioridades da semana de 31 de agosto a 4 de setembro.",
+    claimEn: "On August 27, 2026, Bill 278/2026 was before the Senate plenary, had no appointed rapporteur, and had received 22 amendments. The Senate president listed it among priorities for the August 31 to September 4 session week.",
+    source: "Senado Federal / Agência Senado", url: "https://www12.senado.leg.br/noticias/materias/2026/08/26/davi-alcolumbre-acerta-prioridades-do-congresso-em-reuniao-com-lula-e-motta", checked: "27/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Texto aprovado", labelEn: "Passed text", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O texto da Câmara prevê 10% de oferta doméstica, mas mede o percentual pela receita. Permite substituição integral por investimento adicional em P&D e reduz o compromisso para 8% em regiões incentivadas.",
+    claimEn: "The Chamber text provides for 10% domestic supply but measures the share through revenue. It allows full substitution through additional R&D and lowers the commitment to 8% in incentivized regions.",
+    source: "Agência Câmara, REDATA", url: "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/", checked: "27/08/2026",
+  },
+  {
     kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
     claimPt: "A oferta interna de eletricidade do Brasil chegou a 783,3 TWh em 2025, com 86,8% de fontes renováveis.",
     claimEn: "Brazil's domestic electricity supply reached 783.3 TWh in 2025, with 86.8% from renewable sources.",
@@ -74,27 +86,27 @@ const evidence = [
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
-    claimPt: "Camila e Lourdes acompanham, em setembro de 2026, uma reunião e uma reportagem fictícias que condensam as controvérsias públicas sobre Pecém.",
-    claimEn: "In September 2026, Camila and Lourdes encounter a fictional meeting and news report that condense the public controversies surrounding Pecém.",
-    source: pt ? "Cena de 2026" : "2026 scene", url: pt ? "/#água-emprego-e-a-contrapartida-pública" : "/en#water-jobs-and-the-public-bargain", checked: "19/08/2026",
+    claimPt: "Camila transforma as dúvidas de Lourdes sobre o REDATA em uma nota para o deputado durante o esforço concentrado de agosto de 2026.",
+    claimEn: "Camila turns Lourdes's questions about REDATA into a memo for the congressman during the August 2026 session push.",
+    source: pt ? "Cena de 2026" : "2026 scene", url: pt ? "/#2026-o-ponto-de-bifurcação" : "/en#2026-the-branching-point", checked: "27/08/2026",
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
-    claimPt: "Os Estados Unidos estendem tiers a serviços de inferência em 2029 e classificam o Brasil como Tier 2.",
-    claimEn: "The United States extends country tiers to inference services in 2029 and assigns Brazil to Tier 2.",
-    source: pt ? "Mecanismo central do cenário" : "Core scenario mechanism", url: pt ? "/#2029-tier-2" : "/en#2029-tier-2", checked: "06/08/2026",
+    claimPt: "No cenário negativo, Estados Unidos e China ampliam controles sobre chips, modelos, serviços de inferência e equipamentos de rede em 2029.",
+    claimEn: "In the negative scenario, the United States and China expand controls over chips, models, inference services, and network equipment in 2029.",
+    source: pt ? "Cenário negativo" : "Negative scenario", url: pt ? "/#2029-escolha-forçada" : "/en#2029-a-forced-choice", checked: "27/08/2026",
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
     claimPt: "Empresas brasileiras trocam dados operacionais por ciberdefesa estrangeira após uma onda de ransomware em 2027.",
     claimEn: "Brazilian firms exchange operational data for foreign cyberdefense after a ransomware wave in 2027.",
-    source: pt ? "Premissa do cenário" : "Scenario premise", url: pt ? "/#2027-a-defesa-aprofunda-a-dependência" : "/en#2027-defense-deepens-dependency", checked: "06/08/2026",
+    source: pt ? "Cenário negativo" : "Negative scenario", url: pt ? "/#2027-defesa-dependente" : "/en#2027-dependent-defense", checked: "27/08/2026",
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
     claimPt: "O Brasil abre um canal técnico entre China e Estados Unidos em 2028 e ajuda a negociar um protocolo limitado de segurança até 2030.",
     claimEn: "Brazil opens a technical channel between China and the United States in 2028 and helps negotiate a limited safety protocol by 2030.",
-    source: pt ? "Trajetória diplomática do cenário" : "Scenario diplomatic path", url: pt ? "/#2028-uma-tentativa-de-coordenação" : "/en#2028-an-attempt-at-coordination", checked: "07/08/2026",
+    source: pt ? "Cenário positivo" : "Positive scenario", url: pt ? "/#2028-a-coordenação-ganha-forma" : "/en#2028-coordination-takes-shape", checked: "27/08/2026",
   },
   {
     kind: "open", labelPt: "Proposta em aberto", labelEn: "Open proposal", confidencePt: "Aberta", confidenceEn: "Open",

@@ -1,17 +1,18 @@
 export type Locale = "pt" | "en";
-export type PageKey = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
+export type PageKey = "scenario" | "summary" | "redata" | "evidence" | "strategy" | "letter" | "about";
 
 export const siteCopy = {
   pt: {
     locale: "pt-BR",
     shortLocale: "PT",
     title: "Brasil 2030: Energia para Escolher",
-    description: "Um cenário sobre como o Brasil pode ajudar a desacelerar a corrida da IA, proteger sua infraestrutura e transformar energia em soberania de inferência.",
+    description: "Dois cenários sobre como escolhas em risco, diplomacia e computação podem mudar a posição do Brasil até 2030.",
     status: "Rascunho de trabalho",
-    updated: "19 ago 2026",
+    updated: "27 ago 2026",
     nav: {
-      scenario: "Cenário",
+      scenario: "Cenários",
       summary: "Resumo",
+      redata: "REDATA",
       evidence: "Evidências",
       strategy: "Estratégia",
       letter: "Carta",
@@ -26,12 +27,13 @@ export const siteCopy = {
     locale: "en",
     shortLocale: "EN",
     title: "Brazil 2030: The Energy to Choose",
-    description: "A scenario about how Brazil can help slow the AI race, protect critical infrastructure, and turn energy into inference sovereignty.",
+    description: "Two scenarios for how choices about risk, diplomacy, and compute could change Brazil's position through 2030.",
     status: "Working draft",
-    updated: "19 Aug 2026",
+    updated: "27 Aug 2026",
     nav: {
-      scenario: "Scenario",
+      scenario: "Scenarios",
       summary: "Summary",
+      redata: "REDATA",
       evidence: "Evidence",
       strategy: "Strategy",
       letter: "Letter",
@@ -48,6 +50,7 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
   pt: {
     scenario: "/",
     summary: "/resumo",
+    redata: "/redata",
     evidence: "/evidencias",
     strategy: "/estrategia",
     letter: "/carta-aberta",
@@ -56,6 +59,7 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
   en: {
     scenario: "/en",
     summary: "/en/summary",
+    redata: "/en/redata",
     evidence: "/en/evidence",
     strategy: "/en/strategy",
     letter: "/en/open-letter",
@@ -67,6 +71,7 @@ export const markdownRoutes: Record<Locale, Record<PageKey, string>> = {
   pt: {
     scenario: "/cenario.md",
     summary: "/resumo.md",
+    redata: "/redata.md",
     evidence: "/evidencias.md",
     strategy: "/estrategia.md",
     letter: "/carta-aberta.md",
@@ -75,6 +80,7 @@ export const markdownRoutes: Record<Locale, Record<PageKey, string>> = {
   en: {
     scenario: "/en/scenario.md",
     summary: "/en/summary.md",
+    redata: "/en/redata.md",
     evidence: "/en/evidence.md",
     strategy: "/en/strategy.md",
     letter: "/en/open-letter.md",

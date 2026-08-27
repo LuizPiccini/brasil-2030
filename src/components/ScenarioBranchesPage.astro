@@ -1,0 +1,305 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ScenarioCommonPt from "../content/scenario-common-pt.md";
+import ScenarioCommonEn from "../content/scenario-common-en.md";
+import ScenarioPositivePt from "../content/scenario-positive-pt.md";
+import ScenarioPositiveEn from "../content/scenario-positive-en.md";
+import ScenarioNegativePt from "../content/scenario-negative-pt.md";
+import ScenarioNegativeEn from "../content/scenario-negative-en.md";
+import { markdownRoutes, routes, siteCopy, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const copy = siteCopy[locale];
+const CommonContent = pt ? ScenarioCommonPt : ScenarioCommonEn;
+const PositiveContent = pt ? ScenarioPositivePt : ScenarioPositiveEn;
+const NegativeContent = pt ? ScenarioNegativePt : ScenarioNegativeEn;
+
+const text = pt ? {
+  eyebrow: "Dois cenários para o Brasil",
+  titleCountry: "Brasil 2030",
+  titleLine: "Energia para Escolher",
+  deck: "As mesmas pressões globais podem levar o Brasil a dois futuros. A diferença está nas decisões sobre risco, diplomacia e acesso à computação.",
+  positive: "Cenário positivo",
+  positiveTitle: "Coordenação e margem de escolha",
+  positiveDeck: "O Brasil ajuda a desacelerar a corrida e transforma energia em capacidade contratável.",
+  negative: "Cenário negativo",
+  negativeTitle: "Corrida e dependência",
+  negativeDeck: "A coordenação falha e a infraestrutura instalada não garante acesso brasileiro.",
+  summary: "Resumo de 5 minutos",
+  disclaimer: "Estes cenários não são previsões. Eles usam os mesmos riscos externos para testar quanto as escolhas brasileiras de 2026 mudam a capacidade do país em 2030. O cenário positivo exige várias decisões corretas; o negativo combina falhas plausíveis.",
+  forkEyebrow: "Ponto de decisão",
+  forkTitle: "Escolha um caminho",
+  forkIntro: "Os dois ramos compartilham o contexto de 2026. A partir de 2027, coordenação internacional e capacidade doméstica começam a separar os resultados.",
+  matrixTitle: "Dois eixos, quatro resultados possíveis",
+  matrixColumns: ["Brasil constrói capacidade", "Brasil não constrói capacidade"],
+  matrixRows: ["EUA e China desaceleram", "A corrida continua"],
+  matrixCells: ["Margem de escolha", "Desaceleração com dependência", "Resiliência sob pressão", "Dependência em cascata"],
+  timeline: "Linha do tempo",
+  current: "Capítulo",
+  panelTitle: "Estado do Brasil",
+  panelStatus: "trajetória qualitativa",
+  scale: "Escala de cenário, 1 a 5",
+  scoreUnit: "de 5",
+  changed: "O que mudou",
+  note: "O painel resume a trajetória selecionada. Não mede o Brasil real.",
+} : {
+  eyebrow: "Two scenarios for Brazil",
+  titleCountry: "Brazil 2030",
+  titleLine: "The Energy to Choose",
+  deck: "The same global pressures can lead Brazil toward two futures. Decisions about risk, diplomacy, and compute access create the difference.",
+  positive: "Positive scenario",
+  positiveTitle: "Coordination and room to choose",
+  positiveDeck: "Brazil helps slow the race and turns energy into contractable capacity.",
+  negative: "Negative scenario",
+  negativeTitle: "Race and dependence",
+  negativeDeck: "Coordination fails and installed infrastructure does not guarantee Brazilian access.",
+  summary: "Five-minute summary",
+  disclaimer: "These scenarios are not forecasts. They use the same external risks to test how Brazilian choices made in 2026 change the country's position in 2030. The positive scenario requires several decisions to go right; the negative scenario combines plausible failures.",
+  forkEyebrow: "Decision point",
+  forkTitle: "Choose a path",
+  forkIntro: "Both branches share the 2026 context. From 2027 onward, international coordination and domestic capacity begin to separate the outcomes.",
+  matrixTitle: "Two axes, four possible outcomes",
+  matrixColumns: ["Brazil builds capacity", "Brazil does not build capacity"],
+  matrixRows: ["US and China slow down", "The race continues"],
+  matrixCells: ["Room to choose", "Slowdown with dependence", "Resilience under pressure", "Cascading dependence"],
+  timeline: "Timeline",
+  current: "Chapter",
+  panelTitle: "State of Brazil",
+  panelStatus: "qualitative trajectory",
+  scale: "Scenario scale, 1 to 5",
+  scoreUnit: "of 5",
+  changed: "What changed",
+  note: "This panel summarizes the selected trajectory. It does not measure real-world Brazil.",
+};
+
+const commonChapter = pt
+  ? { year: "2026", label: "A decisão", href: "#2026-o-ponto-de-bifurcação" }
+  : { year: "2026", label: "The decision", href: "#2026-the-branching-point" };
+const branchChapters = {
+  positive: pt ? [
+    { year: "2027", label: "Primeiro choque", href: "#2027-o-primeiro-choque" },
+    { year: "2028", label: "Coordenação", href: "#2028-a-coordenação-ganha-forma" },
+    { year: "2029", label: "Potência média", href: "#2029-potência-intermediária" },
+    { year: "2030", label: "Escolha", href: "#2030-margem-de-escolha" },
+  ] : [
+    { year: "2027", label: "First shock", href: "#2027-the-first-shock" },
+    { year: "2028", label: "Coordination", href: "#2028-coordination-takes-shape" },
+    { year: "2029", label: "Middle power", href: "#2029-a-middle-power" },
+    { year: "2030", label: "Choice", href: "#2030-room-to-choose" },
+  ],
+  negative: pt ? [
+    { year: "2027", label: "Defesa dependente", href: "#2027-defesa-dependente" },
+    { year: "2028", label: "Corrida", href: "#2028-a-corrida-continua" },
+    { year: "2029", label: "Escolha forçada", href: "#2029-escolha-forçada" },
+    { year: "2030", label: "Dependência", href: "#2030-dependência-em-cascata" },
+  ] : [
+    { year: "2027", label: "Dependent defense", href: "#2027-dependent-defense" },
+    { year: "2028", label: "Race", href: "#2028-the-race-continues" },
+    { year: "2029", label: "Forced choice", href: "#2029-a-forced-choice" },
+    { year: "2030", label: "Dependence", href: "#2030-cascading-dependence" },
+  ],
+};
+
+const dashboardStates = pt ? {
+  positive: [
+    { date: "Ago 2026", title: "A primeira barganha", summary: "O Senado decide se o incentivo cria apenas instalações ou também capacidade contratável.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "em disputa"]], focus: "A lei, os contratos e a fiscalização começam a definir quem poderá usar as máquinas.", mobile: "Risco em alta · Acesso em disputa" },
+    { date: "2027", title: "O choque encontra uma alternativa", summary: "Ataques crescem e a defesa estrangeira continua superior, mas cargas críticas ganham uma opção local.", tracks: [["risk", "Risco sistêmico", 4, "alto"], ["leverage", "Alavanca brasileira", 3, "em construção"], ["sovereignty", "Soberania de inferência", 2, "parcial"]], facts: [["Coordenação", "pressão por acordo"], ["Infraestrutura", "primeiros contratos"], ["Acesso", "opção local"]], focus: "Lourdes, Rafael, André e Camila veem lados diferentes da mesma crise.", mobile: "Risco alto · Opção local" },
+    { date: "2028", title: "Coordenação limitada", summary: "Brasil ajuda EUA e China a criar notificações, avaliações comuns e pausas curtas por gatilho.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 4, "diplomática"], ["sovereignty", "Soberania de inferência", 3, "em expansão"]], facts: [["Coordenação", "acordo limitado"], ["Infraestrutura", "demanda agregada"], ["Acesso", "mercado nascente"]], focus: "Capacidade técnica e infraestrutura dão substância à mediação brasileira.", mobile: "Acordo limitado · Mercado nascente" },
+    { date: "2029", title: "Potência intermediária", summary: "Energia, rede e capacidade contratável sustentam negociações com os dois blocos.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 4, "ativa"], ["sovereignty", "Soberania de inferência", 4, "relevante"]], facts: [["Coordenação", "limites mantidos"], ["Infraestrutura", "acesso auditado"], ["Acesso", "fornecedores locais"]], focus: "O país aceita alguns custos de alinhamento e preserva alternativas em outros pontos.", mobile: "Leverage ativa · Alternativas" },
+    { date: "2030", title: "Margem de escolha", summary: "Brasil não controla a fronteira, mas consegue contratar, avaliar e manter parte dos serviços críticos.", tracks: [["risk", "Risco sistêmico", 3, "ainda presente"], ["leverage", "Alavanca brasileira", 5, "consolidada"], ["sovereignty", "Soberania de inferência", 4, "parcial forte"]], facts: [["Coordenação", "protocolo verificável"], ["Infraestrutura", "inventário público"], ["Acesso", "continuidade testada"]], focus: "O resultado combina diplomacia, contratos e um mercado doméstico de inferência.", mobile: "Potência intermediária · Escolha" },
+  ],
+  negative: [
+    { date: "Ago 2026", title: "A primeira barganha", summary: "O incentivo falha ou entra em vigor sem transformar presença física em acesso brasileiro.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "sem garantia"]], focus: "Energia e rede são comprometidas antes que o Brasil negocie capacidade e continuidade.", mobile: "Risco em alta · Sem garantia" },
+    { date: "2027", title: "Defesa dependente", summary: "Interrupções duram mais e empresas compram sistemas estrangeiros sem alternativa de escala.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "física"], ["sovereignty", "Soberania de inferência", 1, "dependente"]], facts: [["Coordenação", "reação fragmentada"], ["Infraestrutura", "enclaves"], ["Acesso", "defesa importada"]], focus: "Restrições domésticas atingem empresas brasileiras e não alcançam atacantes no exterior.", mobile: "Risco crítico · Defesa importada" },
+    { date: "2028", title: "A corrida continua", summary: "EUA e China recusam limites, ataques persistem e o Brasil não influencia os termos.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "desorganizada"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "sem acordo"], ["Infraestrutura", "sem inventário"], ["Acesso", "contratos emergenciais"]], focus: "O mercado de trabalho piora enquanto o governo compra capacidade sob pressão.", mobile: "Sem acordo · Contratos emergenciais" },
+    { date: "2029", title: "Escolha forçada", summary: "Controles de exportação obrigam o país a depender de um bloco para chips, modelos e defesa.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "subutilizada"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "guerra fria"], ["Infraestrutura", "decisão externa"], ["Acesso", "um bloco"]], focus: "Máquinas permanecem no Brasil, mas operadores e governos estrangeiros definem seu uso.", mobile: "Escolha forçada · Um bloco" },
+    { date: "2030", title: "Dependência em cascata", summary: "Cada serviço crítico carrega uma dependência externa que o país não consegue substituir.", tracks: [["risk", "Risco sistêmico", 5, "crônico"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "mínima"]], facts: [["Coordenação", "blocos rivais"], ["Infraestrutura", "acesso opaco"], ["Acesso", "caro e condicionado"]], focus: "O Brasil opera, mas paga mais e aceita as regras do fornecedor que sustenta cada sistema.", mobile: "Dependência crônica · Pouca escolha" },
+  ],
+} : {
+  positive: [
+    { date: "Aug 2026", title: "The first bargain", summary: "The Senate decides whether incentives create facilities alone or contractable capacity as well.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "contested"]], focus: "Law, contracts, and enforcement begin to determine who can use the machines.", mobile: "Risk rising · Access contested" },
+    { date: "2027", title: "The shock finds an alternative", summary: "Attacks rise and foreign defense remains better, but critical workloads gain a local option.", tracks: [["risk", "Systemic risk", 4, "high"], ["leverage", "Brazilian leverage", 3, "under construction"], ["sovereignty", "Inference sovereignty", 2, "partial"]], facts: [["Coordination", "pressure for a deal"], ["Infrastructure", "first contracts"], ["Access", "local option"]], focus: "Lourdes, Rafael, André, and Camila see different sides of the same crisis.", mobile: "Risk high · Local option" },
+    { date: "2028", title: "Limited coordination", summary: "Brazil helps the US and China create notifications, shared evaluations, and short trigger-based pauses.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 4, "diplomatic"], ["sovereignty", "Inference sovereignty", 3, "expanding"]], facts: [["Coordination", "limited agreement"], ["Infrastructure", "aggregated demand"], ["Access", "nascent market"]], focus: "Technical capacity and infrastructure give substance to Brazilian mediation.", mobile: "Limited deal · Nascent market" },
+    { date: "2029", title: "A middle power", summary: "Energy, grid access, and contractable capacity support negotiations with both blocs.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 4, "active"], ["sovereignty", "Inference sovereignty", 4, "material"]], facts: [["Coordination", "limits maintained"], ["Infrastructure", "audited access"], ["Access", "local suppliers"]], focus: "Brazil accepts some alignment costs and preserves alternatives elsewhere.", mobile: "Active leverage · Alternatives" },
+    { date: "2030", title: "Room to choose", summary: "Brazil does not control the frontier but can contract, evaluate, and sustain some critical services.", tracks: [["risk", "Systemic risk", 3, "still present"], ["leverage", "Brazilian leverage", 5, "consolidated"], ["sovereignty", "Inference sovereignty", 4, "strong partial"]], facts: [["Coordination", "verifiable protocol"], ["Infrastructure", "public inventory"], ["Access", "continuity tested"]], focus: "The outcome combines diplomacy, contracts, and a domestic inference market.", mobile: "Middle power · Choice" },
+  ],
+  negative: [
+    { date: "Aug 2026", title: "The first bargain", summary: "The incentive fails or takes effect without converting physical presence into Brazilian access.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "not guaranteed"]], focus: "Energy and grid access are committed before Brazil negotiates capacity and continuity.", mobile: "Risk rising · No guarantee" },
+    { date: "2027", title: "Dependent defense", summary: "Outages last longer and companies buy foreign systems without a scalable alternative.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "physical"], ["sovereignty", "Inference sovereignty", 1, "dependent"]], facts: [["Coordination", "fragmented response"], ["Infrastructure", "enclaves"], ["Access", "imported defense"]], focus: "Domestic restrictions hit Brazilian companies and do not reach attackers abroad.", mobile: "Critical risk · Imported defense" },
+    { date: "2028", title: "The race continues", summary: "The US and China reject limits, attacks persist, and Brazil does not shape the terms.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "disorganized"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "no agreement"], ["Infrastructure", "no inventory"], ["Access", "emergency contracts"]], focus: "The labor market worsens while government buys capacity under pressure.", mobile: "No agreement · Emergency contracts" },
+    { date: "2029", title: "A forced choice", summary: "Export controls make Brazil depend on one bloc for chips, models, and defense.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "underused"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "cold war"], ["Infrastructure", "foreign decision"], ["Access", "one bloc"]], focus: "Machines remain in Brazil, but operators and foreign governments decide their use.", mobile: "Forced choice · One bloc" },
+    { date: "2030", title: "Cascading dependence", summary: "Every critical service carries an external dependency Brazil cannot replace.", tracks: [["risk", "Systemic risk", 5, "chronic"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "minimal"]], facts: [["Coordination", "rival blocs"], ["Infrastructure", "opaque access"], ["Access", "costly and conditional"]], focus: "Brazil operates, but pays more and accepts the rules of the supplier supporting each system.", mobile: "Chronic dependence · Little choice" },
+  ],
+};
+
+const initialState = dashboardStates.positive[0];
+---
+
+<BaseLayout locale={locale} pageKey="scenario" markdownHref={markdownRoutes[locale].scenario} bodyClass="scenario-page branch-scenario-page">
+  <section class="scenario-hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">{text.eyebrow}</p>
+        <h1>{text.titleCountry}<span>{text.titleLine}</span></h1>
+        <p class="hero-deck">{text.deck}</p>
+        <div class="status-line">
+          <span class="status-dot" aria-hidden="true"></span><span>{copy.status}</span><span class="status-separator" aria-hidden="true"></span><time datetime="2026-08-27">{copy.updated}</time>
+        </div>
+        <div class="hero-actions">
+          <a class="button-link primary" href="#cenario-positivo">{text.positive}</a>
+          <a class="button-link negative-action" href="#cenario-negativo">{text.negative}</a>
+          <a class="button-link" href={routes[locale].summary}>{text.summary}</a>
+        </div>
+      </div>
+      <div class="scenario-hero-branches" aria-label={pt ? "Resumo dos cenários" : "Scenario summary"}>
+        <article class="hero-branch hero-branch-positive"><span>{text.positive}</span><strong>{text.positiveTitle}</strong><p>{text.positiveDeck}</p></article>
+        <div class="hero-branch-divider"><span>2026</span></div>
+        <article class="hero-branch hero-branch-negative"><span>{text.negative}</span><strong>{text.negativeTitle}</strong><p>{text.negativeDeck}</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="scenario-disclaimer" aria-label={pt ? "Nota editorial" : "Editorial note"}><p>{text.disclaimer}</p></section>
+
+  <div class="reading-layout">
+    <nav class="chapter-nav" aria-label={text.timeline}>
+      <span class="chapter-nav-label">{text.timeline}</span>
+      {(["positive", "negative"] as const).map((branch) => (
+        <ol data-branch-nav={branch} hidden={branch === "negative"}>
+          {[commonChapter, ...branchChapters[branch]].map((chapter, index) => (
+            <li><a class={index === 0 ? "is-active" : ""} href={chapter.href} data-chapter-label={`${chapter.year}: ${chapter.label}`} aria-current={index === 0 ? "location" : undefined}><span>{chapter.year}</span><span>{chapter.label}</span></a></li>
+          ))}
+        </ol>
+      ))}
+    </nav>
+
+    <article class="scenario-prose">
+      <CommonContent />
+
+      <section class="scenario-fork" id="escolha-do-caminho" aria-labelledby="scenario-fork-title">
+        <p class="eyebrow">{text.forkEyebrow}</p>
+        <h2 id="scenario-fork-title">{text.forkTitle}</h2>
+        <p>{text.forkIntro}</p>
+        <div class="branch-switch" role="group" aria-label={pt ? "Selecionar cenário" : "Select scenario"}>
+          <button class="branch-choice branch-choice-positive" type="button" data-branch-target="positive" aria-pressed="true" aria-controls="scenario-positive"><span>{text.positive}</span><strong>{text.positiveTitle}</strong><small>{text.positiveDeck}</small></button>
+          <button class="branch-choice branch-choice-negative" type="button" data-branch-target="negative" aria-pressed="false" aria-controls="scenario-negative"><span>{text.negative}</span><strong>{text.negativeTitle}</strong><small>{text.negativeDeck}</small></button>
+        </div>
+        <figure class="scenario-matrix" aria-labelledby="scenario-matrix-title">
+          <figcaption id="scenario-matrix-title">{text.matrixTitle}</figcaption>
+          <div class="matrix-grid">
+            <span class="matrix-empty" aria-hidden="true"></span>
+            {text.matrixColumns.map((label) => <span class="matrix-column">{label}</span>)}
+            <span class="matrix-row">{text.matrixRows[0]}</span><strong class="matrix-cell matrix-positive">{text.matrixCells[0]}</strong><span class="matrix-cell">{text.matrixCells[1]}</span>
+            <span class="matrix-row">{text.matrixRows[1]}</span><span class="matrix-cell">{text.matrixCells[2]}</span><strong class="matrix-cell matrix-negative">{text.matrixCells[3]}</strong>
+          </div>
+        </figure>
+      </section>
+
+      <div id="cenario-positivo" data-scenario-branch="positive" role="region" aria-label={text.positiveTitle}><PositiveContent /></div>
+      <div id="cenario-negativo" data-scenario-branch="negative" role="region" aria-label={text.negativeTitle} hidden><NegativeContent /></div>
+    </article>
+
+    <aside class="reading-aside">
+      <section class="scenario-dashboard" data-scenario-dashboard data-states={JSON.stringify(dashboardStates)} data-score-unit={text.scoreUnit} aria-labelledby="scenario-dashboard-title">
+        <header class="dashboard-header"><div><span class="dashboard-eyebrow">{text.panelTitle}</span><span class="dashboard-qualifier">{text.panelStatus}</span></div><time data-dashboard-date>{initialState.date}</time></header>
+        <div class="dashboard-copy"><h2 id="scenario-dashboard-title" data-dashboard-title>{initialState.title}</h2><p data-dashboard-summary>{initialState.summary}</p></div>
+        <div class="dashboard-tracks" aria-label={text.scale}>
+          {initialState.tracks.map(([key, label, score, value]) => (
+            <div class={`dashboard-track dashboard-track-${key}`} data-dashboard-track={key}>
+              <div class="dashboard-track-label"><span>{label}</span><strong data-track-value>{value}</strong></div>
+              <div class="dashboard-track-dots" data-track-dots role="img" aria-label={`${label}: ${value}, ${score} ${text.scoreUnit}`}>{Array.from({ length: 5 }).map((_, index) => <span class={index < Number(score) ? "is-filled" : ""} data-track-dot aria-hidden="true"></span>)}</div>
+            </div>
+          ))}
+        </div>
+        <dl class="dashboard-facts">{initialState.facts.map(([label, value]) => <div><dt>{label}</dt><dd data-dashboard-fact>{value}</dd></div>)}</dl>
+        <div class="dashboard-focus"><span>{text.changed}</span><p data-dashboard-focus>{initialState.focus}</p></div>
+        <p class="dashboard-note">{text.note}</p>
+      </section>
+    </aside>
+  </div>
+
+  <div class="mobile-chapter-bar" aria-live="polite"><span>{text.current}</span><span class="mobile-chapter-copy"><span data-current-chapter>{commonChapter.year}: {commonChapter.label}</span><small data-mobile-state>{initialState.mobile}</small></span><a href="#main-content" aria-label={pt ? "Voltar ao início" : "Back to top"}>↑</a></div>
+
+  <script is:inline>
+    (() => {
+      const branchButtons = Array.from(document.querySelectorAll('[data-branch-target]'));
+      const branchPanels = Array.from(document.querySelectorAll('[data-scenario-branch]'));
+      const branchNavs = Array.from(document.querySelectorAll('[data-branch-nav]'));
+      const dashboard = document.querySelector('[data-scenario-dashboard]');
+      const mobileLabel = document.querySelector('[data-current-chapter]');
+      const mobileState = document.querySelector('[data-mobile-state]');
+      const scoreUnit = dashboard?.getAttribute('data-score-unit') || '';
+      let allStates = {};
+      let activeBranch = 'positive';
+      let chapterEntries = [];
+      try { allStates = JSON.parse(dashboard?.getAttribute('data-states') || '{}'); } catch { allStates = {}; }
+
+      const setDashboard = (index) => {
+        const state = allStates[activeBranch]?.[index];
+        if (!dashboard || !state) return;
+        const setText = (selector, value) => { const element = dashboard.querySelector(selector); if (element) element.textContent = value; };
+        setText('[data-dashboard-date]', state.date);
+        setText('[data-dashboard-title]', state.title);
+        setText('[data-dashboard-summary]', state.summary);
+        setText('[data-dashboard-focus]', state.focus);
+        dashboard.querySelectorAll('[data-dashboard-track]').forEach((trackElement, trackIndex) => {
+          const [key, label, score, value] = state.tracks[trackIndex] || [];
+          if (!key) return;
+          const valueElement = trackElement.querySelector('[data-track-value]');
+          if (valueElement) valueElement.textContent = value;
+          trackElement.querySelectorAll('[data-track-dot]').forEach((dot, dotIndex) => dot.classList.toggle('is-filled', dotIndex < score));
+          const group = trackElement.querySelector('[data-track-dots]');
+          if (group) group.setAttribute('aria-label', `${label}: ${value}, ${score} ${scoreUnit}`);
+        });
+        dashboard.querySelectorAll('[data-dashboard-fact]').forEach((fact, factIndex) => { if (state.facts[factIndex]) fact.textContent = state.facts[factIndex][1]; });
+        dashboard.setAttribute('data-state-index', String(index));
+        if (mobileState) mobileState.textContent = state.mobile;
+      };
+
+      const rebuildChapters = () => {
+        const nav = document.querySelector(`[data-branch-nav="${activeBranch}"]`);
+        const links = Array.from(nav?.querySelectorAll('a') || []);
+        chapterEntries = links.map((link) => { const id = link.getAttribute('href')?.slice(1); return id ? { link, section: document.getElementById(id) } : null; }).filter((entry) => entry?.section);
+      };
+
+      const updateActiveChapter = () => {
+        if (!chapterEntries.length) return;
+        const readingLine = Math.max(96, window.innerHeight * 0.18);
+        let activeEntry = chapterEntries[0];
+        chapterEntries.forEach((entry) => { if (entry.section.getBoundingClientRect().top <= readingLine) activeEntry = entry; });
+        chapterEntries.forEach(({ link }) => { const active = link === activeEntry.link; link.classList.toggle('is-active', active); if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+        if (mobileLabel) mobileLabel.textContent = activeEntry.link.getAttribute('data-chapter-label') || '';
+        setDashboard(chapterEntries.indexOf(activeEntry));
+      };
+
+      const selectBranch = (branch, updateHash = true) => {
+        activeBranch = branch === 'negative' ? 'negative' : 'positive';
+        document.body.setAttribute('data-scenario-branch', activeBranch);
+        branchButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.getAttribute('data-branch-target') === activeBranch)));
+        branchPanels.forEach((panel) => { panel.hidden = panel.getAttribute('data-scenario-branch') !== activeBranch; });
+        branchNavs.forEach((nav) => { nav.hidden = nav.getAttribute('data-branch-nav') !== activeBranch; });
+        rebuildChapters();
+        setDashboard(0);
+        updateActiveChapter();
+        if (updateHash) history.replaceState(null, '', activeBranch === 'negative' ? '#cenario-negativo' : '#cenario-positivo');
+      };
+
+      branchButtons.forEach((button) => button.addEventListener('click', () => selectBranch(button.getAttribute('data-branch-target'))));
+      document.querySelectorAll('a[href="#cenario-positivo"], a[href="#cenario-negativo"]').forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); const branch = link.getAttribute('href')?.includes('negativo') ? 'negative' : 'positive'; selectBranch(branch); document.getElementById('escolha-do-caminho')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
+
+      let framePending = false;
+      const requestUpdate = () => { if (framePending) return; framePending = true; window.requestAnimationFrame(() => { updateActiveChapter(); framePending = false; }); };
+      window.addEventListener('scroll', requestUpdate, { passive: true });
+      window.addEventListener('resize', requestUpdate);
+      window.addEventListener('hashchange', () => {
+        if (location.hash.includes('negativo') || location.hash.includes('negative')) selectBranch('negative', false);
+        if (location.hash.includes('positivo') || location.hash.includes('positive')) selectBranch('positive', false);
+      });
+      selectBranch(location.hash.includes('negativo') || location.hash.includes('negative') ? 'negative' : 'positive', false);
+      window.addEventListener('load', requestUpdate, { once: true });
+      document.fonts?.ready.then(requestUpdate);
+    })();
+  </script>
+</BaseLayout>

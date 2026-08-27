@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { markdownRoutes, routes, type Locale } from "../data/site";
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+
+const metrics = pt ? [
+  ["10%", "oferta doméstica prevista", "Hoje aferida pela participação da receita brasileira na receita total."],
+  ["2%", "investimento obrigatório em P&D", "Calculado sobre os equipamentos adquiridos com o benefício."],
+  ["0,05", "litro por kWh", "Limite anual de eficiência hídrica previsto no texto da Câmara."],
+  ["22", "emendas apresentadas", "O projeto ainda aguardava relator no Senado em 27 de agosto."],
+] : [
+  ["10%", "planned domestic supply", "Currently measured through Brazilian revenue as a share of total revenue."],
+  ["2%", "mandatory R&D investment", "Calculated over equipment acquired with the tax benefit."],
+  ["0.05", "liter per kWh", "Annual water-efficiency threshold in the Chamber text."],
+  ["22", "amendments filed", "The bill still had no Senate rapporteur on August 27."],
+];
+
+const changes = pt ? [
+  { number: "01", title: "Medir capacidade contratável", body: "Aferir os 10% em horas de acelerador, throughput, capacidade reservada ou outra unidade técnica auditável. Receita pode complementar a medição, não substituí-la." },
+  { number: "02", title: "Preservar um piso não substituível", body: "Impedir que toda a oferta doméstica seja trocada por P&D. A solução preferencial revoga a substituição; um compromisso preservaria ao menos 5% de capacidade." },
+  { number: "03", title: "Incluir quem opera o compute", body: "Permitir a habilitação de empresas que instalam aceleradores em data centers de terceiros e incluir energia, interconexão e refrigeração de alta densidade quando não houver similar nacional competitivo." },
+  { number: "04", title: "Criar uma porta brasileira de contratação", body: "Contar apenas serviços com contratação e suporte sujeitos à legislação brasileira, opção de residência local e mecanismo válido para transferências internacionais de dados pessoais." },
+  { number: "05", title: "Publicar resultados e recuperar benefícios", body: "Divulgar capacidade, uso doméstico, água, energia, P&D e custo fiscal por instalação. O descumprimento deve permitir correção, recurso e recuperação proporcional do incentivo." },
+] : [
+  { number: "01", title: "Measure contractable capacity", body: "Measure the 10% through accelerator hours, throughput, reserved capacity, or another auditable technical unit. Revenue may supplement the measure, not replace it." },
+  { number: "02", title: "Preserve a non-substitutable floor", body: "Prevent companies from replacing the entire domestic supply obligation with R&D. The preferred option removes substitution; a compromise would preserve at least 5% of capacity." },
+  { number: "03", title: "Include compute operators", body: "Allow companies installing accelerators in third-party data centers to qualify, and cover high-density power, interconnection, and cooling equipment when no competitive domestic equivalent exists." },
+  { number: "04", title: "Create a Brazilian contracting door", body: "Count only services with contracting and support subject to Brazilian law, a local-residency option, and a valid mechanism for international transfers of personal data." },
+  { number: "05", title: "Publish results and recover benefits", body: "Disclose capacity, domestic use, water, energy, R&D, and fiscal cost by facility. Noncompliance should allow cure, appeal, and proportional recovery of the incentive." },
+];
+
+const sources = pt ? [
+  ["Tramitação e 22 emendas", "Senado Federal", "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786"],
+  ["Prioridade na semana de 31 de agosto", "Agência Senado", "https://www12.senado.leg.br/noticias/materias/2026/08/26/davi-alcolumbre-acerta-prioridades-do-congresso-em-reuniao-com-lula-e-motta"],
+  ["Texto aprovado e contrapartidas", "Agência Câmara", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
+  ["Redação final da Câmara", "Câmara dos Deputados", "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3089078&filename=Tramitacao-50-PL-278-2026"],
+] : [
+  ["Legislative status and 22 amendments", "Brazilian Senate", "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786"],
+  ["Priority for the August 31 session week", "Senate News", "https://www12.senado.leg.br/noticias/materias/2026/08/26/davi-alcolumbre-acerta-prioridades-do-congresso-em-reuniao-com-lula-e-motta"],
+  ["Chamber text and commitments", "Chamber News", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
+  ["Final text passed by the Chamber", "Chamber of Deputies", "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3089078&filename=Tramitacao-50-PL-278-2026"],
+];
+---
+
+<BaseLayout locale={locale} pageKey="redata" markdownHref={markdownRoutes[locale].redata} title="REDATA" description={pt ? "Recomendações ao Senado para transformar incentivos a data centers em capacidade contratável e uma indústria brasileira de inferência." : "Recommendations to turn data-center incentives into contractable capacity and a Brazilian inference industry."}>
+  <PageHero compact locale={locale} eyebrow={pt ? "PL 278/2026 · Nota aos senadores" : "Bill 278/2026 · Note to senators"} title={pt ? "Aprovar o REDATA com cinco ajustes" : "Pass REDATA with five changes"} intro={pt ? "O projeto reduz um obstáculo real ao investimento. O Senado pode garantir que os benefícios também criem capacidade disponível para empresas, universidades e serviços públicos brasileiros." : "The bill removes a real barrier to investment. The Senate can ensure that its benefits also create capacity available to Brazilian companies, universities, and public services."} />
+
+  <div class="page-content redata-content">
+    <section class="redata-live" aria-labelledby="redata-live-title">
+      <div><span>{pt ? "Situação em 27 ago 2026" : "Status on 27 Aug 2026"}</span><h2 id="redata-live-title">{pt ? "A janela de mudança está aberta" : "The window for change is open"}</h2></div>
+      <p>{pt ? "O PL 278/2026 está no Plenário do Senado, ainda sem relator, e recebeu 22 emendas. A Presidência do Senado anunciou sua deliberação entre as prioridades da semana de 31 de agosto a 4 de setembro." : "Bill 278/2026 is before the Senate plenary, still has no rapporteur, and has received 22 amendments. The Senate president listed deliberation among the priorities for the August 31 to September 4 session week."}</p>
+      <a class="button-link primary" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">{pt ? "Acompanhar no Senado" : "Follow in the Senate"}</a>
+    </section>
+
+    <section aria-labelledby="numbers-title">
+      <h2 id="numbers-title">{pt ? "O texto que chegou ao Senado" : "The text before the Senate"}</h2>
+      <div class="redata-metrics">{metrics.map(([value, label, detail]) => <article><strong>{value}</strong><span>{label}</span><p>{detail}</p></article>)}</div>
+      <div class="callout">{pt ? "Nossa posição: aprovar com mudanças pontuais. Desoneração sem acesso cria um enclave; exigência mal desenhada afasta investimento. O Senado pode evitar os dois erros." : "Our position: pass the bill with targeted changes. Tax relief without access creates an enclave; a poorly designed requirement deters investment. The Senate can avoid both mistakes."}</div>
+    </section>
+
+    <section aria-labelledby="value-title">
+      <h2 id="value-title">{pt ? "O prédio é só a primeira camada" : "The building is only the first layer"}</h2>
+      <p class="section-lead">{pt ? "O Brasil captura mais valor quando empresas disputam as camadas acima da infraestrutura física." : "Brazil captures more value when companies compete across the layers above physical infrastructure."}</p>
+      <figure class="compute-value-chain" aria-label={pt ? "Cadeia de valor da infraestrutura física às aplicações" : "Value chain from physical infrastructure to applications"}>
+        <div><span>01</span><strong>{pt ? "Data center" : "Data center"}</strong><small>{pt ? "energia, espaço e refrigeração" : "power, space, and cooling"}</small></div>
+        <div><span>02</span><strong>{pt ? "Nuvem de GPUs" : "GPU cloud"}</strong><small>{pt ? "aceleradores e interconexão" : "accelerators and interconnection"}</small></div>
+        <div><span>03</span><strong>{pt ? "Inferência" : "Inference"}</strong><small>{pt ? "modelos, disponibilidade e segurança" : "models, availability, and security"}</small></div>
+        <div><span>04</span><strong>{pt ? "Aplicações" : "Applications"}</strong><small>{pt ? "produtos, dados e distribuição" : "products, data, and distribution"}</small></div>
+      </figure>
+      <p>{pt ? "O REDATA já reduz custos de equipamentos e cria obrigações ambientais e tecnológicas. As mudanças abaixo fazem o incentivo apoiar também operadores de computação, provedores de inferência e compradores brasileiros." : "REDATA already lowers equipment costs and creates environmental and technology commitments. The changes below would also support compute operators, inference providers, and Brazilian buyers."}</p>
+    </section>
+
+    <section aria-labelledby="changes-title">
+      <h2 id="changes-title">{pt ? "Cinco ajustes ao projeto" : "Five changes to the bill"}</h2>
+      <div class="redata-changes">{changes.map((item) => <article><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div>
+    </section>
+
+    <section class="redata-companions" aria-labelledby="companions-title">
+      <h2 id="companions-title">{pt ? "Duas medidas fora do texto tributário" : "Two measures beyond the tax bill"}</h2>
+      <div class="principle-grid">
+        <article class="principle-card"><span class="card-index">A</span><h3>{pt ? "Licenciamento rápido com capacidade pública" : "Fast licensing with public capacity"}</h3><p>{pt ? "Padronizar termos de referência, analisar etapas em paralelo e financiar equipes ambientais. Prazo previsível exige medição de água, energia, rede e impactos territoriais; licença automática transfere o risco para a população." : "Standardize terms of reference, review stages in parallel, and fund environmental teams. Predictable timelines require measurement of water, power, grid, and territorial effects; automatic approval transfers risk to the public."}</p></article>
+        <article class="principle-card"><span class="card-index">B</span><h3>{pt ? "Consórcio aberto de demanda" : "Open demand consortium"}</h3><p>{pt ? "Agregar compromissos futuros de bancos, varejo, energia, universidades e governo para negociar equipamentos e contratos. Adesão aberta, leilões, separação de dados e supervisão do Cade evitam captura e colusão." : "Aggregate future commitments from banks, retail, energy, universities, and government to negotiate equipment and contracts. Open participation, auctions, data separation, and competition oversight reduce capture and collusion."}</p></article>
+      </div>
+    </section>
+
+    <section class="redata-message" aria-labelledby="message-title">
+      <span>{pt ? "Mensagem de um minuto" : "One-minute message"}</span>
+      <h2 id="message-title">{pt ? "O que pedir à liderança do Senado" : "What to ask Senate leaders"}</h2>
+      <blockquote>{pt ? "O REDATA merece aprovação porque reduz o custo de instalar computação no Brasil e já traz contrapartidas ambientais, tecnológicas e domésticas. Pedimos cinco ajustes: medir os 10% por capacidade contratável, preservar um piso que não possa ser trocado por P&D, incluir operadores de computação acelerada e refrigeração, exigir uma porta brasileira de contratação e publicar resultados com recuperação proporcional do benefício. O Brasil precisa de máquinas, fornecedores e uma opção de continuidade para empresas e serviços públicos." : "REDATA deserves passage because it lowers the cost of installing compute in Brazil and already includes environmental, technology, and domestic commitments. We ask for five changes: measure the 10% as contractable capacity, preserve a floor that cannot be replaced by R&D, include accelerated-compute and cooling operators, require a Brazilian contracting door, and publish results with proportional recovery of benefits. Brazil needs machines, suppliers, and a continuity option for companies and public services."}</blockquote>
+    </section>
+
+    <section aria-labelledby="sources-title">
+      <h2 id="sources-title">{pt ? "Fontes primárias" : "Primary sources"}</h2>
+      <div class="redata-sources">{sources.map(([title, source, url]) => <a href={url}><strong>{title}</strong><span>{source}</span></a>)}</div>
+      <p class="evidence-boundary">{pt ? "Revisão factual: 27 de agosto de 2026. As recomendações representam a posição dos autores e precisam de revisão jurídica antes de se tornarem minuta legislativa." : "Factual review: August 27, 2026. The recommendations represent the authors' position and require legal review before becoming legislative language."}</p>
+      <p><a class="button-link" href={routes[locale].scenario}>{pt ? "Ver como o REDATA muda os cenários" : "See how REDATA changes the scenarios"}</a></p>
+    </section>
+  </div>
+</BaseLayout>

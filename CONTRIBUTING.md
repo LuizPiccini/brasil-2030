@@ -18,11 +18,12 @@ submit.
 
 ## Content map
 
-- `src/content/scenario-pt.md`: canonical Portuguese scenario.
-- `src/content/scenario-en.md`: English scenario following the Portuguese edition.
+- `src/content/scenario-common-*.md`: shared 2026 baseline in Portuguese and English.
+- `src/content/scenario-positive-*.md`: positive branch from 2027 to 2030.
+- `src/content/scenario-negative-*.md`: negative branch from 2027 to 2030.
 - `src/data/site.ts`: summary, strategy, evidence labels, and author credits.
-- `src/components/`: structured pages for evidence, strategy, the open letter, and
-  project background.
+- `src/components/`: structured pages for the scenario branches, REDATA, evidence,
+  strategy, the open letter, and project background.
 - `src/lib/markdown.ts`: machine-readable Markdown editions.
 - `public/llms.txt`: index of the machine-readable editions.
 

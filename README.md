@@ -6,8 +6,10 @@ Source repository for the public working site of the Brasil 20XX scenario projec
 ## Editorial state
 
 - Portuguese is the default and editorially leading public language.
-- English follows the 2026-08-19 Pecém public-bargain revision.
+- English follows the 2026-08-27 two-scenario revision.
 - The public argument has three commitments: a verifiable global slowdown, Brazilian support for US-China negotiations, and domestic data-center and grid infrastructure for leverage and inference sovereignty.
+- The main narrative branches after the shared 2026 baseline into a positive path of coordination and a negative path of dependence.
+- The REDATA page is a focused policy intervention for the Senate debate, with facts reviewed through 2026-08-27.
 - Data-center support is conditional on a public bargain covering contractable compute access, water, grid costs, affected communities, and measurable local benefits.
 - Scenario inventions and open estimates must keep their visible evidence labels.
 - Pedro's 2030 model values remain open and must not be filled without the model.

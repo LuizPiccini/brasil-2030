@@ -14,24 +14,30 @@ const conclusions = pt ? [
   ["Open channels between major powers", "Brazilian diplomacy can bring the United States and China together around evaluations, severe incidents, and conditions for interrupting escalation."],
   ["Turn energy into sovereignty", "Grid access and data centers create bargaining power when contracts guarantee inference and projects bear their water, power-system, and territorial costs."],
 ];
-const years = pt ? [
-  ["2026", "Alertas cibernéticos e a disputa em Pecém ligam a corrida externa a sistemas e recursos brasileiros.", "fact", "Fato + cenário"],
-  ["2027", "Uma crise amplia a demanda por defesas estrangeiras e aprofunda a dependência.", "scenario", "Invenção"],
-  ["2028", "O Brasil tenta abrir um canal de segurança entre Estados Unidos e China.", "scenario", "Invenção"],
-  ["2029", "A coordenação falha, um tier limita a inferência e a vulnerabilidade brasileira aparece.", "open", "Hipótese central"],
-  ["2030", "Acordos limitados reduzem parte do risco; contratos de infraestrutura criam soberania de inferência parcial.", "estimate", "Resultado modal"],
+const branches = pt ? [
+  {
+    kind: "positive", label: "Cenário positivo", title: "Coordenação e margem de escolha",
+    years: [["2026", "REDATA passa com acesso e fiscalização"], ["2027", "Ataques encontram defesa local e estrangeira"], ["2028", "Brasil ajuda a costurar um acordo limitado"], ["2029", "Energia e compute sustentam negociações"], ["2030", "Brasil se torna uma potência intermediária"]],
+  },
+  {
+    kind: "negative", label: "Cenário negativo", title: "Corrida e dependência",
+    years: [["2026", "REDATA falha ou cria apenas enclaves"], ["2027", "Ataques produzem interrupções e dependência"], ["2028", "A corrida continua sem acordo"], ["2029", "Controles externos forçam alinhamento"], ["2030", "Brasil opera sob as regras de um bloco"]],
+  },
 ] : [
-  ["2026", "Cyber warnings and the Pecém dispute connect the external race to Brazilian systems and resources.", "fact", "Fact + scenario"],
-  ["2027", "A crisis raises demand for foreign defenses and deepens dependency.", "scenario", "Invention"],
-  ["2028", "Brazil tries to open a safety channel between the United States and China.", "scenario", "Invention"],
-  ["2029", "Coordination fails, a tier caps inference, and Brazil's vulnerability becomes visible.", "open", "Core hypothesis"],
-  ["2030", "Limited agreements reduce part of the risk; infrastructure contracts create partial inference sovereignty.", "estimate", "Modal result"],
+  {
+    kind: "positive", label: "Positive scenario", title: "Coordination and room to choose",
+    years: [["2026", "REDATA passes with access and oversight"], ["2027", "Attacks meet local and foreign defenses"], ["2028", "Brazil helps broker a limited agreement"], ["2029", "Energy and compute support negotiations"], ["2030", "Brazil becomes a middle power"]],
+  },
+  {
+    kind: "negative", label: "Negative scenario", title: "Race and dependence",
+    years: [["2026", "REDATA fails or creates enclaves"], ["2027", "Attacks create outages and dependence"], ["2028", "The race continues without an agreement"], ["2029", "Foreign controls force alignment"], ["2030", "Brazil operates under one bloc's rules"]],
+  },
 ];
 ---
 <BaseLayout locale={locale} pageKey="summary" markdownHref={markdownRoutes[locale].summary} title={pt ? "Resumo" : "Summary"}>
-  <PageHero locale={locale} eyebrow={pt ? "Leitura em cinco minutos" : "A five-minute read"} title={pt ? "O Brasil precisa de tempo e poder de barganha" : "Brazil needs time and bargaining power"} intro={pt ? "A aceleração aumenta o risco de ataques e falhas. A dependência estrangeira pode deixar o país sem as melhores ferramentas de defesa quando mais precisar delas." : "Acceleration raises the risk of attacks and failures. Foreign dependency may leave Brazil without the best defensive tools when it needs them most."} />
+  <PageHero locale={locale} eyebrow={pt ? "Leitura em cinco minutos" : "A five-minute read"} title={pt ? "Duas trajetórias, três compromissos" : "Two paths, three commitments"} intro={pt ? "Os dois cenários enfrentam ataques, automação e disputa geopolítica. As escolhas de 2026 determinam se energia e data centers ampliam a margem brasileira ou aprofundam a dependência." : "Both scenarios face attacks, automation, and geopolitical competition. Choices made in 2026 determine whether energy and data centers expand Brazil's options or deepen dependency."} />
   <div class="page-content">
-    <div class="callout">{pt ? "O Brasil deve ajudar a desacelerar a corrida, preparar-se para uma falha de coordenação e transformar energia em soberania de inferência." : "Brazil should help slow the race, prepare for coordination failure, and turn energy into inference sovereignty."}</div>
+    <div class="callout">{pt ? "O Brasil deve tentar desacelerar a corrida e construir capacidade doméstica mesmo se a coordenação falhar. Uma política funciona como prevenção; a outra, como seguro." : "Brazil should try to slow the race and build domestic capacity even if coordination fails. One policy provides prevention; the other provides insurance."}</div>
     <section aria-labelledby="conclusions-title">
       <h2 id="conclusions-title">{pt ? "Três compromissos públicos" : "Three public commitments"}</h2>
       <div class="summary-grid">
@@ -39,15 +45,15 @@ const years = pt ? [
       </div>
     </section>
     <section aria-labelledby="timeline-title">
-      <h2 id="timeline-title">{pt ? "A trajetória" : "The path"}</h2>
-      <div class="year-map">
-        {years.map(([year, body, kind, label]) => <div class="year-row"><time>{year}</time><p>{body}</p><span class={`tag ${kind}`}>{label}</span></div>)}
+      <h2 id="timeline-title">{pt ? "Os dois caminhos" : "The two paths"}</h2>
+      <div class="branch-summary-grid">
+        {branches.map((branch) => <article class={`branch-summary branch-summary-${branch.kind}`}><span>{branch.label}</span><h3>{branch.title}</h3><ol>{branch.years.map(([year, body]) => <li><time>{year}</time><p>{body}</p></li>)}</ol></article>)}
       </div>
     </section>
     <section class="narrow-content">
       <h2>{pt ? "O seguro contra uma falha de coordenação" : "Insurance against coordination failure"}</h2>
       <p>{pt ? "A diplomacia pode chegar tarde ou produzir um acordo fraco. O Brasil precisa inventariar dependências, testar modelos usados em serviços críticos, exercitar respostas a ataques e reservar capacidade defensiva antes da crise." : "Diplomacy may arrive late or produce a weak agreement. Brazil needs to inventory dependencies, test models used in critical services, exercise attack response, and reserve defensive capacity before a crisis."}</p>
-      <p><a class="button-link primary" href={routes[locale].strategy}>{pt ? "Ver a estratégia" : "Read the strategy"}</a></p>
+      <p class="hero-actions"><a class="button-link primary" href={routes[locale].strategy}>{pt ? "Ver a estratégia" : "Read the strategy"}</a><a class="button-link" href={routes[locale].redata}>{pt ? "Ver propostas para o REDATA" : "Read the REDATA proposals"}</a></p>
     </section>
   </div>
 </BaseLayout>
