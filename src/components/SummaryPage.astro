@@ -20,8 +20,8 @@ const branches = pt ? [
     years: [["2026", "REDATA passa com acesso e fiscalização"], ["2027", "Ataques encontram defesa local e estrangeira"], ["2028", "Brasil ajuda a costurar um acordo limitado"], ["2029", "Energia e compute sustentam negociações"], ["2030", "Brasil se torna uma potência intermediária"]],
   },
   {
-    kind: "negative", label: "Cenário negativo", title: "Corrida e dependência",
-    years: [["2026", "REDATA falha ou cria apenas enclaves"], ["2027", "Ataques produzem interrupções e dependência"], ["2028", "A corrida continua sem acordo"], ["2029", "Controles externos forçam alinhamento"], ["2030", "Brasil opera sob as regras de um bloco"]],
+    kind: "negative", label: "Cenário negativo", title: "País satélite",
+    years: [["2026", "REDATA falha ou cria apenas enclaves"], ["2027", "Ataques, demissões e poderes de emergência"], ["2028", "EUA e China fecham um acordo que preserva sua vantagem"], ["2029", "Brasil troca alinhamento por acesso"], ["2030", "Desemprego, brain drain e erosão democrática"]],
   },
 ] : [
   {
@@ -29,15 +29,15 @@ const branches = pt ? [
     years: [["2026", "REDATA passes with access and oversight"], ["2027", "Attacks meet local and foreign defenses"], ["2028", "Brazil helps broker a limited agreement"], ["2029", "Energy and compute support negotiations"], ["2030", "Brazil becomes a middle power"]],
   },
   {
-    kind: "negative", label: "Negative scenario", title: "Race and dependence",
-    years: [["2026", "REDATA fails or creates enclaves"], ["2027", "Attacks create outages and dependence"], ["2028", "The race continues without an agreement"], ["2029", "Foreign controls force alignment"], ["2030", "Brazil operates under one bloc's rules"]],
+    kind: "negative", label: "Negative scenario", title: "Satellite country",
+    years: [["2026", "REDATA fails or creates enclaves"], ["2027", "Attacks, layoffs, and emergency powers"], ["2028", "The US and China strike a deal that preserves their advantage"], ["2029", "Brazil trades alignment for access"], ["2030", "Unemployment, brain drain, and democratic erosion"]],
   },
 ];
 ---
 <BaseLayout locale={locale} pageKey="summary" markdownHref={markdownRoutes[locale].summary} title={pt ? "Resumo" : "Summary"}>
   <PageHero locale={locale} eyebrow={pt ? "Leitura em cinco minutos" : "A five-minute read"} title={pt ? "Duas trajetórias, três compromissos" : "Two paths, three commitments"} intro={pt ? "Os dois cenários enfrentam ataques, automação e disputa geopolítica. As escolhas de 2026 determinam se energia e data centers ampliam a margem brasileira ou aprofundam a dependência." : "Both scenarios face attacks, automation, and geopolitical competition. Choices made in 2026 determine whether energy and data centers expand Brazil's options or deepen dependency."} />
   <div class="page-content">
-    <div class="callout">{pt ? "O Brasil deve tentar desacelerar a corrida e construir capacidade doméstica mesmo se a coordenação falhar. Uma política funciona como prevenção; a outra, como seguro." : "Brazil should try to slow the race and build domestic capacity even if coordination fails. One policy provides prevention; the other provides insurance."}</div>
+    <div class="callout">{pt ? "O acordo internacional reduz parte do risco global. A capacidade doméstica define se o Brasil participa das decisões ou aceita regras externas para manter seus sistemas funcionando." : "The international agreement reduces part of the global risk. Domestic capacity determines whether Brazil helps make decisions or accepts external rules to keep its systems running."}</div>
     <section aria-labelledby="conclusions-title">
       <h2 id="conclusions-title">{pt ? "Três compromissos públicos" : "Three public commitments"}</h2>
       <div class="summary-grid">
@@ -51,8 +51,8 @@ const branches = pt ? [
       </div>
     </section>
     <section class="narrow-content">
-      <h2>{pt ? "O seguro contra uma falha de coordenação" : "Insurance against coordination failure"}</h2>
-      <p>{pt ? "A diplomacia pode chegar tarde ou produzir um acordo fraco. O Brasil precisa inventariar dependências, testar modelos usados em serviços críticos, exercitar respostas a ataques e reservar capacidade defensiva antes da crise." : "Diplomacy may arrive late or produce a weak agreement. Brazil needs to inventory dependencies, test models used in critical services, exercise attack response, and reserve defensive capacity before a crisis."}</p>
+      <h2>{pt ? "O acordo não distribui soberania" : "The agreement does not distribute sovereignty"}</h2>
+      <p>{pt ? "EUA e China podem reduzir o ritmo da fronteira sem dividir chips, capacidade defensiva ou poder de decisão. O Brasil precisa inventariar dependências, testar modelos usados em serviços críticos e reservar capacidade antes da crise." : "The United States and China may slow the frontier without sharing chips, defensive capacity, or decision-making power. Brazil needs to inventory dependencies, test models used in critical services, and reserve capacity before a crisis."}</p>
       <p class="hero-actions"><a class="button-link primary" href={routes[locale].strategy}>{pt ? "Ver a estratégia" : "Read the strategy"}</a><a class="button-link" href={routes[locale].redata}>{pt ? "Ver propostas para o REDATA" : "Read the REDATA proposals"}</a></p>
     </section>
   </div>

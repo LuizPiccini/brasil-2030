@@ -10,38 +10,151 @@ const metrics = pt ? [
   ["10%", "oferta doméstica prevista", "Hoje aferida pela participação da receita brasileira na receita total."],
   ["2%", "investimento obrigatório em P&D", "Calculado sobre os equipamentos adquiridos com o benefício."],
   ["0,05", "litro por kWh", "Limite anual de eficiência hídrica previsto no texto da Câmara."],
-  ["22", "emendas apresentadas", "O projeto ainda aguardava relator no Senado em 27 de agosto."],
+  ["0/5", "pedidos centrais cobertos", "Nenhuma das 22 emendas resolve integralmente um dos cinco pedidos."],
 ] : [
   ["10%", "planned domestic supply", "Currently measured through Brazilian revenue as a share of total revenue."],
   ["2%", "mandatory R&D investment", "Calculated over equipment acquired with the tax benefit."],
   ["0.05", "liter per kWh", "Annual water-efficiency threshold in the Chamber text."],
-  ["22", "amendments filed", "The bill still had no Senate rapporteur on August 27."],
+  ["0/5", "core requests covered", "None of the 22 amendments fully resolves one of the five requests."],
 ];
 
 const changes = pt ? [
-  { number: "01", title: "Medir capacidade contratável", body: "Aferir os 10% em horas de acelerador, throughput, capacidade reservada ou outra unidade técnica auditável. Receita pode complementar a medição, não substituí-la." },
-  { number: "02", title: "Preservar um piso não substituível", body: "Impedir que toda a oferta doméstica seja trocada por P&D. A solução preferencial revoga a substituição; um compromisso preservaria ao menos 5% de capacidade." },
-  { number: "03", title: "Incluir quem opera o compute", body: "Permitir a habilitação de empresas que instalam aceleradores em data centers de terceiros e incluir energia, interconexão e refrigeração de alta densidade quando não houver similar nacional competitivo." },
-  { number: "04", title: "Criar uma porta brasileira de contratação", body: "Contar apenas serviços com contratação e suporte sujeitos à legislação brasileira, opção de residência local e mecanismo válido para transferências internacionais de dados pessoais." },
-  { number: "05", title: "Publicar resultados e recuperar benefícios", body: "Divulgar capacidade, uso doméstico, água, energia, P&D e custo fiscal por instalação. O descumprimento deve permitir correção, recurso e recuperação proporcional do incentivo." },
+  { number: "01", title: "Medir capacidade contratável", body: "Aferir os 10% em horas de acelerador, throughput, capacidade reservada ou outra unidade técnica auditável. Receita deve ser indicador complementar. Hardware, desempenho, disponibilidade, SLA e condições comerciais precisam ser comparáveis à capacidade exportada." },
+  { number: "02", title: "Preservar um piso não substituível", body: "Revogar a troca integral da oferta doméstica por P&D. Se for necessário um compromisso, limitar a substituição à metade e preservar pelo menos 5% da capacidade efetiva total no Brasil." },
+  { number: "03", title: "Incluir quem opera o compute", body: "Permitir a habilitação de empresas de GPU cloud, inferência e computação que usem data center de terceiro. Incluir refrigeração líquida, distribuição elétrica, controle térmico e interconexão de alta densidade." },
+  { number: "04", title: "Criar uma porta brasileira de contratação", body: "Contar apenas capacidade com contrato executável no Brasil, documentação fiscal adequada, residência local dos dados, conformidade com LGPD e ANPD e suporte sujeito à legislação brasileira." },
+  { number: "05", title: "Publicar resultados e recuperar benefícios", body: "Criar relatório anual, público e auditado. O descumprimento da oferta doméstica deve gerar clawback proporcional, sem prejuízo de prazo de correção, recurso e cancelamento em violações materiais ou reiteradas." },
 ] : [
-  { number: "01", title: "Measure contractable capacity", body: "Measure the 10% through accelerator hours, throughput, reserved capacity, or another auditable technical unit. Revenue may supplement the measure, not replace it." },
-  { number: "02", title: "Preserve a non-substitutable floor", body: "Prevent companies from replacing the entire domestic supply obligation with R&D. The preferred option removes substitution; a compromise would preserve at least 5% of capacity." },
-  { number: "03", title: "Include compute operators", body: "Allow companies installing accelerators in third-party data centers to qualify, and cover high-density power, interconnection, and cooling equipment when no competitive domestic equivalent exists." },
-  { number: "04", title: "Create a Brazilian contracting door", body: "Count only services with contracting and support subject to Brazilian law, a local-residency option, and a valid mechanism for international transfers of personal data." },
-  { number: "05", title: "Publish results and recover benefits", body: "Disclose capacity, domestic use, water, energy, R&D, and fiscal cost by facility. Noncompliance should allow cure, appeal, and proportional recovery of the incentive." },
+  { number: "01", title: "Measure contractable capacity", body: "Measure the 10% through accelerator hours, throughput, reserved capacity, or another auditable technical unit. Revenue should be supplementary. Hardware, performance, availability, SLA, and commercial terms must be comparable with exported capacity." },
+  { number: "02", title: "Preserve a non-substitutable floor", body: "Remove full substitution of domestic supply through R&D. If a compromise is needed, cap substitution at half and preserve at least 5% of total effective capacity in Brazil." },
+  { number: "03", title: "Include compute operators", body: "Allow GPU cloud, inference, and compute companies using third-party data centers to qualify. Cover liquid cooling, power distribution, thermal control, and high-density interconnection." },
+  { number: "04", title: "Create a Brazilian contracting door", body: "Count only capacity with a contract enforceable in Brazil, proper fiscal documentation, local data residency, LGPD and ANPD compliance, and support under Brazilian law." },
+  { number: "05", title: "Publish results and recover benefits", body: "Create an annual, public, audited report. Breach of domestic-supply commitments should trigger proportional clawback, with cure and appeal rights and cancellation for material or repeated violations." },
 ];
+
+const regulationPoints = pt ? [
+  "Auditar capacidade instalada, oferecida, contratada e utilizada no Brasil.",
+  "Divulgar geração do hardware, desempenho, SLA, disponibilidade e condições comerciais.",
+  "Governar o P&D com chamadas abertas, beneficiários públicos e controle de conflitos.",
+  "Publicar WUE, volume absoluto, origem da água e situação hídrica local.",
+  "Certificar energia sem dupla contagem e com emissões verificáveis.",
+  "Divulgar reforços de rede, custos, cronograma e quem paga.",
+  "Exigir avaliação independente antes de qualquer renovação após cinco anos.",
+] : [
+  "Audit capacity installed, offered, contracted, and used in Brazil.",
+  "Disclose hardware generation, performance, SLA, availability, and commercial terms.",
+  "Govern R&D through open calls, published beneficiaries, and conflict controls.",
+  "Publish WUE, absolute volume, water source, and local water stress.",
+  "Certify power without double counting and with verified emissions.",
+  "Disclose grid reinforcements, costs, timeline, and who pays.",
+  "Require independent review before any renewal after five years.",
+];
+
+const draftLanguage = pt ? [
+  { title: "Capacidade técnica", body: "Trocar a aferição por receita no art. 11-B, § 4º, por unidades técnicas auditáveis. Acrescentar equivalência de geração tecnológica, desempenho, disponibilidade, segurança, SLA e condições comerciais." },
+  { title: "Piso doméstico", body: "Revogar o art. 11-B, § 6º. Como compromisso, permitir substituir no máximo metade da obrigação, preservando pelo menos 5% da oferta efetiva total no mercado interno." },
+  { title: "Operador em instalação de terceiro", body: "Acrescentar ao art. 11-A a habilitação da pessoa jurídica que possua ou opere equipamentos de GPU cloud, HPC, treinamento ou inferência instalados em data center de terceiro." },
+  { title: "Porta brasileira", body: "Acrescentar ao art. 11-B que só conta capacidade contratável no Brasil, com documentação fiscal, residência local, LGPD e ANPD, suporte sob lei brasileira e condições objetivas." },
+  { title: "Relatório e clawback", body: "Incluir a oferta doméstica nas condições dos arts. 11-C e 11-D, ampliar o relatório anual e recuperar o benefício proporcionalmente ao déficit de cumprimento." },
+] : [
+  { title: "Technical capacity", body: "Replace the revenue test in Article 11-B(4) with auditable technical units. Add equivalence requirements for hardware generation, performance, availability, security, SLA, and commercial terms." },
+  { title: "Domestic floor", body: "Repeal Article 11-B(6). As a compromise, cap substitution at half of the obligation while preserving at least 5% of total effective supply for the domestic market." },
+  { title: "Operator in a third-party facility", body: "Add to Article 11-A the qualification of a legal entity that owns or operates GPU cloud, HPC, training, or inference equipment installed in a third-party data center." },
+  { title: "Brazilian contracting door", body: "Add to Article 11-B that only capacity contractable in Brazil counts, with fiscal documentation, local residency, LGPD and ANPD compliance, Brazilian-law support, and objective terms." },
+  { title: "Report and clawback", body: "Include domestic supply among the conditions in Articles 11-C and 11-D, expand the annual report, and recover benefits in proportion to the compliance shortfall." },
+];
+
+const amendmentMeta = [
+  ["1", "Laércio Oliveira", "10163022", "energy-preference", "oppose"],
+  ["2", "Eduardo Braga", "10163042", "national-capacity", "support"],
+  ["3", "Nelsinho Trad", "10163049", "generation-concessions", "separate"],
+  ["4", "Laércio Oliveira", "10163074", "energy-definition", "adjust"],
+  ["5", "Laércio Oliveira", "10163128", "energy-definition-duplicate", "merge"],
+  ["6", "Omar Aziz", "10163179", "national-capacity-duplicate", "merge"],
+  ["7", "Esperidião Amin", "10164009", "regional-reduction", "oppose"],
+  ["8", "Jorge Seif", "10165596", "water-reuse", "adjust"],
+  ["9", "Luis Carlos Heinze", "10165739", "coal-cde", "separate"],
+  ["10", "Luis Carlos Heinze", "10165750", "curtailment-cost", "separate"],
+  ["11", "Zequinha Marinho", "10171408", "local-generation", "adjust"],
+  ["12", "Wellington Fagundes", "10172268", "storage-cost", "review"],
+  ["13", "Izalci Lucas", "10172449", "local-content", "adjust"],
+  ["14", "Jayme Campos", "10172879", "storage-financing", "separate"],
+  ["15", "Marcelo Castro", "10173923", "zpe-services", "separate"],
+  ["16", "Esperidião Amin", "10181424", "gas-energy", "oppose"],
+  ["17", "Luis Carlos Heinze", "10181886", "network-credit", "adjust"],
+  ["18", "Luis Carlos Heinze", "10181890", "hydro-renewal", "separate"],
+  ["19", "Luis Carlos Heinze", "10181894", "storage-cost-duplicate", "merge"],
+  ["20", "Veneziano Vital do Rêgo", "10204658", "zpe-domestic-services", "adjust"],
+  ["21", "Veneziano Vital do Rêgo", "10215127", "energy-certification", "support"],
+  ["22", "Laércio Oliveira", "10281299", "energy-source-list", "oppose"],
+] as const;
+
+const labels = {
+  pt: {
+    "energy-preference": ["Energia apenas preferencial", "Enfraquece a obrigação", "Rejeitar"],
+    "national-capacity": ["Falta de capacidade nacional equivalente", "Ajuda no critério de equipamento", "Apoiar e ampliar"],
+    "generation-concessions": ["Concessões de geração", "Sem relação direta", "Tratar separadamente"],
+    "energy-definition": ["Definição de energia limpa", "Tange a certificação", "Apoiar com ajustes"],
+    "energy-definition-duplicate": ["Repete a Emenda 4", "Tange a certificação", "Fundir com a 4"],
+    "national-capacity-duplicate": ["Repete a Emenda 2", "Ajuda no critério de equipamento", "Fundir com a 2"],
+    "regional-reduction": ["Redução em regiões carboníferas", "Pode reduzir a reserva doméstica", "Rejeitar"],
+    "water-reuse": ["Atalho de WUE para água de reuso", "Ignora volume e estresse local", "Reescrever"],
+    "coal-cde": ["CDE e carvão", "Sem relação direta", "Tratar separadamente"],
+    "curtailment-cost": ["Custeio de cortes de geração", "Sem relação direta", "Tratar separadamente"],
+    "local-generation": ["Associação local de geração e consumo", "Tange conexão e rede", "Apoiar com salvaguardas"],
+    "storage-cost": ["Redistribuição dos custos de armazenamento", "Tange incidência de custos", "Exigir análise"],
+    "local-content": ["Índice de conteúdo local", "Nomeia equipamentos, mas pode afastar investimento", "Reescrever"],
+    "storage-financing": ["Financiamento para armazenamento", "Adjacente ao REDATA", "Projeto próprio"],
+    "zpe-services": ["Contratos de serviços em ZPE", "Tange a cadeia de serviços", "Tratar no marco de ZPE"],
+    "gas-energy": ["Gás como energia limpa", "Não exige emissões verificadas", "Rejeitar como redigida"],
+    "network-credit": ["Crédito para redes", "Tange interconexão, com custo fiscal", "Reescrever"],
+    "hydro-renewal": ["Renovação hidrelétrica", "Sem relação direta", "Tratar separadamente"],
+    "storage-cost-duplicate": ["Repete a Emenda 12", "Tange incidência de custos", "Fundir com a 12"],
+    "zpe-domestic-services": ["Serviços e vendas domésticas em ZPE", "Tange contratação sem garantias de LGPD", "Aproveitar o conceito"],
+    "energy-certification": ["Certificação nacional de energia", "Cobre parcialmente o ponto 5", "Apoiar com ajustes"],
+    "energy-source-list": ["Lista gás entre fontes limpas", "Não exige desempenho ou emissões", "Rejeitar e substituir"],
+  },
+  en: {
+    "energy-preference": ["Power requirement becomes a preference", "Weakens the commitment", "Oppose"],
+    "national-capacity": ["No equivalent domestic capacity", "Helps define equipment eligibility", "Support and expand"],
+    "generation-concessions": ["Generation concessions", "No direct link", "Handle separately"],
+    "energy-definition": ["Clean-power definition", "Adjacent to certification", "Support with changes"],
+    "energy-definition-duplicate": ["Duplicates Amendment 4", "Adjacent to certification", "Merge with 4"],
+    "national-capacity-duplicate": ["Duplicates Amendment 2", "Helps define equipment eligibility", "Merge with 2"],
+    "regional-reduction": ["Reduction for coal regions", "May reduce domestic capacity", "Oppose"],
+    "water-reuse": ["WUE shortcut for reclaimed water", "Ignores volume and local stress", "Rewrite"],
+    "coal-cde": ["Coal and CDE", "No direct link", "Handle separately"],
+    "curtailment-cost": ["Curtailment costs", "No direct link", "Handle separately"],
+    "local-generation": ["Local generation-consumption association", "Adjacent to grid connection", "Add safeguards"],
+    "storage-cost": ["Redistributes storage costs", "Raises cost-incidence issues", "Require analysis"],
+    "local-content": ["Local-content index", "Names equipment but may deter investment", "Rewrite"],
+    "storage-financing": ["Storage financing", "Adjacent to REDATA", "Separate bill"],
+    "zpe-services": ["ZPE service contracts", "Adjacent to the service chain", "Handle under ZPE law"],
+    "gas-energy": ["Gas classified as clean power", "No verified-emissions test", "Oppose as drafted"],
+    "network-credit": ["Credit for network infrastructure", "Adjacent to interconnection, adds fiscal cost", "Rewrite"],
+    "hydro-renewal": ["Hydro concession renewal", "No direct link", "Handle separately"],
+    "storage-cost-duplicate": ["Duplicates Amendment 12", "Raises cost-incidence issues", "Merge with 12"],
+    "zpe-domestic-services": ["Domestic ZPE services and sales", "Touches contracting without LGPD safeguards", "Use the concept only"],
+    "energy-certification": ["National power certification", "Partially covers regulatory point 5", "Support with changes"],
+    "energy-source-list": ["Lists gas among clean sources", "No performance or emissions test", "Replace"],
+  },
+} as const;
+
+const amendments = amendmentMeta.map(([number, author, dm, key, stance]) => {
+  const [subject, relation, recommendation] = labels[pt ? "pt" : "en"][key];
+  return { number, author, subject, relation, recommendation, stance, url: `https://legis.senado.leg.br/sdleg-getter/documento?dm=${dm}&disposition=inline` };
+});
 
 const sources = pt ? [
   ["Tramitação e 22 emendas", "Senado Federal", "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786"],
-  ["Prioridade na semana de 31 de agosto", "Agência Senado", "https://www12.senado.leg.br/noticias/materias/2026/08/26/davi-alcolumbre-acerta-prioridades-do-congresso-em-reuniao-com-lula-e-motta"],
+  ["Possível votação na semana de 31 de agosto", "Agência Senado", "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers"],
   ["Texto aprovado e contrapartidas", "Agência Câmara", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
-  ["Redação final da Câmara", "Câmara dos Deputados", "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3089078&filename=Tramitacao-50-PL-278-2026"],
+  ["Texto-base e dispositivos", "Senado Federal", "https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline"],
 ] : [
   ["Legislative status and 22 amendments", "Brazilian Senate", "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786"],
-  ["Priority for the August 31 session week", "Senate News", "https://www12.senado.leg.br/noticias/materias/2026/08/26/davi-alcolumbre-acerta-prioridades-do-congresso-em-reuniao-com-lula-e-motta"],
+  ["Possible vote during the August 31 session week", "Senate News", "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers"],
   ["Chamber text and commitments", "Chamber News", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
-  ["Final text passed by the Chamber", "Chamber of Deputies", "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3089078&filename=Tramitacao-50-PL-278-2026"],
+  ["Base bill and provisions", "Brazilian Senate", "https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline"],
 ];
 ---
 
@@ -50,15 +163,15 @@ const sources = pt ? [
 
   <div class="page-content redata-content">
     <section class="redata-live" aria-labelledby="redata-live-title">
-      <div><span>{pt ? "Situação em 27 ago 2026" : "Status on 27 Aug 2026"}</span><h2 id="redata-live-title">{pt ? "A janela de mudança está aberta" : "The window for change is open"}</h2></div>
-      <p>{pt ? "O PL 278/2026 está no Plenário do Senado, ainda sem relator, e recebeu 22 emendas. A Presidência do Senado anunciou sua deliberação entre as prioridades da semana de 31 de agosto a 4 de setembro." : "Bill 278/2026 is before the Senate plenary, still has no rapporteur, and has received 22 amendments. The Senate president listed deliberation among the priorities for the August 31 to September 4 session week."}</p>
+      <div><span>{pt ? "Situação em 28 ago 2026" : "Status on 28 Aug 2026"}</span><h2 id="redata-live-title">{pt ? "Falta um bloco novo de emendas" : "A new amendment package is still needed"}</h2></div>
+      <p>{pt ? "O PL 278/2026 está no Plenário do Senado, ainda sem relator e com 22 emendas. Nenhuma cobre integralmente os cinco ajustes necessários para transformar o incentivo em capacidade contratável no Brasil." : "Bill 278/2026 is before the Senate plenary, still has no rapporteur, and has received 22 amendments. None fully covers the five changes needed to turn the incentive into capacity that can be contracted in Brazil."}</p>
       <a class="button-link primary" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">{pt ? "Acompanhar no Senado" : "Follow in the Senate"}</a>
     </section>
 
     <section aria-labelledby="numbers-title">
       <h2 id="numbers-title">{pt ? "O texto que chegou ao Senado" : "The text before the Senate"}</h2>
       <div class="redata-metrics">{metrics.map(([value, label, detail]) => <article><strong>{value}</strong><span>{label}</span><p>{detail}</p></article>)}</div>
-      <div class="callout">{pt ? "Nossa posição: aprovar com mudanças pontuais. Desoneração sem acesso cria um enclave; exigência mal desenhada afasta investimento. O Senado pode evitar os dois erros." : "Our position: pass the bill with targeted changes. Tax relief without access creates an enclave; a poorly designed requirement deters investment. The Senate can avoid both mistakes."}</div>
+      <div class="callout">{pt ? "Nossa posição: aprovar com mudanças pontuais. Sem elas, o Brasil pode subsidiar máquinas modernas sem garantir que empresas brasileiras consigam contratá-las." : "Our position: pass the bill with targeted changes. Without them, Brazil may subsidize modern machines without ensuring that Brazilian companies can contract them."}</div>
     </section>
 
     <section aria-labelledby="value-title">
@@ -78,6 +191,52 @@ const sources = pt ? [
       <div class="redata-changes">{changes.map((item) => <article><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div>
     </section>
 
+    <section aria-labelledby="amendment-review-title">
+      <div class="redata-section-heading">
+        <div>
+          <span>{pt ? "Revisão das 22 emendas" : "Review of all 22 amendments"}</span>
+          <h2 id="amendment-review-title">{pt ? "A pauta atual ainda não resolve o problema" : "The current amendment agenda does not solve the problem"}</h2>
+        </div>
+        <p>{pt ? "A leitura foi feita contra os cinco pedidos e os sete pontos de regulamentação. A Emenda 21 é a única que cobre parcialmente um ponto regulatório. A Emenda 8, como redigida, enfraquece a medição da água." : "We assessed each amendment against the five requests and seven regulatory points. Amendment 21 is the only one to partially cover a regulatory point. Amendment 8, as drafted, weakens water-use measurement."}</p>
+      </div>
+
+      <div class="coverage-strip" aria-label={pt ? "Cobertura das emendas atuais" : "Coverage of current amendments"}>
+        <article><strong>0/5</strong><span>{pt ? "pedidos cobertos integralmente" : "requests fully covered"}</span></article>
+        <article><strong>1/7</strong><span>{pt ? "pontos regulatórios cobertos parcialmente" : "regulatory points partly covered"}</span></article>
+        <article><strong>3</strong><span>{pt ? "emendas úteis como ponto de partida: 2, 6 e 21" : "useful starting points: 2, 6, and 21"}</span></article>
+      </div>
+
+      <div class="amendment-table-wrap" tabindex="0" aria-label={pt ? "Tabela rolável das 22 emendas" : "Scrollable table of all 22 amendments"}>
+        <table class="amendment-table">
+          <thead><tr><th>{pt ? "Emenda" : "Amendment"}</th><th>{pt ? "Autor" : "Author"}</th><th>{pt ? "Conteúdo" : "Subject"}</th><th>{pt ? "Relação" : "Relation"}</th><th>{pt ? "Posição" : "Position"}</th></tr></thead>
+          <tbody>
+            {amendments.map((item) => <tr>
+              <td><a href={item.url}>#{item.number}</a></td>
+              <td>{item.author}</td>
+              <td>{item.subject}</td>
+              <td>{item.relation}</td>
+              <td><span class:list={["amendment-stance", `stance-${item.stance}`]}>{item.recommendation}</span></td>
+            </tr>)}
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">{pt ? "No celular, deslize a tabela horizontalmente. Abra o número da emenda para ler o PDF oficial no Senado." : "On mobile, scroll the table horizontally. Open an amendment number to read the official Senate PDF."}</p>
+    </section>
+
+    <section aria-labelledby="regulation-title">
+      <div class="redata-section-heading compact-heading">
+        <div><span>{pt ? "Regulamentação" : "Regulation"}</span><h2 id="regulation-title">{pt ? "Sete obrigações que não podem ficar implícitas" : "Seven duties that cannot remain implicit"}</h2></div>
+        <p>{pt ? "O texto deve delegar estes pontos com clareza e exigir dados comparáveis por instalação." : "The bill should delegate these points clearly and require comparable facility-level data."}</p>
+      </div>
+      <ol class="regulation-list">{regulationPoints.map((point, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><p>{point}</p></li>)}</ol>
+    </section>
+
+    <section aria-labelledby="language-title">
+      <h2 id="language-title">{pt ? "Redação indicativa para a negociação" : "Indicative language for negotiations"}</h2>
+      <p class="section-lead">{pt ? "A arquitetura já está definida. Consultoria legislativa deve consolidar remissões, competência e impacto fiscal antes do protocolo." : "The architecture is defined. Legislative counsel should consolidate cross-references, authority, and fiscal impact before filing."}</p>
+      <div class="draft-language-grid">{draftLanguage.map((item, index) => <details><summary><span>{String(index + 1).padStart(2, "0")}</span>{item.title}</summary><p>{item.body}</p></details>)}</div>
+    </section>
+
     <section class="redata-companions" aria-labelledby="companions-title">
       <h2 id="companions-title">{pt ? "Duas medidas fora do texto tributário" : "Two measures beyond the tax bill"}</h2>
       <div class="principle-grid">
@@ -89,13 +248,13 @@ const sources = pt ? [
     <section class="redata-message" aria-labelledby="message-title">
       <span>{pt ? "Mensagem de um minuto" : "One-minute message"}</span>
       <h2 id="message-title">{pt ? "O que pedir à liderança do Senado" : "What to ask Senate leaders"}</h2>
-      <blockquote>{pt ? "O REDATA merece aprovação porque reduz o custo de instalar computação no Brasil e já traz contrapartidas ambientais, tecnológicas e domésticas. Pedimos cinco ajustes: medir os 10% por capacidade contratável, preservar um piso que não possa ser trocado por P&D, incluir operadores de computação acelerada e refrigeração, exigir uma porta brasileira de contratação e publicar resultados com recuperação proporcional do benefício. O Brasil precisa de máquinas, fornecedores e uma opção de continuidade para empresas e serviços públicos." : "REDATA deserves passage because it lowers the cost of installing compute in Brazil and already includes environmental, technology, and domestic commitments. We ask for five changes: measure the 10% as contractable capacity, preserve a floor that cannot be replaced by R&D, include accelerated-compute and cooling operators, require a Brazilian contracting door, and publish results with proportional recovery of benefits. Brazil needs machines, suppliers, and a continuity option for companies and public services."}</blockquote>
+      <blockquote>{pt ? "O REDATA merece aprovação, mas as 22 emendas ainda deixam de fora os pontos que transformam incentivo fiscal em capacidade útil ao Brasil. Pedimos que os 10% sejam medidos por capacidade técnica contratável, que pelo menos 5% não possam ser trocados por P&D e que a obrigação doméstica tenha relatório e clawback proporcional. O texto também deve incluir operadores de GPU cloud em data centers de terceiros e criar uma porta brasileira de contratação, com contrato local, LGPD, residência de dados e suporte sob lei brasileira." : "REDATA deserves passage, but the 22 amendments still omit the safeguards that turn tax incentives into useful Brazilian capacity. Measure the 10% as contractable technical capacity, preserve at least 5% that cannot be replaced by R&D, and attach an annual report and proportional clawback to the domestic commitment. The bill should also include GPU cloud operators in third-party data centers and create a Brazilian contracting door with local contracts, LGPD compliance, data residency, and support under Brazilian law."}</blockquote>
     </section>
 
     <section aria-labelledby="sources-title">
       <h2 id="sources-title">{pt ? "Fontes primárias" : "Primary sources"}</h2>
       <div class="redata-sources">{sources.map(([title, source, url]) => <a href={url}><strong>{title}</strong><span>{source}</span></a>)}</div>
-      <p class="evidence-boundary">{pt ? "Revisão factual: 27 de agosto de 2026. As recomendações representam a posição dos autores e precisam de revisão jurídica antes de se tornarem minuta legislativa." : "Factual review: August 27, 2026. The recommendations represent the authors' position and require legal review before becoming legislative language."}</p>
+      <p class="evidence-boundary">{pt ? "Revisão factual: 28 de agosto de 2026. Leitura do texto-base e das 22 emendas oficiais. As recomendações representam a posição dos autores e precisam de revisão jurídica antes do protocolo." : "Factual review: August 28, 2026. Review of the base bill and all 22 official amendments. The recommendations represent the authors' position and require legal review before filing."}</p>
       <p><a class="button-link" href={routes[locale].scenario}>{pt ? "Ver como o REDATA muda os cenários" : "See how REDATA changes the scenarios"}</a></p>
     </section>
   </div>

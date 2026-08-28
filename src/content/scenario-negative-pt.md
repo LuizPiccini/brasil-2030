@@ -1,42 +1,52 @@
-## 2027: Defesa dependente
+## 2027: Ataques, demissões e poderes de emergência
 
-> **Status:** cenário negativo. A onda de ataques e seus efeitos são invenções plausíveis, não fatos observados.
+> **Status:** cenário negativo. Os ataques, seus efeitos econômicos e as decisões políticas são invenções plausíveis, não fatos observados.
 
-As mesmas ferramentas que elevam a pressão no cenário positivo encontram um Brasil com menos capacidade de resposta. O REDATA fracassou ou entrou em vigor sem transformar a obrigação doméstica em serviço contratável. Projetos avançaram, mas operadores destinaram a maior parte das máquinas a contratos estrangeiros ou ao uso de seus controladores.
+O REDATA fracassou ou entrou em vigor sem criar capacidade computacional contratável por empresas e órgãos brasileiros. Alguns data centers operam no país, mas seus controladores destinam as máquinas a contratos estrangeiros. Outros projetos foram adiados ou migraram para países com regras mais previsíveis.
 
-Fraudes, invasões e ransomware atingem bancos, hospitais, municípios e fornecedores de software. O sistema da clínica de Lourdes para três vezes no ano. Na interrupção mais longa, pacientes ficam nove dias sem acesso normal à agenda e aos laudos. A clínica paga por recuperação, adia salários e demite duas pessoas.
+Criminosos usam IA para ampliar fraudes e ataques digitais. Eles testam vulnerabilidades, adaptam códigos maliciosos e imitam funcionários com voz e vídeo. Rafael percebe a mudança na fila de incidentes do CTIR. Cada defesa dura menos, e as equipes públicas recebem mais casos do que conseguem investigar.
 
-Rafael acompanha incidentes no CTIR sem um inventário nacional de dependências. Alertas chegam em formatos diferentes e vários órgãos omitem ataques por medo de exposição. A equipe identifica campanhas parecidas, mas não consegue distribuir uma defesa comum a todos os alvos.
+O sistema da clínica de Lourdes para durante dois dias. Pacientes chegam sem horário confirmado. Funcionários anotam consultas em papel, e a clínica contrata um pacote estrangeiro de segurança que consome uma parte maior do orçamento.
 
-André conclui que o banco precisa do melhor sistema estrangeiro disponível. O contrato exige integração profunda, retenção de dados operacionais e pagamento em dólar. Ele não encontra uma alternativa brasileira capaz de cobrir a escala do banco. A decisão reduz perdas imediatas e torna a continuidade do serviço dependente de uma empresa sujeita a outra jurisdição.
+André compara os sistemas disponíveis para o banco. Uma plataforma estrangeira supera as alternativas nacionais. O contrato exige integração profunda, retenção de dados operacionais e pagamento em dólar. André assina porque a outra opção deixaria milhões de clientes expostos.
 
-Políticos prometem uma resposta visível. O Congresso restringe o uso de agentes por empresas brasileiras, impõe autorizações lentas e amplia a responsabilidade de quem implanta sistemas defensivos. Atacantes no exterior ignoram as regras. Empresas locais cancelam produtos, enquanto grandes fornecedores absorvem o custo de conformidade.
+Grandes bancos conseguem pagar. Clínicas, municípios e pequenas empresas ficam expostos.
 
-Camila tenta incluir uma exceção para pesquisa de segurança e defesa autorizada. O deputado apoia a ideia em privado, mas teme parecer favorável a uma tecnologia associada a golpes. O texto passa sem a exceção.
+Empresas brasileiras também compram sistemas estrangeiros para automatizar atendimento, análise financeira e tarefas administrativas. Elas cortam vagas no Brasil, mas poucas desenvolvem produtos capazes de competir fora do país. Jovens em busca do primeiro emprego sentem o choque antes dos demais trabalhadores.
 
-## 2028: A corrida continua
+Depois de ataques contra bancos e órgãos públicos, o Congresso concede ao Executivo poderes temporários para monitorar redes, bloquear sistemas suspeitos e requisitar dados. O governo mantém parte desses poderes depois que a crise imediata passa.
 
-> **Status:** cenário negativo. O fracasso das negociações e a intensidade dos efeitos econômicos são hipóteses.
+Camila tenta incluir limites, auditoria judicial e uma cláusula de expiração. O deputado apoia a ideia em privado. Na votação, acompanha a orientação do governo.
 
-Estados Unidos e China abrem conversas depois dos incidentes de 2027. Nenhum lado aceita limitar treinamento ou implantação. Cada governo teme que o outro use uma pausa para ganhar vantagem. A ausência de verificação comum transforma qualquer acidente em acusação de sabotagem.
+## 2028: O acordo dos outros
 
-O Brasil participa das sessões multilaterais, mas não influencia os termos centrais. Possui mercado, energia e instalações. Não consegue demonstrar capacidade disponível, avaliações próprias ou uma posição coordenada entre Itamaraty, segurança, energia e política industrial.
+> **Status:** invenção central do cenário. O acordo, seus termos e seus efeitos distributivos são hipóteses.
 
-Os ataques continuam. Empresas concentram seus orçamentos em poucos fornecedores globais de defesa e cortam projetos locais. Universidades perdem acesso a modelos avançados quando preços sobem. O governo compra serviços por contratos emergenciais, sem tempo para negociar residência de dados ou continuidade.
+Estados Unidos e China chegam a um acordo de desaceleração depois de uma sequência de incidentes internacionais. As duas potências limitam o treinamento de sistemas acima de certos níveis de capacidade, criam canais de emergência e compartilham avaliações de risco. Programas militares recebem exceções. Os controles sobre chips e equipamentos continuam.
 
-O mercado de trabalho piora em pontos específicos. Empresas reduzem vagas administrativas e de entrada antes de definir novas carreiras. Jovens graduados disputam estágios, trabalho informal e concursos. O Congresso tenta impedir demissões por automação. As empresas respondem congelando contratações e terceirizando tarefas.
+O acordo diminui a velocidade da corrida e protege a vantagem dos países que já construíram modelos, data centers e cadeias de suprimento. O pacto não distribui chips, não garante capacidade defensiva aos demais países e não lhes oferece participação efetiva nas decisões.
 
-Lourdes percebe a mudança pela família. O filho de uma prima termina o contrato na construção de Pecém e não encontra vaga permanente. Uma sobrinha formada em administração trabalha atendendo clientes de três empresas por uma plataforma. Nenhuma delas oferece vínculo ou treinamento.
+Brasil, Índia, África do Sul e outros países recebem convites para apoiar o acordo depois que EUA e China definem seus termos.
 
-## 2029: Escolha forçada
+Camila acompanha a delegação brasileira. O governo tenta incluir garantias de acesso para países sem capacidade própria. Os negociadores perguntam quais clusters o Brasil consegue operar e quais recursos pode oferecer ao sistema de verificação. A delegação não tem uma resposta relevante.
 
-> **Status:** invenção central do cenário negativo. Até agosto de 2026, controles americanos cobriam chips, pesos e treinamento, não o acesso comum a APIs de inferência.
+O desemprego domina o debate nacional. Empresas com acesso aos melhores sistemas reduzem equipes; suas concorrentes fecham. Engenheiros, pesquisadores e profissionais de saúde recebem propostas para trabalhar em hubs estrangeiros. Universidades perdem docentes e alunos de pós-graduação.
 
-Estados Unidos e China aprofundam controles sobre chips, modelos, serviços de inferência e equipamentos de rede. Os dois blocos exigem garantias contra desvio e restringem clientes ligados à infraestrutura do rival.
+A clínica demite duas recepcionistas e adota um sistema automatizado de atendimento. Lourdes assume parte do trabalho quando o sistema não entende pacientes idosos ou marca procedimentos errados. Ela vê colegas perderem o emprego enquanto a mensalidade do software continua subindo.
 
-O Brasil tenta preservar acesso aos dois lados. Sem capacidade contratável própria, oferece pouco em troca. Operadores instalados no país mostram seus contratos: as máquinas estão em território brasileiro, mas os controladores decidem a alocação e governos estrangeiros definem quais chips e modelos podem atendê-las.
+Protestos ocupam as capitais. Grupos políticos inundam as redes com vídeos falsos e denúncias fabricadas. O governo amplia o monitoramento digital e começa a classificar movimentos de protesto como possíveis ameaças cibernéticas.
 
-Depois de meses de pressão, o governo firma um acordo emergencial com um dos blocos. O parceiro garante capacidade para governo, bancos e grandes empresas. O outro reduz licenças, suporte e acesso a modelos. A escolha evita uma interrupção imediata e cria dependência política.
+## 2029: Acesso em troca de alinhamento
+
+> **Status:** invenção central do cenário negativo. O parceiro escolhido e as condições descritas servem para testar a dependência criada pela falta de capacidade nacional.
+
+A desaceleração torna a capacidade instalada mais escassa. EUA e China atendem primeiro seus órgãos públicos, empresas estratégicas e aliados.
+
+O Brasil tenta comprar capacidade no mercado internacional. Fornecedores americanos oferecem acesso limitado, sujeito a controles de exportação e revisões de segurança. Um consórcio chinês apresenta um pacote mais amplo: computação para órgãos públicos, sistemas de defesa cibernética, crédito para infraestrutura elétrica e construção de data centers.
+
+O pacote exige contratos longos, equipamentos chineses e preferência para fornecedores aprovados por Pequim. O governo brasileiro também deve evitar acordos que prejudiquem interesses tecnológicos chineses.
+
+O Planalto aceita. Ministros descrevem o acordo como uma parceria entre iguais. Qualquer conflito diplomático passa a ameaçar os sistemas que protegem bancos, hospitais e redes governamentais.
 
 <figure class="scenario-visual visual-capacity" aria-labelledby="visual-capacity-negative-title-pt">
   <figcaption>
@@ -48,36 +58,48 @@ Depois de meses de pressão, o governo firma um acordo emergencial com um dos bl
     <div class="capacity-layer capacity-physical"><span>Capacidade física no Brasil</span><small>máquinas, energia e território</small><div class="capacity-layer capacity-usable"><span>Contratável por brasileiros</span><small>preço, cota e permissão</small><div class="capacity-layer capacity-protected"><span>Continuidade protegida</span><small>direito de uso durante restrições</small></div></div></div>
   </div>
   <dl class="control-ledger"><div><dt>Localização</dt><dd>Brasil</dd></div><div><dt>Alocação</dt><dd>operador</dd></div><div><dt>Regras dos chips</dt><dd>governo estrangeiro</dd></div><div><dt>Comprador brasileiro</dt><dd>sem garantia</dd></div></dl>
-  <p class="visual-note"><strong>Conclusão:</strong> o país comprometeu energia e rede antes de contratar acesso ou continuidade.</p>
+  <p class="visual-note"><strong>Conclusão:</strong> o Brasil comprometeu energia e rede antes de contratar acesso ou continuidade.</p>
 </figure>
 
-Multinacionais brasileiras mantêm serviços por subsidiárias no exterior. Empresas médias, universidades e governos locais recebem produtos mais caros, atrasados ou limitados. O acesso à melhor defesa digital passa a acompanhar renda, escala empresarial e proximidade política.
+O desemprego entre jovens e profissionais com diploma atinge níveis inéditos. Famílias que viviam de empregos administrativos passam a combinar trabalho informal, benefícios públicos e ajuda de parentes no exterior.
 
-Camila encontra as notas de 2026 numa pasta. As perguntas estavam corretas. O gabinete nunca conseguiu transformá-las em emendas, contratos ou indicadores. Agora o Congresso tenta mudar as regras, mas os principais projetos já possuem licenças, conexões e contratos de longo prazo.
+A arrecadação cai. O governo financia programas de renda e segurança enquanto corta recursos de universidades, pesquisa e administração pública. Empresas brasileiras transferem seus melhores profissionais para escritórios no exterior, onde encontram mais capacidade computacional.
 
-## 2030: Dependência em cascata
+Autoridades brasileiras começam a usar os sistemas estrangeiros de monitoramento contra jornalistas, organizações civis e adversários políticos. Fornecedores chineses entregam a tecnologia. Dirigentes brasileiros escolhem os alvos.
 
-> **Status:** resultado negativo, condicionado ao fracasso das escolhas domésticas e da coordenação internacional.
+Camila descobre que relatórios produzidos para proteger infraestrutura circulam em uma nova unidade de inteligência política. Rafael recebe ordens para compartilhar dados sobre grupos que organizaram protestos. Ele passa a registrar quais solicitações não têm relação com segurança cibernética.
 
-Os Estados Unidos e a China concentram chips, modelos de fronteira e sistemas defensivos. Países aliados recebem acesso previsível. Países com ativos estratégicos negociam condições. O Brasil compra uma parcela do que precisa sob as regras do bloco escolhido.
+O deputado de Camila adere à coalizão governista. Em troca, recebe recursos para seu estado e proteção nas redes controladas pelo governo. Ele pede que Camila pare de fazer perguntas sobre o programa de monitoramento.
+
+## 2030: País satélite
+
+> **Status:** resultado negativo, condicionado ao fracasso das escolhas domésticas e à concentração de capacidade após o acordo internacional.
+
+O Brasil ainda realiza eleições. O governo controla o acesso às principais redes de comunicação, usa dados públicos para direcionar propaganda e investiga adversários com ferramentas criadas para combater ataques digitais.
+
+Empresas de mídia enfrentam auditorias e bloqueios. Candidatos de oposição perdem acesso a plataformas durante períodos críticos da campanha. Governadores dependem de transferências federais para financiar programas de renda e segurança.
+
+As instituições preservam seus nomes e edifícios. Juízes, parlamentares e servidores aprendem quais decisões podem custar recursos, proteção digital ou exposição nas redes. Observadores internacionais passam a classificar o Brasil como um regime híbrido, com eleições periódicas e poucas condições para uma disputa livre.
 
 | Medida | 2026 | Cenário negativo em 2030 |
 |---|---|---|
-| Computação relevante para IA | Sem inventário confiável | Capacidade física conhecida, acesso opaco |
-| Oferta para compradores brasileiros | Promessa medida por receita | Pequena, cara e sujeita a autorização externa |
-| Continuidade de serviços críticos | Não testada | Dependente de contratos emergenciais |
-| Provedores brasileiros de inferência | Oferta pequena e fragmentada | Mercado concentrado em revendedores estrangeiros |
-| Capacidade de avaliação | Dispersa | Órgãos testam apenas os modelos que recebem |
-| Posição internacional | Participação sem ativo operacional | Alinhamento defensivo com um bloco |
+| Capacidade computacional para IA | Sem inventário confiável | Acesso estrangeiro, caro e revogável |
+| Trabalho | Pressão concentrada em algumas funções | Desemprego recorde, informalidade e poucas vagas de entrada |
+| Talentos | Ecossistema doméstico pequeno | Fuga de pesquisadores, engenheiros e empreendedores |
+| Defesa digital | Capacidade dispersa | Sistemas críticos dependem do fornecedor estrangeiro |
+| Democracia | Instituições competitivas sob pressão | Regime híbrido apoiado por vigilância e patronagem |
+| Posição internacional | Autonomia diplomática sem ativo operacional | Alinhamento em troca de computação, crédito e segurança |
 
-Empresas brasileiras absorvem menos ganhos de produtividade. Funções de entrada desaparecem mais rápido do que surgem novas ocupações. Desemprego, informalidade e gasto social crescem enquanto a arrecadação das atividades mais rentáveis se concentra fora do país.
+A economia se divide entre um grupo conectado à infraestrutura estrangeira e uma população que alterna desemprego, trabalho informal e assistência pública. O país importa sistemas capazes de substituir trabalhadores, mas não controla as empresas, os modelos ou os data centers que capturam os ganhos.
 
-O Brasil não entra em colapso. Bancos operam, hospitais atendem e empresas continuam exportando. Cada sistema importante, porém, carrega uma dependência que o país não controla: modelo, chip, atualização, licença ou nuvem.
+André protege o banco com a plataforma chinesa. Ele não consegue auditar todo o sistema ou trocar de fornecedor sem interromper operações essenciais. Rafael continua no governo, tentando impedir que ferramentas de segurança sirvam ao controle político. Camila deixa o gabinete depois que o deputado vota pela renovação dos poderes de emergência.
 
-Um país muito menor transforma energia e acordos de acesso em posição intermediária. Os Emirados Árabes Unidos servem como contraponto dentro do cenário, sem funcionar como modelo político para o Brasil. Eles negociam equipamentos, infraestrutura e parcerias enquanto o Brasil discute como recuperar condições que poderia ter fixado em 2026.
+A clínica de Lourdes sobrevive com menos funcionários. O sistema decide horários, preços e autorizações de pagamento. Quando o fornecedor bloqueia uma função por falta de conformidade, ninguém na clínica sabe como contestar a decisão.
 
-Na clínica, Lourdes usa um sistema estrangeiro mais seguro e mais caro. Quando a assinatura aumenta, o diretor reduz o número de funcionários da recepção. Ela não sabe qual governo pode interromper o serviço. Sabe que a clínica não tem alternativa.
+Lourdes pergunta a Camila por que o governo permite que uma empresa de outro país controle tantas coisas. Camila responde que o Brasil assinou os contratos porque precisava manter os sistemas funcionando.
 
-Camila permanece no Congresso, agora em outro gabinete. Durante uma audiência sobre soberania digital, um senador pergunta por que tantos data centers não deram autonomia ao país. Ela responde com a distinção que tentou colocar na nota quatro anos antes: localização, acesso e controle nunca foram a mesma coisa.
+Em negociações internacionais, o Itamaraty ainda fala em autonomia. Antes de cada voto importante, o governo calcula como Pequim pode reagir. O acesso a capacidade computacional, defesa digital e crédito pesa mais que os discursos.
 
-O Brasil encerra 2030 com infraestrutura e pouca margem de escolha. A energia gerou receita para alguns projetos. Não gerou poder suficiente para negociar o futuro digital do país.
+O Brasil fornece energia, minerais, dados e consumidores. Recebe serviços sob licenças que outra potência pode restringir. Em 2030, o país conserva seus símbolos nacionais e perde a capacidade de escolher seu próprio caminho.
+
+> **Este cenário pressupõe que EUA e China conseguem limitar a corrida.** O acordo reduz parte do risco global e concentra poder nas mãos de quem já controla a infraestrutura. O apêndice de risco catastrófico examinará o outro caminho: o acordo fracassa e a corrida continua.

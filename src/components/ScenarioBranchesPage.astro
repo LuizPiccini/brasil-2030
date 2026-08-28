@@ -25,17 +25,17 @@ const text = pt ? {
   positiveTitle: "Coordenação e margem de escolha",
   positiveDeck: "O Brasil ajuda a desacelerar a corrida e transforma energia em capacidade contratável.",
   negative: "Cenário negativo",
-  negativeTitle: "Corrida e dependência",
-  negativeDeck: "A coordenação falha e a infraestrutura instalada não garante acesso brasileiro.",
+  negativeTitle: "País satélite",
+  negativeDeck: "As potências desaceleram, mas o Brasil chega sem capacidade própria e troca autonomia por acesso.",
   summary: "Resumo de 5 minutos",
   disclaimer: "Estes cenários não são previsões. Eles usam os mesmos riscos externos para testar quanto as escolhas brasileiras de 2026 mudam a capacidade do país em 2030. O cenário positivo exige várias decisões corretas; o negativo combina falhas plausíveis.",
   forkEyebrow: "Ponto de decisão",
   forkTitle: "Escolha um caminho",
-  forkIntro: "Os dois ramos compartilham o contexto de 2026. A partir de 2027, coordenação internacional e capacidade doméstica começam a separar os resultados.",
+  forkIntro: "Os dois ramos compartilham os riscos globais e uma desaceleração limitada. A capacidade construída pelo Brasil separa os resultados.",
   matrixTitle: "Dois eixos, quatro resultados possíveis",
   matrixColumns: ["Brasil constrói capacidade", "Brasil não constrói capacidade"],
   matrixRows: ["EUA e China desaceleram", "A corrida continua"],
-  matrixCells: ["Margem de escolha", "Desaceleração com dependência", "Resiliência sob pressão", "Dependência em cascata"],
+  matrixCells: ["Margem de escolha", "País satélite", "Resiliência sob pressão", "Risco catastrófico"],
   timeline: "Linha do tempo",
   current: "Capítulo",
   panelTitle: "Estado do Brasil",
@@ -53,17 +53,17 @@ const text = pt ? {
   positiveTitle: "Coordination and room to choose",
   positiveDeck: "Brazil helps slow the race and turns energy into contractable capacity.",
   negative: "Negative scenario",
-  negativeTitle: "Race and dependence",
-  negativeDeck: "Coordination fails and installed infrastructure does not guarantee Brazilian access.",
+  negativeTitle: "Satellite country",
+  negativeDeck: "The powers slow down, but Brazil arrives without its own capacity and trades autonomy for access.",
   summary: "Five-minute summary",
   disclaimer: "These scenarios are not forecasts. They use the same external risks to test how Brazilian choices made in 2026 change the country's position in 2030. The positive scenario requires several decisions to go right; the negative scenario combines plausible failures.",
   forkEyebrow: "Decision point",
   forkTitle: "Choose a path",
-  forkIntro: "Both branches share the 2026 context. From 2027 onward, international coordination and domestic capacity begin to separate the outcomes.",
+  forkIntro: "Both branches share the same global risks and a limited slowdown. The capacity Brazil builds separates the outcomes.",
   matrixTitle: "Two axes, four possible outcomes",
   matrixColumns: ["Brazil builds capacity", "Brazil does not build capacity"],
   matrixRows: ["US and China slow down", "The race continues"],
-  matrixCells: ["Room to choose", "Slowdown with dependence", "Resilience under pressure", "Cascading dependence"],
+  matrixCells: ["Room to choose", "Satellite country", "Resilience under pressure", "Catastrophic risk"],
   timeline: "Timeline",
   current: "Chapter",
   panelTitle: "State of Brazil",
@@ -90,15 +90,15 @@ const branchChapters = {
     { year: "2030", label: "Choice", href: "#2030-room-to-choose" },
   ],
   negative: pt ? [
-    { year: "2027", label: "Defesa dependente", href: "#2027-defesa-dependente" },
-    { year: "2028", label: "Corrida", href: "#2028-a-corrida-continua" },
-    { year: "2029", label: "Escolha forçada", href: "#2029-escolha-forçada" },
-    { year: "2030", label: "Dependência", href: "#2030-dependência-em-cascata" },
+    { year: "2027", label: "Crise interna", href: "#2027-ataques-demissões-e-poderes-de-emergência" },
+    { year: "2028", label: "Acordo dos outros", href: "#2028-o-acordo-dos-outros" },
+    { year: "2029", label: "Alinhamento", href: "#2029-acesso-em-troca-de-alinhamento" },
+    { year: "2030", label: "País satélite", href: "#2030-país-satélite" },
   ] : [
-    { year: "2027", label: "Dependent defense", href: "#2027-dependent-defense" },
-    { year: "2028", label: "Race", href: "#2028-the-race-continues" },
-    { year: "2029", label: "Forced choice", href: "#2029-a-forced-choice" },
-    { year: "2030", label: "Dependence", href: "#2030-cascading-dependence" },
+    { year: "2027", label: "Domestic crisis", href: "#2027-attacks-layoffs-and-emergency-powers" },
+    { year: "2028", label: "Others' agreement", href: "#2028-someone-elses-agreement" },
+    { year: "2029", label: "Alignment", href: "#2029-access-in-exchange-for-alignment" },
+    { year: "2030", label: "Satellite country", href: "#2030-satellite-country" },
   ],
 };
 
@@ -112,10 +112,10 @@ const dashboardStates = pt ? {
   ],
   negative: [
     { date: "Ago 2026", title: "A primeira barganha", summary: "O incentivo falha ou entra em vigor sem transformar presença física em acesso brasileiro.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "sem garantia"]], focus: "Energia e rede são comprometidas antes que o Brasil negocie capacidade e continuidade.", mobile: "Risco em alta · Sem garantia" },
-    { date: "2027", title: "Defesa dependente", summary: "Interrupções duram mais e empresas compram sistemas estrangeiros sem alternativa de escala.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "física"], ["sovereignty", "Soberania de inferência", 1, "dependente"]], facts: [["Coordenação", "reação fragmentada"], ["Infraestrutura", "enclaves"], ["Acesso", "defesa importada"]], focus: "Restrições domésticas atingem empresas brasileiras e não alcançam atacantes no exterior.", mobile: "Risco crítico · Defesa importada" },
-    { date: "2028", title: "A corrida continua", summary: "EUA e China recusam limites, ataques persistem e o Brasil não influencia os termos.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "desorganizada"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "sem acordo"], ["Infraestrutura", "sem inventário"], ["Acesso", "contratos emergenciais"]], focus: "O mercado de trabalho piora enquanto o governo compra capacidade sob pressão.", mobile: "Sem acordo · Contratos emergenciais" },
-    { date: "2029", title: "Escolha forçada", summary: "Controles de exportação obrigam o país a depender de um bloco para chips, modelos e defesa.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "subutilizada"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "guerra fria"], ["Infraestrutura", "decisão externa"], ["Acesso", "um bloco"]], focus: "Máquinas permanecem no Brasil, mas operadores e governos estrangeiros definem seu uso.", mobile: "Escolha forçada · Um bloco" },
-    { date: "2030", title: "Dependência em cascata", summary: "Cada serviço crítico carrega uma dependência externa que o país não consegue substituir.", tracks: [["risk", "Risco sistêmico", 5, "crônico"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "mínima"]], facts: [["Coordenação", "blocos rivais"], ["Infraestrutura", "acesso opaco"], ["Acesso", "caro e condicionado"]], focus: "O Brasil opera, mas paga mais e aceita as regras do fornecedor que sustenta cada sistema.", mobile: "Dependência crônica · Pouca escolha" },
+    { date: "2027", title: "Crise interna", summary: "Ataques, automação importada e poderes de emergência pressionam trabalho e instituições.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "física"], ["sovereignty", "Soberania de inferência", 1, "dependente"]], facts: [["Coordenação", "pressão por acordo"], ["Infraestrutura", "enclaves"], ["Acesso", "defesa importada"]], focus: "Grandes organizações compram proteção; trabalhadores e serviços menores absorvem o custo.", mobile: "Crise interna · Defesa importada" },
+    { date: "2028", title: "O acordo dos outros", summary: "EUA e China desaceleram sob termos que preservam sua vantagem e não garantem acesso ao Brasil.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "ausente"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "acordo excludente"], ["Infraestrutura", "sem capacidade própria"], ["Acesso", "sem garantia"]], focus: "Desemprego e fuga de cérebros crescem enquanto o Brasil apoia regras que não ajudou a escrever.", mobile: "Acordo excludente · Brain drain" },
+    { date: "2029", title: "Acesso por alinhamento", summary: "O governo aceita condições políticas para garantir computação, crédito e defesa digital.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "terceirizada"]], facts: [["Coordenação", "acordo mantido"], ["Infraestrutura", "decisão externa"], ["Acesso", "condicionado"]], focus: "A crise fiscal e o monitoramento político ligam dependência tecnológica à erosão democrática.", mobile: "Acesso condicionado · Erosão" },
+    { date: "2030", title: "País satélite", summary: "Desemprego, fuga de talentos e um regime híbrido limitam a autonomia econômica e política.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "mínima"]], facts: [["Coordenação", "regras externas"], ["Infraestrutura", "acesso revogável"], ["Acesso", "por alinhamento"]], focus: "O Brasil mantém serviços essenciais ao custo de aceitar o fornecedor como árbitro de sua margem de escolha.", mobile: "Regime híbrido · País satélite" },
   ],
 } : {
   positive: [
@@ -127,10 +127,10 @@ const dashboardStates = pt ? {
   ],
   negative: [
     { date: "Aug 2026", title: "The first bargain", summary: "The incentive fails or takes effect without converting physical presence into Brazilian access.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "not guaranteed"]], focus: "Energy and grid access are committed before Brazil negotiates capacity and continuity.", mobile: "Risk rising · No guarantee" },
-    { date: "2027", title: "Dependent defense", summary: "Outages last longer and companies buy foreign systems without a scalable alternative.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "physical"], ["sovereignty", "Inference sovereignty", 1, "dependent"]], facts: [["Coordination", "fragmented response"], ["Infrastructure", "enclaves"], ["Access", "imported defense"]], focus: "Domestic restrictions hit Brazilian companies and do not reach attackers abroad.", mobile: "Critical risk · Imported defense" },
-    { date: "2028", title: "The race continues", summary: "The US and China reject limits, attacks persist, and Brazil does not shape the terms.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "disorganized"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "no agreement"], ["Infrastructure", "no inventory"], ["Access", "emergency contracts"]], focus: "The labor market worsens while government buys capacity under pressure.", mobile: "No agreement · Emergency contracts" },
-    { date: "2029", title: "A forced choice", summary: "Export controls make Brazil depend on one bloc for chips, models, and defense.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "underused"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "cold war"], ["Infrastructure", "foreign decision"], ["Access", "one bloc"]], focus: "Machines remain in Brazil, but operators and foreign governments decide their use.", mobile: "Forced choice · One bloc" },
-    { date: "2030", title: "Cascading dependence", summary: "Every critical service carries an external dependency Brazil cannot replace.", tracks: [["risk", "Systemic risk", 5, "chronic"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "minimal"]], facts: [["Coordination", "rival blocs"], ["Infrastructure", "opaque access"], ["Access", "costly and conditional"]], focus: "Brazil operates, but pays more and accepts the rules of the supplier supporting each system.", mobile: "Chronic dependence · Little choice" },
+    { date: "2027", title: "Domestic crisis", summary: "Attacks, imported automation, and emergency powers put pressure on jobs and institutions.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "physical"], ["sovereignty", "Inference sovereignty", 1, "dependent"]], facts: [["Coordination", "pressure for a deal"], ["Infrastructure", "enclaves"], ["Access", "imported defense"]], focus: "Large organizations buy protection while workers and smaller services absorb the cost.", mobile: "Domestic crisis · Imported defense" },
+    { date: "2028", title: "Someone else's agreement", summary: "The US and China slow down under terms that preserve their advantage and do not guarantee access to Brazil.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "absent"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "exclusive agreement"], ["Infrastructure", "no domestic capacity"], ["Access", "not guaranteed"]], focus: "Unemployment and brain drain rise while Brazil supports rules it did not help write.", mobile: "Exclusive deal · Brain drain" },
+    { date: "2029", title: "Access through alignment", summary: "The government accepts political conditions to secure compute, credit, and cyber defense.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "outsourced"]], facts: [["Coordination", "agreement holds"], ["Infrastructure", "foreign decision"], ["Access", "conditional"]], focus: "The fiscal crisis and political monitoring connect technology dependence to democratic erosion.", mobile: "Conditional access · Erosion" },
+    { date: "2030", title: "Satellite country", summary: "Unemployment, talent flight, and a hybrid regime limit economic and political autonomy.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "minimal"]], facts: [["Coordination", "external rules"], ["Infrastructure", "revocable access"], ["Access", "through alignment"]], focus: "Brazil keeps essential services running by accepting the supplier as the arbiter of its room to choose.", mobile: "Hybrid regime · Satellite country" },
   ],
 };
 
@@ -145,7 +145,7 @@ const initialState = dashboardStates.positive[0];
         <h1>{text.titleCountry}<span>{text.titleLine}</span></h1>
         <p class="hero-deck">{text.deck}</p>
         <div class="status-line">
-          <span class="status-dot" aria-hidden="true"></span><span>{copy.status}</span><span class="status-separator" aria-hidden="true"></span><time datetime="2026-08-27">{copy.updated}</time>
+          <span class="status-dot" aria-hidden="true"></span><span>{copy.status}</span><span class="status-separator" aria-hidden="true"></span><time datetime="2026-08-28">{copy.updated}</time>
         </div>
         <div class="hero-actions">
           <a class="button-link primary" href="#cenario-positivo">{text.positive}</a>
@@ -191,8 +191,8 @@ const initialState = dashboardStates.positive[0];
           <div class="matrix-grid">
             <span class="matrix-empty" aria-hidden="true"></span>
             {text.matrixColumns.map((label) => <span class="matrix-column">{label}</span>)}
-            <span class="matrix-row">{text.matrixRows[0]}</span><strong class="matrix-cell matrix-positive">{text.matrixCells[0]}</strong><span class="matrix-cell">{text.matrixCells[1]}</span>
-            <span class="matrix-row">{text.matrixRows[1]}</span><span class="matrix-cell">{text.matrixCells[2]}</span><strong class="matrix-cell matrix-negative">{text.matrixCells[3]}</strong>
+            <span class="matrix-row">{text.matrixRows[0]}</span><strong class="matrix-cell matrix-positive">{text.matrixCells[0]}</strong><strong class="matrix-cell matrix-negative">{text.matrixCells[1]}</strong>
+            <span class="matrix-row">{text.matrixRows[1]}</span><span class="matrix-cell">{text.matrixCells[2]}</span><span class="matrix-cell">{text.matrixCells[3]}</span>
           </div>
         </figure>
       </section>

@@ -1,42 +1,52 @@
-## 2027: Dependent defense
+## 2027: Attacks, layoffs, and emergency powers
 
-> **Status:** negative scenario. The wave of attacks and its effects are plausible inventions, not observed facts.
+> **Status:** negative scenario. The attacks, their economic effects, and the political decisions are plausible inventions, not observed facts.
 
-The same tools that raise pressure in the positive scenario find a Brazil with less response capacity. REDATA failed or took effect without turning the domestic obligation into a contractable service. Projects advanced, but operators allocated most machines to foreign contracts or their controllers' own use.
+REDATA failed or took effect without creating compute capacity that Brazilian companies and public agencies could contract. Some data centers operate in the country, but their controllers allocate the machines to foreign contracts. Other projects moved to countries with more predictable rules or remained on hold.
 
-Fraud, intrusion, and ransomware hit banks, hospitals, municipalities, and software suppliers. The system at Lourdes's clinic stops three times during the year. During the longest outage, patients go nine days without normal access to scheduling and reports. The clinic pays for recovery, delays salaries, and dismisses two employees.
+Criminals use AI to expand fraud and cyberattacks. They test vulnerabilities, adapt malicious code, and impersonate employees through voice and video. Rafael sees the change in CTIR's incident queue. Each defense lasts less time, and public teams receive more cases than they can investigate.
 
-Rafael tracks incidents at CTIR without a national dependency inventory. Alerts arrive in different formats, and several agencies conceal attacks for fear of exposure. His team identifies similar campaigns but cannot distribute one defense across all targets.
+The system at Lourdes's clinic goes down for two days. Patients arrive without confirmed appointments. Employees record visits on paper, and the clinic buys a foreign security package that takes a larger share of its budget.
 
-André concludes that the bank needs the best foreign system available. The contract requires deep integration, operational-data retention, and payment in dollars. He finds no Brazilian alternative capable of covering the bank's scale. The decision reduces immediate losses and makes service continuity depend on a company governed by another jurisdiction.
+André compares the systems available to the bank. A foreign platform outperforms every domestic alternative. The contract requires deep integration, operational-data retention, and payment in dollars. André signs because the other option would leave millions of customers exposed.
 
-Politicians promise a visible response. Congress restricts the use of agents by Brazilian companies, imposes slow approvals, and expands liability for organizations deploying defensive systems. Attackers abroad ignore the rules. Local companies cancel products while large suppliers absorb the compliance cost.
+Large banks can pay. Clinics, municipalities, and small businesses remain exposed.
 
-Camila tries to add an exception for authorized security research and defense. The congressman supports the idea in private but fears appearing friendly to a technology associated with scams. The bill passes without the exception.
+Brazilian companies also buy foreign systems to automate customer service, financial analysis, and administrative work. They cut jobs in Brazil, while few develop products that can compete abroad. Young people searching for their first job feel the shock before other workers.
 
-## 2028: The race continues
+After attacks on banks and government agencies, Congress gives the executive temporary powers to monitor networks, block suspicious systems, and demand data. The government keeps part of those powers after the immediate crisis passes.
 
-> **Status:** negative scenario. The failure of negotiations and the intensity of economic effects are assumptions.
+Camila tries to add limits, judicial review, and an expiration clause. The congressman supports her proposal in private. During the vote, he follows the government's position.
 
-The United States and China open talks after the 2027 incidents. Neither accepts limits on training or deployment. Each government fears the other will use a pause to gain an advantage. Without common verification, every accident becomes an accusation of sabotage.
+## 2028: Someone else's agreement
 
-Brazil attends multilateral sessions but does not shape the central terms. It has a market, energy, and facilities. It cannot demonstrate available capacity, independent evaluations, or a coordinated position across diplomacy, security, energy, and industrial policy.
+> **Status:** central scenario invention. The agreement, its terms, and its distributional effects are assumptions.
 
-Attacks continue. Companies concentrate their budgets on a few global defense suppliers and cut local projects. Universities lose access to advanced models when prices rise. Government buys services through emergency contracts, with no time to negotiate data residency or continuity.
+The United States and China reach a slowdown agreement after a series of international incidents. The two powers limit the training of systems above defined capability levels, establish emergency channels, and share risk evaluations. Military programs receive exemptions. Controls on chips and equipment remain.
 
-The labor market deteriorates in specific areas. Companies reduce administrative and entry-level openings before defining new career paths. Young graduates compete for internships, informal work, and civil-service exams. Congress tries to prevent automation-related layoffs. Companies respond by freezing hiring and outsourcing tasks.
+The agreement slows the race and protects the advantage held by countries that have already built models, data centers, and supply chains. The deal does not distribute chips, guarantee defensive capacity to other countries, or give them an effective role in decisions.
 
-Lourdes sees the change through her family. A cousin's son finishes his construction contract at Pecém and finds no permanent position. A niece with a business degree serves customers for three companies through a platform. None provides employment or training.
+Brazil, India, South Africa, and other countries receive invitations to support the agreement after the United States and China have set its terms.
 
-## 2029: A forced choice
+Camila follows the Brazilian delegation. The government tries to include access guarantees for countries without their own capacity. Negotiators ask which clusters Brazil can operate and which resources it can contribute to the verification system. The delegation has no meaningful answer.
 
-> **Status:** central invention in the negative scenario. As of August 2026, US controls covered chips, weights, and training, not ordinary inference API access.
+Unemployment dominates national politics. Companies with access to the best systems reduce staff; their competitors close. Engineers, researchers, and health professionals receive offers from foreign hubs. Universities lose faculty and graduate students.
 
-The United States and China deepen controls over chips, models, inference services, and network equipment. Both blocs demand diversion safeguards and restrict customers tied to the rival's infrastructure.
+The clinic dismisses two receptionists and adopts an automated service system. Lourdes takes over part of their work when the system fails to understand elderly patients or schedules the wrong procedures. She watches colleagues lose their jobs while the software subscription keeps rising.
 
-Brazil tries to preserve access to both sides. Without contractable domestic capacity, it offers little in return. Operators in the country point to their contracts: the machines sit in Brazilian territory, but controllers allocate them and foreign governments decide which chips and models may serve them.
+Protests fill the streets of major cities. Political groups flood social networks with fabricated accusations and false videos. The government expands digital monitoring and starts classifying protest movements as possible cyber threats.
 
-After months of pressure, the government signs an emergency agreement with one bloc. The partner guarantees capacity for government, banks, and large firms. The other side reduces licenses, support, and model access. The choice prevents an immediate outage and creates political dependence.
+## 2029: Access in exchange for alignment
+
+> **Status:** central invention in the negative scenario. The chosen partner and the terms described here test the dependence created by the absence of national capacity.
+
+The slowdown makes installed capacity scarcer. The United States and China serve their government agencies, strategic companies, and allies first.
+
+Brazil tries to buy capacity on the international market. American suppliers offer limited access, subject to export controls and security reviews. A Chinese consortium presents a broader package: compute for government agencies, cyber defense systems, credit for power infrastructure, and new data centers.
+
+The package requires long-term contracts, Chinese equipment, and preference for suppliers approved by Beijing. The Brazilian government must also avoid agreements that harm Chinese technology interests.
+
+The administration accepts. Ministers describe the agreement as a partnership between equals. Any diplomatic conflict can now threaten the systems protecting banks, hospitals, and government networks.
 
 <figure class="scenario-visual visual-capacity" aria-labelledby="visual-capacity-negative-title-en">
   <figcaption>
@@ -48,36 +58,48 @@ After months of pressure, the government signs an emergency agreement with one b
     <div class="capacity-layer capacity-physical"><span>Physical capacity in Brazil</span><small>machines, energy, and territory</small><div class="capacity-layer capacity-usable"><span>Contractable by Brazilians</span><small>price, quota, and permission</small><div class="capacity-layer capacity-protected"><span>Protected continuity</span><small>usage rights during restrictions</small></div></div></div>
   </div>
   <dl class="control-ledger"><div><dt>Location</dt><dd>Brazil</dd></div><div><dt>Allocation</dt><dd>operator</dd></div><div><dt>Chip rules</dt><dd>foreign government</dd></div><div><dt>Brazilian buyer</dt><dd>no guarantee</dd></div></dl>
-  <p class="visual-note"><strong>Conclusion:</strong> Brazil committed energy and grid capacity before contracting access or continuity.</p>
+  <p class="visual-note"><strong>Conclusion:</strong> Brazil committed energy and grid access before contracting capacity or continuity.</p>
 </figure>
 
-Brazilian multinationals retain service through subsidiaries abroad. Mid-sized companies, universities, and local governments receive more expensive, delayed, or limited products. Access to the best digital defense starts to follow income, corporate scale, and political proximity.
+Unemployment among young people and university graduates reaches unprecedented levels. Families that once lived on administrative jobs combine informal work, public benefits, and help from relatives abroad.
 
-Camila finds the 2026 memos in a folder. The questions were correct. Her office never converted them into amendments, contracts, or indicators. Congress now tries to change the rules, but the largest projects already hold permits, grid connections, and long-term contracts.
+Tax revenue falls. The government funds income and security programs while cutting universities, research, and public administration. Brazilian companies transfer their best employees to foreign offices where they can find more compute capacity.
 
-## 2030: Cascading dependence
+Brazilian authorities start using foreign monitoring systems against journalists, civil organizations, and political opponents. Chinese suppliers provide the technology. Brazilian officials choose the targets.
 
-> **Status:** negative result, conditional on the failure of domestic choices and international coordination.
+Camila discovers that reports produced to protect infrastructure circulate within a new political-intelligence unit. Rafael receives orders to share data about groups that organized protests. He starts recording which requests have no connection to cybersecurity.
 
-The United States and China concentrate chips, frontier models, and defensive systems. Allies receive predictable access. Countries with strategic assets negotiate terms. Brazil purchases part of what it needs under the rules of its chosen bloc.
+Camila's congressman joins the governing coalition. In return, he receives funding for his state and protection on networks controlled by the government. He asks Camila to stop raising questions about the monitoring program.
+
+## 2030: Satellite country
+
+> **Status:** negative outcome, conditional on failed domestic choices and concentrated capacity after the international agreement.
+
+Brazil still holds elections. The government controls access to the main communication networks, uses public data to target propaganda, and investigates opponents with tools built to fight cyberattacks.
+
+Media companies face audits and blocks. Opposition candidates lose access to platforms during critical campaign periods. Governors depend on federal transfers to fund income and security programs.
+
+Institutions retain their names and buildings. Judges, lawmakers, and civil servants learn which decisions can cost them funding, digital protection, or exposure on social networks. International observers begin to classify Brazil as a hybrid regime with periodic elections and few conditions for free competition.
 
 | Measure | 2026 | Negative scenario in 2030 |
 |---|---|---|
-| AI-relevant compute | No reliable inventory | Physical capacity known, access opaque |
-| Supply for Brazilian buyers | Revenue-based promise | Small, expensive, and subject to foreign approval |
-| Critical-service continuity | Untested | Dependent on emergency contracts |
-| Brazilian inference providers | Small, fragmented supply | Market concentrated among foreign resellers |
-| Evaluation capability | Dispersed | Agencies can test only the models they receive |
-| International position | Participation without an operational asset | Defensive alignment with one bloc |
+| AI compute capacity | No reliable inventory | Foreign access that is costly and revocable |
+| Work | Pressure concentrated in some occupations | Record unemployment, informality, and few entry-level jobs |
+| Talent | Small domestic ecosystem | Researchers, engineers, and founders leave |
+| Cyber defense | Dispersed capacity | Critical systems depend on the foreign supplier |
+| Democracy | Competitive institutions under pressure | Hybrid regime supported by surveillance and patronage |
+| International position | Diplomatic autonomy without an operational asset | Alignment in exchange for compute, credit, and security |
 
-Brazilian companies capture fewer productivity gains. Entry-level roles disappear faster than new occupations emerge. Unemployment, informality, and social spending rise while tax revenue from the most profitable activities accrues abroad.
+The economy splits between a group connected to foreign infrastructure and a population moving between unemployment, informal work, and public assistance. Brazil imports systems capable of replacing workers but does not control the companies, models, or data centers capturing the gains.
 
-Brazil does not collapse. Banks operate, hospitals treat patients, and companies continue to export. Yet each important system carries a dependency the country does not control: a model, chip, update, license, or cloud.
+André protects the bank with the Chinese platform. He cannot audit the entire system or change suppliers without interrupting essential operations. Rafael remains in government, trying to keep security tools from serving political control. Camila leaves the office after the congressman votes to renew the emergency powers.
 
-A much smaller country converts energy and access agreements into a middle-tier position. The United Arab Emirates serves as a contrast inside the scenario, not as a political model for Brazil. It negotiates equipment, infrastructure, and partnerships while Brazil debates how to recover terms it could have set in 2026.
+Lourdes's clinic survives with fewer employees. The system sets appointments, prices, and payment authorizations. When the supplier blocks a function over a compliance failure, nobody at the clinic knows how to appeal.
 
-At the clinic, Lourdes uses a safer and more expensive foreign system. When the subscription price rises, the director cuts reception staff. She does not know which government can interrupt the service. She knows the clinic has no alternative.
+Lourdes asks Camila why the government lets a company from another country control so much. Camila explains that Brazil signed the contracts because it had to keep its systems running.
 
-Camila remains in Congress, now in another office. During a hearing on digital sovereignty, a senator asks why so many data centers failed to provide autonomy. She answers with the distinction she tried to put in the memo four years earlier: location, access, and control were never the same thing.
+In international negotiations, the foreign ministry still speaks of autonomy. Before each important vote, the government calculates how Beijing might react. Access to compute, cyber defense, and credit carries more weight than speeches.
 
-Brazil ends 2030 with infrastructure and little room to choose. Energy generated revenue for some projects. It did not generate enough power to negotiate the country's digital future.
+Brazil supplies energy, minerals, data, and customers. It receives services under licenses that another power can restrict. In 2030, the country retains its national symbols and loses the capacity to choose its own path.
+
+> **This scenario assumes that the United States and China manage to limit the race.** The agreement reduces part of the global risk and concentrates power among those who already control the infrastructure. The catastrophic-risk appendix will examine the other path: the agreement fails and the race continues.

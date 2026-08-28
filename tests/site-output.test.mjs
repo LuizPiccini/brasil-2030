@@ -50,19 +50,19 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
     [pt, "2028-a-coordenação-ganha-forma"],
     [pt, "2029-potência-intermediária"],
     [pt, "2030-margem-de-escolha"],
-    [pt, "2027-defesa-dependente"],
-    [pt, "2028-a-corrida-continua"],
-    [pt, "2029-escolha-forçada"],
-    [pt, "2030-dependência-em-cascata"],
+    [pt, "2027-ataques-demissões-e-poderes-de-emergência"],
+    [pt, "2028-o-acordo-dos-outros"],
+    [pt, "2029-acesso-em-troca-de-alinhamento"],
+    [pt, "2030-país-satélite"],
     [en, "2026-the-branching-point"],
     [en, "2027-the-first-shock"],
     [en, "2028-coordination-takes-shape"],
     [en, "2029-a-middle-power"],
     [en, "2030-room-to-choose"],
-    [en, "2027-dependent-defense"],
-    [en, "2028-the-race-continues"],
-    [en, "2029-a-forced-choice"],
-    [en, "2030-cascading-dependence"],
+    [en, "2027-attacks-layoffs-and-emergency-powers"],
+    [en, "2028-someone-elses-agreement"],
+    [en, "2029-access-in-exchange-for-alignment"],
+    [en, "2030-satellite-country"],
   ];
   for (const [html, id] of targets) {
     assert.ok(html.includes(`href="#${id}"`), `scenario must link to #${id}`);
@@ -124,6 +124,23 @@ test("core pages remain discoverable and progressive enhancement is explicit", (
   assert.equal(existsSync(new URL("og.png", root)), true, "social card must exist");
 });
 
+test("REDATA page includes the complete amendment review in both languages", () => {
+  const pt = readFileSync(new URL("redata/index.html", root), "utf8");
+  const en = readFileSync(new URL("en/redata/index.html", root), "utf8");
+  for (const html of [pt, en]) {
+    assert.equal((html.match(/class="amendment-stance /g) || []).length, 22);
+    assert.match(html, /dm=10215127/);
+    assert.match(html, /0\/5/);
+    assert.match(html, /1\/7/);
+  }
+  assert.match(pt, /Falta um bloco novo de emendas/);
+  assert.match(pt, /Porta brasileira/);
+  assert.match(pt, /avaliação independente antes de qualquer renovação/);
+  assert.match(en, /A new amendment package is still needed/);
+  assert.match(en, /Brazilian contracting door/);
+  assert.match(en, /independent review before any renewal/);
+});
+
 test("all Markdown documents exist and disclose draft status", () => {
   for (const route of markdownRoutes) {
     const path = new URL(route, root);
@@ -131,7 +148,7 @@ test("all Markdown documents exist and disclose draft status", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /status: (rascunho-de-trabalho|working-draft)/);
-    assert.match(markdown, /sourceRevision: 2026-08-27-two-scenarios-redata-v0\.5/);
+    assert.match(markdown, /sourceRevision: 2026-08-28-redata-amendments-v0\.6/);
   }
 });
 
