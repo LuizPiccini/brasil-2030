@@ -1,6 +1,6 @@
 # Brasil 2030: Energia para Escolher
 
-> Two working scenarios about how Brazil could respond to AI risk and geopolitical dependence. Public draft, last updated 2026-08-27.
+> Two scenarios about how Brazil could respond to AI risk and geopolitical dependence. Public edition, last updated 2026-08-28.
 
 ## Portuguese, default
 
@@ -8,7 +8,7 @@
 - [Resumo](https://brasil-2030.piccini.app/resumo.md)
 - [Evidências](https://brasil-2030.piccini.app/evidencias.md)
 - [Estratégia](https://brasil-2030.piccini.app/estrategia.md)
-- [Carta aberta, em elaboração](https://brasil-2030.piccini.app/carta-aberta.md)
+- [Carta aberta](https://brasil-2030.piccini.app/carta-aberta.md)
 - [REDATA: aprovar com cinco ajustes](https://brasil-2030.piccini.app/redata.md)
 - [Sobre e método](https://brasil-2030.piccini.app/sobre.md)
 
@@ -18,10 +18,10 @@
 - [Summary](https://brasil-2030.piccini.app/en/summary.md)
 - [Evidence](https://brasil-2030.piccini.app/en/evidence.md)
 - [Strategy](https://brasil-2030.piccini.app/en/strategy.md)
-- [Open letter, in development](https://brasil-2030.piccini.app/en/open-letter.md)
+- [Open letter](https://brasil-2030.piccini.app/en/open-letter.md)
 - [REDATA: pass with five changes](https://brasil-2030.piccini.app/en/redata.md)
 - [About and method](https://brasil-2030.piccini.app/en/about.md)
 
 ## Evidence warning
 
-Observed facts, developer claims, author estimates, and narrative inventions carry separate labels. Both post-2026 branches are scenarios, not predictions. Cyber incidents, the Brazilian mediation channel, the limited slowdown agreement, and the 2029 bloc restrictions are narrative inventions. REDATA facts are reviewed through August 27, 2026. Pedro's 2030 compute-model values remain open.
+Observed facts, developer claims, author estimates, and narrative inventions carry separate labels. Both post-2026 branches are scenarios, not predictions. Cyber incidents, the Brazilian mediation channel, the limited slowdown agreement, and the 2029 bloc restrictions are narrative inventions. REDATA facts are reviewed through August 28, 2026. Pedro's 2030 compute-model values remain open.

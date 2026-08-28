@@ -181,7 +181,7 @@ Camila looked at her meeting notes. She almost explained that Fortaleza drew fro
 
 Lourdes asked whether Camila had bought her ticket for Célia's birthday. She had not.
 
-Before leaving, Camila opened a request to the Chamber's legislative consultants. The first draft asked for an analysis of a compute inventory, purchase options, and conditions attached to public incentives. She added four items: the water source and withdrawal limit, scarcity-period rules, the cost of the grid connection, and separate counts for temporary and permanent jobs.
+Before leaving, Camila opened a request to the Chamber's legislative consultants. The first version asked for an analysis of a compute inventory, purchase options, and conditions attached to public incentives. She added four items: the water source and withdrawal limit, scarcity-period rules, the cost of the grid connection, and separate counts for temporary and permanent jobs.
 
 The office supported the investment without knowing the water source, the grid cost, or the rights to use the machines. The request sought those answers. Camila saved it as `Pecém - public obligations and access - consultation`.
 
@@ -388,7 +388,7 @@ At the end of the year, the government publishes its first national compute scor
   <div class="leverage-limit"><span>Limit of the strategy</span><p>Brazil still does not control the technological frontier. Its influence depends on contracts signed before capital and energy become committed.</p></div>
 </figure>
 
-Brazil ends 2030 as a middle power with more infrastructure and technical capacity. Frontier-model development and foreign access rules remain outside its control. Brazil gains choice where it used energy, grid access, and demand as negotiating assets.
+Brazil ends 2030 as an AI-era middle power with more infrastructure and technical capacity. Frontier-model development and foreign access rules remain outside its control. Brazil gains choice where it used energy, grid access, and demand as negotiating assets.
 
 ## Decision points
 

@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { routes, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+
+const requests = pt ? [
+  "Medir os 10% por capacidade computacional contratável.",
+  "Preservar pelo menos 5% de capacidade no Brasil, sem substituição por P&D.",
+  "Incluir operadores de GPU cloud e a infraestrutura de alta densidade.",
+  "Criar uma porta brasileira de contratação, com LGPD, dados locais e contrato no país.",
+  "Publicar resultados e recuperar benefícios quando a contrapartida não for cumprida.",
+] : [
+  "Measure the 10% as contractable computing capacity.",
+  "Preserve at least 5% of capacity in Brazil without R&D substitution.",
+  "Include GPU-cloud operators and high-density infrastructure.",
+  "Create a Brazilian contracting door with LGPD compliance, local data, and a domestic contract.",
+  "Publish results and recover benefits when commitments are not met.",
+];
+---
+
+<BaseLayout locale={locale} pageKey="support" title={pt ? "Apoie o pedido" : "Support the request"} description={pt ? "Apoie cinco mudanças para que o REDATA crie capacidade computacional contratável no Brasil." : "Support five changes so REDATA creates computing capacity that can be contracted in Brazil."}>
+  <PageHero compact locale={locale} eyebrow={pt ? "PL 278/2026 · Mobilização pública" : "Bill 278/2026 · Public support"} title={pt ? "Apoie cinco mudanças no REDATA" : "Support five changes to REDATA"} intro={pt ? "O Brasil deve atrair data centers e garantir que parte da capacidade subsidiada possa ser contratada no país, sob regras brasileiras e com resultados públicos." : "Brazil should attract data centers while ensuring that part of the subsidized capacity can be contracted in the country under Brazilian rules and public accountability."} />
+
+  <div class="page-content support-layout">
+    <section class="support-case" aria-labelledby="support-case-title">
+      <span class="section-label">{pt ? "O pedido" : "The request"}</span>
+      <h2 id="support-case-title">{pt ? "Aprovar o REDATA com salvaguardas" : "Pass REDATA with safeguards"}</h2>
+      <p>{pt ? "Seu apoio será associado aos cinco pedidos abaixo. A equipe publica cada nome depois de moderar a mensagem e, quando houver cargo público, confirmar o vínculo informado." : "Your support covers the five requests below. The team publishes each name after moderating the message and, for public officials, confirming the stated role."}</p>
+      <ol class="support-request-list">
+        {requests.map((request, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><p>{request}</p></li>)}
+      </ol>
+      <div class="support-inline-actions">
+        <a class="button-link" href={routes[locale].redata}>{pt ? "Ler a proposta completa" : "Read the full proposal"}</a>
+        <a class="text-link" href={routes[locale].signatories}>{pt ? "Ver signatários" : "View signatories"}</a>
+      </div>
+    </section>
+
+    <section class="support-form-panel" aria-labelledby="support-form-title">
+      <div class="support-form-heading">
+        <span>{pt ? "Registro de apoio" : "Record your support"}</span>
+        <h2 id="support-form-title">{pt ? "Assine o pedido" : "Sign the request"}</h2>
+        <p>{pt ? "Nome, cargo, organização e mensagem poderão aparecer na página de signatários. Seu e-mail será usado para validação e não será publicado." : "Your name, role, organization, and message may appear on the signatories page. Your email is used for validation and will not be published."}</p>
+      </div>
+
+      <form class="support-form" data-support-form data-locale={locale} data-error={pt ? "Não foi possível registrar seu apoio. Revise os campos e tente de novo." : "We could not record your support. Review the fields and try again."}>
+        <div class="form-field">
+          <label for="supporter-type">{pt ? "Como você assina?" : "How are you signing?"}</label>
+          <select id="supporter-type" name="supporterType" required>
+            <option value="">{pt ? "Selecione uma opção" : "Choose an option"}</option>
+            <option value="citizen">{pt ? "Cidadão ou cidadã" : "Citizen"}</option>
+            <option value="public_official">{pt ? "Autoridade, parlamentar ou candidato" : "Public official, lawmaker, or candidate"}</option>
+            <option value="expert">{pt ? "Especialista ou pesquisador" : "Expert or researcher"}</option>
+            <option value="organization">{pt ? "Empresa ou organização" : "Company or organization"}</option>
+          </select>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="support-name">{pt ? "Nome" : "Name"}</label>
+            <input id="support-name" name="name" type="text" minlength="2" maxlength="100" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="support-role">{pt ? "Cargo ou atuação" : "Role or occupation"}</label>
+            <input id="support-role" name="roleTitle" type="text" maxlength="120" autocomplete="organization-title" aria-describedby="role-help" />
+            <small id="role-help">{pt ? "Obrigatório para autoridades, parlamentares e candidatos." : "Required for public officials, lawmakers, and candidates."}</small>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="support-organization">{pt ? "Organização" : "Organization"}</label>
+            <input id="support-organization" name="organization" type="text" maxlength="120" autocomplete="organization" />
+          </div>
+          <div class="form-field">
+            <label for="support-email">{pt ? "E-mail para validação" : "Email for validation"}</label>
+            <input id="support-email" name="email" type="email" maxlength="254" autocomplete="email" required />
+            <small>{pt ? "O e-mail não aparece no site." : "Your email does not appear on the site."}</small>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="support-message">{pt ? "Mensagem de apoio" : "Message of support"}</label>
+          <textarea id="support-message" name="message" maxlength="480" rows="5" placeholder={pt ? "Por que esses ajustes são importantes para você?" : "Why do these changes matter to you?"}></textarea>
+        </div>
+
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="support-website">Website</label>
+          <input id="support-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <label class="consent-field">
+          <input name="consent" type="checkbox" required />
+          <span>{pt ? "Confirmo meu apoio aos cinco pedidos e autorizo a publicação do meu nome, cargo, organização e mensagem depois da moderação. Declaro que as informações acima são verdadeiras." : "I support the five requests and authorize publication of my name, role, organization, and message after moderation. I confirm that the information above is truthful."}</span>
+        </label>
+
+        <div class="form-submit-row">
+          <button class="button-link primary" type="submit">{pt ? "Apoie esse pedido" : "Support this request"}</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="support-success" data-support-success hidden tabindex="-1">
+        <span>{pt ? "Apoio recebido" : "Support received"}</span>
+        <h3>{pt ? "Obrigado por assinar." : "Thank you for signing."}</h3>
+        <p>{pt ? "A equipe vai conferir os dados antes da publicação. Cargos públicos, mandatos e candidaturas passam por validação." : "The team will review the information before publication. Public offices, mandates, and candidacies are verified."}</p>
+        <a class="button-link" href={routes[locale].signatories}>{pt ? "Ver signatários publicados" : "View published signatories"}</a>
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    const form = document.querySelector("[data-support-form]");
+    const success = document.querySelector("[data-support-success]");
+    const status = form?.querySelector("[data-form-status]");
+    const typeField = form?.querySelector("[name='supporterType']");
+    const roleField = form?.querySelector("[name='roleTitle']");
+
+    const syncRoleRequirement = () => {
+      if (roleField && typeField) roleField.required = typeField.value === "public_official";
+    };
+    typeField?.addEventListener("change", syncRoleRequirement);
+    syncRoleRequirement();
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const submit = form.querySelector("button[type='submit']");
+      const data = new FormData(form);
+      const payload = Object.fromEntries(data.entries());
+      payload.consent = data.get("consent") === "on";
+      payload.locale = form.dataset.locale;
+      submit.disabled = true;
+      status.textContent = form.dataset.locale === "pt" ? "Enviando..." : "Sending...";
+
+      try {
+        const response = await fetch("/api/apoios", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!response.ok) throw new Error("support_failed");
+        form.hidden = true;
+        success.hidden = false;
+        success.focus();
+      } catch {
+        status.textContent = form.dataset.error;
+        submit.disabled = false;
+      }
+    });
+  </script>
+</BaseLayout>

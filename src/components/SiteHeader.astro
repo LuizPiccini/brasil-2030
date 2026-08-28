@@ -1,15 +1,15 @@
 ---
-import { routes, siteCopy, type Locale, type PageKey } from "../data/site";
+import { routes, siteCopy, type ContentPageKey, type Locale, type PageKey } from "../data/site";
 
 interface Props {
   locale: Locale;
   pageKey: PageKey;
-  markdownHref: string;
+  markdownHref?: string;
 }
 
 const { locale, pageKey, markdownHref } = Astro.props;
 const copy = siteCopy[locale];
-const navKeys: PageKey[] = ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
+const navKeys: ContentPageKey[] = ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
 ---
 
 <header class="site-header">
@@ -28,12 +28,13 @@ const navKeys: PageKey[] = ["scenario", "summary", "redata", "evidence", "strate
     </nav>
 
     <div class="header-tools">
+      <a class="header-cta" href={routes[locale].support}>{copy.nav.support}</a>
       <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
         <a href={routes.pt[pageKey]} lang="pt-BR" aria-current={locale === "pt" ? "true" : undefined}>PT</a>
         <span aria-hidden="true">/</span>
         <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
       </div>
-      <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>
+      {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>}
       <details class="mobile-menu">
         <summary aria-label={copy.menu}><span></span><span></span><span></span></summary>
         <nav aria-label={locale === "pt" ? "Navegação móvel" : "Mobile navigation"}>
@@ -42,7 +43,9 @@ const navKeys: PageKey[] = ["scenario", "summary", "redata", "evidence", "strate
               {copy.nav[key as keyof typeof copy.nav]}
             </a>
           ))}
-          <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>
+          <a href={routes[locale].support}>{copy.nav.support}</a>
+          <a href={routes[locale].signatories}>{copy.nav.signatories}</a>
+          {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>}
         </nav>
       </details>
     </div>

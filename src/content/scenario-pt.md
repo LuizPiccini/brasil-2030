@@ -181,7 +181,7 @@ Camila olhou as anotações da reunião. Quase respondeu que Fortaleza não reti
 
 Lourdes perguntou se Camila já tinha comprado a passagem para o aniversário de tia Célia. Camila não tinha.
 
-Antes de sair, Camila abriu um pedido para a Consultoria Legislativa. O primeiro rascunho solicitava análise de inventário de capacidade, opções de compra e condições associadas a incentivos públicos. Ela acrescentou quatro pontos: fonte e limite de uso da água, regra para períodos de escassez, custo da conexão elétrica e separação entre empregos temporários e permanentes.
+Antes de sair, Camila abriu um pedido para a Consultoria Legislativa. A primeira versão solicitava análise de inventário de capacidade, opções de compra e condições associadas a incentivos públicos. Ela acrescentou quatro pontos: fonte e limite de uso da água, regra para períodos de escassez, custo da conexão elétrica e separação entre empregos temporários e permanentes.
 
 O gabinete apoiava o investimento sem conhecer a fonte da água, o custo da rede ou os direitos de acesso às máquinas. A consulta pedia essas respostas. Camila salvou o documento como `Pecém - contrapartidas e acesso - consulta`.
 
@@ -456,7 +456,7 @@ No fim do ano, o governo publica o primeiro placar nacional de computação. O d
   <div class="leverage-limit"><span>Limite da estratégia</span><p>O país continua sem controlar a fronteira tecnológica. Sua influência depende de contratos assinados antes que o capital e a energia fiquem comprometidos.</p></div>
 </figure>
 
-O país encerra 2030 como potência média, com mais infraestrutura e capacidade técnica. O desenvolvimento de modelos de fronteira e as regras estrangeiras continuam fora de seu controle. O Brasil ganha escolha onde usou energia, rede e demanda como ativos de negociação.
+O país encerra 2030 como potência intermediária da era da IA, com mais infraestrutura e capacidade técnica. O desenvolvimento de modelos de fronteira e as regras estrangeiras continuam fora de seu controle. O Brasil ganha escolha onde usou energia, rede e demanda como ativos de negociação.
 
 ## Pontos de decisão
 

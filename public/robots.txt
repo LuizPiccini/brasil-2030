@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-# Working document. Search indexing will open after editorial release.
+# Search indexing remains closed until the public launch decision.

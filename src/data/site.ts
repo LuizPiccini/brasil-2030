@@ -1,5 +1,6 @@
 export type Locale = "pt" | "en";
-export type PageKey = "scenario" | "summary" | "redata" | "evidence" | "strategy" | "letter" | "about";
+export type ContentPageKey = "scenario" | "summary" | "redata" | "evidence" | "strategy" | "letter" | "about";
+export type PageKey = ContentPageKey | "redataNote" | "support" | "signatories";
 
 export const siteCopy = {
   pt: {
@@ -7,7 +8,7 @@ export const siteCopy = {
     shortLocale: "PT",
     title: "Brasil 2030: Energia para Escolher",
     description: "Dois cenários sobre como escolhas em risco, diplomacia e computação podem mudar a posição do Brasil até 2030.",
-    status: "Rascunho de trabalho",
+    status: "Atualizado",
     updated: "28 ago 2026",
     nav: {
       scenario: "Cenários",
@@ -17,6 +18,8 @@ export const siteCopy = {
       strategy: "Estratégia",
       letter: "Carta",
       about: "Sobre",
+      support: "Apoie",
+      signatories: "Signatários",
     },
     menu: "Menu",
     format: "Markdown",
@@ -28,7 +31,7 @@ export const siteCopy = {
     shortLocale: "EN",
     title: "Brazil 2030: The Energy to Choose",
     description: "Two scenarios for how choices about risk, diplomacy, and compute could change Brazil's position through 2030.",
-    status: "Working draft",
+    status: "Updated",
     updated: "28 Aug 2026",
     nav: {
       scenario: "Scenarios",
@@ -38,6 +41,8 @@ export const siteCopy = {
       strategy: "Strategy",
       letter: "Letter",
       about: "About",
+      support: "Support",
+      signatories: "Signatories",
     },
     menu: "Menu",
     format: "Markdown",
@@ -55,6 +60,9 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     strategy: "/estrategia",
     letter: "/carta-aberta",
     about: "/sobre",
+    redataNote: "/redata/nota-executiva",
+    support: "/apoie",
+    signatories: "/signatarios",
   },
   en: {
     scenario: "/en",
@@ -64,10 +72,13 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     strategy: "/en/strategy",
     letter: "/en/open-letter",
     about: "/en/about",
+    redataNote: "/en/redata/executive-note",
+    support: "/en/support",
+    signatories: "/en/signatories",
   },
 };
 
-export const markdownRoutes: Record<Locale, Record<PageKey, string>> = {
+export const markdownRoutes: Record<Locale, Record<ContentPageKey, string>> = {
   pt: {
     scenario: "/cenario.md",
     summary: "/resumo.md",

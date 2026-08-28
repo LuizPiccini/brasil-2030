@@ -50,7 +50,7 @@ const regulationPoints = pt ? [
   "Require independent review before any renewal after five years.",
 ];
 
-const draftLanguage = pt ? [
+const proposedLanguage = pt ? [
   { title: "Capacidade técnica", body: "Trocar a aferição por receita no art. 11-B, § 4º, por unidades técnicas auditáveis. Acrescentar equivalência de geração tecnológica, desempenho, disponibilidade, segurança, SLA e condições comerciais." },
   { title: "Piso doméstico", body: "Revogar o art. 11-B, § 6º. Como compromisso, permitir substituir no máximo metade da obrigação, preservando pelo menos 5% da oferta efetiva total no mercado interno." },
   { title: "Operador em instalação de terceiro", body: "Acrescentar ao art. 11-A a habilitação da pessoa jurídica que possua ou opere equipamentos de GPU cloud, HPC, treinamento ou inferência instalados em data center de terceiro." },
@@ -66,77 +66,77 @@ const draftLanguage = pt ? [
 
 const amendmentMeta = [
   ["1", "Laércio Oliveira", "10163022", "energy-preference", "oppose"],
-  ["2", "Eduardo Braga", "10163042", "national-capacity", "support"],
+  ["2", "Eduardo Braga", "10163042", "national-capacity", "adjust"],
   ["3", "Nelsinho Trad", "10163049", "generation-concessions", "separate"],
   ["4", "Laércio Oliveira", "10163074", "energy-definition", "adjust"],
   ["5", "Laércio Oliveira", "10163128", "energy-definition-duplicate", "merge"],
-  ["6", "Omar Aziz", "10163179", "national-capacity-duplicate", "merge"],
+  ["6", "Omar Aziz", "10163179", "national-capacity-duplicate", "adjust"],
   ["7", "Esperidião Amin", "10164009", "regional-reduction", "oppose"],
   ["8", "Jorge Seif", "10165596", "water-reuse", "adjust"],
   ["9", "Luis Carlos Heinze", "10165739", "coal-cde", "separate"],
   ["10", "Luis Carlos Heinze", "10165750", "curtailment-cost", "separate"],
   ["11", "Zequinha Marinho", "10171408", "local-generation", "adjust"],
   ["12", "Wellington Fagundes", "10172268", "storage-cost", "review"],
-  ["13", "Izalci Lucas", "10172449", "local-content", "adjust"],
-  ["14", "Jayme Campos", "10172879", "storage-financing", "separate"],
+  ["13", "Izalci Lucas", "10172449", "local-content", "oppose"],
+  ["14", "Irajá", "10172879", "storage-financing", "separate"],
   ["15", "Marcelo Castro", "10173923", "zpe-services", "separate"],
   ["16", "Esperidião Amin", "10181424", "gas-energy", "oppose"],
   ["17", "Luis Carlos Heinze", "10181886", "network-credit", "adjust"],
   ["18", "Luis Carlos Heinze", "10181890", "hydro-renewal", "separate"],
   ["19", "Luis Carlos Heinze", "10181894", "storage-cost-duplicate", "merge"],
-  ["20", "Veneziano Vital do Rêgo", "10204658", "zpe-domestic-services", "adjust"],
+  ["20", "Jayme Campos", "10204658", "zpe-domestic-services", "adjust"],
   ["21", "Veneziano Vital do Rêgo", "10215127", "energy-certification", "support"],
   ["22", "Laércio Oliveira", "10281299", "energy-source-list", "oppose"],
 ] as const;
 
 const labels = {
   pt: {
-    "energy-preference": ["Energia apenas preferencial", "Enfraquece a obrigação", "Rejeitar"],
-    "national-capacity": ["Falta de capacidade nacional equivalente", "Ajuda no critério de equipamento", "Apoiar e ampliar"],
-    "generation-concessions": ["Concessões de geração", "Sem relação direta", "Tratar separadamente"],
-    "energy-definition": ["Definição de energia limpa", "Tange a certificação", "Apoiar com ajustes"],
-    "energy-definition-duplicate": ["Repete a Emenda 4", "Tange a certificação", "Fundir com a 4"],
-    "national-capacity-duplicate": ["Repete a Emenda 2", "Ajuda no critério de equipamento", "Fundir com a 2"],
-    "regional-reduction": ["Redução em regiões carboníferas", "Pode reduzir a reserva doméstica", "Rejeitar"],
-    "water-reuse": ["Atalho de WUE para água de reuso", "Ignora volume e estresse local", "Reescrever"],
-    "coal-cde": ["CDE e carvão", "Sem relação direta", "Tratar separadamente"],
-    "curtailment-cost": ["Custeio de cortes de geração", "Sem relação direta", "Tratar separadamente"],
-    "local-generation": ["Associação local de geração e consumo", "Tange conexão e rede", "Apoiar com salvaguardas"],
-    "storage-cost": ["Redistribuição dos custos de armazenamento", "Tange incidência de custos", "Exigir análise"],
-    "local-content": ["Índice de conteúdo local", "Nomeia equipamentos, mas pode afastar investimento", "Reescrever"],
-    "storage-financing": ["Financiamento para armazenamento", "Adjacente ao REDATA", "Projeto próprio"],
-    "zpe-services": ["Contratos de serviços em ZPE", "Tange a cadeia de serviços", "Tratar no marco de ZPE"],
-    "gas-energy": ["Gás como energia limpa", "Não exige emissões verificadas", "Rejeitar como redigida"],
-    "network-credit": ["Crédito para redes", "Tange interconexão, com custo fiscal", "Reescrever"],
-    "hydro-renewal": ["Renovação hidrelétrica", "Sem relação direta", "Tratar separadamente"],
-    "storage-cost-duplicate": ["Repete a Emenda 12", "Tange incidência de custos", "Fundir com a 12"],
-    "zpe-domestic-services": ["Serviços e vendas domésticas em ZPE", "Tange contratação sem garantias de LGPD", "Aproveitar o conceito"],
-    "energy-certification": ["Certificação nacional de energia", "Cobre parcialmente o ponto 5", "Apoiar com ajustes"],
-    "energy-source-list": ["Lista gás entre fontes limpas", "Não exige desempenho ou emissões", "Rejeitar e substituir"],
+    "energy-preference": ["Torna o uso de energia limpa apenas preferencial", "A emenda foi retirada pelo autor. Se o conteúdo voltar ao texto, ele enfraquece uma contrapartida central e deve ser rejeitado.", "Retirada; rejeitar se voltar"],
+    "national-capacity": ["Troca similar nacional por capacidade produtiva equivalente", "A redação pode melhorar o texto-base, mas mantém uma trava à importação dependente de ato do Executivo. Só é aceitável como fallback com critérios objetivos de geração, desempenho, volume, prazo, confiabilidade e custo; decisão rápida; silêncio positivo; lista pública e recurso.", "Aceitar só como fallback"],
+    "generation-concessions": ["Altera regras de concessões de geração", "A mudança amplia o escopo do projeto e não melhora a capacidade contratável, a fiscalização ou o benefício público do REDATA.", "Tratar separadamente"],
+    "energy-definition": ["Define energia limpa por impacto ou emissões", "O conceito pode ajudar, desde que o regulamento use emissões verificadas e impeça dupla contagem. A emenda não cria esses controles.", "Apoiar com ajustes"],
+    "energy-definition-duplicate": ["Repete a definição proposta na Emenda 4", "Duas definições paralelas aumentam a ambiguidade. O Senado deve consolidar o tema em um único dispositivo com padrão mensurável.", "Fundir com a 4"],
+    "national-capacity-duplicate": ["Repete o teste de capacidade da Emenda 2", "Mantém a mesma trava à importação dependente de ato do Executivo. Se a solução for usada, deve ser consolidada com critérios técnicos objetivos, prazo curto, silêncio positivo, lista pública e recurso.", "Mesmo fallback da 2"],
+    "regional-reduction": ["Reduz contrapartidas em regiões carboníferas do Sul", "A localização não deve reduzir a parcela de capacidade acessível ao Brasil. A nova exceção pode se somar a outras reduções e esvaziar a contrapartida.", "Rejeitar"],
+    "water-reuse": ["Considera o WUE cumprido com água de reuso externa", "O reuso merece incentivo, mas não dispensa volume absoluto, origem da água ou situação hídrica local. A regra proposta cria um atalho de medição.", "Reescrever"],
+    "coal-cde": ["Muda a tributação de reembolsos da CDE para carvão", "A proposta altera a política para carvão sem relação direta com as cinco garantias do REDATA e sem uma análise de incidência dentro deste projeto.", "Tratar separadamente"],
+    "curtailment-cost": ["Redistribui custos de cortes de geração", "A emenda mexe na alocação de custos do sistema elétrico. O Senado deve avaliar quem paga e tratar o tema fora do pacote de data centers.", "Tratar separadamente"],
+    "local-generation": ["Permite conexão direta entre geração e consumo", "A conexão pode reduzir gargalos, mas precisa preservar confiabilidade, planejamento da rede e transparência sobre custos que recaiam sobre outros consumidores.", "Apoiar com salvaguardas"],
+    "storage-cost": ["Muda a alocação de custos de armazenamento", "Armazenamento pode apoiar cargas intensivas, mas a emenda pode transferir custos ao conjunto dos consumidores. Falta uma análise pública de incidência e adicionalidade.", "Exigir análise"],
+    "local-content": ["Cria índice de conteúdo local", "A regra retoma a lógica de reserva de mercado antes de existir oferta nacional de fronteira. Pode atrasar importações, estimular captura e repetir problemas comerciais do Inovar-Auto sem criar aceleradores competitivos no país.", "Rejeitar"],
+    "storage-financing": ["Torna baterias elegíveis a financiamento incentivado", "O armazenamento pode melhorar a confiabilidade, mas a emenda cria um benefício fiscal próprio. Ela precisa demonstrar adicionalidade, custo e regras de recuperação.", "Projeto próprio ou ajuste"],
+    "zpe-services": ["Altera contratos de serviços em ZPE", "O tema afeta a cadeia de serviços, mas promove uma reforma ampla do regime de ZPE sem criar a porta brasileira de contratação exigida no REDATA.", "Tratar no marco de ZPE"],
+    "gas-energy": ["Classifica gás natural e biometano como energia limpa", "As emissões variam por combustível e operação. O texto deve usar intensidade de carbono verificada, em vez de conceder aprovação automática por categoria.", "Rejeitar como está"],
+    "network-credit": ["Cria crédito para redes submarinas e terrestres", "Interconexão faz parte da infraestrutura necessária, mas um crédito novo exige custo fiscal público, acesso não discriminatório, adicionalidade e clawback.", "Reescrever"],
+    "hydro-renewal": ["Altera renovação de concessões hidrelétricas", "A emenda trata de uma política ampla de concessões e não melhora as contrapartidas do REDATA. A análise exige um processo próprio.", "Tratar separadamente"],
+    "storage-cost-duplicate": ["Repete a mudança de custos da Emenda 12", "A duplicação deve ser eliminada. Qualquer redação consolidada precisa mostrar quem paga e como a mudança afeta tarifas e concorrência.", "Fundir com a 12"],
+    "zpe-domestic-services": ["Amplia serviços e vendas domésticas em ZPE", "O conceito pode facilitar contratação local, mas a reforma não garante LGPD, processamento local, contrato brasileiro ou equivalência da capacidade oferecida.", "Aproveitar o conceito"],
+    "energy-certification": ["Cria sistema nacional unificado de certificados", "É a base mais útil entre as emendas ambientais. Deve exigir cancelamento do certificado usado, rastreabilidade e emissões verificadas.", "Apoiar com ajustes"],
+    "energy-source-list": ["Lista gás entre fontes limpas ou de baixo carbono", "Uma lista por tecnologia não mede emissões reais e pode premiar instalações de alto carbono. O texto deve adotar um padrão de desempenho verificável.", "Rejeitar e substituir"],
   },
   en: {
-    "energy-preference": ["Power requirement becomes a preference", "Weakens the commitment", "Oppose"],
-    "national-capacity": ["No equivalent domestic capacity", "Helps define equipment eligibility", "Support and expand"],
-    "generation-concessions": ["Generation concessions", "No direct link", "Handle separately"],
-    "energy-definition": ["Clean-power definition", "Adjacent to certification", "Support with changes"],
-    "energy-definition-duplicate": ["Duplicates Amendment 4", "Adjacent to certification", "Merge with 4"],
-    "national-capacity-duplicate": ["Duplicates Amendment 2", "Helps define equipment eligibility", "Merge with 2"],
-    "regional-reduction": ["Reduction for coal regions", "May reduce domestic capacity", "Oppose"],
-    "water-reuse": ["WUE shortcut for reclaimed water", "Ignores volume and local stress", "Rewrite"],
-    "coal-cde": ["Coal and CDE", "No direct link", "Handle separately"],
-    "curtailment-cost": ["Curtailment costs", "No direct link", "Handle separately"],
-    "local-generation": ["Local generation-consumption association", "Adjacent to grid connection", "Add safeguards"],
-    "storage-cost": ["Redistributes storage costs", "Raises cost-incidence issues", "Require analysis"],
-    "local-content": ["Local-content index", "Names equipment but may deter investment", "Rewrite"],
-    "storage-financing": ["Storage financing", "Adjacent to REDATA", "Separate bill"],
-    "zpe-services": ["ZPE service contracts", "Adjacent to the service chain", "Handle under ZPE law"],
-    "gas-energy": ["Gas classified as clean power", "No verified-emissions test", "Oppose as drafted"],
-    "network-credit": ["Credit for network infrastructure", "Adjacent to interconnection, adds fiscal cost", "Rewrite"],
-    "hydro-renewal": ["Hydro concession renewal", "No direct link", "Handle separately"],
-    "storage-cost-duplicate": ["Duplicates Amendment 12", "Raises cost-incidence issues", "Merge with 12"],
-    "zpe-domestic-services": ["Domestic ZPE services and sales", "Touches contracting without LGPD safeguards", "Use the concept only"],
-    "energy-certification": ["National power certification", "Partially covers regulatory point 5", "Support with changes"],
-    "energy-source-list": ["Lists gas among clean sources", "No performance or emissions test", "Replace"],
+    "energy-preference": ["Makes clean power a preference", "The author withdrew the amendment. If its content returns, it would weaken a core commitment and should be opposed.", "Withdrawn; oppose if revived"],
+    "national-capacity": ["Replaces domestic similarity with equivalent productive capacity", "The wording may improve the base bill but keeps an import gate dependent on executive action. It is acceptable only as a fallback with objective tests for generation, performance, volume, delivery time, reliability, and cost; a short deadline; approval by silence; a public list; and appeal.", "Fallback only"],
+    "generation-concessions": ["Changes generation-concession rules", "The change broadens the bill without improving contractable capacity, oversight, or REDATA's public benefit.", "Handle separately"],
+    "energy-definition": ["Defines clean power by impact or emissions", "The concept can help if regulation uses verified emissions and prevents double counting. The amendment does not create those controls.", "Support with changes"],
+    "energy-definition-duplicate": ["Repeats Amendment 4's definition", "Parallel definitions increase ambiguity. The Senate should consolidate the issue into one measurable standard.", "Merge with 4"],
+    "national-capacity-duplicate": ["Repeats Amendment 2's capacity test", "It keeps the same import gate dependent on executive action. If used, the solution should be consolidated with objective technical criteria, a short deadline, approval by silence, a public list, and appeal.", "Same fallback as 2"],
+    "regional-reduction": ["Reduces commitments in southern coal regions", "Location should not reduce capacity available to Brazil. This exception may combine with other reductions and hollow out the commitment.", "Oppose"],
+    "water-reuse": ["Deems WUE satisfied through external reclaimed water", "Reuse should be encouraged, but it cannot waive absolute volume, water source, or local scarcity data. The amendment creates a measurement shortcut.", "Rewrite"],
+    "coal-cde": ["Changes taxation of coal-related CDE reimbursements", "The proposal changes coal policy without a direct link to REDATA's five safeguards or an incidence analysis within this bill.", "Handle separately"],
+    "curtailment-cost": ["Redistributes generation-curtailment costs", "The amendment changes power-system cost allocation. The Senate should identify who pays and consider it outside the data-center package.", "Handle separately"],
+    "local-generation": ["Allows direct links between generation and consumption", "Direct connection may reduce bottlenecks, but it must preserve reliability, grid planning, and transparency over costs borne by other consumers.", "Add safeguards"],
+    "storage-cost": ["Changes storage-cost allocation", "Storage may support intensive loads, but the amendment may shift costs to other consumers. It lacks a public incidence and additionality analysis.", "Require analysis"],
+    "local-content": ["Creates a local-content index", "The rule revives reserve-market logic before a domestic frontier supply exists. It may delay imports, encourage capture, and repeat Inovar-Auto's trade problems without creating competitive accelerators in Brazil.", "Oppose"],
+    "storage-financing": ["Makes batteries eligible for incentivized financing", "Storage may improve reliability, but the amendment creates a separate tax benefit. It needs evidence of additionality, cost, and recovery rules.", "Separate bill or revise"],
+    "zpe-services": ["Changes ZPE service contracts", "The issue affects the service chain, but it creates a broad ZPE reform without establishing REDATA's Brazilian contracting door.", "Handle under ZPE law"],
+    "gas-energy": ["Classifies natural gas and biomethane as clean power", "Emissions vary by fuel and operation. The bill should use verified carbon intensity instead of automatic approval by category.", "Oppose current text"],
+    "network-credit": ["Creates a credit for submarine and terrestrial networks", "Interconnection is necessary infrastructure, but a new credit needs a published fiscal cost, open access, additionality, and clawback.", "Rewrite"],
+    "hydro-renewal": ["Changes hydro-concession renewals", "The amendment addresses a broad concession policy and does not improve REDATA commitments. It requires a separate process.", "Handle separately"],
+    "storage-cost-duplicate": ["Repeats Amendment 12's cost change", "The duplicate should be removed. Any consolidated language must show who pays and how the change affects tariffs and competition.", "Merge with 12"],
+    "zpe-domestic-services": ["Expands domestic ZPE services and sales", "The concept may enable local contracts, but the reform does not guarantee LGPD compliance, local processing, a Brazilian contract, or equivalent capacity.", "Use the concept"],
+    "energy-certification": ["Creates a unified national certificate system", "This is the most useful environmental amendment. It should require certificate retirement, traceability, and verified emissions.", "Support with changes"],
+    "energy-source-list": ["Lists gas among clean or low-carbon sources", "A technology list does not measure real emissions and may reward high-carbon facilities. The bill should use a verified performance standard.", "Replace"],
   },
 } as const;
 
@@ -150,11 +150,13 @@ const sources = pt ? [
   ["Possível votação na semana de 31 de agosto", "Agência Senado", "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers"],
   ["Texto aprovado e contrapartidas", "Agência Câmara", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
   ["Texto-base e dispositivos", "Senado Federal", "https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline"],
+  ["Precedente de conteúdo local no Inovar-Auto", "OMC, caso DS472", "https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds472_e.htm"],
 ] : [
   ["Legislative status and 22 amendments", "Brazilian Senate", "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786"],
   ["Possible vote during the August 31 session week", "Senate News", "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers"],
   ["Chamber text and commitments", "Chamber News", "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/"],
   ["Base bill and provisions", "Brazilian Senate", "https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline"],
+  ["Local-content precedent in Inovar-Auto", "WTO, dispute DS472", "https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds472_e.htm"],
 ];
 ---
 
@@ -164,8 +166,24 @@ const sources = pt ? [
   <div class="page-content redata-content">
     <section class="redata-live" aria-labelledby="redata-live-title">
       <div><span>{pt ? "Situação em 28 ago 2026" : "Status on 28 Aug 2026"}</span><h2 id="redata-live-title">{pt ? "Falta um bloco novo de emendas" : "A new amendment package is still needed"}</h2></div>
-      <p>{pt ? "O PL 278/2026 está no Plenário do Senado, ainda sem relator e com 22 emendas. Nenhuma cobre integralmente os cinco ajustes necessários para transformar o incentivo em capacidade contratável no Brasil." : "Bill 278/2026 is before the Senate plenary, still has no rapporteur, and has received 22 amendments. None fully covers the five changes needed to turn the incentive into capacity that can be contracted in Brazil."}</p>
-      <a class="button-link primary" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">{pt ? "Acompanhar no Senado" : "Follow in the Senate"}</a>
+      <p>{pt ? "O PL 278/2026 está no Plenário do Senado, ainda sem relator. Foram apresentadas 22 emendas; a Emenda 1 consta como retirada. Nenhuma das restantes cobre integralmente os cinco ajustes necessários para transformar o incentivo em capacidade contratável no Brasil." : "Bill 278/2026 is before the Senate plenary and still has no rapporteur. Senators filed 22 amendments; Amendment 1 is listed as withdrawn. None of the remaining amendments fully covers the five changes needed to turn the incentive into capacity that can be contracted in Brazil."}</p>
+      <div class="redata-live-actions">
+        <a class="button-link" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">{pt ? "Acompanhar no Senado" : "Follow in the Senate"}</a>
+        <a class="button-link primary" href={routes[locale].support}>{pt ? "Apoie esse pedido" : "Support this request"}</a>
+        <a href={routes[locale].signatories}>{pt ? "Ver signatários" : "View signatories"}</a>
+      </div>
+    </section>
+
+    <section class="redata-executive-summary" aria-labelledby="executive-summary-title">
+      <div>
+        <span>{pt ? "Nota executiva · uma página" : "Executive note · one page"}</span>
+        <h2 id="executive-summary-title">{pt ? "Aprovar o REDATA e exigir capacidade útil ao Brasil" : "Pass REDATA and require useful capacity for Brazil"}</h2>
+      </div>
+      <div>
+        <p>{pt ? "O incentivo reduz o custo de instalar computação, mas o texto atual não garante quantidade, qualidade ou contratação local. A medição por receita e a substituição integral por P&D permitem que um projeto receba o benefício sem reservar capacidade moderna aos usuários brasileiros." : "The incentive lowers the cost of installing computing infrastructure, but the current bill does not guarantee quantity, quality, or domestic contracting. Revenue-based measurement and full R&D substitution allow a project to receive the benefit without reserving modern capacity for Brazilian users."}</p>
+        <p>{pt ? "O Senado deve medir capacidade técnica, preservar um piso doméstico, incluir operadores e equipamentos de alta densidade, criar uma porta brasileira de contratação e aplicar relatório com clawback." : "The Senate should measure technical capacity, preserve a domestic floor, include operators and high-density equipment, create a Brazilian contracting door, and require reporting with clawback."}</p>
+        <a class="button-link" href={routes[locale].redataNote}>{pt ? "Abrir a nota para imprimir" : "Open the printable note"}</a>
+      </div>
     </section>
 
     <section aria-labelledby="numbers-title">
@@ -191,24 +209,32 @@ const sources = pt ? [
       <div class="redata-changes">{changes.map((item) => <article><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div>
     </section>
 
+    <section class="redata-companions" aria-labelledby="red-lines-title">
+      <h2 id="red-lines-title">{pt ? "Duas linhas vermelhas" : "Two red lines"}</h2>
+      <div class="principle-grid">
+        <article class="principle-card"><span class="card-index">A</span><h3>{pt ? "Não bloquear o hardware que o Brasil ainda não produz" : "Do not block hardware Brazil does not yet make"}</h3><p>{pt ? "Rejeitar índice rígido de conteúdo local e trava de importação sem saída objetiva. A regra preferida libera equipamentos estratégicos de fronteira; o fallback exige equivalência técnica completa, decisão rápida, silêncio positivo, lista pública e recurso." : "Reject rigid local-content targets and import gates without an objective exit. The preferred rule exempts strategic frontier equipment; the fallback requires full technical equivalence, a short deadline, approval by silence, a public list, and appeal."}</p></article>
+        <article class="principle-card"><span class="card-index">B</span><h3>{pt ? "Não chamar gás natural de energia limpa" : "Do not call natural gas clean power"}</h3><p>{pt ? "Gás pode servir como contingência, com horas de uso, emissões e plano de transição publicados. Ele não deve cumprir automaticamente a obrigação de energia limpa nem receber o mesmo tratamento de fontes de baixa emissão verificável." : "Gas may provide emergency backup if operating hours, emissions, and a transition plan are disclosed. It should not automatically satisfy the clean-power obligation or receive the same treatment as sources with verifiably low emissions."}</p></article>
+      </div>
+    </section>
+
     <section aria-labelledby="amendment-review-title">
       <div class="redata-section-heading">
         <div>
-          <span>{pt ? "Revisão das 22 emendas" : "Review of all 22 amendments"}</span>
+          <span>{pt ? "Revisão das 22 emendas apresentadas" : "Review of all 22 filed amendments"}</span>
           <h2 id="amendment-review-title">{pt ? "A pauta atual ainda não resolve o problema" : "The current amendment agenda does not solve the problem"}</h2>
         </div>
-        <p>{pt ? "A leitura foi feita contra os cinco pedidos e os sete pontos de regulamentação. A Emenda 21 é a única que cobre parcialmente um ponto regulatório. A Emenda 8, como redigida, enfraquece a medição da água." : "We assessed each amendment against the five requests and seven regulatory points. Amendment 21 is the only one to partially cover a regulatory point. Amendment 8, as drafted, weakens water-use measurement."}</p>
+        <p>{pt ? "A leitura foi feita contra os cinco pedidos e os sete pontos de regulamentação. A Emenda 21 é a única que cobre parcialmente um ponto regulatório. O texto atual da Emenda 8 enfraquece a medição da água." : "We assessed each amendment against the five requests and seven regulatory points. Amendment 21 is the only one to partially cover a regulatory point. Amendment 8's current text weakens water-use measurement."}</p>
       </div>
 
       <div class="coverage-strip" aria-label={pt ? "Cobertura das emendas atuais" : "Coverage of current amendments"}>
         <article><strong>0/5</strong><span>{pt ? "pedidos cobertos integralmente" : "requests fully covered"}</span></article>
         <article><strong>1/7</strong><span>{pt ? "pontos regulatórios cobertos parcialmente" : "regulatory points partly covered"}</span></article>
-        <article><strong>3</strong><span>{pt ? "emendas úteis como ponto de partida: 2, 6 e 21" : "useful starting points: 2, 6, and 21"}</span></article>
+        <article><strong>1</strong><span>{pt ? "emenda útil como ponto de partida parcial: 21" : "useful partial starting point: 21"}</span></article>
       </div>
 
       <div class="amendment-table-wrap" tabindex="0" aria-label={pt ? "Tabela rolável das 22 emendas" : "Scrollable table of all 22 amendments"}>
         <table class="amendment-table">
-          <thead><tr><th>{pt ? "Emenda" : "Amendment"}</th><th>{pt ? "Autor" : "Author"}</th><th>{pt ? "Conteúdo" : "Subject"}</th><th>{pt ? "Relação" : "Relation"}</th><th>{pt ? "Posição" : "Position"}</th></tr></thead>
+          <thead><tr><th>{pt ? "Emenda" : "Amendment"}</th><th>{pt ? "Autor" : "Author"}</th><th>{pt ? "Conteúdo" : "Subject"}</th><th>{pt ? "Comentário" : "Comment"}</th><th>{pt ? "Posição" : "Position"}</th></tr></thead>
           <tbody>
             {amendments.map((item) => <tr>
               <td><a href={item.url}>#{item.number}</a></td>
@@ -232,9 +258,9 @@ const sources = pt ? [
     </section>
 
     <section aria-labelledby="language-title">
-      <h2 id="language-title">{pt ? "Redação indicativa para a negociação" : "Indicative language for negotiations"}</h2>
-      <p class="section-lead">{pt ? "A arquitetura já está definida. Consultoria legislativa deve consolidar remissões, competência e impacto fiscal antes do protocolo." : "The architecture is defined. Legislative counsel should consolidate cross-references, authority, and fiscal impact before filing."}</p>
-      <div class="draft-language-grid">{draftLanguage.map((item, index) => <details><summary><span>{String(index + 1).padStart(2, "0")}</span>{item.title}</summary><p>{item.body}</p></details>)}</div>
+      <h2 id="language-title">{pt ? "Redação proposta para a negociação" : "Proposed language for negotiations"}</h2>
+      <p class="section-lead">{pt ? "Os dispositivos abaixo traduzem os cinco pedidos em comandos legislativos. A consultoria legislativa deve consolidar remissões, competência e impacto fiscal antes do protocolo." : "The provisions below translate the five requests into legislative commands. Legislative counsel should consolidate cross-references, authority, and fiscal impact before filing."}</p>
+      <div class="proposed-language-grid">{proposedLanguage.map((item, index) => <details><summary><span>{String(index + 1).padStart(2, "0")}</span>{item.title}</summary><p>{item.body}</p></details>)}</div>
     </section>
 
     <section class="redata-companions" aria-labelledby="companions-title">
@@ -254,7 +280,7 @@ const sources = pt ? [
     <section aria-labelledby="sources-title">
       <h2 id="sources-title">{pt ? "Fontes primárias" : "Primary sources"}</h2>
       <div class="redata-sources">{sources.map(([title, source, url]) => <a href={url}><strong>{title}</strong><span>{source}</span></a>)}</div>
-      <p class="evidence-boundary">{pt ? "Revisão factual: 28 de agosto de 2026. Leitura do texto-base e das 22 emendas oficiais. As recomendações representam a posição dos autores e precisam de revisão jurídica antes do protocolo." : "Factual review: August 28, 2026. Review of the base bill and all 22 official amendments. The recommendations represent the authors' position and require legal review before filing."}</p>
+      <p class="evidence-boundary">{pt ? "Revisão factual: 28 de agosto de 2026. Leitura do texto-base e das 22 emendas oficiais. As recomendações representam a posição dos autores. Uma consultoria legislativa deve conferir remissões, iniciativa e impacto fiscal antes do protocolo." : "Factual review: August 28, 2026. Review of the base bill and all 22 official amendments. The recommendations represent the authors' position. Legislative counsel should review cross-references, authority, and fiscal impact before filing."}</p>
       <p><a class="button-link" href={routes[locale].scenario}>{pt ? "Ver como o REDATA muda os cenários" : "See how REDATA changes the scenarios"}</a></p>
     </section>
   </div>

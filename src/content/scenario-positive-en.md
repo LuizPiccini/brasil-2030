@@ -12,6 +12,8 @@ At the bank, André tests two defensive systems. The foreign supplier identifies
 
 REDATA starts to produce its first effects. Operators offer capacity in Brazil, and two local companies rent accelerators to run open-weight models. Their scale remains small. Even so, public agencies and regulated companies can sign contracts in reais, set data-residency requirements, and test continuity.
 
+The change also reaches hiring in the second half of the year. Law firms, banks, and contact centers open fewer entry-level administrative positions. Demand grows for people who integrate tools, review results, and handle exceptions. The effect still varies widely across sectors and companies, but young people seeking their first job notice it before it dominates national indicators.
+
 <figure class="scenario-visual visual-cascade" aria-labelledby="visual-cascade-positive-title-en">
   <figcaption>
     <span class="visual-kicker">Visual 02 · 2027</span>
@@ -46,11 +48,9 @@ The first agreement falls short of a general pause. The United States and China 
 
 The mechanism lowers the risk of accidental escalation and creates a common vocabulary. It does not stop research, smaller models, or lower-risk applications. Each side keeps investing and monitoring the other.
 
-In Brazil, BNDES, companies, and public agencies aggregate purchase commitments without sharing prices or commercial strategies. Providers compete for long-term contracts serving banks, universities, startups, and government. Manufacturers begin to see Brazilian orders as an organized market rather than isolated purchases.
+In Brazil, BNDES, companies, and public agencies aggregate purchase commitments without sharing prices or commercial strategies. Providers compete for long-term contracts serving banks, universities, startups, and government. Manufacturers begin to see Brazilian orders as an organized market rather than isolated purchases. The government expands income protection and training in the most exposed sectors. The transition creates losses without turning into a general collapse.
 
-The labor market starts to change. Companies hire fewer people for entry-level administrative tasks and more professionals who can review systems, handle exceptions, and integrate tools. The government expands income protection and training without trying to freeze every existing role. The transition creates losses without turning into a general collapse.
-
-## 2029: A middle power
+## 2029: Brazil enters the game
 
 > **Status:** positive scenario. The relative value of energy and compute depends on the slowdown agreement remaining in force.
 
@@ -64,7 +64,7 @@ Brazilian inference companies occupy the layer between the building and the appl
 
 Camila follows REDATA's first annual evaluation. Some projects met the domestic commitment with comparable capacity. Others tried to count older products or contracts that local customers could not buy. The government suspends one operator's benefits, and the company fixes its offer before cancellation. Enforcement makes the rule credible.
 
-## 2030: Room to choose
+## 2030: An AI-era middle power
 
 > **Status:** positive result, conditional on the choices made since 2026. Brazil remains dependent on foreign chips and models.
 
@@ -77,7 +77,7 @@ Brazil reaches 2030 without controlling the technological frontier. It controls 
 | Critical-service continuity | Untested | Contracts and annual exercises |
 | Brazilian inference providers | Small, fragmented supply | Competitive market, still below the frontier |
 | Evaluation capability | Dispersed | National institution with secure access to leading models |
-| International position | Diplomatic participation without an operational asset | Middle power combining capacity and mediation |
+| International position | Diplomatic participation without an operational asset | AI-era middle power combining capacity and mediation |
 
 <figure class="scenario-visual visual-leverage" aria-labelledby="visual-leverage-positive-title-en">
   <figcaption>
@@ -91,11 +91,11 @@ Brazil reaches 2030 without controlling the technological frontier. It controls 
     <section class="leverage-counterpart leverage-china"><span>China</span><dl><div><dt>Controls</dt><dd>models, operators, and equipment</dd></div><div><dt>Brazil negotiates</dt><dd>local service and diversification</dd></div></dl></section>
     <section class="leverage-counterpart leverage-operators"><span>Operators</span><dl><div><dt>Need</dt><dd>energy, connection, and permits</dd></div><div><dt>Brazil requires</dt><dd>access, transparency, and competition</dd></div></dl></section>
   </div>
-  <div class="leverage-limit"><span>Limit</span><p>A middle power still depends on the frontier. Its advantage lies in the ability to contract, keep critical services running, and negotiate with more than one supplier.</p></div>
+  <div class="leverage-limit"><span>Limit</span><p>Brazil remains outside the frontier in chips and models. Its position comes from the ability to contract domestically, keep critical services running, and negotiate with more than one supplier.</p></div>
 </figure>
 
 Automation eliminates jobs and compresses some professions. Brazilian companies also capture productivity in finance, health, energy, agriculture, and software. Growth remains below the powers that control the frontier but exceeds that of countries dependent on occasional and expensive access.
 
 Lourdes still does not understand how a model works. She understands the difference between losing the clinic system for four days and restoring it in a few hours. Camila watches the congressman present the compute scorecard at a hearing. Her mother's question has a public answer for the first time, even if it remains incomplete.
 
-Brazil ends the decade as a strong middle-tier country. It has not achieved independence. It has secured enough alternatives to preserve some choices.
+Brazil continues to import chips, models, and equipment. By 2030, it belongs to the small group of countries outside the frontier that can operate critical services, sustain a domestic inference market, and negotiate with more than one bloc. Those capabilities make it an AI-era middle power. Energy, grid access, and market demand reduce absolute dependency and preserve room to choose.

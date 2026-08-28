@@ -1,7 +1,7 @@
 ---
 import { routes, siteCopy, type Locale } from "../data/site";
 
-interface Props { locale: Locale; markdownHref: string; }
+interface Props { locale: Locale; markdownHref?: string; }
 const { locale, markdownHref } = Astro.props;
 const copy = siteCopy[locale];
 ---
@@ -12,9 +12,11 @@ const copy = siteCopy[locale];
     <p>{copy.footerNote}</p>
   </div>
   <div class="footer-links">
+    <a href={routes[locale].support}>{copy.nav.support}</a>
+    <a href={routes[locale].signatories}>{copy.nav.signatories}</a>
     <a href={routes[locale].letter}>{copy.nav.letter}</a>
     <a href={routes[locale].about}>{copy.nav.about}</a>
-    <a href={markdownHref}>{copy.format}</a>
+    {markdownHref && <a href={markdownHref}>{copy.format}</a>}
     <a href="/llms.txt">llms.txt</a>
   </div>
 </footer>

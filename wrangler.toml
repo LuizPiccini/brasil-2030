@@ -13,3 +13,8 @@ binding = "ASSETS"
 html_handling = "none"
 not_found_handling = "404-page"
 run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "brasil-2030-supporters"
+database_id = "1c7425d7-306d-40ea-804e-3b7dd94a7bdc"

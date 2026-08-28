@@ -4,6 +4,8 @@
 
 O REDATA fracassou ou entrou em vigor sem criar capacidade computacional contratável por empresas e órgãos brasileiros. Alguns data centers operam no país, mas seus controladores destinam as máquinas a contratos estrangeiros. Outros projetos foram adiados ou migraram para países com regras mais previsíveis.
 
+Na tentativa de mostrar política industrial, o Congresso acrescenta índices de conteúdo local e condiciona a importação à comprovação de que não existe produção nacional equivalente. O processo não tem prazo curto, critérios técnicos completos nem aprovação automática quando o governo demora a responder. A indústria brasileira ainda não fabrica os aceleradores e sistemas de alta densidade exigidos pelos projetos. Equipamentos ficam parados na alfândega, investidores adiam pedidos e a capacidade escassa é instalada em outros países. A barreira não cria uma cadeia de fronteira; ela atrasa justamente as máquinas necessárias para que empresas brasileiras entrem no mercado.
+
 Criminosos usam IA para ampliar fraudes e ataques digitais. Eles testam vulnerabilidades, adaptam códigos maliciosos e imitam funcionários com voz e vídeo. Rafael percebe a mudança na fila de incidentes do CTIR. Cada defesa dura menos, e as equipes públicas recebem mais casos do que conseguem investigar.
 
 O sistema da clínica de Lourdes para durante dois dias. Pacientes chegam sem horário confirmado. Funcionários anotam consultas em papel, e a clínica contrata um pacote estrangeiro de segurança que consome uma parte maior do orçamento.
@@ -25,6 +27,8 @@ Camila tenta incluir limites, auditoria judicial e uma cláusula de expiração.
 Estados Unidos e China chegam a um acordo de desaceleração depois de uma sequência de incidentes internacionais. As duas potências limitam o treinamento de sistemas acima de certos níveis de capacidade, criam canais de emergência e compartilham avaliações de risco. Programas militares recebem exceções. Os controles sobre chips e equipamentos continuam.
 
 O acordo diminui a velocidade da corrida e protege a vantagem dos países que já construíram modelos, data centers e cadeias de suprimento. O pacto não distribui chips, não garante capacidade defensiva aos demais países e não lhes oferece participação efetiva nas decisões.
+
+O acordo também não unifica os ecossistemas criados durante a corrida. Pax Silica e WAICO tornam-se bases para cadeias de fornecimento, padrões técnicos, práticas de segurança e regimes de treinamento diferentes. Empresas e governos que compram serviços de um bloco importam parte dessas regras junto com os modelos. O Brasil precisa escolher compatibilidades sem ter ajudado a defini-las.
 
 Brasil, Índia, África do Sul e outros países recebem convites para apoiar o acordo depois que EUA e China definem seus termos.
 

@@ -4,6 +4,8 @@
 
 REDATA failed or took effect without creating compute capacity that Brazilian companies and public agencies could contract. Some data centers operate in the country, but their controllers allocate the machines to foreign contracts. Other projects moved to countries with more predictable rules or remained on hold.
 
+Trying to display an industrial policy, Congress adds local-content targets and makes imports conditional on proof that no equivalent domestic production exists. The process lacks a short deadline, complete technical criteria, or automatic approval when the government fails to decide. Brazilian industry still does not manufacture the accelerators and high-density systems required by the projects. Equipment waits at customs, investors postpone orders, and scarce capacity is installed elsewhere. The barrier does not create a frontier supply chain; it delays the machines Brazilian companies need to enter the market.
+
 Criminals use AI to expand fraud and cyberattacks. They test vulnerabilities, adapt malicious code, and impersonate employees through voice and video. Rafael sees the change in CTIR's incident queue. Each defense lasts less time, and public teams receive more cases than they can investigate.
 
 The system at Lourdes's clinic goes down for two days. Patients arrive without confirmed appointments. Employees record visits on paper, and the clinic buys a foreign security package that takes a larger share of its budget.
@@ -25,6 +27,8 @@ Camila tries to add limits, judicial review, and an expiration clause. The congr
 The United States and China reach a slowdown agreement after a series of international incidents. The two powers limit the training of systems above defined capability levels, establish emergency channels, and share risk evaluations. Military programs receive exemptions. Controls on chips and equipment remain.
 
 The agreement slows the race and protects the advantage held by countries that have already built models, data centers, and supply chains. The deal does not distribute chips, guarantee defensive capacity to other countries, or give them an effective role in decisions.
+
+The agreement also fails to unify the ecosystems created during the race. Pax Silica and WAICO become foundations for different supply chains, technical standards, security practices, and training regimes. Companies and governments that buy services from one bloc import part of those rules along with the models. Brazil must choose compatibility without having helped define it.
 
 Brazil, India, South Africa, and other countries receive invitations to support the agreement after the United States and China have set its terms.
 

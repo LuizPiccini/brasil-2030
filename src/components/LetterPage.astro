@@ -7,10 +7,10 @@ const { locale } = Astro.props;
 const pt = locale === "pt";
 ---
 <BaseLayout locale={locale} pageKey="letter" markdownHref={markdownRoutes[locale].letter} title={pt ? "Carta aberta" : "Open letter"}>
-  <PageHero locale={locale} eyebrow={pt ? "Em elaboração" : "In development"} title={pt ? "Uma carta aos candidatos de 2026" : "A letter to Brazil's 2026 candidates"} intro={pt ? "Este texto transforma a pesquisa do cenário em pedidos que uma candidatura pode assumir e um governo pode medir. A equipe ainda revisa o conteúdo." : "This text turns the scenario research into requests a campaign can adopt and a government can measure. The team is still reviewing the content."} />
+  <PageHero locale={locale} eyebrow={pt ? "Carta aberta" : "Open letter"} title={pt ? "Uma carta aos candidatos de 2026" : "A letter to Brazil's 2026 candidates"} intro={pt ? "Este texto transforma a pesquisa do cenário em compromissos que uma candidatura pode assumir e um governo pode medir." : "This text turns the scenario research into commitments a campaign can adopt and a government can measure."} />
   <div class="page-content">
     <article class="letter-sheet">
-      <p class="letter-meta">{pt ? "Rascunho para revisão da equipe · 27 de agosto de 2026 · Não representa endosso eleitoral" : "Team review draft · 27 August 2026 · No electoral endorsement"}</p>
+      <p class="letter-meta">{pt ? "Edição de 28 de agosto de 2026 · Não representa endosso eleitoral" : "28 August 2026 edition · No electoral endorsement"}</p>
       <h2>{pt ? "Tempo para negociar e energia para escolher" : "Time to negotiate and energy to choose"}</h2>
       {pt ? <>
         <p>Às candidaturas à Presidência da República,</p>

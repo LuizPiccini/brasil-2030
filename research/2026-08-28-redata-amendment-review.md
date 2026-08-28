@@ -1,6 +1,6 @@
 # REDATA no Senado: revisão das 22 emendas e pacote de ajustes
 
-> Documento de trabalho, 28 de agosto de 2026. Revisão técnica com base no texto aprovado pela Câmara e nas 22 emendas disponíveis no Senado. A redação indicativa abaixo precisa de consolidação por consultoria legislativa e revisão jurídica antes de ser protocolada.
+> Nota interna, 28 de agosto de 2026. Revisão técnica com base no texto aprovado pela Câmara e nas 22 emendas disponíveis no Senado. A Emenda 1 consta como retirada pelo autor. Uma consultoria legislativa deve conferir remissões, iniciativa e impacto fiscal antes do protocolo.
 
 ## Resumo executivo
 
@@ -11,11 +11,13 @@ A revisão das 22 emendas encontrou uma lacuna clara:
 - nenhuma emenda cobre integralmente qualquer um dos cinco pedidos centrais;
 - apenas um dos sete pontos de regulamentação aparece parcialmente, na Emenda 21, sobre certificação de energia;
 - a Emenda 8 cria um atalho hídrico incompatível com a medição proposta;
-- as Emendas 2 e 6 ajudam a definir quando falta capacidade produtiva nacional, mas não ampliam por si só a lista de equipamentos elegíveis;
+- as Emendas 2 e 6 podem melhorar o teste do texto-base, mas preservam uma trava à importação dependente de ato do Executivo e só servem como fallback com critérios e prazos objetivos;
 - as Emendas 13, 17 e 20 tangenciam equipamentos, interconexão ou contratação doméstica, sem criar a porta brasileira de contratação;
 - nenhuma emenda corrige a substituição integral da obrigação doméstica por P&D ou cria clawback proporcional pelo seu descumprimento.
 
 Nossa recomendação é aprovar o REDATA com um bloco novo de cinco ajustes. Se houver espaço político para apenas três, a prioridade deve ser: capacidade contratável, piso doméstico não substituível e clawback com transparência.
+
+Duas linhas vermelhas completam o pacote: rejeitar índices rígidos de conteúdo local ou travas de importação sem saída objetiva; e impedir que gás natural seja contado automaticamente como energia limpa. Gás pode servir como contingência, sujeito a divulgação de horas de uso, emissões e plano de transição.
 
 ## Por que o texto atual permite um enclave
 
@@ -43,7 +45,7 @@ Compromisso aceitável: permitir a substituição de no máximo metade da obriga
 
 Deixar explícito que empresas de GPU cloud, computação de alto desempenho, treinamento e inferência podem ser habilitadas quando possuírem ou operarem o equipamento de computação, mesmo que usem um data center de terceiro.
 
-Incluir entre os equipamentos elegíveis, quando não houver capacidade nacional equivalente e competitiva:
+Incluir diretamente entre os equipamentos elegíveis:
 
 - aceleradores e servidores de alta densidade;
 - refrigeração líquida e controle térmico;
@@ -107,7 +109,7 @@ Acrescentar ao art. 11-A:
 
 Acrescentar ao art. 11-C:
 
-> § 4º-A Ato do Poder Executivo incluirá entre os equipamentos elegíveis, quando essenciais ao projeto e inexistente capacidade de produção nacional equivalente e competitiva, sistemas de refrigeração líquida, controle térmico, distribuição e proteção elétrica, redes e interconexão de alta densidade e seus componentes.
+> § 4º-A Consideram-se elegíveis, quando essenciais ao projeto, aceleradores e servidores de alta densidade; sistemas de refrigeração líquida e controle térmico; equipamentos de distribuição, conversão e proteção elétrica; redes, óptica e interconexão de alta densidade; e seus componentes indispensáveis à operação.
 
 ### Porta brasileira de contratação
 
@@ -135,26 +137,26 @@ Acrescentar ao art. 4º:
 
 | Emenda | Autor | Conteúdo principal | Relação com os pedidos | Posição recomendada |
 |---|---|---|---|---|
-| [1](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163022&disposition=inline) | Laércio Oliveira | Torna preferencial o uso de energia limpa ou renovável | Enfraquece a obrigação energética | Rejeitar |
-| [2](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163042&disposition=inline) | Eduardo Braga | Troca “sem similar nacional” por falta de capacidade nacional equivalente | Ajuda no critério de equipamento | Apoiar e ampliar |
+| [1](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163022&disposition=inline) | Laércio Oliveira | Torna preferencial o uso de energia limpa ou renovável | Enfraquece a obrigação energética; consta como retirada pelo autor | Rejeitar se o conteúdo voltar |
+| [2](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163042&disposition=inline) | Eduardo Braga | Troca “sem similar nacional” por falta de capacidade nacional equivalente | Melhora potencial, mas mantém trava dependente de ato do Executivo | Aceitar só como fallback objetivo |
 | [3](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163049&disposition=inline) | Nelsinho Trad | Revogação de concessões de geração | Sem relação direta | Tratar separadamente |
 | [4](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163074&disposition=inline) | Laércio Oliveira | Define energia limpa por menor impacto ou emissões | Tange a certificação | Apoiar com ajustes |
 | [5](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163128&disposition=inline) | Laércio Oliveira | Repete a definição da Emenda 4 | Tange a certificação | Fundir com a 4 |
-| [6](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163179&disposition=inline) | Omar Aziz | Repete a solução da Emenda 2 | Ajuda no critério de equipamento | Fundir com a 2 |
+| [6](https://legis.senado.leg.br/sdleg-getter/documento?dm=10163179&disposition=inline) | Omar Aziz | Repete a solução da Emenda 2 | Mantém a mesma trava à importação | Mesmo fallback da 2 |
 | [7](https://legis.senado.leg.br/sdleg-getter/documento?dm=10164009&disposition=inline) | Esperidião Amin | Reduz contrapartidas em regiões carboníferas do Sul | Pode reduzir a reserva doméstica | Rejeitar |
 | [8](https://legis.senado.leg.br/sdleg-getter/documento?dm=10165596&disposition=inline) | Jorge Seif | Considera o WUE cumprido com água de reuso externa | Ignora volume e estresse local | Reescrever |
 | [9](https://legis.senado.leg.br/sdleg-getter/documento?dm=10165739&disposition=inline) | Luis Carlos Heinze | Tributa reembolsos da CDE para carvão | Sem relação direta | Tratar separadamente |
 | [10](https://legis.senado.leg.br/sdleg-getter/documento?dm=10165750&disposition=inline) | Luis Carlos Heinze | Muda custeio de cortes de geração | Sem relação direta | Tratar separadamente |
 | [11](https://legis.senado.leg.br/sdleg-getter/documento?dm=10171408&disposition=inline) | Zequinha Marinho | Associação local entre geração e consumo | Tange conexão e rede | Apoiar com salvaguardas |
 | [12](https://legis.senado.leg.br/sdleg-getter/documento?dm=10172268&disposition=inline) | Wellington Fagundes | Redistribui custos de armazenamento | Tange incidência de custos | Exigir análise de incidência |
-| [13](https://legis.senado.leg.br/sdleg-getter/documento?dm=10172449&disposition=inline) | Izalci Lucas | Cria índice de conteúdo local | Nomeia classes de equipamentos, mas pode afastar investimento | Reescrever |
-| [14](https://legis.senado.leg.br/sdleg-getter/documento?dm=10172879&disposition=inline) | Jayme Campos | Prioriza armazenamento para financiamento | Adjacente | Avaliar em projeto próprio |
+| [13](https://legis.senado.leg.br/sdleg-getter/documento?dm=10172449&disposition=inline) | Izalci Lucas | Cria índice de conteúdo local | Pode atrasar importações, estimular captura e repetir a lógica da reserva de mercado | Rejeitar |
+| [14](https://legis.senado.leg.br/sdleg-getter/documento?dm=10172879&disposition=inline) | Irajá | Prioriza armazenamento para financiamento | Adjacente | Avaliar em projeto próprio |
 | [15](https://legis.senado.leg.br/sdleg-getter/documento?dm=10173923&disposition=inline) | Marcelo Castro | Altera contratos de serviços em ZPE | Tange cadeia de serviços | Tratar no marco de ZPE |
 | [16](https://legis.senado.leg.br/sdleg-getter/documento?dm=10181424&disposition=inline) | Esperidião Amin | Inclui gás e biometano como energia limpa | Não exige emissões verificadas | Rejeitar como redigida |
 | [17](https://legis.senado.leg.br/sdleg-getter/documento?dm=10181886&disposition=inline) | Luis Carlos Heinze | Cria crédito para redes submarinas e terrestres | Tange interconexão, com novo custo fiscal | Reescrever com transparência e clawback |
 | [18](https://legis.senado.leg.br/sdleg-getter/documento?dm=10181890&disposition=inline) | Luis Carlos Heinze | Renova concessões hidrelétricas | Sem relação direta | Tratar separadamente |
 | [19](https://legis.senado.leg.br/sdleg-getter/documento?dm=10181894&disposition=inline) | Luis Carlos Heinze | Repete o custeio da Emenda 12 | Tange incidência de custos | Fundir com a 12 |
-| [20](https://legis.senado.leg.br/sdleg-getter/documento?dm=10204658&disposition=inline) | Veneziano Vital do Rêgo | Amplia serviços e vendas domésticas em ZPE | Tange contratação no Brasil, sem garantias de LGPD e jurisdição | Aproveitar o conceito, sem a expansão geral |
+| [20](https://legis.senado.leg.br/sdleg-getter/documento?dm=10204658&disposition=inline) | Jayme Campos | Amplia serviços e vendas domésticas em ZPE | Tange contratação no Brasil, sem garantias de LGPD e jurisdição | Aproveitar o conceito, sem a expansão geral |
 | [21](https://legis.senado.leg.br/sdleg-getter/documento?dm=10215127&disposition=inline) | Veneziano Vital do Rêgo | Exige sistema nacional de certificação de energia | Cobre parcialmente a certificação sem dupla contagem | Apoiar com ajustes |
 | [22](https://legis.senado.leg.br/sdleg-getter/documento?dm=10281299&disposition=inline) | Laércio Oliveira | Lista fontes, incluindo gás, como limpas ou de baixo carbono | Não exige desempenho ou emissões verificadas | Rejeitar e substituir por padrão de emissões |
 
@@ -180,9 +182,18 @@ Protocolar os cinco ajustes e os sete pontos de regulamentação.
 
 ### Apoio a emendas existentes
 
-- apoiar as Emendas 2 e 6, com ampliação para equipamentos de alta densidade;
 - apoiar a Emenda 21, com vedação explícita à dupla contagem e emissões verificáveis;
 - reescrever a Emenda 8 para que água de reuso seja valorizada sem dispensar volume absoluto, origem e situação hídrica local.
+
+### Fallback para as Emendas 2 e 6
+
+A solução preferida é retirar a trava do § 6º para equipamentos estratégicos de fronteira e sistemas de alta densidade que o Brasil ainda não produz. Se a negociação mantiver o teste de capacidade nacional, a lei ou a regulamentação deve exigir:
+
+1. equivalência de geração, desempenho, volume, prazo de entrega, confiabilidade e custo total;
+2. decisão em prazo curto e definido;
+3. elegibilidade automática quando o prazo vencer sem decisão;
+4. lista pública, atualizada periodicamente, dos itens considerados disponíveis no país;
+5. recurso contra a decisão.
 
 ## Mensagem curta à liderança
 
@@ -193,6 +204,7 @@ O REDATA merece aprovação, mas as 22 emendas ainda deixam de fora os pontos qu
 - [Texto aprovado pela Câmara](https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline)
 - [Tramitação e emendas no Senado](https://www25.senado.leg.br/web/atividade/materias/-/materia/172786)
 - [Agência Senado: possível votação na semana de 31 de agosto](https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers)
+- [OMC, caso DS472: medidas tributárias e conteúdo local do Inovar-Auto](https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds472_e.htm)
 
 ## Confiança e pontos de revisão
 

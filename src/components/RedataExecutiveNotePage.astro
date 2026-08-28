@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { routes, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const requests = pt ? [
+  ["Capacidade contratável", "Medir os 10% em unidades técnicas auditáveis, com hardware, desempenho, disponibilidade, SLA e preço comparáveis à capacidade exportada. Receita entra apenas como indicador complementar."],
+  ["Piso doméstico", "Revogar a substituição integral por P&D. Como compromisso, permitir a troca de no máximo metade da obrigação e preservar pelo menos 5% da oferta efetiva total no Brasil."],
+  ["Operadores e equipamentos", "Habilitar empresas de GPU cloud, HPC, treinamento e inferência que operem em data center de terceiro. Incluir refrigeração líquida, distribuição elétrica, controle térmico e interconexão de alta densidade."],
+  ["Porta brasileira de contratação", "Contar somente capacidade com contrato executável no Brasil, documentação fiscal, processamento e residência local dos dados, conformidade com LGPD e ANPD e suporte sob lei brasileira."],
+  ["Relatório e clawback", "Publicar relatório anual auditado por instalação. O déficit de oferta doméstica deve gerar recuperação proporcional do benefício, com prazo de correção, recurso e cancelamento em violações materiais ou reiteradas."],
+] : [
+  ["Contractable capacity", "Measure the 10% through auditable technical units with hardware, performance, availability, SLA, and prices comparable to exported capacity. Revenue should remain a supplementary indicator."],
+  ["Domestic floor", "Remove full substitution through R&D. As a compromise, allow at most half of the obligation to be replaced while preserving at least 5% of total effective supply in Brazil."],
+  ["Operators and equipment", "Allow GPU cloud, HPC, training, and inference companies using third-party data centers to qualify. Cover liquid cooling, power distribution, thermal control, and high-density interconnection."],
+  ["Brazilian contracting door", "Count only capacity with an enforceable Brazilian contract, fiscal documentation, local data processing and residency, LGPD and ANPD compliance, and support under Brazilian law."],
+  ["Report and clawback", "Publish an audited annual facility-level report. A domestic-supply shortfall should trigger proportional benefit recovery, with cure and appeal rights and cancellation for material or repeated violations."],
+];
+---
+
+<BaseLayout locale={locale} pageKey="redataNote" title={pt ? "Nota executiva sobre o REDATA" : "REDATA executive note"} description={pt ? "Nota executiva de uma página com cinco mudanças propostas ao PL 278/2026." : "A one-page executive note with five proposed changes to Bill 278/2026."} bodyClass="executive-note-page">
+  <div class="executive-note-actions">
+    <a class="button-link" href={routes[locale].redata}>{pt ? "Voltar ao REDATA" : "Back to REDATA"}</a>
+    <button class="button-link primary" type="button" onclick="window.print()">{pt ? "Imprimir ou salvar em PDF" : "Print or save as PDF"}</button>
+  </div>
+
+  <article class="executive-note-sheet">
+    <header>
+      <div>
+        <span>BRASIL 2030</span>
+        <strong>{pt ? "NOTA EXECUTIVA" : "EXECUTIVE NOTE"}</strong>
+      </div>
+      <time datetime="2026-08-28">{pt ? "28 de agosto de 2026" : "August 28, 2026"}</time>
+    </header>
+
+    <p class="executive-note-kicker">{pt ? "PL 278/2026 · Regime Especial de Tributação para Serviços de Datacenter" : "Bill 278/2026 · Special Tax Regime for Data Center Services"}</p>
+    <h1>{pt ? "Aprovar o REDATA com cinco ajustes" : "Pass REDATA with five changes"}</h1>
+    <p class="executive-note-deck">{pt ? "O projeto reduz o custo de instalar computação no Brasil. O Senado pode garantir que o benefício fiscal também produza capacidade moderna, contratável no país e sujeita a regras brasileiras." : "The bill lowers the cost of installing computing infrastructure in Brazil. The Senate can ensure that the tax benefit also creates modern capacity that can be contracted domestically under Brazilian rules."}</p>
+
+    <section>
+      <h2>{pt ? "O problema no texto atual" : "The problem in the current text"}</h2>
+      <p>{pt ? "O art. 11-B mede a obrigação doméstica de 10% pela participação da receita brasileira. Receita não demonstra quantidade, geração do hardware, disponibilidade ou qualidade. O texto também permite substituir toda a obrigação por P&D e prevê uma sanção com pouco efeito depois da compra inicial dos equipamentos." : "Article 11-B measures the 10% domestic commitment through the Brazilian share of revenue. Revenue does not demonstrate quantity, hardware generation, availability, or quality. The bill also allows full substitution through R&D and relies on a sanction that may have little effect after the initial equipment purchase."}</p>
+    </section>
+
+    <section>
+      <h2>{pt ? "Cinco mudanças" : "Five changes"}</h2>
+      <ol class="executive-note-requests">
+        {requests.map(([title, body], index) => <li><span>{index + 1}</span><p><strong>{title}.</strong> {body}</p></li>)}
+      </ol>
+    </section>
+
+    <section class="executive-note-decision">
+      <h2>{pt ? "Decisão pedida ao Senado" : "Decision requested from the Senate"}</h2>
+      <p>{pt ? "Aprovar o pacote completo. Se couberem apenas três mudanças, preservar capacidade técnica auditável, piso doméstico de 5% e relatório com clawback proporcional. A Emenda 21 é um ponto de partida parcial. Rejeitar conteúdo local rígido, travas de importação sem saída objetiva e a classificação automática do gás como energia limpa." : "Pass the full package. If only three changes fit, preserve auditable technical capacity, a 5% domestic floor, and annual reporting with proportional clawback. Amendment 21 is a partial starting point. Reject rigid local-content rules, import gates without an objective exit, and automatic classification of gas as clean power."}</p>
+    </section>
+
+    <footer>
+      <p><strong>{pt ? "Fontes:" : "Sources:"}</strong> <a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/172786">{pt ? "tramitação e emendas" : "status and amendments"}</a> · <a href="https://legis.senado.leg.br/sdleg-getter/documento?dm=10162783&disposition=inline">{pt ? "texto-base" : "base bill"}</a></p>
+      <p>{pt ? "Posição dos autores do Brasil 2030. Redação legislativa completa e comentário das 22 emendas em brasil-2030.piccini.app/redata." : "Position of the Brazil 2030 authors. Full legislative language and comments on all 22 amendments at brasil-2030.piccini.app/en/redata."}</p>
+    </footer>
+  </article>
+</BaseLayout>

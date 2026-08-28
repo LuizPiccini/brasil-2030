@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { routes, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const typeLabels = pt ? {
+  citizen: "Cidadania",
+  public_official: "Vida pública",
+  expert: "Pesquisa e especialidade",
+  organization: "Organização",
+} : {
+  citizen: "Citizen",
+  public_official: "Public life",
+  expert: "Research and expertise",
+  organization: "Organization",
+};
+---
+
+<BaseLayout locale={locale} pageKey="signatories" title={pt ? "Signatários" : "Signatories"} description={pt ? "Pessoas, especialistas, organizações e representantes públicos que apoiam cinco mudanças no REDATA." : "Citizens, experts, organizations, and public representatives supporting five changes to REDATA."}>
+  <PageHero compact locale={locale} eyebrow={pt ? "Apoio público" : "Public support"} title={pt ? "Signatários do pedido ao Senado" : "Signatories to the Senate request"} intro={pt ? "Estes apoios defendem a aprovação do REDATA com capacidade contratável no Brasil, piso doméstico, operadores de compute, contratação sob regras brasileiras e prestação de contas." : "These signatories support REDATA with contractable Brazilian capacity, a domestic floor, compute operators, contracting under Brazilian rules, and public accountability."} />
+
+  <div class="page-content signatories-content">
+    <section class="signatories-toolbar" aria-labelledby="signatories-list-title">
+      <div>
+        <span>{pt ? "Apoios publicados" : "Published support"}</span>
+        <h2 id="signatories-list-title" data-signatories-title>{pt ? "Carregando signatários" : "Loading signatories"}</h2>
+      </div>
+      <a class="button-link primary" href={routes[locale].support}>{pt ? "Apoie esse pedido" : "Support this request"}</a>
+    </section>
+
+    <div class="signatories-grid" data-signatories-list aria-live="polite" aria-busy="true">
+      <p class="signatories-loading">{pt ? "Consultando os apoios publicados..." : "Loading published support..."}</p>
+    </div>
+
+    <section class="verification-note">
+      <h2>{pt ? "Como publicamos os apoios" : "How support is published"}</h2>
+      <p>{pt ? "A equipe modera todas as mensagens. Cargos públicos, mandatos e candidaturas passam por conferência antes de aparecerem nesta página. O e-mail informado no formulário não é publicado." : "The team moderates every message. Public offices, mandates, and candidacies are checked before appearing on this page. Email addresses submitted through the form are not published."}</p>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ locale, typeLabels }}>
+    const list = document.querySelector("[data-signatories-list]");
+    const title = document.querySelector("[data-signatories-title]");
+    const text = locale === "pt" ? {
+      empty: "Os primeiros apoios verificados aparecerão aqui.",
+      error: "Não foi possível carregar os signatários.",
+      one: "1 signatário publicado",
+      many: "signatários publicados",
+    } : {
+      empty: "The first verified signatories will appear here.",
+      error: "We could not load the signatories.",
+      one: "1 published signatory",
+      many: "published signatories",
+    };
+
+    const addText = (parent, tag, value, className) => {
+      if (!value) return;
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      element.textContent = value;
+      parent.append(element);
+    };
+
+    try {
+      const response = await fetch("/api/signatarios", { headers: { Accept: "application/json" } });
+      if (!response.ok) throw new Error("load_failed");
+      const payload = await response.json();
+      const signatories = Array.isArray(payload.signatories) ? payload.signatories : [];
+      list.replaceChildren();
+      title.textContent = signatories.length === 1 ? text.one : `${signatories.length} ${text.many}`;
+
+      if (!signatories.length) {
+        addText(list, "p", text.empty, "signatories-empty");
+      } else {
+        for (const signatory of signatories) {
+          const article = document.createElement("article");
+          article.className = "signatory-card";
+          addText(article, "span", typeLabels[signatory.supporterType] || typeLabels.citizen, "signatory-type");
+          addText(article, "h3", signatory.name);
+          const role = [signatory.roleTitle, signatory.organization].filter(Boolean).join(" · ");
+          addText(article, "p", role, "signatory-role");
+          addText(article, "blockquote", signatory.message, "signatory-message");
+          list.append(article);
+        }
+      }
+      list.setAttribute("aria-busy", "false");
+    } catch {
+      list.replaceChildren();
+      addText(list, "p", text.error, "signatories-empty");
+      title.textContent = locale === "pt" ? "Signatários" : "Signatories";
+      list.setAttribute("aria-busy", "false");
+    }
+  </script>
+</BaseLayout>

@@ -12,6 +12,8 @@ No banco, André testa dois sistemas de defesa. O fornecedor estrangeiro identif
 
 O REDATA começa a produzir seus primeiros efeitos. Operadores oferecem capacidade no Brasil, e duas empresas locais alugam aceleradores para executar modelos abertos. A escala ainda é pequena. Mesmo assim, órgãos públicos e empresas reguladas conseguem assinar contratos em reais, definir residência de dados e testar continuidade.
 
+No segundo semestre, a mudança também aparece nas contratações. Escritórios, bancos e centrais de atendimento abrem menos vagas administrativas de entrada. Cresce a procura por pessoas que integrem ferramentas, revisem resultados e resolvam exceções. O efeito ainda varia muito entre setores e empresas, mas jovens em busca do primeiro emprego percebem a mudança antes de ela dominar os indicadores nacionais.
+
 <figure class="scenario-visual visual-cascade" aria-labelledby="visual-cascade-positive-title-pt">
   <figcaption>
     <span class="visual-kicker">Visual 02 · 2027</span>
@@ -46,11 +48,9 @@ O primeiro acordo fica aquém de uma pausa geral. Estados Unidos e China aceitam
 
 O mecanismo reduz a chance de escalada acidental e cria uma linguagem comum. Ele não impede pesquisa, modelos menores ou aplicações de baixo risco. Cada lado continua investindo e fiscalizando o outro.
 
-No Brasil, BNDES, empresas e órgãos públicos agregam compromissos de demanda sem compartilhar preços ou estratégias comerciais. Provedores disputam contratos de longo prazo para atender bancos, universidades, startups e governo. Fabricantes passam a enxergar pedidos brasileiros como um mercado organizado, não como compras isoladas.
+No Brasil, BNDES, empresas e órgãos públicos agregam compromissos de demanda sem compartilhar preços ou estratégias comerciais. Provedores disputam contratos de longo prazo para atender bancos, universidades, startups e governo. Fabricantes passam a enxergar pedidos brasileiros como um mercado organizado, não como compras isoladas. O governo amplia proteção de renda e formação para os setores mais expostos. A transição produz perdas, mas não vira um colapso generalizado.
 
-O mercado de trabalho começa a mudar. Empresas contratam menos pessoas para tarefas administrativas de entrada e mais profissionais capazes de revisar sistemas, responder a exceções e integrar ferramentas. O governo amplia proteção de renda e formação sem tentar congelar todas as funções existentes. A transição produz perdas, mas não vira um colapso generalizado.
-
-## 2029: Potência intermediária
+## 2029: O Brasil entra no jogo
 
 > **Status:** cenário positivo. A valorização relativa da energia e da computação depende do acordo de desaceleração permanecer em vigor.
 
@@ -64,7 +64,7 @@ Empresas brasileiras de inferência ocupam a camada entre o prédio e a aplicaç
 
 Camila acompanha a primeira avaliação anual do REDATA. Alguns projetos cumpriram a obrigação doméstica com capacidade comparável. Outros tentaram contar produtos mais antigos ou contratos que clientes locais não conseguiam comprar. O governo suspende benefícios de um operador, que corrige a oferta antes do cancelamento. A sanção torna a regra crível.
 
-## 2030: Margem de escolha
+## 2030: Potência intermediária da era da IA
 
 > **Status:** resultado positivo, condicionado às escolhas descritas desde 2026. O Brasil continua dependente de chips e modelos estrangeiros.
 
@@ -77,7 +77,7 @@ O Brasil chega a 2030 sem controlar a fronteira tecnológica. Controla uma parce
 | Continuidade de serviços críticos | Não testada | Contratos e exercícios anuais |
 | Provedores brasileiros de inferência | Oferta pequena e fragmentada | Mercado competitivo, ainda abaixo da fronteira |
 | Capacidade de avaliação | Dispersa | Instituição nacional com acesso seguro aos principais modelos |
-| Posição internacional | Participação diplomática sem ativo operacional | Potência intermediária com capacidade e mediação |
+| Posição internacional | Participação diplomática sem ativo operacional | Potência intermediária da era da IA, com capacidade e mediação |
 
 <figure class="scenario-visual visual-leverage" aria-labelledby="visual-leverage-positive-title-pt">
   <figcaption>
@@ -91,11 +91,11 @@ O Brasil chega a 2030 sem controlar a fronteira tecnológica. Controla uma parce
     <section class="leverage-counterpart leverage-china"><span>China</span><dl><div><dt>Controla</dt><dd>modelos, operadores e equipamentos</dd></div><div><dt>Brasil negocia</dt><dd>serviço local e diversificação</dd></div></dl></section>
     <section class="leverage-counterpart leverage-operators"><span>Operadores</span><dl><div><dt>Precisam</dt><dd>energia, conexão e licença</dd></div><div><dt>Brasil exige</dt><dd>acesso, transparência e competição</dd></div></dl></section>
   </div>
-  <div class="leverage-limit"><span>Limite</span><p>Uma potência intermediária ainda depende da fronteira. Sua vantagem está em poder contratar, manter serviços críticos e negociar com mais de um fornecedor.</p></div>
+  <div class="leverage-limit"><span>Limite</span><p>O Brasil continua fora da fronteira de chips e modelos. Sua posição vem da capacidade de contratar no país, manter serviços críticos e negociar com mais de um fornecedor.</p></div>
 </figure>
 
 A automação elimina vagas e comprime algumas profissões. Empresas brasileiras também capturam produtividade em finanças, saúde, energia, agronegócio e software. O crescimento fica abaixo das potências que controlam a fronteira, mas supera o de países que dependem de acesso eventual e caro.
 
 Lourdes continua sem entender como um modelo funciona. Entende a diferença entre ficar quatro dias sem o sistema da clínica e conseguir restaurá-lo em algumas horas. Camila vê o deputado apresentar o placar de computação numa audiência. Pela primeira vez, a pergunta da mãe recebe uma resposta pública, mesmo que incompleta.
 
-O Brasil encerra a década como um país intermediário forte. Não conquistou independência. Conquistou alternativas suficientes para preservar algumas escolhas.
+O Brasil continua importando chips, modelos e equipamentos. Em 2030, integra o pequeno grupo de países fora da fronteira capaz de operar serviços críticos, sustentar um mercado próprio de inferência e negociar com mais de um bloco. Esse conjunto de capacidades o torna uma potência intermediária da era da IA. Energia, rede e mercado reduziram a dependência absoluta e preservaram poder de escolha.
