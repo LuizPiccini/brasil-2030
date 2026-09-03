@@ -71,9 +71,9 @@ O Planalto aceita. Ministros descrevem o acordo como uma parceria entre iguais. 
   <p class="visual-note"><strong>Conclusão:</strong> o Brasil comprometeu energia e rede antes de contratar acesso ou continuidade.</p>
 </figure>
 
-O retorno parcial das contratações humanas não reverte o choque. Empresas haviam perdido processos, equipes e conhecimento; trabalhadores disponíveis não substituem em semanas sistemas que operavam milhões de tarefas. A desocupação dá um degrau e volta a dois dígitos pela primeira vez desde 2021; entre jovens com diploma, o desemprego chega a níveis que a série histórica nunca registrou. Famílias que viviam de empregos administrativos combinam trabalho informal, benefícios públicos e ajuda de parentes no exterior.
+O retorno parcial das contratações humanas não reverte o choque. Empresas haviam perdido processos, equipes e conhecimento; trabalhadores disponíveis não substituem em semanas sistemas que operavam milhões de tarefas. A desocupação dá um degrau e volta a dois dígitos pela primeira vez desde 2021; entre jovens com diploma, o desemprego chega a níveis que a série histórica nunca registrou. Famílias que viviam de empregos administrativos combinam contratos como pessoa jurídica, trabalho por aplicativo, benefícios públicos e ajuda de parentes no exterior. Uma das recepcionistas demitidas da clínica volta como MEI, prestando o mesmo serviço por aplicativo, sem FGTS e por menos. A informalidade volta ao patamar de 2019, perto de 41%, sem bater recorde; o que bate recorde é o número de MEIs e de contratos PJ em funções que eram celetistas.
 
-A arrecadação cai. O governo financia renda e segurança enquanto corta universidades, pesquisa e administração pública. Empresas transferem seus melhores profissionais para escritórios no exterior, onde encontram computação. O país perde ao mesmo tempo empregos, talentos e a capacidade de construir uma alternativa.
+A arrecadação cai entre 3% e 5% ao ano em termos reais, na faixa de 2015 e de 2020, porque quem sai do emprego é formal de renda média e quem volta é PJ de renda menor: a massa salarial encolhe mais do que o emprego. O governo financia renda e segurança enquanto corta universidades, pesquisa e administração pública. Empresas transferem seus melhores profissionais para escritórios no exterior, onde encontram computação. O país perde ao mesmo tempo empregos, talentos e a capacidade de construir uma alternativa.
 
 Autoridades brasileiras começam a usar os sistemas estrangeiros de monitoramento contra jornalistas, organizações civis e adversários políticos. Fornecedores chineses entregam a tecnologia. Dirigentes brasileiros escolhem os alvos.
 
@@ -89,7 +89,7 @@ O acordo internacional ainda existe, mas está por um fio. Laboratórios america
 
 A economia sufoca. Empresas brasileiras não competem com rivais americanos e chineses que dispõem de mais agentes, máquinas e robôs. Software, finanças e consultoria encolhem; fábricas perdem espaço para cadeias automatizadas. Commodities batem recordes de exportação, mas mineração, petróleo e agronegócio não criam empregos suficientes para substituir os escritórios e serviços que desapareceram. O país fecha 2030 com o maior número de desocupados da série histórica, perto de quinze milhões, e uma taxa entre 12% e 14%: abaixo do pico de 2021, mas sobre uma força de trabalho maior e com o primeiro emprego mais raro do que em qualquer ano medido.
 
-A arrecadação despenca quando a demanda por proteção social atinge o pico. União, estados e municípios renegociam dívidas, adiam pagamentos e reduzem serviços. O governo mantém benefícios mínimos usando crédito e contratos externos. Cada renovação aumenta a dependência do consórcio que fornece computação, defesa e financiamento.
+A arrecadação cai pelo segundo ano seguido quando a demanda por proteção social atinge o pico. União, estados e municípios renegociam dívidas, como fizeram em 2017 e em 2025, adiam pagamentos e reduzem serviços. O governo mantém benefícios mínimos usando crédito e contratos externos. Cada renovação aumenta a dependência do consórcio que fornece computação, defesa e financiamento.
 
 O Brasil ainda realiza eleições. O governo controla o acesso às principais redes de comunicação, usa dados públicos para direcionar propaganda e investiga adversários com ferramentas criadas para combater ataques digitais.
 
@@ -100,13 +100,13 @@ As instituições preservam seus nomes e edifícios. Juízes, parlamentares e se
 | Medida | 2026 | Cenário negativo em 2030 |
 |---|---|---|
 | Capacidade computacional para IA | Sem inventário confiável | Acesso estrangeiro, caro e revogável |
-| Trabalho | Pressão concentrada em algumas funções | Maior número de desocupados da série, primeiro emprego mais raro, informalidade em alta |
+| Trabalho | Pressão concentrada em algumas funções | Maior número de desocupados da série, primeiro emprego mais raro, pejotização recorde |
 | Talentos | Ecossistema doméstico pequeno | Fuga de pesquisadores, engenheiros e empreendedores |
 | Defesa digital | Capacidade dispersa | Sistemas críticos dependem do fornecedor estrangeiro |
 | Democracia | Instituições competitivas sob pressão | Regime híbrido apoiado por vigilância e patronagem |
 | Posição internacional | Autonomia diplomática sem ativo operacional | Alinhamento em troca de computação, crédito e segurança |
 
-A economia se divide entre um grupo conectado à infraestrutura estrangeira e uma população que alterna desemprego, trabalho informal e assistência pública. Quem consegue partir procura cidades com computação, laboratórios e empresas. Quem fica vê a universidade perder professores e a empresa onde trabalhava transferir a operação para fora. O país importa sistemas capazes de substituir trabalhadores, mas não controla as empresas, os modelos ou a infraestrutura que captura os ganhos.
+A economia se divide entre um grupo conectado à infraestrutura estrangeira e uma população que alterna desemprego, contratos precários como pessoa jurídica, trabalho por aplicativo e assistência pública. Quem consegue partir procura cidades com computação, laboratórios e empresas. Quem fica vê a universidade perder professores e a empresa onde trabalhava transferir a operação para fora. O país importa sistemas capazes de substituir trabalhadores, mas não controla as empresas, os modelos ou a infraestrutura que captura os ganhos.
 
 André protege o banco com a plataforma chinesa. Não consegue auditar todo o sistema nem trocar de fornecedor sem interromper operações essenciais. Rafael continua no governo e guarda, numa pasta pessoal, as ordens que transformaram segurança em vigilância. Camila deixa o gabinete depois que o deputado vota pela renovação dos poderes de emergência e chama a medida de defesa da democracia.
 
