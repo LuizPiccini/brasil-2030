@@ -20,7 +20,7 @@ Operações internacionais evitam o pior: não há contaminação de água nem q
 
 Numa noite de maio, Lourdes vê na televisão imagens de Lagos sem energia e com caminhões parados nas vias de acesso. O telejornal diz que agentes ligados ao Boko Haram atacaram a rede elétrica e sistemas logísticos ao mesmo tempo. A tarja na parte de baixo menciona interrupções na Índia e na Polônia. Lourdes abaixa o volume e manda um áudio para Camila: “Isso pode acontecer aqui também?” Camila ouve a mensagem ao lado de um boletim do CTIR com a mesma pergunta escrita em linguagem técnica.
 
-Ao mesmo tempo, empresas brasileiras compram agentes estrangeiros para atendimento, análise financeira e tarefas administrativas. André percebe a mudança no próprio banco: analistas jovens passam o dia distribuindo tarefas entre agentes, conferindo alertas e assumindo os casos que o sistema não resolve. Numa apresentação interna, alguém chama a função de “gerente de IAs”. O nome pega. Em algumas equipes de software, nenhum profissional lê todo o código produzido durante a semana; eles revisam testes, permissões e comportamento em produção. O banco corta vagas de entrada e compra a produtividade de fornecedores estrangeiros.
+Ao mesmo tempo, empresas brasileiras compram agentes estrangeiros para atendimento, análise financeira e tarefas administrativas. André percebe a mudança no próprio banco: analistas jovens passam o dia distribuindo tarefas entre agentes, conferindo alertas e assumindo os casos que o sistema não resolve. Numa apresentação interna, alguém chama a função de “gerente de IAs”. O nome pega. Em algumas equipes de software, nenhum profissional lê todo o código produzido durante a semana; eles revisam testes, permissões e comportamento em produção. O banco corta vagas de entrada e compra a produtividade de fornecedores estrangeiros: quem já está empregado é redistribuído, quem ia começar não começa.
 
 Estados Unidos e China reagem à onda de ataques restringindo a publicação de novos pesos de fronteira. Os modelos já abertos continuam disponíveis, mas a distância entre eles e os sistemas fechados aumenta. O Brasil perde a rota mais barata para adaptar um modelo de ponta aos próprios interesses. Sem capacidade contratável, perde também a chance de construir um mercado forte em torno dos modelos que ainda pode executar.
 
@@ -38,7 +38,7 @@ O acordo reduz parte do risco global e congela parte da vantagem de quem já con
 
 Brasil, Índia, África do Sul e outros países são convidados a apoiar o texto depois que os termos estão definidos. Camila acompanha a delegação brasileira. O governo pede garantias para países sem capacidade própria. Os negociadores perguntam quais clusters o Brasil pode oferecer à verificação e quanta defesa consegue manter durante uma restrição. A delegação apresenta projetos anunciados, não capacidade operacional.
 
-Enquanto os grandes treinos param, a inferência fica mais barata. Escritórios, bancos e varejistas passam a comprar equipes de agentes por assinatura. O trabalho administrativo de entrada encolhe no meio de 2027 e desaba em 2028. Empresas com acesso aos melhores sistemas reduzem equipes; concorrentes sem acesso fecham. Engenheiros e pesquisadores recebem propostas para trabalhar em hubs estrangeiros, onde há máquinas. Universidades perdem docentes e alunos de pós-graduação.
+Enquanto os grandes treinos param, a inferência fica mais barata. Escritórios, bancos e varejistas passam a comprar equipes de agentes por assinatura. As admissões de entrada em funções administrativas, que começaram a cair em 2027, estão cerca de um terço abaixo de 2026 nas ocupações mais expostas. O estoque de empregos de escritório encolhe no ritmo da automação bancária dos anos 1990, quatro a cinco pontos ao ano, agora sem nenhum amortecedor. A desocupação passa de 5% para perto de 8%. Empresas com acesso aos melhores sistemas reduzem equipes; concorrentes sem acesso fecham. Engenheiros e pesquisadores recebem propostas para trabalhar em hubs estrangeiros, onde há máquinas. Universidades perdem docentes e alunos de pós-graduação.
 
 A clínica demite duas recepcionistas e adota um sistema automatizado. Lourdes assume as exceções quando a voz sintética não entende um paciente idoso ou marca o procedimento errado. Ela vê colegas perderem o emprego enquanto a mensalidade do software, cobrada em dólar, aumenta.
 
@@ -71,7 +71,7 @@ O Planalto aceita. Ministros descrevem o acordo como uma parceria entre iguais. 
   <p class="visual-note"><strong>Conclusão:</strong> o Brasil comprometeu energia e rede antes de contratar acesso ou continuidade.</p>
 </figure>
 
-O retorno parcial das contratações humanas não reverte o choque. Empresas haviam perdido processos, equipes e conhecimento; trabalhadores disponíveis não substituem em semanas sistemas que operavam milhões de tarefas. O desemprego entre jovens e profissionais com diploma atinge níveis inéditos. Famílias que viviam de empregos administrativos combinam trabalho informal, benefícios públicos e ajuda de parentes no exterior.
+O retorno parcial das contratações humanas não reverte o choque. Empresas haviam perdido processos, equipes e conhecimento; trabalhadores disponíveis não substituem em semanas sistemas que operavam milhões de tarefas. A desocupação dá um degrau e volta a dois dígitos pela primeira vez desde 2021; entre jovens com diploma, o desemprego chega a níveis que a série histórica nunca registrou. Famílias que viviam de empregos administrativos combinam trabalho informal, benefícios públicos e ajuda de parentes no exterior.
 
 A arrecadação cai. O governo financia renda e segurança enquanto corta universidades, pesquisa e administração pública. Empresas transferem seus melhores profissionais para escritórios no exterior, onde encontram computação. O país perde ao mesmo tempo empregos, talentos e a capacidade de construir uma alternativa.
 
@@ -87,7 +87,7 @@ O deputado de Camila adere à coalizão governista. Em troca, recebe recursos pa
 
 O acordo internacional ainda existe, mas está por um fio. Laboratórios americanos pressionam pela retomada dos grandes treinos; a China ameaça responder; militares dos dois lados testam os limites. O risco de uma corrida renovada vai para o apêndice catastrófico. Aqui, o resultado é o que aconteceu com o Brasil mesmo quando a desaceleração funcionou o suficiente para evitar o pior.
 
-A economia sufoca. Empresas brasileiras não competem com rivais americanos e chineses que dispõem de mais agentes, máquinas e robôs. Software, finanças e consultoria encolhem; fábricas perdem espaço para cadeias automatizadas. Commodities batem recordes de exportação, mas mineração, petróleo e agronegócio não criam empregos suficientes para substituir os escritórios e serviços que desapareceram.
+A economia sufoca. Empresas brasileiras não competem com rivais americanos e chineses que dispõem de mais agentes, máquinas e robôs. Software, finanças e consultoria encolhem; fábricas perdem espaço para cadeias automatizadas. Commodities batem recordes de exportação, mas mineração, petróleo e agronegócio não criam empregos suficientes para substituir os escritórios e serviços que desapareceram. O país fecha 2030 com o maior número de desocupados da série histórica, perto de quinze milhões, e uma taxa entre 12% e 14%: abaixo do pico de 2021, mas sobre uma força de trabalho maior e com o primeiro emprego mais raro do que em qualquer ano medido.
 
 A arrecadação despenca quando a demanda por proteção social atinge o pico. União, estados e municípios renegociam dívidas, adiam pagamentos e reduzem serviços. O governo mantém benefícios mínimos usando crédito e contratos externos. Cada renovação aumenta a dependência do consórcio que fornece computação, defesa e financiamento.
 
@@ -100,7 +100,7 @@ As instituições preservam seus nomes e edifícios. Juízes, parlamentares e se
 | Medida | 2026 | Cenário negativo em 2030 |
 |---|---|---|
 | Capacidade computacional para IA | Sem inventário confiável | Acesso estrangeiro, caro e revogável |
-| Trabalho | Pressão concentrada em algumas funções | Desemprego recorde, informalidade e poucas vagas de entrada |
+| Trabalho | Pressão concentrada em algumas funções | Maior número de desocupados da série, primeiro emprego mais raro, informalidade em alta |
 | Talentos | Ecossistema doméstico pequeno | Fuga de pesquisadores, engenheiros e empreendedores |
 | Defesa digital | Capacidade dispersa | Sistemas críticos dependem do fornecedor estrangeiro |
 | Democracia | Instituições competitivas sob pressão | Regime híbrido apoiado por vigilância e patronagem |
