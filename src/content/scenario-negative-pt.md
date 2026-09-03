@@ -26,7 +26,7 @@ Estados Unidos e China reagem à onda de ataques restringindo a publicação de 
 
 A exigência de escolher lado chega em 2027, com o Pecém em obras e um convite formal para a Pax Silica. O governo adia. Aparece nas listas de convidados dos dois lados, mantém o Pecém como está e deixa governo e bancos dependerem de agentes americanos. É a sinalização dupla que os precedentes punem: Reino Unido e Emirados levaram entre um e dois anos para ceder depois da primeira exigência; o Brasil escolhe não escolher.
 
-Depois de ataques contra bancos e órgãos públicos, o Congresso concede ao Executivo poderes temporários para monitorar redes, bloquear sistemas e requisitar dados. Camila tenta incluir auditoria judicial e uma cláusula de expiração. O deputado concorda no gabinete e vota com o governo no plenário. Parte dos poderes permanece depois que a onda diminui.
+Depois de ataques contra bancos e órgãos públicos, o Congresso concede ao Executivo poderes temporários para monitorar redes, bloquear sistemas e requisitar dados. Camila tenta incluir auditoria judicial, uma cláusula de expiração e a designação de uma autoridade de avaliação de riscos de IA. O deputado concorda no gabinete e vota com o governo no plenário. A autoridade nunca é criada; os poderes de monitorar e requisitar dados ficam. O mesmo choque produz a escolha institucional oposta à do outro ramo, e parte dos poderes permanece depois que a onda diminui.
 
 ## 2028: O acordo dos outros
 
