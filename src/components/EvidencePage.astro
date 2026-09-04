@@ -115,6 +115,36 @@ const evidence = [
     source: "Stanford Digital Economy Lab (2025); IBGE PNAD Contínua", url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", checked: "02/09/2026",
   },
   {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A informalidade brasileira foi de 41,1% em 2019 para 38,7% em 2020, no colapso agudo da pandemia, e estava em 38,1% em 2025. Em recessões lentas, como 2015 a 2017, ela sobe; em colapsos agudos, cai, porque os postos informais desaparecem primeiro. Desemprego recorde e informalidade recorde nunca coincidiram na série.",
+    claimEn: "Brazilian informality went from 41.1% in 2019 to 38.7% in 2020, during the pandemic's acute collapse, and stood at 38.1% in 2025. In slow recessions, such as 2015 to 2017, it rises; in acute collapses it falls, because informal jobs disappear first. Record unemployment and record informality have never coincided in the series.",
+    source: "IBGE, PNAD Contínua", url: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/taxa-de-informalidade-cai-no-mercado-de-trabalho-mostra-ibge", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A arrecadação federal caiu 5,6% em termos reais em 2015, 3,0% em 2016 e 6,9% em 2020. A renegociação das dívidas estaduais veio em 2017 (LC 159) e em 2025 (LC 212). Os cenários usam essa faixa de 3% a 7% ao ano como limite de uma queda de receita plausível.",
+    claimEn: "Federal revenue fell 5.6% in real terms in 2015, 3.0% in 2016, and 6.9% in 2020. State debt renegotiations came in 2017 (LC 159) and 2025 (LC 212). The scenarios use that 3% to 7% a year range as the bound for a plausible revenue fall.",
+    source: "Receita Federal / Agência Brasil; Senado", url: "https://agenciabrasil.ebc.com.br/economia/noticia/2021-01/arrecadacao-federal-cai-691-em-2020", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Estados Unidos e China assinaram em novembro de 2024 uma declaração sobre controle humano de armas nucleares e só anunciaram um canal bilateral oficial sobre IA militar e segurança em maio de 2026, com conversas previstas para setembro. Não há texto vinculante.",
+    claimEn: "The United States and China signed a statement on human control of nuclear weapons in November 2024 and only announced an official bilateral channel on military AI and security in May 2026, with talks scheduled for September. There is no binding text.",
+    source: "IISS, junho de 2026; CNBC", url: "https://www.iiss.org/online-analysis/online-analysis/2026/06/military-ai-governance-under-strain-the-uschina-dialogue/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O acordo mais rápido entre superpotências depois de uma crise levou oito a dez meses: da crise de Cuba (outubro de 1962) à linha direta (junho de 1963) e ao Tratado de Proibição Parcial de Testes (agosto de 1963), mas após oito anos de negociação prévia. Moratórias tecnológicas duram em geral dois a três anos e terminam erodidas; das cinco conhecidas, uma foi rompida em menos de dois anos.",
+    claimEn: "The fastest superpower agreement after a crisis took eight to ten months: from the Cuban crisis (October 1962) to the Hot Line (June 1963) and the Limited Test Ban Treaty (August 1963), but after eight years of prior negotiation. Technology moratoria typically last two to three years and end eroded; of five known cases, one was broken in under two years.",
+    source: "Arms Control Association; CTBTO; NIH", url: "https://www.armscontrol.org/factsheets/nuclear-testing-and-comprehensive-test-ban-treaty-ctbt-timeline", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Média", confidenceEn: "Medium",
+    claimPt: "No Tratado de Não Proliferação, as minutas idênticas de Estados Unidos e União Soviética (agosto de 1967) não tinham artigos para países não nucleares; emendas de Brasil, México, Índia e Suécia produziram os artigos de uso pacífico, desarmamento e revisão. Terceiros influenciaram cláusulas de acesso e processo, em foro multilateral, não os limites entre as potências.",
+    claimEn: "In the Non-Proliferation Treaty, the identical US and Soviet drafts (August 1967) had no articles for non-nuclear states; amendments from Brazil, Mexico, India, and Sweden produced the peaceful-use, disarmament, and review articles. Third parties shaped access and process clauses, in a multilateral forum, not the limits between the powers.",
+    source: "National Security Archive; Arms Control Association", url: "https://nsarchive.gwu.edu/briefing-book/nuclear-vault/2018-05-24/nuclear-non-proliferation-treaty-mexican-amendments-negotiating-record", checked: "02/09/2026",
+  },
+  {
     kind: "fact", labelPt: "Precedente regulatório", labelEn: "Regulatory precedent", confidencePt: "Alta", confidenceEn: "High",
     claimPt: "O regime americano de difusão de 2025 criou tiers para chips, pesos e treinamento. O texto não criou tiers para APIs comuns de inferência.",
     claimEn: "The 2025 US diffusion framework created country tiers for chips, model weights, and training. It did not tier ordinary inference APIs.",
@@ -152,8 +182,8 @@ const evidence = [
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
-    claimPt: "O Brasil abre um canal técnico entre China e Estados Unidos em 2028 e ajuda a negociar um protocolo limitado de segurança até 2030.",
-    claimEn: "Brazil opens a technical channel between China and the United States in 2028 and helps negotiate a limited safety protocol by 2030.",
+    claimPt: "O Brasil propõe um canal técnico para incidentes na sessão da ONU de 2027, acompanha a declaração conjunta EUA–China de 2028 e obtém duas cláusulas no texto multilateral; o protocolo vinculante vem em 2029.",
+    claimEn: "Brazil proposes a technical incident channel at the 2027 UN session, follows the 2028 US–China joint declaration, and secures two clauses in the multilateral text; the binding protocol comes in 2029.",
     source: pt ? "Cenário positivo" : "Positive scenario", url: pt ? "/#2028-a-coordenação-ganha-forma" : "/en#2028-coordination-takes-shape", checked: "27/08/2026",
   },
   {
