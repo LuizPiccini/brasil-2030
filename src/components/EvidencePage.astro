@@ -103,6 +103,18 @@ const evidence = [
     source: "Brasil 20XX, cálculo de trabalho", url: pt ? "/evidencias#metodo" : "/en/evidence#method", checked: "06/08/2026",
   },
   {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A automação bancária brasileira reduziu o emprego no setor de cerca de 750 mil (1990) para cerca de 390 mil (2000), uma queda de 46% em dez anos. Os cenários usam esse ritmo, de quatro a cinco pontos ao ano, como referência para o emprego administrativo.",
+    claimEn: "Brazilian banking automation cut sector employment from about 750,000 (1990) to about 390,000 (2000), a 46% fall over ten years. The scenarios use that pace, four to five points a year, as the reference for administrative employment.",
+    source: "Ensaios FEE 25(1), 2004; DIEESE", url: "https://revistas.planejamento.rs.gov.br/index.php/ensaios/article/download/2054/2436/0", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Média", confidenceEn: "Medium",
+    claimPt: "Nos Estados Unidos, o emprego relativo de trabalhadores de 22 a 25 anos em ocupações mais expostas à IA caiu 13% entre o fim de 2022 e julho de 2025, sem queda equivalente para os mais experientes. O efeito aparece nas admissões de entrada, não no estoque. Máximos da série brasileira: desocupação de 14,9% e 14,8 milhões de desocupados em 2021.",
+    claimEn: "In the United States, relative employment of 22-to-25-year-olds in AI-exposed occupations fell 13% between late 2022 and July 2025, with no equivalent fall for experienced workers. The effect shows up in entry-level hiring, not in the stock. Brazilian series maxima: 14.9% unemployment and 14.8 million unemployed in 2021.",
+    source: "Stanford Digital Economy Lab (2025); IBGE PNAD Contínua", url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", checked: "02/09/2026",
+  },
+  {
     kind: "fact", labelPt: "Precedente regulatório", labelEn: "Regulatory precedent", confidencePt: "Alta", confidenceEn: "High",
     claimPt: "O regime americano de difusão de 2025 criou tiers para chips, pesos e treinamento. O texto não criou tiers para APIs comuns de inferência.",
     claimEn: "The 2025 US diffusion framework created country tiers for chips, model weights, and training. It did not tier ordinary inference APIs.",
@@ -134,8 +146,8 @@ const evidence = [
   },
   {
     kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
-    claimPt: "O cenário negativo projeta desemprego recorde, fuga de talentos e a transformação do Brasil em um regime híbrido até 2030.",
-    claimEn: "The negative scenario projects record unemployment, talent flight, and Brazil's transformation into a hybrid regime by 2030.",
+    claimPt: "O cenário negativo projeta o maior número de desocupados da série histórica, fuga de talentos e a transformação do Brasil em um regime híbrido até 2030.",
+    claimEn: "The negative scenario projects the largest number of unemployed people in the statistical series, talent flight, and Brazil's transformation into a hybrid regime by 2030.",
     source: pt ? "Cenário negativo" : "Negative scenario", url: pt ? "/#2030-país-satélite" : "/en#2030-satellite-country", checked: "28/08/2026",
   },
   {
