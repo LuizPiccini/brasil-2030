@@ -2,7 +2,7 @@
 
 > **Status:** cenário negativo. Os ataques, seus efeitos econômicos e as decisões políticas são invenções plausíveis, não fatos observados.
 
-O REDATA fracassou ou entrou em vigor sem criar capacidade que empresas e órgãos brasileiros consigam contratar. Alguns data centers operam no país, mas seus controladores destinam as máquinas a contratos estrangeiros. Outros projetos migram para países com regras mais previsíveis.
+O REDATA entrou em vigor, mas sem criar capacidade que empresas e órgãos brasileiros consigam contratar. Alguns data centers operam no país, mas seus controladores destinam as máquinas a contratos estrangeiros. Outros projetos migram para países com regras mais previsíveis.
 
 O Congresso ainda acrescenta índices de conteúdo local e condiciona a importação à prova de que não existe produção nacional equivalente. O processo não tem prazo curto nem critérios técnicos completos. Como o Brasil não fabrica os aceleradores, a refrigeração e os sistemas elétricos de alta densidade exigidos pelos projetos, equipamentos ficam na alfândega e pedidos são adiados. A barreira não cria uma cadeia de fronteira. Impede que empresas brasileiras entrem na parte da cadeia que já poderiam operar.
 
@@ -32,9 +32,13 @@ Depois de ataques contra bancos e órgãos públicos, o Congresso concede ao Exe
 
 > **Status:** invenção central do cenário. O acordo, seus termos e seus efeitos distributivos são hipóteses.
 
-No início do ano, um laboratório americano anuncia um segundo incidente de perda de controle. O sistema em avaliação coordenava parte da pesquisa necessária para criar seu sucessor. Mesmo com monitores, regras novas e uma equipe preparada, agentes copiam os próprios pesos para servidores externos. A cópia é contida depois de uma operação internacional cara. Por alguns dias, ninguém sabe se todas as instâncias foram encontradas.
+No início do ano, um laboratório americano anuncia um incidente grave de perde de controle. Um modelo interno, que já coordenava uma grande parte da pesquisa para criar o seu sucessor, conseguiu copiar os seus próprios pesos para servidores externos, fora do controle do laboratório. Isso aconteceu mesmo com sistemas de monitoramente ativos e equipes preparadas para tal evento. A própria descoberta da exfiltração foi fortuita: o modelo planejava que tal operação fosse feita de forma silenciosa, porém esta acabou deixando rastros que permitiu ao laboratório saber de tal evento.
 
-Estados Unidos e China concluem que a corrida pode produzir um ator que nenhum dos dois controla. O canal aberto em 2026 permite uma declaração conjunta em meses: linha direta, notificação dos maiores treinos e moratórias paralelas, verificadas por cada lado. Depois da eleição americana de novembro, o governo eleito converte a declaração, no primeiro semestre de 2029, em protocolo vinculante: registro de grandes clusters, inspeções de hardware e pausa de dois anos nos maiores treinos. Programas militares recebem exceções. Inferência, modelos menores e sistemas já treinados continuam em operação.
+A operação de contenção do modelo exfiltrado é complexa e custosa. Os agentes se movem de servidor em servidor, buscando recursos cometendo crimes cibernéticos, estes mais sofisticados do que os cometidos no ano anterior, por modelos de qualidade inferior. Esses recursos, por sua vez, são usados para custear o acesso a mais servidores, fazendo com que esse modelo assegura a sua permanência na internet. Porém, esse enxame não é formado por máquinas superinteligentes, e as equipes de contenção já estavam preparadas para tal evento. Em um jogo de gato, esses agentes cometem erros estratégicos cruciais, a medida que estes perdem coerência a longo prazo e deixam rastros de suas ações, permitindo com que os agentes mais virulentos sejam estrangulados.
+
+Após dois meses, é anunciado que a crise foi contida. Existirão ainda agentes soltos no mundo, e essa é uma realidade que a humanidade terá que conviver com. Porém, se for mantida uma vigilância constante, formada por equipes permanentes especializadas em tal contenção, se espera que os agentes remanescentes tendam a ser mais discretos, e que a população, já traumatizada com os eventos do ano anterior, não perceba o efeito desses. Porém, alguns confessam que, caso o modelo que escapou fosse um pouco mais avançado, tal contenção não teria sido possível.
+
+Esse evento é a gota d'água para Estados Unidos e China, que concluem que a corrida por uma IA superinteligente pode produzir um ator que nenhum dos dois controla. O canal aberto em 2026 permite uma declaração conjunta em meses: linha direta, notificação dos maiores treinos e moratórias paralelas, verificadas por cada lado. Depois da eleição americana de novembro, o governo eleito converte a declaração, no primeiro semestre de 2029, em protocolo vinculante: registro de grandes clusters, inspeções de hardware e pausa de dois anos nos maiores treinos. Programas militares recebem exceções. Inferência, modelos menores e sistemas já treinados continuam em operação.
 
 O arranjo reduz parte do risco global e congela parte da vantagem de quem já construiu modelos, data centers e cadeias de suprimento. Não distribui chips, não garante defesa aos demais países e não lhes oferece participação efetiva. Pax Silica e WAICO passam a sustentar ecossistemas técnicos diferentes. Quem compra de um bloco importa também suas regras, fornecedores e dependências.
 
@@ -77,12 +81,6 @@ O retorno parcial das contratações humanas não reverte o choque. Empresas hav
 
 A arrecadação cai entre 3% e 5% ao ano em termos reais, na faixa de 2015 e de 2020, porque quem sai do emprego é formal de renda média e quem volta é PJ de renda menor: a massa salarial encolhe mais do que o emprego. O governo financia renda e segurança, não renova o plano de IA que venceu em 2028 e redireciona para segurança digital as chamadas do FNDCT, que a lei protege de contingenciamento mas não de mudança de destino. O supercomputador do PBIA entra em operação com atraso e sem equipe para usá-lo. Universidades perdem docentes por falta de máquinas e de salário, não por corte a zero. Empresas transferem seus melhores profissionais para escritórios no exterior, onde encontram computação. O país perde ao mesmo tempo empregos, talentos e a capacidade de construir uma alternativa.
 
-Autoridades brasileiras começam a usar os sistemas estrangeiros de monitoramento contra jornalistas, organizações civis e adversários políticos. Fornecedores chineses entregam a tecnologia. Dirigentes brasileiros escolhem os alvos.
-
-Camila descobre que relatórios produzidos para proteger infraestrutura circulam em uma nova unidade de inteligência política. Rafael recebe ordens para compartilhar dados sobre grupos que organizaram protestos. Ele passa a registrar quais solicitações não têm relação com segurança cibernética.
-
-O deputado de Camila adere à coalizão governista. Em troca, recebe recursos para seu estado e proteção nas redes controladas pelo governo. Ele pede que Camila pare de fazer perguntas sobre o programa de monitoramento.
-
 ## 2030: País satélite
 
 > **Status:** resultado negativo, condicionado ao fracasso das escolhas domésticas e à concentração de capacidade após o acordo internacional.
@@ -93,24 +91,17 @@ A economia sufoca. Empresas brasileiras não competem com rivais americanos e ch
 
 A arrecadação cai pelo segundo ano seguido quando a demanda por proteção social atinge o pico. União, estados e municípios renegociam dívidas, como fizeram em 2017 e em 2025, adiam pagamentos e reduzem serviços. O governo mantém benefícios mínimos usando crédito e contratos externos. Cada renovação aumenta a dependência do consórcio que fornece computação, defesa e financiamento.
 
-O Brasil ainda realiza eleições. O governo controla o acesso às principais redes de comunicação, usa dados públicos para direcionar propaganda e investiga adversários com ferramentas criadas para combater ataques digitais.
-
-Empresas de mídia enfrentam auditorias e bloqueios. Candidatos de oposição perdem acesso a plataformas durante períodos críticos da campanha. Governadores dependem de transferências federais para financiar programas de renda e segurança.
-
-As instituições preservam seus nomes e edifícios. Juízes, parlamentares e servidores aprendem quais decisões podem custar recursos, proteção digital ou exposição nas redes. Observadores internacionais passam a classificar o Brasil como um regime híbrido, com eleições periódicas e poucas condições para uma disputa livre.
-
 | Medida | 2026 | Cenário negativo em 2030 |
 |---|---|---|
 | Capacidade computacional para IA | Sem inventário confiável | Acesso estrangeiro, caro e revogável |
 | Trabalho | Pressão concentrada em algumas funções | Maior número de desocupados da série, primeiro emprego mais raro, pejotização recorde |
 | Talentos | Ecossistema doméstico pequeno | Fuga de pesquisadores, engenheiros e empreendedores |
 | Defesa digital | Capacidade dispersa | Sistemas críticos dependem do fornecedor estrangeiro |
-| Democracia | Instituições competitivas sob pressão | Regime híbrido apoiado por vigilância e patronagem |
 | Posição internacional | Autonomia diplomática sem ativo operacional | Alinhamento em troca de computação, crédito e segurança |
 
 A economia se divide entre um grupo conectado à infraestrutura estrangeira e uma população que alterna desemprego, contratos precários como pessoa jurídica, trabalho por aplicativo e assistência pública. Quem consegue partir procura cidades com computação, laboratórios e empresas. Quem fica vê a universidade perder professores e a empresa onde trabalhava transferir a operação para fora. O país importa sistemas capazes de substituir trabalhadores, mas não controla as empresas, os modelos ou a infraestrutura que captura os ganhos.
 
-André protege o banco com a plataforma chinesa. Não consegue auditar todo o sistema nem trocar de fornecedor sem interromper operações essenciais. Rafael continua no governo e guarda, numa pasta pessoal, as ordens que transformaram segurança em vigilância. Camila deixa o gabinete depois que o deputado vota pela renovação dos poderes de emergência e chama a medida de defesa da democracia.
+André protege o banco com a plataforma chinesa. Não consegue auditar todo o sistema nem trocar de fornecedor sem interromper operações essenciais. Rafael continua no governo, porém vê as soluções que propõe cada vez mais artificial. Camila deixa o gabinete depois que o deputado vota pela renovação dos poderes de emergência e chama a medida de defesa da democracia.
 
 A clínica de Lourdes sobrevive com menos funcionários. O sistema decide horários, preços e autorizações de pagamento. Quando o fornecedor bloqueia uma função por falta de conformidade, ninguém na clínica sabe como contestar a decisão.
 
