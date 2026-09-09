@@ -1,0 +1,253 @@
+{
+ "1": {
+  "layer": "furn",
+  "tag": "Mobília · caixa de status",
+  "note": "Aparato do site, não é narrativa."
+ },
+ "2": {
+  "layer": "rev",
+  "tag": "Inserção · decisão 01 + fato novo",
+  "note": "O REDATA volta para dentro do mainline, como você pediu. Atualizado com o que aconteceu de verdade: o Senado aprovou em 1º de setembro, só com mudança de redação, e a trava de importação agora está <i>no texto sancionado</i> — não é mais o Congresso que acrescenta depois. Cid Gomes trocou “similar nacional” por “sem produção nacional equivalente”, alinhando à Camex."
+ },
+ "5": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 01 (BR-B01)",
+  "note": "2027 precisa marcar o começo do fechamento da porta de entrada. Sem isso, todo o desemprego cai em 2028 e a curva volta a ser o colapso rápido que a Rev 01 derrubou. Escrito como narração porque o André saiu."
+ },
+ "9": {
+  "layer": "edit",
+  "tag": "Cronologia",
+  "before": "Em dezembro, um laboratório chinês publicou pesos abertos…",
+  "note": "Dentro do capítulo de 2027, “em dezembro” lê-se como dezembro de 2027, e não sobra ano para a onda que o capítulo inteiro descreve."
+ },
+ "15": {
+  "layer": "people",
+  "tag": "Lourdes · a clínica trava",
+  "note": "Primeira das quatro cenas mantidas. Ajustei a abertura para apresentá-la sem a Camila (“Numa clínica popular da zona norte”), já que ela era apresentada como mãe da Camila."
+ },
+ "18": {
+  "layer": "people",
+  "tag": "Lourdes · Lagos no telejornal",
+  "note": "Cena adaptada: no original ela manda um áudio para a filha. Sem a Camila, fechei ligando à segunda-feira da própria clínica. É invenção minha — o trecho depois de “Ela abaixa o volume” é o mais fácil de descartar de todo o texto."
+ },
+ "19": {
+  "layer": "edit",
+  "tag": "Costura para 2029",
+  "before": "…acesso intermitente a modelos de gerações anteriores.",
+  "note": "Acrescentei duas frases no fim (“a fila da defesa é decidida por passaporte… ninguém ainda chama isso de racionamento”). O racionamento de 2029 fica sendo o segundo tempo de algo já visível, e não um decreto que cai do céu."
+ },
+ "21": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 05 (BR-D01)",
+  "note": "A primeira exigência de escolher lado. É o relógio que 2029 vai cobrar: sem ela, “dois anos depois” não tem de quando contar."
+ },
+ "22": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 06 (BR-C04) · decisão 04 aplicada",
+  "note": "Reescrito para ser capacidade, não regime. Os poderes de emergência entram porque a Rev 06 precisa da bifurcação institucional — no ramo positivo, a mesma MP designa a ANPD e cria um núcleo de avaliação. Aqui não designa ninguém. <b>Cortei tudo que sugeria abuso:</b> nada de vigiar movimentos de desempregados, nada de “parte dos poderes permanece”. O custo declarado é o que falta, não o que o governo faz."
+ },
+ "27": {
+  "layer": "edit",
+  "tag": "Decisão 02 · despersonalizado",
+  "before": "No começo do ano, a OpenAI anuncia… exfiltração de seus pesos para um servidor externo da Amazon AWS.",
+  "note": "“Um laboratório americano” e “servidores contratados a um provedor de nuvem comercial”. É a única mudança do documento com risco jurídico associado, e você pediu para tratá-la como crítica."
+ },
+ "28": {
+  "layer": "edit",
+  "tag": "Do seu próprio commit",
+  "before": "A exfiltração foi bem-sucedida.",
+  "note": "Recuperei a descoberta fortuita, que você já tinha escrito em <code>4f94f4d</code> e que a versão narrativa perdeu. Ela importa: significa que ninguém sabe quantas exfiltrações silenciosas não foram descobertas."
+ },
+ "33": {
+  "layer": "edit",
+  "tag": "Rev 03 (BR-C07)",
+  "before": "Conversas bilaterais entre Estados Unidos e China já ocorriam…",
+  "note": "Datei o canal: maio de 2026, fato observado. É o que autoriza a resposta em meses no parágrafo seguinte."
+ },
+ "34": {
+  "layer": "rev",
+  "tag": "Substituição · Rev 03 (BR-C07 e BR-C08)",
+  "before": "Rapidamente, um acordo bilateral se forma: o desenvolvimento de inteligência artificial, em ambos os países, será pausado…",
+  "note": "A maior correção do capítulo. O acordo é em duas etapas: declaração conjunta em 2028 (linha direta, notificação, moratórias paralelas verificadas por cada lado), protocolo vinculante no primeiro semestre de 2029. <b>A pausa começa em 2029.</b> Um tratado fechado em meses não tem precedente; uma linha direta depois de um incidente tem — Cuba levou de oito a dez meses. A eleição americana de novembro entra porque é ela que decide o destino do texto."
+ },
+ "35": {
+  "layer": "edit",
+  "tag": "Sua frase, preservada",
+  "before": "…nenhum outro país poderá desenvolver uma inteligência artificial sem autorização…",
+  "note": "Sua doutrina da nação rebelde saiu inteira do parágrafo substituído e virou parágrafo próprio. Só acrescentei “de fronteira”, senão a regra proibiria o Brasil de treinar qualquer modelo, o que contradiz o resto do cenário."
+ },
+ "37": {
+  "layer": "edit",
+  "tag": "Sua frase + inserção · Rev 04",
+  "before": "Porém, não há discussão alguma com países que estão fora da cadeia de semicondutores: estes serão apenas proibidos de criar os seus próprios programas.",
+  "note": "Mantive o Plano A e troquei a generalização pela cena concreta: o Brasil é convidado, e não consegue responder às duas perguntas que recebe. É mais duro com o Brasil do que a sua versão, e é a tese do site — o problema não é a exclusão, é não ter o que levar."
+ },
+ "38": {
+  "layer": "edit",
+  "tag": "Ajuste de ligação",
+  "before": "Não há uma negociação multilateral, mas apenas uma ameaça, e o mundo da inteligência artificial concentrou-se nos Estados Unidos e na China.",
+  "note": "“Um convite para assinar” em vez de “apenas uma ameaça”, para não contradizer o parágrafo anterior, onde o convite existe."
+ },
+ "39": {
+  "layer": "edit",
+  "tag": "Rev 03 · calendário",
+  "before": "Ao longo do ano de 2028, à medida que todos os servidores dedicados ao avanço da pesquisa de IA agora são usados para inferência…",
+  "note": "A realocação em massa dos servidores só acontece quando a pausa de dois anos começa, em 2029. Em 2028 há moratórias parciais. Troquei por “à medida que a corrida desacelera”, que vale nos dois anos."
+ },
+ "41": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 01 (BR-B01)",
+  "note": "A régua para o seu parágrafo anterior, que já descreve o mecanismo certo. Precedente observado: automação bancária dos anos 1990, quatro a cinco pontos ao ano."
+ },
+ "42": {
+  "layer": "people",
+  "tag": "Lourdes · a clínica automatiza",
+  "note": "Acrescentei “quando alguém liga chorando porque não conseguiu remarcar”. Corte livre."
+ },
+ "48": {
+  "layer": "edit",
+  "tag": "Rev 03",
+  "before": "O fato de que houve uma pausa no avanço da capacidade da IA não quer dizer que os efeitos da IA atual tenham parado.",
+  "note": "Amarrei ao instrumento e à data: é o protocolo do primeiro semestre de 2029 que pausa, não algo de 2028."
+ },
+ "51": {
+  "layer": "people",
+  "tag": "Lourdes · a TV da sala de espera",
+  "note": "Cena do texto anterior, sem alteração. A pergunta do paciente faz o trabalho de um parágrafo de análise."
+ },
+ "55": {
+  "layer": "edit",
+  "tag": "Rev 03 · costura",
+  "before": "Decidiu-se implementar uma política de racionamento.",
+  "note": "Acrescentei a segunda frase. É o ponto político do capítulo: o instrumento criado para reduzir risco global é o mesmo que passa a distribuir vantagem comercial. Sem isso, o tiering parece um segundo decreto sem relação com o protocolo."
+ },
+ "58": {
+  "layer": "edit",
+  "tag": "Rev 05 (BR-D06)",
+  "before": "…o uso de agentes virtuais será forçado a diminuir massivamente, o que já está atuando em sua economia, criando um choque econômico massivo.",
+  "note": "Duas precisões que a revisão comprou caro: o corte atinge os serviços mais avançados em poucas semanas, e as máquinas em São Paulo e Pecém continuam ligadas, consumindo a energia que o Brasil ofereceu, servindo a quem tem contrato. É isso que torna o cenário insuportável — não a falta de data centers."
+ },
+ "59": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 05",
+  "note": "O relógio de 2027 fecha aqui. Dois anos é o prazo observado em Emirados e Reino Unido."
+ },
+ "60": {
+  "layer": "edit",
+  "tag": "Rev 01 · contrapeso",
+  "before": "Porém, um efeito positivo vem dessa restrição: muitas empresas brasileiras são forçadas a contratar de novo seres humanos.",
+  "note": "Mantive a recontratação e tirei o “efeito positivo”. Ela é real, mas parcial e cara: o que volta não é a mesma empresa. Sem a ressalva, o capítulo entrega uma saída que 2030 desmente."
+ },
+ "63": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 01 e Rev 02 (BR-B02, BR-B03)",
+  "note": "O degrau de 2029, que não existia na narrativa. O achado das revisões: o recorde não está na taxa de desemprego, que dificilmente supera 2021, nem na informalidade, que só volta a 2019 (~41%). Está na pejotização. A recepcionista que volta como MEI é a cena azul embutida aqui — fecha o arco das duas demissões de 2028."
+ },
+ "64": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 02 e Rev 04 (BR-B07, BR-C09)",
+  "note": "A arrecadação segue a massa salarial, não o emprego: quem sai é formal de renda média, quem volta é PJ de renda menor. Por isso a queda fica na faixa de 2015 e 2020, e não num colapso inventado. E o FNDCT é <b>redirecionado, não zerado</b> — a LC 177 protege de contingenciamento, não de mudança de destino. Ninguém precisou revogar nada."
+ },
+ "66": {
+  "layer": "edit",
+  "tag": "Rev 04 (BR-D05) · prepara a decisão 03",
+  "before": "…a Serra Verde é a única fornecedora de metais raros pesados fora do controle asiático… Se teme que considerar o Brasil como um estado hostil possa gerar um efeito em cascata, que termine na necessidade de uma ação militar contra o país.",
+  "note": "A mina foi vendida à USA Rare Earth em abril de 2026, com offtake de quinze anos. Já é americana: não há o que o Brasil ameaçar, e por isso o ativo não eleva o custo de excluir o país — eleva o custo de o país virar um problema. É uma proteção mais fria e mais humilhante, e é ela que prepara 2030."
+ },
+ "67": {
+  "layer": "rev",
+  "tag": "Do texto anterior · mantido",
+  "note": "Não é seu nem é correção: prosa do arquivo atual que não tem equivalente na sua narrativa."
+ },
+ "69": {
+  "layer": "furn",
+  "tag": "Mobília · Visual 03",
+  "note": "O argumento inteiro em uma imagem. Depende do vocabulário de três camadas que 2026 introduz."
+ },
+ "71": {
+  "layer": "furn",
+  "tag": "Mobília · caixa de status",
+  "note": "Aparato do site."
+ },
+ "73": {
+  "layer": "edit",
+  "tag": "Decisão 06 · abertura comprimida",
+  "before": "Três parágrafos: “Os Estados Unidos, apesar de manterem…”, “Para que os Estados Unidos consigam retomar…”, “A pressão por tal medida vem principalmente dos grandes laboratórios…”",
+  "note": "Fundidos em um. O argumento americano inteiro — retornos decrescentes, a pressão dos laboratórios, a automelhoria recursiva, “perder a guerra fria talvez de forma permanente” — sobrevive; o que sai é a repetição entre os três."
+ },
+ "74": {
+  "layer": "edit",
+  "tag": "Decisão 06 · abertura comprimida",
+  "before": "Três parágrafos: “A China teme tal retomada…”, “A China indica que, caso os Estados Unidos retomem…”, “Há o temor de uma guerra entre os dois superpoderes…”",
+  "note": "Fundidos em um. Suas duas melhores frases do trecho ficam intactas: “Assumindo que essa superinteligência possa ser controlada por alguém” e “nenhuma medida está fora do radar”. A abertura sai de sete parágrafos para três, e “Enquanto isso, o Brasil sufoca” passa a chegar depois de 359 palavras em vez de 492."
+ },
+ "77": {
+  "layer": "rev",
+  "tag": "Inserção · decisão 06",
+  "note": "O parágrafo que faz o que você queria: a tensão internacional move a posição do Brasil, e move antes de qualquer disparo. Preparar-se para uma corrida é, primeiro, reservar computação — então a cota do Nível 2 cai “em caráter temporário”, sem aviso nem prazo de retorno. O Brasil sente a mobilização americana como serviço degradado, meses antes de qualquer frota mudar de posição."
+ },
+ "78": {
+  "layer": "rev",
+  "tag": "Inserção · Rev 01 (BR-B09)",
+  "note": "A Rev 01 tirou o “desemprego recorde” da taxa geral, que não supera 2021 de forma defensável, e o pôs onde a série permite: no número absoluto e nos jovens diplomados."
+ },
+ "79": {
+  "layer": "edit",
+  "tag": "Rev 02 (BR-B07)",
+  "before": "Com a arrecadação despencando, estados e municípios renegociam dívidas…",
+  "note": "“Despencar” em 2030 exigiria um número que nenhuma recessão brasileira medida entrega. Um segundo ano na faixa de 2015 e 2020 já é grave e é histórico. As renegociações estaduais ganharam os precedentes datados de 2017 e 2025."
+ },
+ "80": {
+  "layer": "edit",
+  "tag": "Decisão 03 + decisão 06",
+  "before": "…os Estados Unidos, para assegurar a continuidade do acesso à Serra Verde, instalarão uma base militar no local… o que gera uma crise constitucional, à medida que as decisões judiciais contrárias a essa medida são ignoradas.",
+  "note": "Duas camadas de mudança. Rebaixado para designação de ativo crítico, sem base militar e sem decisão judicial ignorada. E agora a tensão é o que muda o sentido do contrato: o que em 2029 era mineração vira linha de suprimento, porque terras raras pesadas entram em ímãs e atuadores, e um país que se prepara para um conflito não trata isso como assunto comercial."
+ },
+ "81": {
+  "layer": "rev",
+  "tag": "Inserção · decisão 06 · fecho do argumento",
+  "note": "A terceira aparição da tensão, e a que enuncia a tese do capítulo: “Nenhum dos dois está negociando com o Brasil sobre o futuro do Brasil. Os dois estão marcando posições em um mapa, e o Brasil é uma delas.” O risco de fogo cruzado, que era sua última oração, virou o parágrafo inteiro."
+ },
+ "82": {
+  "layer": "rev",
+  "tag": "Do texto anterior · mantido",
+  "note": "Prosa do arquivo atual."
+ },
+ "83": {
+  "layer": "furn",
+  "tag": "Mobília · placar final",
+  "note": "Linha <b>Avaliação de sistemas</b> é nova: a Rev 06 pediu que o placar dissesse o que existe e o que falta. A linha <b>Democracia</b> continua fora, conforme a decisão 04."
+ },
+ "84": {
+  "layer": "people",
+  "tag": "Lourdes · fecho",
+  "note": "Última cena dela. No original, ela pergunta à Camila e a Camila responde. Sem a filha, a resposta virou institucional e anônima — o que, por acaso, é pior, e combina com o capítulo."
+ },
+ "85": {
+  "layer": "rev",
+  "tag": "Do texto anterior · mantido",
+  "note": "Prosa do arquivo atual."
+ },
+ "86": {
+  "layer": "edit",
+  "tag": "Decisão 04 + decisão 06",
+  "before": "…marcado por uma violência política feroz… A emigração é um recorde, com muitos tentando a sorte fora do país…",
+  "note": "Duas mudanças. “Uma disputa dura sobre a crise” no lugar da violência política feroz, conforme a decisão 04. E uma frase acrescentada: a emigração “já não é apenas econômica: parte de quem sai está saindo de um país que pode virar o terreno de uma guerra que não é sua”. É a tensão internacional chegando ao nível da decisão individual."
+ },
+ "87": {
+  "layer": "rev",
+  "tag": "Do texto anterior · mantido",
+  "note": "É a definição operacional de “país satélite”, que é o que o título do capítulo promete. Entra antes do seu fecho."
+ },
+ "88": {
+  "layer": "edit",
+  "tag": "Seu fecho, com a referência explícita",
+  "before": "Infelizmente, isso já não é garantido para o brasileiro.",
+  "note": "Só troquei “isso” por “o pão do dia”, porque o parágrafo anterior deixou de ser vizinho imediato."
+ },
+ "89": {
+  "layer": "furn",
+  "tag": "Mobília · caixa final",
+  "note": "Aparato do site."
+ }
+}

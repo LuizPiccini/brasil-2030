@@ -1,0 +1,164 @@
+<title>Uma Trajetória Só</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --paper:#F7F6F2; --paper-2:#FFFFFF; --ink:#191A1D; --ink-2:#55565C; --ink-3:#87888F;
+  --rule:#DEDCD4; --rule-2:#EBE9E1;
+  --red:#B0241A; --red-2:#8C1C14; --red-wash:#F8E7E4; --red-edge:#E6C2BB;
+  --amber:#8A5A12; --amber-wash:#F7EEDD; --amber-edge:#E4D2AE;
+  --green:#2C6A52; --green-2:#21523E; --green-wash:#E2EEE8; --green-edge:#BCD9CB;
+  --serif:Literata,Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#141519; --paper-2:#1B1D22; --ink:#E9E7E2; --ink-2:#A3A4AA; --ink-3:#75767D;
+  --rule:#2C2E35; --rule-2:#22242A;
+  --red:#FF8272; --red-2:#FFA496; --red-wash:#331A17; --red-edge:#582722;
+  --amber:#E0B060; --amber-wash:#2E2413; --amber-edge:#4E3D1C;
+  --green:#6FC9A5; --green-2:#90DABC; --green-wash:#122B22; --green-edge:#20453A;
+}}
+:root[data-theme="dark"]{
+  --paper:#141519; --paper-2:#1B1D22; --ink:#E9E7E2; --ink-2:#A3A4AA; --ink-3:#75767D;
+  --rule:#2C2E35; --rule-2:#22242A;
+  --red:#FF8272; --red-2:#FFA496; --red-wash:#331A17; --red-edge:#582722;
+  --amber:#E0B060; --amber-wash:#2E2413; --amber-edge:#4E3D1C;
+  --green:#6FC9A5; --green-2:#90DABC; --green-wash:#122B22; --green-edge:#20453A;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px 110px}
+.masthead{padding:56px 0 24px;border-bottom:2px solid var(--ink)}
+.masthead .slug{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 16px}
+.masthead h1{font-weight:700;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.03;letter-spacing:-.022em;margin:0;text-wrap:balance}
+.masthead .deck{font-size:1.1rem;color:var(--ink-2);margin:18px 0 0}
+.masthead .meta{display:flex;flex-wrap:wrap;gap:6px 20px;margin:22px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+h2{font-weight:700;font-size:1.5rem;letter-spacing:-.018em;margin:52px 0 4px;text-wrap:balance}
+h2+.sub{font-family:var(--sans);font-size:13.4px;color:var(--ink-3);margin:0 0 18px}
+h3{font-family:var(--serif);font-weight:600;font-size:1.1rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin:0 0 1em}
+a{color:inherit}
+code{font-family:var(--mono);font-size:.86em;background:var(--rule-2);padding:1px 5px;border-radius:2px}
+.lede{font-size:1.06rem}
+.keep{border-left:3px solid var(--green);padding-left:16px;margin:0 0 22px}
+.keep dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 16px;font-family:var(--sans);font-size:13.4px;line-height:1.5}
+.keep dt{font-family:var(--mono);font-size:11px;color:var(--green-2);padding-top:2px;white-space:nowrap}
+.keep dd{margin:0;color:var(--ink-2)}
+.keep dd b{color:var(--ink);font-weight:600}
+ul.plain{list-style:none;padding:0;margin:0 0 1em}
+ul.plain li{font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--ink-2);padding-left:22px;position:relative;margin-bottom:7px}
+ul.plain li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:1.5px;background:var(--ink-3)}
+ul.plain b{color:var(--ink);font-weight:600}
+.finding{border:1px solid var(--rule);border-radius:2px;padding:18px 20px;margin:0 0 14px;background:var(--paper-2)}
+.finding.sev-high{border-color:var(--red-edge);background:var(--red-wash)}
+.finding.sev-mid{border-color:var(--amber-edge);background:var(--amber-wash)}
+.finding .chip{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:2px;margin-bottom:9px}
+.sev-high .chip{background:var(--red);color:var(--paper-2)}
+.sev-mid .chip{background:var(--amber);color:var(--paper-2)}
+.finding.sev-low .chip{background:var(--rule);color:var(--ink-2)}
+.finding h3{margin:0 0 7px;font-size:1.06rem}
+.finding p{font-family:var(--sans);font-size:13.6px;line-height:1.56;color:var(--ink-2);margin:0 0 .6em}
+.finding p:last-child{margin:0}
+.finding b{color:var(--ink);font-weight:600}
+.open{border-top:1px solid var(--rule-2);padding:16px 0}
+.open h3{margin:0 0 5px}
+.open p{font-family:var(--sans);font-size:13.6px;line-height:1.55;color:var(--ink-2);margin:0}
+.pull{font-family:var(--serif);font-size:1.16rem;line-height:1.5;border-left:3px solid var(--ink);padding:2px 0 2px 20px;margin:26px 0;color:var(--ink)}
+.foot{margin-top:56px;border-top:2px solid var(--ink);padding-top:20px;font-family:var(--sans);font-size:13px;color:var(--ink-3)}
+@media (max-width:640px){.wrap{padding:0 18px 80px}.keep dl{grid-template-columns:minmax(0,1fr);gap:2px}.keep dt{padding-top:8px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header class="masthead">
+  <p class="slug">Brasil 2030 · nota de proposta · setembro de 2026</p>
+  <h1>Uma Trajetória Só</h1>
+  <p class="deck">Uma proposta de reescrita do cenário: de duas trajetórias simétricas para uma narrativa única, com todas as taxas de base das Revisões 01–06 preservadas. Nada aqui está publicado, e nada aqui é decisão tomada.</p>
+  <div class="meta">
+    <span>ramo danilo/large_revisions_08092026</span>
+    <span>nada foi para a main</span>
+    <span>nada foi commitado</span>
+  </div>
+</header>
+
+<h2>O que estou propondo</h2>
+<p class="lede">O cenário deixa de ser duas trajetórias que o leitor escolhe e passa a ser uma trajetória narrada. A razão não é que o ramo positivo esteja errado — é que a estrutura de escolha simétrica pedia do leitor uma decisão antes de ele ter lido o suficiente para tomá-la, e cobrava de nós manter duas histórias completas em duas línguas antes que qualquer uma das duas estivesse pronta.</p>
+<p>O texto ficou mais longo e mais duro. O que era uma lista de afirmações defensáveis virou uma história com consequências, e as taxas de base continuam todas lá — em vários casos mais legíveis do que estavam.</p>
+
+<h2>O que não mudou</h2>
+<p class="sub">As seis revisões continuam sendo a espinha factual do texto. Ficha por ficha:</p>
+<div class="keep">
+  <dl>
+    <dt>Rev 01</dt><dd><b>BR-B01, BR-B02, BR-B09.</b> A porta de entrada fecha de 2027 a 2030, com degrau em 2029. Admissões um terço abaixo de 2026, estoque no ritmo da automação bancária dos anos 1990, desocupação de 5% para 8%, dois dígitos em 2029, 12% a 14% em 2030 sobre o maior número absoluto da série. O “recorde” continua fora da taxa geral.</dd>
+    <dt>Rev 02</dt><dd><b>BR-B03, BR-B04, BR-B07.</b> Informalidade em 38% na linha de base, volta a ~41% em 2029 sem bater recorde; o recorde é de MEIs e PJ. Arrecadação em queda de 3% a 5% ao ano na faixa de 2015 e 2020, via massa salarial. Renegociação estadual com os precedentes de 2017 e 2025.</dd>
+    <dt>Rev 03</dt><dd><b>BR-C07, BR-C08, BR-D04, BR-D07.</b> O acordo em duas etapas, declaração conjunta em 2028 e protocolo vinculante no primeiro semestre de 2029, com a pausa começando em 2029 e a eleição americana de novembro decidindo o destino do texto. O racionamento vem do mesmo governo que registra clusters.</dd>
+    <dt>Rev 04</dt><dd><b>BR-A10, BR-C09, BR-D05, BR-D08.</b> PBIA com calendário real, supercomputador atrasado e sem equipe, FNDCT redirecionado e não zerado. Serra Verde como ativo americano desde abril de 2026, com a inversão de leitura: o ativo não eleva o custo de excluir o Brasil, eleva o custo de o Brasil virar um problema.</dd>
+    <dt>Rev 05</dt><dd><b>BR-D01, BR-D02, BR-D06, BR-D09.</b> A exigência de escolher lado em 2027, a sinalização dupla, o prazo de dois anos de Emirados e Reino Unido, e a perda de acesso aos serviços mais avançados em poucas semanas — não “grande parte da capacidade” de uma vez.</dd>
+    <dt>Rev 06</dt><dd><b>BR-C04.</b> A bifurcação institucional: a MP que concede poderes e não designa autoridade de avaliação. Virou também uma linha nova no placar de 2030.</dd>
+  </dl>
+</div>
+<p>Em dois lugares a forma narrativa deixou a taxa de base <i>mais</i> forte, não menos. A recepcionista que volta como MEI carrega a BR-B03 melhor do que “a informalidade volta a 41%”, porque mostra por que o número da informalidade quase não se mexe enquanto a coisa que importa se mexe muito. E “o FNDCT foi redirecionado, não zerado — a lei protege de contingenciamento, não de mudança de destino” é a BR-C09 dita de um jeito que ninguém consegue contestar.</p>
+<p>O aparato de notas continua inteiro e cresceu: a avaliação do instituto britânico sobre o Mythos e a aprovação do REDATA no Senado entraram com fonte.</p>
+
+<h2>O que saiu do site, e para onde foi</h2>
+<p>Nada foi apagado. Tudo que saiu está no repositório, em <code>drafts/</code>, e continua no histórico do git.</p>
+<ul class="plain">
+  <li><b>O ramo positivo</b> saiu do site e está em <code>drafts/cenario-positivo-pt.ARQUIVADO.md</code>. A proposta não é descartá-lo: é que ele vire o documento “o que poderíamos ter feito”, que é o formato em que aquele material funciona melhor. Como ramo simétrico ele competia com o negativo pela atenção do leitor; como contrafactual explícito, ele ganha função própria.</li>
+  <li><b>A edição em inglês</b> foi retirada. Estava na versão anterior às Revisões 01–06 e descrevia um site que não existe mais. A rota <code>/en</code> continua viva com um aviso de tradução em andamento e aponta para o português; as outras páginas em inglês seguem correntes.</li>
+  <li><b>A seção “o que o Brasil errou”</b> — quatro erros de avaliação nomeados na abertura, no modelo do Europe 2031 — está só em <code>drafts/proposta-erros-2026.md</code>. Não foi para o site. É a decisão que mais precisa de conversa antes de virar texto público.</li>
+</ul>
+
+<h2>Onde o site parou de bater com a realidade</h2>
+<p class="sub">Levantamento feito enquanto eu mexia no cenário. A maior parte não tem relação com a reescrita: é o mundo tendo andado.</p>
+
+<div class="finding sev-high">
+  <span class="chip">Urgente · fora do prazo</span>
+  <h3>A página do REDATA pede emendas a um projeto que já foi aprovado</h3>
+  <p>O Senado aprovou o PL 278/2026 em <b>1º de setembro de 2026</b>. Cid Gomes foi designado relator, manteve o mérito e alterou só a redação — trocou “similar nacional” por “sem produção nacional equivalente”, alinhando à Camex — justamente para não devolver o texto à Câmara. O projeto seguiu direto para sanção presidencial.</p>
+  <p>A página ainda diz “Situação em 28 ago 2026”, “o PL 278/2026 está no Plenário do Senado, ainda sem relator” e “falta um bloco novo de emendas”, e o botão convida a acompanhar a tramitação. Estamos pedindo publicamente aos senadores algo que eles já fizeram sem nós.</p>
+  <p><b>As alavancas que sobraram são duas, e as duas ainda estão abertas:</b> o veto parcial, na Presidência, e o regulamento, que é onde se define como os 10% serão medidos, como funciona o teste de equivalência da Camex, como a eficiência hídrica é aferida e como o clawback é executado. Os cinco pedidos se traduzem para os dois. Mas isso é reescrever a página, não corrigir uma data.</p>
+</div>
+
+<div class="finding sev-mid">
+  <span class="chip">Fato observado desatualizado</span>
+  <h3>A página de evidências registra o status pré-votação como fato</h3>
+  <p>A primeira ficha diz que “em 28 de agosto de 2026, o PL 278/2026 estava no Plenário do Senado, sem relator definido e com 22 emendas”, e que a votação <i>poderia</i> ocorrer na semana seguinte. Era verdade quando foi escrito e é a primeira coisa que um leitor técnico confere.</p>
+</div>
+
+<div class="finding sev-mid">
+  <span class="chip">Datas em desacordo</span>
+  <h3>Cinco lugares ainda dizem 27 ou 28 de agosto</h3>
+  <p><code>PageHero.astro</code> tem <code>datetime="2026-08-28"</code> fixo no código; <code>public/llms.txt</code> anuncia “two scenarios… last updated 2026-08-28”; o <code>README</code> diz que o inglês segue a revisão de dois cenários; a nota executiva do REDATA e a carta aberta trazem “edição de 28 de agosto”. Atualizei <code>site.ts</code> e a fronteira de evidência do cenário para 9 de setembro; o resto ficou como estava, porque cada um é uma decisão editorial de quem assina.</p>
+</div>
+
+<div class="finding sev-mid">
+  <span class="chip">Prescrição sem narrativa</span>
+  <h3>A estratégia recomenda movimentos que só o ramo positivo demonstrava</h3>
+  <p>O compromisso 4 pede segmentação de cargas por origem do fornecedor, verificação antidesvio oferecida aos dois blocos e vários projetos médios em vez de um campus único. Os três vieram da Rev 05 e eram encenados no ramo positivo. Com ele fora do site, as recomendações continuam certas e ficam sem a história que mostrava como se pareceriam na prática. É um argumento a favor de escrever logo o “o que poderíamos ter feito”.</p>
+</div>
+
+<div class="finding sev-low">
+  <span class="chip">Código morto</span>
+  <h3>1.386 linhas de uma estrutura anterior que ninguém importa</h3>
+  <p><code>ScenarioPage.astro</code>, <code>scenario-pt.md</code> e <code>scenario-en.md</code> não são importados por nada desde a mudança para dois ramos. Não toquei neles. Valem menos como código do que como sintoma, que é o assunto da seção seguinte.</p>
+</div>
+
+<h2>O ponto estrutural</h2>
+<p>A estrutura foi construída antes de o cenário estar pronto, e isso cobrou juros de um jeito específico e mensurável.</p>
+<p>Manter dois ramos simétricos em duas línguas significava seis arquivos de conteúdo, um painel lateral com cerca de sessenta valores digitados à mão (cinco capítulos × três trilhas × dois ramos × dois idiomas), um seletor de ramo, uma matriz 2×2 e duas navegações de capítulo. Cada decisão editorial precisava ser reinserida em quatro lugares. Foi por isso que as Revisões 01–06 ficaram só em português, que o painel continuou dizendo “erosão democrática” depois que ela saiu do texto, e que o resumo ainda dizia “REDATA falha ou cria enclaves” duas semanas depois de o REDATA ter sido aprovado.</p>
+<p>E já tinha acontecido uma vez: as 1.386 linhas mortas são a estrutura anterior, abandonada pela mudança para dois ramos e nunca removida.</p>
+<p class="pull">Com uma trajetória só, a estrutura ficou simples de graça: um arquivo de conteúdo, uma navegação, um painel. A simplificação não foi um objetivo do trabalho. Foi o que sobrou quando a narrativa decidiu o que queria ser.</p>
+<p>Vale como aviso para os dois próximos documentos. A tentação, agora, é construir estrutura para três — cenário, versão mais dura, contrafactual — antes de qualquer um deles existir. O barato é escrever os três como documentos simples e só construir estrutura compartilhada quando dois deles precisarem da mesma coisa de verdade.</p>
+
+<h2>O que continua em aberto</h2>
+<div class="open"><h3>A seção de erros entra no site?</h3><p>Está escrita e fora do site. É a decisão com maior custo político: nomear quatro erros de avaliação em ano eleitoral é diferente de descrever uma trajetória.</p></div>
+<div class="open"><h3>O capítulo de 2026 continua compartilhado?</h3><p>Vive em <code>scenario-common-pt.md</code> e servia aos dois ramos. Com um cenário só, a separação entre “comum” e “ramo” perdeu a razão de existir.</p></div>
+<div class="open"><h3>Os personagens</h3><p>O texto publicado tem só a Lourdes, em quatro cenas. A variante com Camila, Rafael e André está em <code>drafts/variante-quatro-personagens.md</code>, e a variante com o fio de erosão institucional em <code>drafts/variante-erosao-democratica.md</code>.</p></div>
+<div class="open"><h3>A página do REDATA</h3><p>Veto parcial e regulamento, ou encerrar a campanha e transformar a página em registro do que foi pedido e do que passou.</p></div>
+<div class="open"><h3>O inglês</h3><p>Retraduzir do zero depois que o português estabilizar.</p></div>
+
+<p class="foot">Tudo isto está no ramo <code>danilo/large_revisions_08092026</code>, sem commit e sem push. A vista anotada do texto mesclado, com a proveniência de cada parágrafo, está publicada à parte.</p>
+</div>

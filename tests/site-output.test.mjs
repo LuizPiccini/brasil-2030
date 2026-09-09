@@ -49,26 +49,12 @@ test("all localized HTML pages exist with metadata", () => {
 
 test("scenario navigation targets exist and Portuguese notes are localized", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
-  const en = readFileSync(new URL("en/index.html", root), "utf8");
   const targets = [
     [pt, "2026-o-ponto-de-bifurcação"],
-    [pt, "2027-o-primeiro-choque"],
-    [pt, "2028-a-coordenação-ganha-forma"],
-    [pt, "2029-o-brasil-entra-no-jogo"],
-    [pt, "2030-potência-intermediária-da-era-da-ia"],
     [pt, "2027-ataques-demissões-e-poderes-de-emergência"],
     [pt, "2028-o-acordo-dos-outros"],
     [pt, "2029-acesso-em-troca-de-alinhamento"],
     [pt, "2030-país-satélite"],
-    [en, "2026-the-branching-point"],
-    [en, "2027-the-first-shock"],
-    [en, "2028-coordination-takes-shape"],
-    [en, "2029-brazil-enters-the-game"],
-    [en, "2030-an-ai-era-middle-power"],
-    [en, "2027-attacks-layoffs-and-emergency-powers"],
-    [en, "2028-someone-elses-agreement"],
-    [en, "2029-access-in-exchange-for-alignment"],
-    [en, "2030-satellite-country"],
   ];
   for (const [html, id] of targets) {
     assert.ok(html.includes(`href="#${id}"`), `scenario must link to #${id}`);
@@ -79,43 +65,31 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
   assert.doesNotMatch(pt, />Footnotes<|Back to reference/);
 });
 
-test("scenario dashboard is bilingual, scroll-linked, and explicit about uncertainty", () => {
+test("scenario dashboard is scroll-linked and explicit about uncertainty", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
   assert.match(pt, /data-scenario-dashboard/);
   assert.match(pt, /Estado do Brasil/);
-  assert.match(pt, /O painel resume a trajetória selecionada\. Não mede o Brasil real\./);
+  assert.match(pt, /O painel resume a trajetória do cenário\. Não mede o Brasil real\./);
   assert.match(pt, /Risco sistêmico/);
   assert.match(pt, /Soberania de inferência/);
-  assert.match(en, /State of Brazil/);
-  assert.match(en, /This panel summarizes the selected trajectory\. It does not measure real-world Brazil\./);
-  assert.match(en, /Systemic risk/);
-  assert.match(en, /Inference sovereignty/);
-  assert.match(pt, /data-branch-target="positive"/);
-  assert.match(pt, /data-branch-target="negative"/);
-  assert.match(pt, /const selectBranch/);
-  assert.match(en, /data-scenario-branch/);
+  assert.match(pt, /data-scenario-dashboard/);
+  assert.match(pt, /const setDashboard/);
+  // O cenário em inglês foi retirado enquanto a tradução é refeita do zero.
+  assert.match(en, /Translation in progress/);
+  assert.match(en, /Read the scenario in Portuguese/);
 });
 
-test("the complete scenario visual system renders in both languages", () => {
+test("the scenario visual system renders without inline graphics", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
-  const en = readFileSync(new URL("en/index.html", root), "utf8");
-  for (const html of [pt, en]) {
-    assert.equal((html.match(/class="scenario-visual /g) || []).length, 4);
-    assert.match(html, /visual-bargain/);
-    assert.match(html, /visual-cascade/);
-    assert.match(html, /visual-capacity/);
-    assert.match(html, /visual-leverage/);
-    assert.doesNotMatch(html, /<svg|<canvas/);
-  }
+  // Visual 02 (cascade) e Visual 04 (leverage) saíram do site junto com o ramo
+  // positivo e ainda não foram realocados na trajetória única.
+  assert.equal((pt.match(/class="scenario-visual /g) || []).length, 2);
+  assert.match(pt, /visual-bargain/);
+  assert.match(pt, /visual-capacity/);
+  assert.doesNotMatch(pt, /<svg|<canvas/);
   assert.match(pt, /O data center só vira alavanca com contrapartidas/);
-  assert.match(pt, /Um ataque, quatro pontos de vista/);
   assert.match(pt, /Máquinas no Brasil não garantem uso brasileiro/);
-  assert.match(pt, /O mapa da negociação brasileira/);
-  assert.match(en, /A data center becomes leverage only through public terms/);
-  assert.match(en, /One attack, four points of view/);
-  assert.match(en, /Machines in Brazil do not guarantee Brazilian use/);
-  assert.match(en, /Brazil's negotiation map/);
 });
 
 test("core pages remain discoverable and progressive enhancement is explicit", () => {
@@ -192,7 +166,7 @@ test("publication support files exist", () => {
     assert.equal(existsSync(new URL(file, root)), true, `${file} must exist`);
   }
   assert.match(readFileSync(new URL("robots.txt", root), "utf8"), /Disallow: \//);
-  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /Both post-2026 branches are scenarios, not predictions/);
+  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /The post-2026 trajectory is a scenario, not a prediction/);
 });
 
 test("the public copy contains no em dashes", () => {
@@ -219,10 +193,10 @@ test("support form and signatories page expose a moderated public flow", () => {
 test("the public edition contains no draft labels", () => {
   for (const [route] of htmlRoutes) {
     const html = readFileSync(new URL(route, root), "utf8");
-    assert.doesNotMatch(html, /rascunho|working draft|public draft|team review draft|draft letter/i, `${route} contains a draft label`);
+    assert.doesNotMatch(html, /rascunho p[úu]blico|rascunho de trabalho|working draft|public draft|team review draft|draft letter/i, `${route} contains a draft label`);
   }
   for (const route of markdownRoutes) {
     const markdown = readFileSync(new URL(route, root), "utf8");
-    assert.doesNotMatch(markdown, /rascunho|working draft|public draft|team review draft|draft letter/i, `${route} contains a draft label`);
+    assert.doesNotMatch(markdown, /rascunho p[úu]blico|rascunho de trabalho|working draft|public draft|team review draft|draft letter/i, `${route} contains a draft label`);
   }
 });

@@ -9,7 +9,7 @@ export const siteCopy = {
     title: "Brasil 2030: Energia para Escolher",
     description: "Dois cenários sobre como escolhas em risco, diplomacia e computação podem mudar a posição do Brasil até 2030.",
     status: "Atualizado",
-    updated: "28 ago 2026",
+    updated: "9 set 2026",
     nav: {
       scenario: "Cenários",
       summary: "Resumo",
@@ -32,7 +32,7 @@ export const siteCopy = {
     title: "Brazil 2030: The Energy to Choose",
     description: "Two scenarios for how choices about risk, diplomacy, and compute could change Brazil's position through 2030.",
     status: "Updated",
-    updated: "28 Aug 2026",
+    updated: "9 Sep 2026",
     nav: {
       scenario: "Scenarios",
       summary: "Summary",

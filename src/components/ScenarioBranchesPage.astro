@@ -1,41 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ScenarioCommonPt from "../content/scenario-common-pt.md";
-import ScenarioCommonEn from "../content/scenario-common-en.md";
-import ScenarioPositivePt from "../content/scenario-positive-pt.md";
-import ScenarioPositiveEn from "../content/scenario-positive-en.md";
 import ScenarioNegativePt from "../content/scenario-negative-pt.md";
-import ScenarioNegativeEn from "../content/scenario-negative-en.md";
 import { markdownRoutes, routes, siteCopy, type Locale } from "../data/site";
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
 const copy = siteCopy[locale];
-const CommonContent = pt ? ScenarioCommonPt : ScenarioCommonEn;
-const PositiveContent = pt ? ScenarioPositivePt : ScenarioPositiveEn;
-const NegativeContent = pt ? ScenarioNegativePt : ScenarioNegativeEn;
+const CommonContent = ScenarioCommonPt;
+const ScenarioContent = ScenarioNegativePt;
 
 const text = pt ? {
-  eyebrow: "Dois cenários para o Brasil",
+  eyebrow: "Uma trajetória para o Brasil",
   titleCountry: "Brasil 2030",
   titleLine: "Energia para Escolher",
-  deck: "As mesmas pressões globais podem levar o Brasil a dois futuros. A diferença está nas decisões sobre risco, diplomacia e acesso à computação.",
-  positive: "Cenário positivo",
-  positiveTitle: "Coordenação e margem de escolha",
-  positiveDeck: "O Brasil ajuda a desacelerar a corrida e transforma energia em capacidade contratável.",
-  negative: "Cenário negativo",
-  negativeTitle: "País satélite",
-  negativeDeck: "As potências desaceleram, mas o Brasil chega sem capacidade própria e troca autonomia por acesso.",
+  deck: "As mesmas pressões globais chegam a todos os países. Este cenário segue o que acontece com o Brasil quando o país não constrói capacidade própria antes de precisar dela.",
   summary: "Resumo de 5 minutos",
-  disclaimer: "Estes cenários não são previsões. Eles usam os mesmos riscos externos para testar quanto as escolhas brasileiras de 2026 mudam a capacidade do país em 2030. O cenário positivo exige várias decisões corretas; o negativo combina falhas plausíveis.",
-  forkEyebrow: "Ponto de decisão",
-  forkTitle: "Escolha um caminho",
-  forkIntro: "Os dois ramos compartilham os riscos globais e uma desaceleração limitada. A capacidade construída pelo Brasil separa os resultados.",
-  matrixTitle: "Dois eixos, quatro resultados possíveis",
-  matrixColumns: ["Brasil constrói capacidade", "Brasil não constrói capacidade"],
-  matrixRows: ["EUA e China desaceleram", "A corrida continua"],
-  matrixCells: ["Margem de escolha", "País satélite", "Resiliência sob pressão", "Risco catastrófico"],
+  disclaimer: "Este cenário não é uma previsão. Ele parte de condições observadas até setembro de 2026 e testa quanto as escolhas brasileiras mudam a posição do país em 2030. A trajetória descrita é a que resulta de falhas plausíveis, não de má sorte: cada erro tinha uma alternativa conhecida em 2026.",
   timeline: "Linha do tempo",
   current: "Capítulo",
   panelTitle: "Estado do Brasil",
@@ -43,27 +25,16 @@ const text = pt ? {
   scale: "Escala de cenário, 1 a 5",
   scoreUnit: "de 5",
   changed: "O que mudou",
-  note: "O painel resume a trajetória selecionada. Não mede o Brasil real.",
+  note: "O painel resume a trajetória do cenário. Não mede o Brasil real.",
+  arcTitle: "O arco em uma frase",
+  arcBody: "O Brasil oferece energia, território e mercado antes de contratar acesso e continuidade, e chega ao acordo internacional de 2029 sem nada para pôr na mesa.",
 } : {
-  eyebrow: "Two scenarios for Brazil",
+  eyebrow: "One trajectory for Brazil",
   titleCountry: "Brazil 2030",
   titleLine: "The Energy to Choose",
-  deck: "The same global pressures can lead Brazil toward two futures. Decisions about risk, diplomacy, and compute access create the difference.",
-  positive: "Positive scenario",
-  positiveTitle: "Coordination and room to choose",
-  positiveDeck: "Brazil helps slow the race and turns energy into contractable capacity.",
-  negative: "Negative scenario",
-  negativeTitle: "Satellite country",
-  negativeDeck: "The powers slow down, but Brazil arrives without its own capacity and trades autonomy for access.",
+  deck: "The same global pressures reach every country. This scenario follows what happens to Brazil when the country fails to build its own capacity before it needs it.",
   summary: "Five-minute summary",
-  disclaimer: "These scenarios are not forecasts. They use the same external risks to test how Brazilian choices made in 2026 change the country's position in 2030. The positive scenario requires several decisions to go right; the negative scenario combines plausible failures.",
-  forkEyebrow: "Decision point",
-  forkTitle: "Choose a path",
-  forkIntro: "Both branches share the same global risks and a limited slowdown. The capacity Brazil builds separates the outcomes.",
-  matrixTitle: "Two axes, four possible outcomes",
-  matrixColumns: ["Brazil builds capacity", "Brazil does not build capacity"],
-  matrixRows: ["US and China slow down", "The race continues"],
-  matrixCells: ["Room to choose", "Satellite country", "Resilience under pressure", "Catastrophic risk"],
+  disclaimer: "This scenario is not a forecast. It starts from conditions observed through September 2026 and tests how much Brazilian choices change the country's position in 2030. The trajectory described follows from plausible failures, not bad luck: every mistake had a known alternative in 2026.",
   timeline: "Timeline",
   current: "Chapter",
   panelTitle: "State of Brazil",
@@ -71,72 +42,61 @@ const text = pt ? {
   scale: "Scenario scale, 1 to 5",
   scoreUnit: "of 5",
   changed: "What changed",
-  note: "This panel summarizes the selected trajectory. It does not measure real-world Brazil.",
+  note: "This panel summarizes the scenario's trajectory. It does not measure real-world Brazil.",
+  arcTitle: "The arc in one sentence",
+  arcBody: "Brazil commits energy, land, and market access before contracting capacity and continuity, and arrives at the 2029 international agreement with nothing to put on the table.",
 };
 
-const commonChapter = pt
-  ? { year: "2026", label: "A decisão", href: "#2026-o-ponto-de-bifurcação" }
-  : { year: "2026", label: "The decision", href: "#2026-the-branching-point" };
-const branchChapters = {
-  positive: pt ? [
-    { year: "2027", label: "Primeiro choque", href: "#2027-o-primeiro-choque" },
-    { year: "2028", label: "Coordenação", href: "#2028-a-coordenação-ganha-forma" },
-    { year: "2029", label: "Brasil entra no jogo", href: "#2029-o-brasil-entra-no-jogo" },
-    { year: "2030", label: "Potência da era da IA", href: "#2030-potência-intermediária-da-era-da-ia" },
-  ] : [
-    { year: "2027", label: "First shock", href: "#2027-the-first-shock" },
-    { year: "2028", label: "Coordination", href: "#2028-coordination-takes-shape" },
-    { year: "2029", label: "Brazil enters the game", href: "#2029-brazil-enters-the-game" },
-    { year: "2030", label: "AI-era middle power", href: "#2030-an-ai-era-middle-power" },
-  ],
-  negative: pt ? [
-    { year: "2027", label: "Crise interna", href: "#2027-ataques-demissões-e-poderes-de-emergência" },
-    { year: "2028", label: "Acordo dos outros", href: "#2028-o-acordo-dos-outros" },
-    { year: "2029", label: "Alinhamento", href: "#2029-acesso-em-troca-de-alinhamento" },
-    { year: "2030", label: "País satélite", href: "#2030-país-satélite" },
-  ] : [
-    { year: "2027", label: "Domestic crisis", href: "#2027-attacks-layoffs-and-emergency-powers" },
-    { year: "2028", label: "Others' agreement", href: "#2028-someone-elses-agreement" },
-    { year: "2029", label: "Alignment", href: "#2029-access-in-exchange-for-alignment" },
-    { year: "2030", label: "Satellite country", href: "#2030-satellite-country" },
-  ],
-};
+const chapters = pt ? [
+  { year: "2026", label: "A decisão", href: "#2026-o-ponto-de-bifurcação" },
+  { year: "2027", label: "Crise interna", href: "#2027-ataques-demissões-e-poderes-de-emergência" },
+  { year: "2028", label: "Acordo dos outros", href: "#2028-o-acordo-dos-outros" },
+  { year: "2029", label: "Alinhamento", href: "#2029-acesso-em-troca-de-alinhamento" },
+  { year: "2030", label: "País satélite", href: "#2030-país-satélite" },
+] : [
+  { year: "2026", label: "The decision", href: "#2026-the-branching-point" },
+  { year: "2027", label: "Domestic crisis", href: "#2027-attacks-layoffs-and-emergency-powers" },
+  { year: "2028", label: "Others' agreement", href: "#2028-someone-elses-agreement" },
+  { year: "2029", label: "Alignment", href: "#2029-access-in-exchange-for-alignment" },
+  { year: "2030", label: "Satellite country", href: "#2030-satellite-country" },
+];
 
-const dashboardStates = pt ? {
-  positive: [
-    { date: "Ago 2026", title: "A primeira barganha", summary: "O Senado decide se o incentivo cria apenas instalações ou também capacidade contratável.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "em disputa"]], focus: "A lei, os contratos e a fiscalização começam a definir quem poderá usar as máquinas.", mobile: "Risco em alta · Acesso em disputa" },
-    { date: "2027", title: "O choque encontra uma alternativa", summary: "Ataques crescem e a defesa estrangeira continua superior, mas cargas críticas ganham uma opção local.", tracks: [["risk", "Risco sistêmico", 4, "alto"], ["leverage", "Alavanca brasileira", 3, "em construção"], ["sovereignty", "Soberania de inferência", 2, "parcial"]], facts: [["Coordenação", "pressão por acordo"], ["Infraestrutura", "primeiros contratos"], ["Acesso", "opção local"]], focus: "Lourdes, Rafael, André e Camila veem lados diferentes da mesma crise.", mobile: "Risco alto · Opção local" },
-    { date: "2028", title: "Coordenação limitada", summary: "Brasil ajuda EUA e China a criar notificações, avaliações comuns e pausas curtas por gatilho.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 4, "diplomática"], ["sovereignty", "Soberania de inferência", 3, "em expansão"]], facts: [["Coordenação", "acordo limitado"], ["Infraestrutura", "demanda agregada"], ["Acesso", "mercado nascente"]], focus: "Capacidade técnica e infraestrutura dão substância à mediação brasileira.", mobile: "Acordo limitado · Mercado nascente" },
-    { date: "2029", title: "O Brasil entra no jogo", summary: "Energia, rede e capacidade contratável sustentam negociações com os dois blocos.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 4, "ativa"], ["sovereignty", "Soberania de inferência", 4, "relevante"]], facts: [["Coordenação", "limites mantidos"], ["Infraestrutura", "acesso auditado"], ["Acesso", "fornecedores locais"]], focus: "O país aceita alguns custos de alinhamento e preserva alternativas em outros pontos.", mobile: "Leverage ativa · Alternativas" },
-    { date: "2030", title: "Potência intermediária da era da IA", summary: "Brasil não controla a fronteira, mas consegue contratar, avaliar e manter parte dos serviços críticos.", tracks: [["risk", "Risco sistêmico", 3, "ainda presente"], ["leverage", "Alavanca brasileira", 5, "consolidada"], ["sovereignty", "Soberania de inferência", 4, "parcial forte"]], facts: [["Coordenação", "protocolo verificável"], ["Infraestrutura", "inventário público"], ["Acesso", "continuidade testada"]], focus: "Diplomacia, contratos e um mercado doméstico de inferência dão ao Brasil poder de escolha sem sugerir independência da fronteira.", mobile: "Potência da era da IA · Escolha" },
-  ],
-  negative: [
-    { date: "Ago 2026", title: "A primeira barganha", summary: "O incentivo falha ou entra em vigor sem transformar presença física em acesso brasileiro.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "sem garantia"]], focus: "Energia e rede são comprometidas antes que o Brasil negocie capacidade e continuidade.", mobile: "Risco em alta · Sem garantia" },
-    { date: "2027", title: "Crise interna", summary: "Ataques, automação importada e poderes de emergência pressionam trabalho e instituições.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "física"], ["sovereignty", "Soberania de inferência", 1, "dependente"]], facts: [["Coordenação", "pressão por acordo"], ["Infraestrutura", "enclaves"], ["Acesso", "defesa importada"]], focus: "Grandes organizações compram proteção; trabalhadores e serviços menores absorvem o custo.", mobile: "Crise interna · Defesa importada" },
-    { date: "2028", title: "O acordo dos outros", summary: "EUA e China desaceleram sob termos que preservam sua vantagem e não garantem acesso ao Brasil.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "ausente"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "acordo excludente"], ["Infraestrutura", "sem capacidade própria"], ["Acesso", "sem garantia"]], focus: "Desemprego e fuga de cérebros crescem enquanto o Brasil apoia regras que não ajudou a escrever.", mobile: "Acordo excludente · Brain drain" },
-    { date: "2029", title: "Acesso por alinhamento", summary: "O governo aceita condições políticas para garantir computação, crédito e defesa digital.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "terceirizada"]], facts: [["Coordenação", "acordo mantido"], ["Infraestrutura", "decisão externa"], ["Acesso", "condicionado"]], focus: "A crise fiscal e o monitoramento político ligam dependência tecnológica à erosão democrática.", mobile: "Acesso condicionado · Erosão" },
-    { date: "2030", title: "País satélite", summary: "Desemprego, fuga de talentos e um regime híbrido limitam a autonomia econômica e política.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "mínima"]], facts: [["Coordenação", "regras externas"], ["Infraestrutura", "acesso revogável"], ["Acesso", "por alinhamento"]], focus: "O Brasil mantém serviços essenciais ao custo de aceitar o fornecedor como árbitro de sua margem de escolha.", mobile: "Regime híbrido · País satélite" },
-  ],
-} : {
-  positive: [
-    { date: "Aug 2026", title: "The first bargain", summary: "The Senate decides whether incentives create facilities alone or contractable capacity as well.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "contested"]], focus: "Law, contracts, and enforcement begin to determine who can use the machines.", mobile: "Risk rising · Access contested" },
-    { date: "2027", title: "The shock finds an alternative", summary: "Attacks rise and foreign defense remains better, but critical workloads gain a local option.", tracks: [["risk", "Systemic risk", 4, "high"], ["leverage", "Brazilian leverage", 3, "under construction"], ["sovereignty", "Inference sovereignty", 2, "partial"]], facts: [["Coordination", "pressure for a deal"], ["Infrastructure", "first contracts"], ["Access", "local option"]], focus: "Lourdes, Rafael, André, and Camila see different sides of the same crisis.", mobile: "Risk high · Local option" },
-    { date: "2028", title: "Limited coordination", summary: "Brazil helps the US and China create notifications, shared evaluations, and short trigger-based pauses.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 4, "diplomatic"], ["sovereignty", "Inference sovereignty", 3, "expanding"]], facts: [["Coordination", "limited agreement"], ["Infrastructure", "aggregated demand"], ["Access", "nascent market"]], focus: "Technical capacity and infrastructure give substance to Brazilian mediation.", mobile: "Limited deal · Nascent market" },
-    { date: "2029", title: "Brazil enters the game", summary: "Energy, grid access, and contractable capacity support negotiations with both blocs.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 4, "active"], ["sovereignty", "Inference sovereignty", 4, "material"]], facts: [["Coordination", "limits maintained"], ["Infrastructure", "audited access"], ["Access", "local suppliers"]], focus: "Brazil accepts some alignment costs and preserves alternatives elsewhere.", mobile: "Active leverage · Alternatives" },
-    { date: "2030", title: "An AI-era middle power", summary: "Brazil does not control the frontier but can contract, evaluate, and sustain some critical services.", tracks: [["risk", "Systemic risk", 3, "still present"], ["leverage", "Brazilian leverage", 5, "consolidated"], ["sovereignty", "Inference sovereignty", 4, "strong partial"]], facts: [["Coordination", "verifiable protocol"], ["Infrastructure", "public inventory"], ["Access", "continuity tested"]], focus: "Diplomacy, contracts, and a domestic inference market give Brazil room to choose without implying independence from the frontier.", mobile: "AI-era middle power · Choice" },
-  ],
-  negative: [
-    { date: "Aug 2026", title: "The first bargain", summary: "The incentive fails or takes effect without converting physical presence into Brazilian access.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "not guaranteed"]], focus: "Energy and grid access are committed before Brazil negotiates capacity and continuity.", mobile: "Risk rising · No guarantee" },
-    { date: "2027", title: "Domestic crisis", summary: "Attacks, imported automation, and emergency powers put pressure on jobs and institutions.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "physical"], ["sovereignty", "Inference sovereignty", 1, "dependent"]], facts: [["Coordination", "pressure for a deal"], ["Infrastructure", "enclaves"], ["Access", "imported defense"]], focus: "Large organizations buy protection while workers and smaller services absorb the cost.", mobile: "Domestic crisis · Imported defense" },
-    { date: "2028", title: "Someone else's agreement", summary: "The US and China slow down under terms that preserve their advantage and do not guarantee access to Brazil.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "absent"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "exclusive agreement"], ["Infrastructure", "no domestic capacity"], ["Access", "not guaranteed"]], focus: "Unemployment and brain drain rise while Brazil supports rules it did not help write.", mobile: "Exclusive deal · Brain drain" },
-    { date: "2029", title: "Access through alignment", summary: "The government accepts political conditions to secure compute, credit, and cyber defense.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "outsourced"]], facts: [["Coordination", "agreement holds"], ["Infrastructure", "foreign decision"], ["Access", "conditional"]], focus: "The fiscal crisis and political monitoring connect technology dependence to democratic erosion.", mobile: "Conditional access · Erosion" },
-    { date: "2030", title: "Satellite country", summary: "Unemployment, talent flight, and a hybrid regime limit economic and political autonomy.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "minimal"]], facts: [["Coordination", "external rules"], ["Infrastructure", "revocable access"], ["Access", "through alignment"]], focus: "Brazil keeps essential services running by accepting the supplier as the arbiter of its room to choose.", mobile: "Hybrid regime · Satellite country" },
-  ],
-};
+const dashboardStates = pt ? [
+  { date: "Set 2026", title: "A primeira barganha", summary: "O REDATA é aprovado sem transformar presença física em acesso brasileiro: os 10% do mercado interno são medidos em receita e podem virar P&D.", tracks: [["risk", "Risco sistêmico", 2, "em alta"], ["leverage", "Alavanca brasileira", 2, "potencial"], ["sovereignty", "Soberania de inferência", 1, "fraca"]], facts: [["Coordenação", "diálogo inicial"], ["Infraestrutura", "projetos anunciados"], ["Acesso", "sem garantia"]], focus: "Energia e rede são comprometidas antes que o Brasil negocie capacidade e continuidade.", mobile: "Risco em alta · Sem garantia" },
+  { date: "2027", title: "Crise interna", summary: "Ataques, automação importada e poderes de emergência pressionam trabalho e instituições.", tracks: [["risk", "Risco sistêmico", 5, "crítico"], ["leverage", "Alavanca brasileira", 2, "física"], ["sovereignty", "Soberania de inferência", 1, "dependente"]], facts: [["Coordenação", "pressão por acordo"], ["Infraestrutura", "enclaves"], ["Acesso", "defesa importada"]], focus: "Grandes organizações compram proteção; trabalhadores e serviços menores absorvem o custo.", mobile: "Crise interna · Defesa importada" },
+  { date: "2028", title: "O acordo dos outros", summary: "EUA e China desaceleram sob termos que preservam sua vantagem e não garantem acesso ao Brasil.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "ausente"], ["sovereignty", "Soberania de inferência", 1, "restrita"]], facts: [["Coordenação", "acordo excludente"], ["Infraestrutura", "sem capacidade própria"], ["Acesso", "sem garantia"]], focus: "O Brasil é convidado a apoiar o texto e não consegue dizer que clusters oferece à verificação.", mobile: "Acordo excludente · Brain drain" },
+  { date: "2029", title: "Acesso por alinhamento", summary: "O governo aceita condições políticas para garantir computação, crédito e defesa digital.", tracks: [["risk", "Risco sistêmico", 3, "contido"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "terceirizada"]], facts: [["Coordenação", "acordo mantido"], ["Infraestrutura", "decisão externa"], ["Acesso", "condicionado"]], focus: "Dois anos depois da primeira exigência, o prazo em que Emirados e Reino Unido cederam, o Brasil escolhe sob pressão.", mobile: "Acesso condicionado · Escolha forçada" },
+  { date: "2030", title: "País satélite", summary: "Desemprego recorde em número absoluto, fuga de talentos e uma posição definida por outros.", tracks: [["risk", "Risco sistêmico", 4, "em alta de novo"], ["leverage", "Alavanca brasileira", 1, "perdida"], ["sovereignty", "Soberania de inferência", 1, "mínima"]], facts: [["Coordenação", "protocolo por um fio"], ["Infraestrutura", "acesso revogável"], ["Acesso", "por alinhamento"]], focus: "A tensão entre as potências chega ao Brasil como corte de cota, meses antes de qualquer disparo.", mobile: "País satélite · Cota cortada" },
+] : [
+  { date: "Sep 2026", title: "The first bargain", summary: "REDATA passes without turning physical presence into Brazilian access: the 10% domestic share is measured as revenue and can be swapped for R&D.", tracks: [["risk", "Systemic risk", 2, "rising"], ["leverage", "Brazilian leverage", 2, "potential"], ["sovereignty", "Inference sovereignty", 1, "weak"]], facts: [["Coordination", "early dialogue"], ["Infrastructure", "projects announced"], ["Access", "not guaranteed"]], focus: "Energy and grid access are committed before Brazil negotiates capacity and continuity.", mobile: "Risk rising · No guarantee" },
+  { date: "2027", title: "Domestic crisis", summary: "Attacks, imported automation, and emergency powers put pressure on jobs and institutions.", tracks: [["risk", "Systemic risk", 5, "critical"], ["leverage", "Brazilian leverage", 2, "physical"], ["sovereignty", "Inference sovereignty", 1, "dependent"]], facts: [["Coordination", "pressure for a deal"], ["Infrastructure", "enclaves"], ["Access", "imported defense"]], focus: "Large organizations buy protection while workers and smaller services absorb the cost.", mobile: "Domestic crisis · Imported defense" },
+  { date: "2028", title: "Someone else's agreement", summary: "The US and China slow down under terms that preserve their advantage and do not guarantee access to Brazil.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "absent"], ["sovereignty", "Inference sovereignty", 1, "restricted"]], facts: [["Coordination", "exclusive agreement"], ["Infrastructure", "no domestic capacity"], ["Access", "not guaranteed"]], focus: "Brazil is invited to support the text and cannot say which clusters it can offer for verification.", mobile: "Exclusive deal · Brain drain" },
+  { date: "2029", title: "Access through alignment", summary: "The government accepts political conditions to secure compute, credit, and cyber defense.", tracks: [["risk", "Systemic risk", 3, "contained"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "outsourced"]], facts: [["Coordination", "agreement holds"], ["Infrastructure", "foreign decision"], ["Access", "conditional"]], focus: "Two years after the first demand, the same span in which the UAE and the UK gave way, Brazil chooses under pressure.", mobile: "Conditional access · Forced choice" },
+  { date: "2030", title: "Satellite country", summary: "Record unemployment in absolute numbers, talent flight, and a position defined by others.", tracks: [["risk", "Systemic risk", 4, "rising again"], ["leverage", "Brazilian leverage", 1, "lost"], ["sovereignty", "Inference sovereignty", 1, "minimal"]], facts: [["Coordination", "protocol by a thread"], ["Infrastructure", "revocable access"], ["Access", "through alignment"]], focus: "Great-power tension reaches Brazil as a quota cut, months before any shot is fired.", mobile: "Satellite country · Quota cut" },
+];
 
-const initialState = dashboardStates.positive[0];
+const initialState = dashboardStates[0];
 ---
 
+{!pt && (
+  <BaseLayout locale={locale} pageKey="scenario" bodyClass="scenario-page">
+    <section class="scenario-hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Translation in progress</p>
+          <h1>Brazil 2030<span>The Energy to Choose</span></h1>
+          <p class="hero-deck">The scenario was substantially rewritten in September 2026 and the English edition is being retranslated from scratch. The previous English text has been withdrawn rather than left to describe a version that no longer exists.</p>
+          <div class="hero-actions">
+            <a class="button-link primary" href={routes.pt.scenario}>Read the scenario in Portuguese</a>
+            <a class="button-link" href={routes.en.summary}>Five-minute summary</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scenario-disclaimer" aria-label="Editorial note"><p>The other English pages (summary, strategy, evidence, REDATA, and the open letter) remain current.</p></section>
+  </BaseLayout>
+)}
+{pt && (
 <BaseLayout locale={locale} pageKey="scenario" markdownHref={markdownRoutes[locale].scenario} bodyClass="scenario-page branch-scenario-page">
   <section class="scenario-hero">
     <div class="hero-inner">
@@ -145,18 +105,15 @@ const initialState = dashboardStates.positive[0];
         <h1>{text.titleCountry}<span>{text.titleLine}</span></h1>
         <p class="hero-deck">{text.deck}</p>
         <div class="status-line">
-          <span class="status-dot" aria-hidden="true"></span><span>{copy.status}</span><span class="status-separator" aria-hidden="true"></span><time datetime="2026-08-28">{copy.updated}</time>
+          <span class="status-dot" aria-hidden="true"></span><span>{copy.status}</span><span class="status-separator" aria-hidden="true"></span><time datetime="2026-09-09">{copy.updated}</time>
         </div>
         <div class="hero-actions">
-          <a class="button-link primary" href="#cenario-positivo">{text.positive}</a>
-          <a class="button-link negative-action" href="#cenario-negativo">{text.negative}</a>
+          <a class="button-link primary negative-action" href="#2026-o-ponto-de-bifurcação">{pt ? "Começar em 2026" : "Start in 2026"}</a>
           <a class="button-link" href={routes[locale].summary}>{text.summary}</a>
         </div>
       </div>
-      <div class="scenario-hero-branches" aria-label={pt ? "Resumo dos cenários" : "Scenario summary"}>
-        <article class="hero-branch hero-branch-positive"><span>{text.positive}</span><strong>{text.positiveTitle}</strong><p>{text.positiveDeck}</p></article>
-        <div class="hero-branch-divider"><span>2026</span></div>
-        <article class="hero-branch hero-branch-negative"><span>{text.negative}</span><strong>{text.negativeTitle}</strong><p>{text.negativeDeck}</p></article>
+      <div class="scenario-hero-branches" aria-label={text.arcTitle}>
+        <article class="hero-branch hero-branch-negative"><span>{text.arcTitle}</span><strong>{pt ? "País satélite" : "Satellite country"}</strong><p>{text.arcBody}</p></article>
       </div>
     </div>
   </section>
@@ -166,39 +123,16 @@ const initialState = dashboardStates.positive[0];
   <div class="reading-layout">
     <nav class="chapter-nav" aria-label={text.timeline}>
       <span class="chapter-nav-label">{text.timeline}</span>
-      {(["positive", "negative"] as const).map((branch) => (
-        <ol data-branch-nav={branch} hidden={branch === "negative"}>
-          {[commonChapter, ...branchChapters[branch]].map((chapter, index) => (
-            <li><a class={index === 0 ? "is-active" : ""} href={chapter.href} data-chapter-label={`${chapter.year}: ${chapter.label}`} aria-current={index === 0 ? "location" : undefined}><span>{chapter.year}</span><span>{chapter.label}</span></a></li>
-          ))}
-        </ol>
-      ))}
+      <ol>
+        {chapters.map((chapter, index) => (
+          <li><a class={index === 0 ? "is-active" : ""} href={chapter.href} data-chapter-label={`${chapter.year}: ${chapter.label}`} aria-current={index === 0 ? "location" : undefined}><span>{chapter.year}</span><span>{chapter.label}</span></a></li>
+        ))}
+      </ol>
     </nav>
 
     <article class="scenario-prose">
       <CommonContent />
-
-      <section class="scenario-fork" id="escolha-do-caminho" aria-labelledby="scenario-fork-title">
-        <p class="eyebrow">{text.forkEyebrow}</p>
-        <h2 id="scenario-fork-title">{text.forkTitle}</h2>
-        <p>{text.forkIntro}</p>
-        <div class="branch-switch" role="group" aria-label={pt ? "Selecionar cenário" : "Select scenario"}>
-          <button class="branch-choice branch-choice-positive" type="button" data-branch-target="positive" aria-pressed="true" aria-controls="scenario-positive"><span>{text.positive}</span><strong>{text.positiveTitle}</strong><small>{text.positiveDeck}</small></button>
-          <button class="branch-choice branch-choice-negative" type="button" data-branch-target="negative" aria-pressed="false" aria-controls="scenario-negative"><span>{text.negative}</span><strong>{text.negativeTitle}</strong><small>{text.negativeDeck}</small></button>
-        </div>
-        <figure class="scenario-matrix" aria-labelledby="scenario-matrix-title">
-          <figcaption id="scenario-matrix-title">{text.matrixTitle}</figcaption>
-          <div class="matrix-grid">
-            <span class="matrix-empty" aria-hidden="true"></span>
-            {text.matrixColumns.map((label) => <span class="matrix-column">{label}</span>)}
-            <span class="matrix-row">{text.matrixRows[0]}</span><strong class="matrix-cell matrix-positive">{text.matrixCells[0]}</strong><strong class="matrix-cell matrix-negative">{text.matrixCells[1]}</strong>
-            <span class="matrix-row">{text.matrixRows[1]}</span><span class="matrix-cell">{text.matrixCells[2]}</span><span class="matrix-cell">{text.matrixCells[3]}</span>
-          </div>
-        </figure>
-      </section>
-
-      <div id="cenario-positivo" data-scenario-branch="positive" role="region" aria-label={text.positiveTitle}><PositiveContent /></div>
-      <div id="cenario-negativo" data-scenario-branch="negative" role="region" aria-label={text.negativeTitle} hidden><NegativeContent /></div>
+      <ScenarioContent />
     </article>
 
     <aside class="reading-aside">
@@ -220,24 +154,20 @@ const initialState = dashboardStates.positive[0];
     </aside>
   </div>
 
-  <div class="mobile-chapter-bar" aria-live="polite"><span>{text.current}</span><span class="mobile-chapter-copy"><span data-current-chapter>{commonChapter.year}: {commonChapter.label}</span><small data-mobile-state>{initialState.mobile}</small></span><a href="#main-content" aria-label={pt ? "Voltar ao início" : "Back to top"}>↑</a></div>
+  <div class="mobile-chapter-bar" aria-live="polite"><span>{text.current}</span><span class="mobile-chapter-copy"><span data-current-chapter>{chapters[0].year}: {chapters[0].label}</span><small data-mobile-state>{initialState.mobile}</small></span><a href="#main-content" aria-label={pt ? "Voltar ao início" : "Back to top"}>↑</a></div>
 
   <script is:inline>
     (() => {
-      const branchButtons = Array.from(document.querySelectorAll('[data-branch-target]'));
-      const branchPanels = Array.from(document.querySelectorAll('[data-scenario-branch]'));
-      const branchNavs = Array.from(document.querySelectorAll('[data-branch-nav]'));
+      document.body.setAttribute('data-scenario-branch', 'negative');
       const dashboard = document.querySelector('[data-scenario-dashboard]');
       const mobileLabel = document.querySelector('[data-current-chapter]');
       const mobileState = document.querySelector('[data-mobile-state]');
       const scoreUnit = dashboard?.getAttribute('data-score-unit') || '';
-      let allStates = {};
-      let activeBranch = 'positive';
-      let chapterEntries = [];
-      try { allStates = JSON.parse(dashboard?.getAttribute('data-states') || '{}'); } catch { allStates = {}; }
+      let states = [];
+      try { states = JSON.parse(dashboard?.getAttribute('data-states') || '[]'); } catch { states = []; }
 
       const setDashboard = (index) => {
-        const state = allStates[activeBranch]?.[index];
+        const state = states[index];
         if (!dashboard || !state) return;
         const setText = (selector, value) => { const element = dashboard.querySelector(selector); if (element) element.textContent = value; };
         setText('[data-dashboard-date]', state.date);
@@ -258,48 +188,27 @@ const initialState = dashboardStates.positive[0];
         if (mobileState) mobileState.textContent = state.mobile;
       };
 
-      const rebuildChapters = () => {
-        const nav = document.querySelector(`[data-branch-nav="${activeBranch}"]`);
-        const links = Array.from(nav?.querySelectorAll('a') || []);
-        chapterEntries = links.map((link) => { const id = link.getAttribute('href')?.slice(1); return id ? { link, section: document.getElementById(id) } : null; }).filter((entry) => entry?.section);
-      };
+      const links = Array.from(document.querySelectorAll('.chapter-nav a'));
+      const entries = links.map((link) => { const id = decodeURIComponent(link.getAttribute('href')?.slice(1) || ''); const section = document.getElementById(id); return section ? { link, section } : null; }).filter(Boolean);
 
       const updateActiveChapter = () => {
-        if (!chapterEntries.length) return;
+        if (!entries.length) return;
         const readingLine = Math.max(96, window.innerHeight * 0.18);
-        let activeEntry = chapterEntries[0];
-        chapterEntries.forEach((entry) => { if (entry.section.getBoundingClientRect().top <= readingLine) activeEntry = entry; });
-        chapterEntries.forEach(({ link }) => { const active = link === activeEntry.link; link.classList.toggle('is-active', active); if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+        let activeEntry = entries[0];
+        entries.forEach((entry) => { if (entry.section.getBoundingClientRect().top <= readingLine) activeEntry = entry; });
+        entries.forEach(({ link }) => { const active = link === activeEntry.link; link.classList.toggle('is-active', active); if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
         if (mobileLabel) mobileLabel.textContent = activeEntry.link.getAttribute('data-chapter-label') || '';
-        setDashboard(chapterEntries.indexOf(activeEntry));
+        setDashboard(entries.indexOf(activeEntry));
       };
-
-      const selectBranch = (branch, updateHash = true) => {
-        activeBranch = branch === 'negative' ? 'negative' : 'positive';
-        document.body.setAttribute('data-scenario-branch', activeBranch);
-        branchButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.getAttribute('data-branch-target') === activeBranch)));
-        branchPanels.forEach((panel) => { panel.hidden = panel.getAttribute('data-scenario-branch') !== activeBranch; });
-        branchNavs.forEach((nav) => { nav.hidden = nav.getAttribute('data-branch-nav') !== activeBranch; });
-        rebuildChapters();
-        setDashboard(0);
-        updateActiveChapter();
-        if (updateHash) history.replaceState(null, '', activeBranch === 'negative' ? '#cenario-negativo' : '#cenario-positivo');
-      };
-
-      branchButtons.forEach((button) => button.addEventListener('click', () => selectBranch(button.getAttribute('data-branch-target'))));
-      document.querySelectorAll('a[href="#cenario-positivo"], a[href="#cenario-negativo"]').forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); const branch = link.getAttribute('href')?.includes('negativo') ? 'negative' : 'positive'; selectBranch(branch); document.getElementById('escolha-do-caminho')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
 
       let framePending = false;
       const requestUpdate = () => { if (framePending) return; framePending = true; window.requestAnimationFrame(() => { updateActiveChapter(); framePending = false; }); };
       window.addEventListener('scroll', requestUpdate, { passive: true });
       window.addEventListener('resize', requestUpdate);
-      window.addEventListener('hashchange', () => {
-        if (location.hash.includes('negativo') || location.hash.includes('negative')) selectBranch('negative', false);
-        if (location.hash.includes('positivo') || location.hash.includes('positive')) selectBranch('positive', false);
-      });
-      selectBranch(location.hash.includes('negativo') || location.hash.includes('negative') ? 'negative' : 'positive', false);
       window.addEventListener('load', requestUpdate, { once: true });
       document.fonts?.ready.then(requestUpdate);
+      updateActiveChapter();
     })();
   </script>
 </BaseLayout>
+)}

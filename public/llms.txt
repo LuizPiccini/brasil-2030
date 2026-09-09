@@ -1,6 +1,6 @@
 # Brasil 2030: Energia para Escolher
 
-> Two scenarios about how Brazil could respond to AI risk and geopolitical dependence. Public edition, last updated 2026-08-28.
+> A scenario about how Brazil could respond to AI risk and geopolitical dependence. Public edition, last updated 2026-09-09.
 
 ## Portuguese, default
 
@@ -24,4 +24,4 @@
 
 ## Evidence warning
 
-Observed facts, developer claims, author estimates, and narrative inventions carry separate labels. Both post-2026 branches are scenarios, not predictions. Cyber incidents, the Brazilian mediation channel, the limited slowdown agreement, and the 2029 bloc restrictions are narrative inventions. REDATA facts are reviewed through August 28, 2026. Pedro's 2030 compute-model values remain open.
+Observed facts, developer claims, author estimates, and narrative inventions carry separate labels. The post-2026 trajectory is a scenario, not a prediction. Cyber incidents, the Brazilian mediation channel, the limited slowdown agreement, and the 2029 bloc restrictions are narrative inventions. REDATA facts are reviewed through August 28, 2026. Pedro's 2030 compute-model values remain open.

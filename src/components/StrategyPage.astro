@@ -22,7 +22,7 @@ const items = pt ? [
 <BaseLayout locale={locale} pageKey="strategy" markdownHref={markdownRoutes[locale].strategy} title={pt ? "Estratégia" : "Strategy"}>
   <PageHero compact locale={locale} eyebrow={pt ? "Cinco compromissos" : "Five commitments"} title={pt ? "Ganhar tempo e poder de barganha" : "Gain time and bargaining power"} intro={pt ? "O Brasil pode defender uma desaceleração global, preparar-se para seu fracasso e usar energia para negociar a capacidade de inferência necessária à própria defesa." : "Brazil can support a global slowdown, prepare for its failure, and use energy to negotiate the inference capacity required for its own defense."} />
   <div class="page-content">
-    <div class="callout">{pt ? "A estratégia precisa funcionar nos dois cenários. Se o acordo internacional avançar, a capacidade aumenta nossa influência. Se falhar, ela protege serviços críticos e reduz a dependência." : "The strategy must work in both scenarios. If international coordination advances, capacity increases Brazil's influence. If it fails, capacity protects critical services and reduces dependency."}</div>
+    <div class="callout">{pt ? "A estratégia precisa funcionar independentemente do que as potências fizerem. Se o acordo internacional avançar, a capacidade aumenta nossa influência. Se falhar, ela protege serviços críticos e reduz a dependência." : "The strategy must work regardless of what the major powers do. If international coordination advances, capacity increases Brazil's influence. If it fails, capacity protects critical services and reduces dependency."}</div>
     <div class="strategy-list">
       {items.map((item, index) => <article class="strategy-item">
         <span class="strategy-number">{String(index + 1).padStart(2, "0")}</span>
