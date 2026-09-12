@@ -5,6 +5,8 @@ Source repository for the public working site of the Brasil 20XX scenario projec
 
 ## Editorial state
 
+- The isolated Portuguese review candidate dated 2026-09-12 is available at `/candidato` and `/candidato.md`. It adapts Danilo's proposal into one negative narrative with a slowdown, decision points and a separate no-slowdown appendix. It is not collectively approved; `/` and all existing translations remain unchanged in content.
+- Candidate source and editorial provenance: `src/content/scenario-candidate-pt.md` and `research/2026-09-12-candidate-editorial-note.md`.
 - Portuguese is the default and editorially leading public language.
 - English follows the 2026-08-27 two-scenario revision.
 - The public argument has three commitments: a verifiable global slowdown, Brazilian support for US-China negotiations, and domestic data-center and grid infrastructure for leverage and inference sovereignty.

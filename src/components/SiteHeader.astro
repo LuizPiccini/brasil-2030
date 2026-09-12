@@ -5,11 +5,12 @@ interface Props {
   locale: Locale;
   pageKey: PageKey;
   markdownHref?: string;
+  candidate?: boolean;
 }
 
-const { locale, pageKey, markdownHref } = Astro.props;
+const { locale, pageKey, markdownHref, candidate = false } = Astro.props;
 const copy = siteCopy[locale];
-const navKeys: ContentPageKey[] = ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
+const navKeys: ContentPageKey[] = candidate ? ["scenario", "about"] : ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
 ---
 
 <header class="site-header">
@@ -21,28 +22,31 @@ const navKeys: ContentPageKey[] = ["scenario", "summary", "redata", "evidence", 
 
     <nav class="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : "Primary navigation"}>
       {navKeys.map((key) => (
-        <a href={routes[locale][key]} aria-current={pageKey === key ? "page" : undefined}>
-          {copy.nav[key as keyof typeof copy.nav]}
+        <a href={routes[locale][key]} aria-current={!candidate && pageKey === key ? "page" : undefined}>
+          {candidate && key === "scenario" ? "Edição atual" : copy.nav[key as keyof typeof copy.nav]}
         </a>
       ))}
+      {locale === "pt" && <a href="/candidato" aria-current={candidate ? "page" : undefined}>Candidata</a>}
     </nav>
 
     <div class="header-tools">
-      <a class="header-cta" href={routes[locale].support}>{copy.nav.support}</a>
-      <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
+      {!candidate && <a class="header-cta" href={routes[locale].support}>{copy.nav.support}</a>}
+      {!candidate && <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
         <a href={routes.pt[pageKey]} lang="pt-BR" aria-current={locale === "pt" ? "true" : undefined}>PT</a>
         <span aria-hidden="true">/</span>
         <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
-      </div>
+      </div>}
+      {candidate && <span class="candidate-language" title="Esta versão candidata está disponível apenas em português">PT · revisão</span>}
       {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>}
       <details class="mobile-menu">
         <summary aria-label={copy.menu}><span></span><span></span><span></span></summary>
         <nav aria-label={locale === "pt" ? "Navegação móvel" : "Mobile navigation"}>
           {navKeys.map((key) => (
-            <a href={routes[locale][key]} aria-current={pageKey === key ? "page" : undefined}>
-              {copy.nav[key as keyof typeof copy.nav]}
+            <a href={routes[locale][key]} aria-current={!candidate && pageKey === key ? "page" : undefined}>
+              {candidate && key === "scenario" ? "Edição atual" : copy.nav[key as keyof typeof copy.nav]}
             </a>
           ))}
+          {locale === "pt" && <a href="/candidato" aria-current={candidate ? "page" : undefined}>Versão candidata</a>}
           <a href={routes[locale].support}>{copy.nav.support}</a>
           <a href={routes[locale].signatories}>{copy.nav.signatories}</a>
           {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>}

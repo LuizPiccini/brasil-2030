@@ -1,0 +1,49 @@
+.candidate-language { font: 600 0.875rem/1.4 var(--sans); white-space: nowrap; color: var(--amber); }
+.candidate-banner { padding: 0.85rem max(1rem, calc((100vw - 80rem) / 2)); background: var(--amber-pale); border-bottom: 1px solid var(--line-dark); font: 400 1rem/1.5 var(--sans); display: flex; flex-wrap: wrap; gap: 0.3rem 1.5rem; }
+.candidate-banner strong { color: var(--amber); }
+.candidate-intro { max-width: 80rem; margin: 0 auto; padding: 3.5rem 1.25rem 2.75rem; border-bottom: 1px solid var(--line); }
+.candidate-eyebrow { font: 650 0.875rem/1.4 var(--sans); color: var(--forest); text-transform: uppercase; letter-spacing: 0.08em; }
+.candidate-intro h1 { margin: 0.8rem 0 1.4rem; max-width: 19ch; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 550; letter-spacing: -0.045em; }
+.candidate-deck { max-width: 48rem; font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.6; }
+.candidate-byline, .candidate-scope { max-width: 49rem; font: 400 0.95rem/1.6 var(--sans); color: var(--ink-soft); }
+.candidate-actions { display: flex; gap: 0.9rem 1.5rem; flex-wrap: wrap; align-items: center; margin: 1.6rem 0; font: 500 1rem/1.5 var(--sans); }
+.candidate-actions a { color: var(--forest); padding-block: 0.3rem; }
+.candidate-actions span { font-size: 0.875rem; color: var(--ink-soft); }
+.candidate-reading { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem 5rem; display: grid; grid-template-columns: 15rem minmax(0, 45rem); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.candidate-nav { position: sticky; top: 6.4rem; margin-top: 4rem; max-height: calc(100svh - 8rem); overflow-y: auto; font: 450 0.95rem/1.5 var(--sans); }
+.candidate-nav > p { font-weight: 650; }
+.candidate-nav ol { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--line-dark); }
+.candidate-nav li a { display: block; padding: 0.6rem 0.85rem; text-decoration: none; }
+.candidate-nav li a:hover { background: var(--forest-pale); }
+.candidate-compare { display: block; margin-top: 1.5rem; font-size: 0.875rem; }
+.candidate-prose { min-width: 0; overflow-wrap: anywhere; }
+.candidate-prose h2 { font-size: clamp(1.9rem, 3.3vw, 2.8rem); line-height: 1.15; scroll-margin-top: 6rem; }
+.candidate-prose h3 { font-size: 1.25rem; }
+.candidate-prose .candidate-evidence { padding: 0.85rem 1rem; border-left: 3px solid var(--amber); background: var(--amber-pale); font: 450 0.95rem/1.6 var(--sans); }
+.candidate-prose .candidate-diagram { margin: 2.5rem 0; padding: 1.4rem; background: var(--paper-light); border: 1px solid var(--line-dark); }
+.candidate-diagram figcaption { font: 650 1.1rem/1.5 var(--sans); }
+.candidate-prose .candidate-diagram ol { padding: 0; list-style: none; display: grid; gap: 0.8rem; margin: 1.25rem 0; counter-reset: stage; }
+.candidate-prose .candidate-diagram li { padding: 0.9rem 1rem; border-left: 3px solid var(--forest); background: var(--forest-pale); font: 450 1rem/1.5 var(--sans); counter-increment: stage; }
+.candidate-diagram li strong::before { content: counter(stage, decimal-leading-zero) " · "; color: var(--forest); }
+.candidate-diagram li span { display: block; margin-top: 0.3rem; }
+.candidate-prose .candidate-diagram p { margin-bottom: 0; font: 400 0.95rem/1.6 var(--sans); color: var(--ink-soft); }
+.candidate-prose .candidate-sources li { margin-bottom: 1.2rem; font: 400 1rem/1.6 var(--sans); scroll-margin-top: 6rem; }
+@media (max-width: 850px) {
+  .candidate-reading { display: block; max-width: 47.5rem; }
+  .candidate-nav { position: static; max-height: none; margin: 1.5rem 0 0; }
+  .candidate-nav ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.2rem; }
+  .candidate-intro { padding-top: 2rem; }
+  .candidate-prose h2 { margin-top: 3rem; }
+}
+@media (max-width: 430px) {
+  .candidate-nav ol { grid-template-columns: 1fr; }
+  .candidate-banner { display: block; }
+  .candidate-banner span { display: block; margin-top: 0.25rem; }
+}
+@media (prefers-reduced-motion: reduce) { .candidate-page { scroll-behavior: auto; } html:has(.candidate-page) { scroll-behavior: auto; } }
+@media print {
+  .candidate-page .site-header, .candidate-page .site-footer, .candidate-nav, .candidate-actions { display: none; }
+  .candidate-reading { display: block; max-width: none; }
+  .candidate-prose h2 { break-after: avoid; }
+  .candidate-diagram { break-inside: avoid; }
+}

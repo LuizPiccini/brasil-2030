@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CandidateContent, { getHeadings } from "../content/scenario-candidate-pt.md";
+import candidateSource from "../content/scenario-candidate-pt.md?raw";
+import "../styles/candidate.css";
+
+const headings = getHeadings().filter(({ depth }) => depth === 2);
+const choices = headings.find(({ text }) => text === "O que poderia ter sido diferente")!;
+const minutes = Math.ceil(candidateSource.replace(/<[^>]*>/g, " ").split(/\s+/).length / 210);
+---
+<BaseLayout
+  locale="pt"
+  pageKey="scenario"
+  candidate
+  title="Versão candidata · Energia para Escolher"
+  description="Texto para revisão: Lourdes atravessa um Brasil dependente de IA entre 2026 e 2030. Baseado na proposta de Danilo, com escolhas alternativas e apêndice de risco."
+  markdownHref="/candidato.md"
+  bodyClass="candidate-page"
+>
+  <section class="candidate-banner" aria-label="Status editorial">
+    <strong>Versão candidata · 12 set 2026</strong>
+    <span>Texto para revisão dos autores. Não substitui a <a href="/">edição atual</a>.</span>
+  </section>
+  <header class="candidate-intro">
+    <p class="candidate-eyebrow">Brasil 2030 · Proposta de narrativa</p>
+    <h1>Energia para Escolher</h1>
+    <p class="candidate-deck">O mundo desacelera a corrida da IA. O Brasil chega ao acordo sem ter preparado suas alternativas. Na clínica de Lourdes, a perda de autonomia tem nome, rosto e hora marcada.</p>
+    <p class="candidate-byline">Baseado na proposta de Danilo · nova redação preparada com assistência de IA, a pedido de Luiz Piccini · aprovação coletiva pendente</p>
+    <div class="candidate-actions">
+      <a href={`#${headings[0].slug}`}>Ler o cenário</a>
+      <a href={`#${choices.slug}`}>O que poderia ser diferente</a>
+      <a href="/candidato.md">Texto em Markdown</a>
+      <span>Cerca de {minutes} min de leitura</span>
+    </div>
+    <p class="candidate-scope">Uma trajetória negativa com desaceleração, seguida de alternativas e de um apêndice sobre a ausência de acordo. Cenas e acontecimentos futuros são ficção de cenário. Esta candidata está disponível apenas em português; as demais páginas mantêm a edição anterior.</p>
+  </header>
+  <div class="candidate-reading">
+    <nav class="candidate-nav" aria-label="Capítulos da versão candidata">
+      <p>Nesta versão</p>
+      <ol>
+        {headings.map(({ slug, text }) => <li><a href={`#${slug}`}>{text}</a></li>)}
+      </ol>
+      <a class="candidate-compare" href="https://piccini-brasil-2030-proposta.dfnaiff.workers.dev/">Comparar com a proposta de Danilo</a>
+    </nav>
+    <article class="scenario-prose candidate-prose" aria-label="Narrativa candidata completa">
+      <CandidateContent />
+    </article>
+  </div>
+</BaseLayout>

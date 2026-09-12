@@ -13,13 +13,14 @@ interface Props {
   description?: string;
   markdownHref?: string;
   bodyClass?: string;
+  candidate?: boolean;
 }
 
-const { locale, pageKey, markdownHref, bodyClass = "" } = Astro.props;
+const { locale, pageKey, markdownHref, bodyClass = "", candidate = false } = Astro.props;
 const copy = siteCopy[locale];
 const title = Astro.props.title ? `${Astro.props.title} | ${locale === "pt" ? "Brasil 2030" : "Brazil 2030"}` : copy.title;
 const description = Astro.props.description ?? copy.description;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(candidate ? "/candidato" : Astro.url.pathname, Astro.site);
 const ptAlternate = new URL(routes.pt[pageKey], Astro.site);
 const enAlternate = new URL(routes.en[pageKey], Astro.site);
 const socialImage = new URL("/og.png", Astro.site);
@@ -34,9 +35,11 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta name="description" content={description} />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="pt-BR" href={ptAlternate} />
-    <link rel="alternate" hreflang="en" href={enAlternate} />
-    <link rel="alternate" hreflang="x-default" href={ptAlternate} />
+    {!candidate && <>
+      <link rel="alternate" hreflang="pt-BR" href={ptAlternate} />
+      <link rel="alternate" hreflang="en" href={enAlternate} />
+      <link rel="alternate" hreflang="x-default" href={ptAlternate} />
+    </>}
     <meta property="og:type" content="article" />
     <meta property="og:locale" content={locale === "pt" ? "pt_BR" : "en_US"} />
     <meta property="og:site_name" content={locale === "pt" ? "Brasil 2030" : "Brazil 2030"} />
@@ -55,7 +58,7 @@ const socialImage = new URL("/og.png", Astro.site);
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main-content">{copy.skip}</a>
-    <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} />
+    <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} candidate={candidate} />
     <main id="main-content" tabindex="-1">
       <slot />
     </main>
