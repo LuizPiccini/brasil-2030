@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 5,
+  "revision": 6,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "active",
+  "status": "review",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-12T18:55:20Z",
+  "updated_at": "2026-09-12T18:58:04Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Candidate manuscript and reader route implemented.",
-  "next_action": "Validate, commit, push and deploy the candidate route.",
+  "current_state": "Candidate deployed at https://brasil-2030.piccini.app/candidato from pushed content commit 3397ca41816858a31a39f74489f93e0993c04557; Cloudflare version 8c962c6b-23b3-472a-8ac3-03ef1c59e1e3. All 22 tests passed; live article and Markdown match the build. Main remains unchanged.",
+  "next_action": "Authors review the candidate; decide whether to integrate its implementation and replace the existing narrative.",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -104,6 +104,14 @@
       "actor": "codex",
       "event": "artifact_added",
       "note": "research/2026-09-12-candidate-editorial-note.md"
+    },
+    {
+      "at": "2026-09-12T18:58:04Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
     }
   ],
   "completion": {
@@ -119,11 +127,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Candidate manuscript and reader route implemented.
+Candidate deployed at https://brasil-2030.piccini.app/candidato from pushed content commit 3397ca41816858a31a39f74489f93e0993c04557; Cloudflare version 8c962c6b-23b3-472a-8ac3-03ef1c59e1e3. All 22 tests passed; live article and Markdown match the build. Main remains unchanged.
 
 ## Next action
 
-Validate, commit, push and deploy the candidate route.
+Authors review the candidate; decide whether to integrate its implementation and replace the existing narrative.
 
 ## Authority gates
 

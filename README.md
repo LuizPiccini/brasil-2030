@@ -35,6 +35,11 @@ npm run validate
 
 ## Deployment
 
+The 2026-09-12 candidate is deployed from `codex/narrative-candidate-2026-09-12`,
+not merged into `main`. A subsequent deployment from `main` without the candidate
+implementation will remove `/candidato`; integrate the candidate route first if
+it must remain available. This is a review deployment, not a general launch.
+
 Cloudflare receives the built `dist/` assets through Wrangler Direct Upload. Merging a
 pull request does not deploy automatically. A maintainer with Cloudflare access deploys
 the validated `main` branch with:

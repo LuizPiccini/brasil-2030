@@ -35,3 +35,13 @@ Clinical ransomware with incomplete recovery after payment; Lagos news; defensiv
 5. Can the alternatives preserve hope without promising that infrastructure alone prevents catastrophe?
 
 No new signature request, external-reader message, translation approval or general launch is implied by deploying the candidate.
+
+## Deployment evidence
+
+- Content commit: `3397ca41816858a31a39f74489f93e0993c04557`.
+- Review branch: `codex/narrative-candidate-2026-09-12`; not merged into `main`.
+- URL: https://brasil-2030.piccini.app/candidato; Markdown: https://brasil-2030.piccini.app/candidato.md.
+- Cloudflare deployment: `8c962c6b-23b3-472a-8ac3-03ef1c59e1e3`.
+- Checks: Astro reported no errors/warnings; all 22 tests passed; 55 deployment files passed the leakage check; Wrangler dry run and deployment succeeded.
+- Live verification: both candidate URLs returned HTTP 200; the article and Markdown matched the validated build exactly. Cloudflare appends its existing analytics script to the HTML. The existing home still exposes both scenario branches and a link to the candidate.
+- Review intentionally pending: factual/source review by the authors, economic and technical beta review, and native EN/ES adaptation. No browser visual QA was performed in this publication pass.
