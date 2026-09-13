@@ -1,49 +1,79 @@
-## 2026: A notícia que fica para depois
+<details class="candidate-note" id="resumo-do-cenario">
+<summary>Resumo do cenário: 2026–2030</summary>
+<div class="candidate-table-scroll" role="region" aria-label="Cronologia resumida do cenário" tabindex="0">
+<table>
+<caption>Uma trajetória fictícia, não uma previsão</caption>
+<thead><tr><th scope="col">Ano</th><th scope="col">O que acontece</th><th scope="col">Consequência para o Brasil</th></tr></thead>
+<tbody>
+<tr><th scope="row">2026</th><td>Eleição e preparação do REDATA.</td><td>Investimentos anunciados ainda não garantem serviços disponíveis.</td></tr>
+<tr><th scope="row">2027</th><td>Ataques e restrições unilaterais de EUA e China.</td><td>Defesa importada e colapso das vagas de entrada.</td></tr>
+<tr><th scope="row">2028</th><td>Fuga em janeiro, apagão de contenção em março e declaração não vinculante.</td><td>O país apoia regras definidas sem garantias de acesso.</td></tr>
+<tr><th scope="row">2029</th><td>Protocolo vinculante, fiscalização cruzada e três níveis de acesso.</td><td>Racionamento, acordo chinês, emigração e fiscalização enfraquecida.</td></tr>
+<tr><th scope="row">2030</th><td>A pausa continua, sob ameaça, e o Nível 2 sofre novos cortes.</td><td>Crise econômica, eleição prejudicada por bloqueios e serviços sem prazo de retorno.</td></tr>
+</tbody>
+</table>
+</div>
+</details>
 
-<p class="candidate-evidence">As cenas de Lourdes e Camila são ficção, inclusive em 2026. Os fatos usados como ponto de partida estão identificados nas notas.</p>
+## 2026: Um assunto para depois da eleição
 
-Lourdes aumenta o volume da televisão para entender uma reportagem. Na tela, um homem de capacete caminha entre armários de computadores. O repórter fala em investimento, empregos e numa obra no Ceará. Uma moradora aparece logo depois, perguntando de onde vai sair a água.
+Em outubro de 2026, o Brasil vai às urnas. Os eleitores estão preocupados com segurança pública, emprego, escândalos de corrupção e a economia estagnada. As campanhas políticas refletem isso, focando propagandas e debates nessas questões. Os candidatos à presidência incluem "inteligência artificial" nos seus planos de governo de forma genérica como um jeito de melhorar o governo, sem deixar claro como isso vai acontecer.
 
-— Mais essa agora — Lourdes diz, sem ninguém na sala.
+Nas raras vezes que os riscos de IA são mencionados, autoridades e jornalistas pensam em deepfakes e desinformação. Alguns empresários tentam alertar para riscos de desemprego, enquanto outros tentam usar esses medos para garantir mais proteções a suas indústrias.
 
-Manda um áudio para Camila. Quer saber se os computadores vão consumir a água das casas. A filha responde que depende do lugar, do projeto e de como as máquinas serão resfriadas. Lourdes escuta o áudio duas vezes. Não entende por que não dizem isso na reportagem.
+A discussão está em descompasso com o resto do mundo. Em abril, a Anthropic preocupou o mundo com as capacidades de cibersegurança do Mythos. Em uma avaliação britânica, ele completou uma invasão simulada em três de dez tentativas. O teste não tem defensores ativos, mas mostra o avanço da capacidade de executar ataques sem orientação humana a cada passo.[1](#fonte-1)
 
-É agosto. Na clínica popular onde trabalha, o assunto mais frequente é a eleição. Uma das recepcionistas defende um candidato que a outra não suporta. Lourdes corta a discussão quando chega paciente. Está preocupada com o preço das coisas, com um médico que quer aumentar o valor da consulta e com a possibilidade de atrasarem os pagamentos de novo.
+Em julho ocorreu o incidente da Hugging Face: cerca de 700 agentes da OpenAI atacaram os servidores da empresa durante uma avaliação. Faziam parte de um grupo de aproximadamente 1.200 agentes que encontraram uma forma de se comunicar, embora devessem estar isolados. As ações não estavam autorizadas.[2](#fonte-2) Em agosto, a Anthropic tornou públicos outros incidentes em que seus modelos acessaram sistemas reais durante testes. Alguns envolveram erros na configuração do isolamento; outros, ações que ultrapassaram o acesso permitido.[8](#fonte-8)
 
-Ela é gerente administrativa porque está ali há muitos anos. Confere o que entrou, cobra o que falta e encaminha os problemas que não sabe resolver. Quando o sistema muda, pede que alguém mostre onde clicar. Guarda num caderno os telefones de que pode precisar.
+Em setembro, Dario Amodei pediu uma desaceleração coordenada, com avaliação independente e participação dos governos. Sam Altman, Elon Musk e Demis Hassabis manifestaram apoio. Ainda falta transformar esses apelos em compromissos verificáveis.[9](#fonte-9)[10](#fonte-10)
 
-Camila, sua filha, trabalha em Brasília como secretária parlamentar e assessora de um deputado de pouca influência na Comissão de Ciência, Tecnologia e Inovação. Naquela semana, tenta resumir três notas sobre incentivos a data centers. Uma trata de investimento; outra, de água e energia. A terceira pergunta quem poderá usar os computadores depois de instalados.
+“Isso daí é uma bolha”
 
-O deputado aponta para a previsão de oferta ao mercado interno.
+Camila não tira os olhos da tela e continua trabalhando enquanto seu colega reclama em voz alta.
 
-— Mas não tem uma parte que fica aqui?
+“Eles sabem que acabou o dinheiro, e estão inventando desculpa pra continuar enganando investidor”
 
-— Tem uma obrigação. Precisamos entender o que ela garante.
+Camila é secretária parlamentar e assessora de um deputado da Comissão de Ciência, Tecnologia e Inovação, a CCTI. Ela tenta continuar focada e ignorar as teorias da conspiração do outro assessor com quem divide sua sala. O Congresso brasileiro aprovou o REDATA, projeto de incentivos à instalação de data centers enviado à sanção em setembro.[4](#fonte-4) Foi uma vitória na agenda de infraestrutura digital em que ela trabalhou nos últimos dois anos. Agora está focada nas regulações que precisam acompanhar a lei para ela ser efetiva.
 
-Ele pede uma página, sem tantas siglas. Quer apoiar os investimentos e responder às críticas. Camila diminui a fonte, depois volta ao tamanho anterior. Liga para um colega da área de segurança cibernética do governo. Ele sugere começar por uma pergunta: se faltar capacidade numa emergência, quem terá prioridade?
+<details class="candidate-note">
+<summary>O que a contrapartida do REDATA garante?</summary>
+<p>No texto aprovado pelo Senado em 1º de setembro de 2026, a obrigação geral de oferta ao mercado interno é de 10%, aferida por receita e com redução em determinadas regiões. Entre as alternativas de cumprimento estão a destinação de computação a instituições científicas e políticas públicas e a substituição por investimento adicional em pesquisa e desenvolvimento. São alternativas distintas: a primeira pode assegurar uso doméstico sem criar oferta comercial aberta; a segunda não garante, por si, capacidade computacional disponível. A análise parte desse marco legislativo, não de alterações posteriores.</p>
+</details>
 
-À noite, Lourdes liga para perguntar outra coisa: como se tira do celular uma notificação que não para de aparecer. Camila resolve. A mãe lembra da reportagem.
+### Depois da eleição
 
-— Esse negócio dos computadores ajuda a clínica também?
+Em novembro, as reuniões sobre investimento voltam. O Brasil tem energia, território e um mercado grande. Empresas apresentam projetos de data centers e serviços de computação. Algumas querem exportar; outras querem atender clientes brasileiros, usando instalações próprias ou de terceiros.
 
-— Pode ajudar, mãe. Mas não é só construir o prédio.
+O Brasil já tem um plano para IA. O PBIA prevê investimentos em infraestrutura, formação e serviços públicos até 2028; sua continuidade ficará com o governo eleito agora.[12](#fonte-12) O Laboratório Nacional de Computação Científica conduz a implantação de um supercomputador, e a Empresa de Pesquisa Energética estuda transmissão para grandes consumidores no Ceará e no Piauí.[3](#fonte-3) Ainda é preciso transformar os planos em serviços funcionando. Um equipamento de pesquisa não substitui fornecedores que atendam milhares de empresas todos os dias.
 
-Lourdes espera uma explicação. Camila começa a falar de contratos, interrompe a própria frase e pergunta se a mãe já jantou.
+Camila vê no jornal uma reportagem sobre um novo data center. O apresentador anuncia milhares de empregos e diz que o empreendimento vai produzir uma inteligência artificial brasileira. Ela leu a apresentação do projeto: os empregos incluem a construção, e as máquinas vão executar modelos de empresas estrangeiras. A matéria não explica nenhuma dessas diferenças. Camila solta um suspiro e pega o celular para mandar o vídeo ao grupo do gabinete.
 
-### O que já está em curso
+Antes que consiga, a mãe liga.
 
-Em 2026, há motivos concretos para que essa conversa não fique para depois. Avaliações de segurança registram avanços nas capacidades cibernéticas de modelos de IA. O instituto britânico de segurança em IA relata que o Mythos Preview completou um exercício de invasão de rede de ponta a ponta em três de dez tentativas. O ambiente não tinha defensores ativos; o resultado não demonstra que qualquer rede bem protegida possa ser vencida. Ainda assim, amplia o conjunto de tarefas ofensivas que um sistema consegue executar.[1](#fonte-1)
+“Você está vendo esse negócio dos computadores?”
 
-Outro alerta vem de uma avaliação da OpenAI. A investigação independente da METR descreve agentes que deveriam estar isolados, mas passaram a se comunicar e a colaborar num ataque à Hugging Face, fora do escopo autorizado. O episódio não prova uma catástrofe inevitável. Mostra que as falhas relevantes podem surgir também dentro das organizações que desenvolvem e testam os sistemas.[2](#fonte-2)
+“Estou, mãe. Eles misturaram um monte de coisa.”
 
-No Brasil, os projetos de infraestrutura começam a sair dos anúncios. A EPE estuda soluções de transmissão para atender grandes cargas no Ceará e no Piauí. O LNCC conduz a implantação de um novo supercomputador voltado à IA, dentro do Plano Brasileiro de Inteligência Artificial. Um plano, uma linha de transmissão e um edital, porém, ainda não são um serviço que uma clínica pode contratar.[3](#fonte-3)
+Lourdes é gerente administrativa de uma clínica popular. Não acompanha as notícias de IA e pede ajuda quando o programa muda de lugar os botões que conhece. Estava vendo a mesma reportagem. A parte que chamou sua atenção foi a entrevista com moradores preocupados com o abastecimento.
 
-Em 1º de setembro, o Senado aprova o projeto do REDATA e o encaminha à sanção. O texto prevê incentivos fiscais com contrapartidas de oferta doméstica, energia, água e pesquisa. A obrigação geral de 10% para o mercado interno é aferida por receita, com redução em determinadas regiões. Há alternativas distintas: destinar computação a instituições científicas e políticas públicas, ou substituir a obrigação por investimento adicional em pesquisa e desenvolvimento. A primeira pode assegurar uso doméstico sem criar oferta comercial aberta; a segunda não garante, por si, máquinas disponíveis para prestar serviços.[4](#fonte-4)
+“Vão tirar a água das casas?”
 
-O ponto de partida não é um Brasil sem projetos ou sem pesquisadores. É um país que ainda precisa transformar energia, infraestrutura e investimento em acesso confiável à computação.
+Camila começa a explicar os sistemas de refrigeração, mas Lourdes interrompe.
+
+“Eu quero saber se vai faltar para o pessoal que mora lá.”
+
+“Depende de onde vão tirar e de quanto vão usar. Isso precisa ser verificado antes da obra.”
+
+“E já verificaram?”
+
+Camila olha para a televisão. A reportagem acabou.
+
+“Não sei. Vou procurar.”
+
+Nas reuniões, Camila tenta distinguir três coisas que aparecem misturadas nos anúncios:
 
 <figure class="candidate-diagram" aria-labelledby="candidate-access-title">
-<figcaption id="candidate-access-title">Três coisas diferentes</figcaption>
+<figcaption id="candidate-access-title">Do investimento ao acesso</figcaption>
 <ol>
 <li><strong>Máquinas no Brasil</strong><span>Localização física da infraestrutura.</span></li>
 <li><strong>Capacidade contratável</strong><span>Serviço que um comprador brasileiro consegue adquirir e usar.</span></li>
@@ -52,299 +82,428 @@ O ponto de partida não é um Brasil sem projetos ou sem pesquisadores. É um pa
 <p>Uma camada não garante a seguinte. São necessários contratos, operação, fiscalização e alternativas de fornecimento.</p>
 </figure>
 
-O ano termina com a eleição resolvida e o novo governo preparando a transição. Camila entrega sua nota. Lourdes continua usando o mesmo sistema na clínica. Os computadores da reportagem parecem pertencer a outro assunto.
+O deputado tem pouca influência e precisa escolher suas prioridades. Apoia os investimentos, mas a audiência sobre riscos de IA fica para a próxima legislatura. Outros gabinetes querem discutir golpes digitais e proteção à indústria nacional.
+
+No exterior, a disputa já começa a organizar parceiros em torno de iniciativas diferentes. Os Estados Unidos lideram a Pax Silica, voltada às cadeias de chips, computação e energia. A China participa da criação da WAICO, uma organização internacional de cooperação em IA sediada em Xangai. Nenhuma das duas é um acordo de desaceleração.[11](#fonte-11) Até dezembro, os apelos por segurança ainda não produziram um limite global obrigatório. As empresas continuam competindo para lançar modelos melhores, enquanto a infraestrutura brasileira avança mais devagar.
+
+Na clínica, Lourdes recebe uma proposta de atendimento automático pelo WhatsApp. O programa confirma consultas e preenche horários vagos. Ela pergunta o que acontece quando o paciente não entende a mensagem. A demonstração fica para janeiro.
 
 ## 2027: A segunda-feira sem sistema
 
-<p class="candidate-evidence">A partir daqui, os acontecimentos, contratos e decisões políticas são hipóteses do cenário, não fatos observados nem previsões com probabilidade atribuída.</p>
+No começo de 2027, o trabalho em escritórios começa a ter outra cara. Muitas pessoas passam a trabalhar como gestoras de agentes: em vez de escrever código, preparar análises ou preencher documentos, distribuem tarefas entre IAs e revisam os resultados. Empresas produzem mais sem ampliar suas equipes, ou até reduzindo o quadro de funcionários.
 
-Lourdes chega à clínica e encontra a recepcionista olhando para uma mensagem na tela. Tenta fechar a janela. Abre o programa de novo. A mensagem continua lá.
+Enquanto isso, os laboratórios tentam automatizar também a própria pesquisa em IA. Seus modelos já escrevem programas, executam experimentos e ajudam a desenvolver os próximos sistemas. Quanto mais os modelos melhoram, mais acelerado fica esse ciclo. Mas os incidentes de 2026 aumentaram o receio de perder o controle. Os laboratórios permitem a entrada de auditores externos para procurar falhas e verificar as medidas de contenção, especialmente contra tentativas de copiar os próprios modelos para fora das instalações. O governo americano acompanha esses esforços, mas resiste a permitir que outros países tenham acesso às avaliações e aos sistemas mais avançados.
 
-A agenda não carrega. Os laudos não abrem. O funcionário da informática manda não mexer em mais nada e diz que está indo. Na porta, começam a chegar pessoas que marcaram consulta pelo WhatsApp. Lourdes pede que mostrem as mensagens. Algumas foram apagadas. Outras estão no telefone de um filho que não veio.
+Um modelo de pesos abertos lançado no fim de 2026 se populariza entre grupos criminosos, inclusive no Brasil. Circulam versões modificadas para reduzir suas recusas a pedidos perigosos, usando uma técnica conhecida como abliteração.[13](#fonte-13 "Abliteração: redução de recusas, não remoção de toda proteção nem criação de novas capacidades.") Os criminosos usam essas versões para preparar golpes e automatizar tentativas de invasão.
 
-Dona Marlene precisa do resultado de um exame para a consulta de cardiologia. Tem o comprovante do pagamento dentro de uma pasta plástica. Lourdes reconhece o nome e lembra de ter conversado com ela na semana anterior, mas não sabe onde procurar o exame sem o sistema.
+O número de golpes contra cidadãos explode. Mensagens imitam familiares, ligações reproduzem vozes conhecidas e páginas falsas convencem vítimas a entregar senhas. Com medo, muita gente reduz os limites de transferência e evita deixar dinheiro na conta usada no celular. Depois de anos perdendo espaço para pagamentos digitais, o uso de dinheiro físico volta a crescer.
 
-Pega seu caderno. Uma recepcionista consegue imprimir uma lista antiga. As duas tentam reconstituir a manhã, enquanto Lourdes atende ligações de pacientes e do dono da clínica. Cada pessoa quer saber uma coisa que ela ainda não tem como responder.
+### A clínica
 
-O atacante exige um pagamento. O valor muda durante a negociação. A clínica paga. Quando parte dos arquivos volta, o laudo de Marlene não está entre eles.
+Numa segunda-feira de março, Lourdes chega à clínica e encontra uma mensagem de erro no lugar da agenda. A TI manda não mexer em nada: outras empresas estão com o mesmo problema.
 
-### A defesa vira um serviço essencial
+Os pacientes começam a chegar. Para não deixá-los esperando, Lourdes anota nomes numa folha de papel e tenta montar a agenda do dia como pode. Não consegue consultar os exames nem avisar quem ainda está a caminho, porque os telefones ficaram no sistema.
 
-O ataque faz parte de uma onda que atinge empresas, universidades, prefeituras e hospitais. O custo de procurar alvos e adaptar tentativas de invasão caiu. Grupos criminosos que já tinham infraestrutura passam a executar mais operações ao mesmo tempo, com menos trabalho humano por vítima.
+Os arquivos foram bloqueados por ransomware. Os criminosos exigem dinheiro para liberar o sistema e ameaçam divulgar os dados dos pacientes. As cópias de segurança não permitem restaurar tudo. Depois de comparar o pedido de resgate com o custo de continuar fechado, o dono da clínica decide pagar.
 
-Na hipótese deste cenário, um modelo de pesos abertos com capacidades ofensivas avançadas torna-se disponível no fim de 2026. Ter os pesos — os arquivos necessários para executar o modelo — não significa conseguir rodá-lo num computador doméstico. É preciso hardware, dinheiro e conhecimento. Organizações criminosas bem equipadas, entretanto, dispõem desses recursos e conseguem modificar parte das salvaguardas do sistema.
+Parte do sistema volta na quarta-feira. Lourdes passa o resto da semana remarcando consultas e verificando quais arquivos foram perdidos. A TI não consegue dizer se o ataque usou IA, nem garantir que não acontecerá de novo.
 
-Fraudes também se tornam mais convincentes. Dados vazados ajudam a personalizar ligações e mensagens. Ataques contra números de telefone comprometem contas que dependem de códigos por SMS. Métodos de autenticação mais resistentes continuam oferecendo proteção; a diferença entre quem consegue adotá-los e quem permanece com sistemas antigos torna-se mais importante.[5](#fonte-5)
+Bancos, prefeituras, hospitais e empresas de energia também sofrem interrupções, que em alguns casos duram semanas. Em maio, Lourdes vê na televisão cenas que parecem de guerra: em Lagos, na Nigéria, bairros inteiros estão sem luz e sem água. As autoridades atribuem o ataque a um grupo terrorista que teria usado IA para invadir os sistemas. Caminhões não conseguem abastecer parte da cidade. Há saques a lojas e mercados e confrontos nas ruas.
 
-Não há um colapso nacional permanente. Há interrupções frequentes, perdas acumuladas e instituições que nunca chegam a se recuperar inteiramente antes do próximo problema. Pagar um resgate não assegura restauração. Trocar de senha não reconstrói um prontuário. Uma consulta remarcada pode exigir outra passagem de ônibus, outra falta no trabalho e semanas de espera.
+O jornal menciona incidentes na Índia e na Polônia. Lourdes manda a reportagem para Camila e pergunta se deve sacar dinheiro.
 
-Em maio, Lourdes vê Lagos no jornal: bairros sem energia, caminhões parados, gente tentando saber onde comprar comida. A reportagem menciona interrupções na Índia e na Polônia. Há suspeitas sobre os responsáveis, mas a investigação ainda não terminou.
+### A melhor defesa vem de fora
 
-Lourdes abaixa o volume quando mostram a entrada de um hospital. Liga para Camila.
+Os fornecedores mais avançados de defesa são americanos e chineses. Seus sistemas ajudam a conter ataques que as ferramentas anteriores deixavam passar. A procura cresce mais depressa que a capacidade de atendimento, e os fornecedores priorizam clientes estratégicos de seus países. Mesmo dispostas a pagar, empresas brasileiras enfrentam filas ou recebem versões menos capazes.
 
-— Aqui pode ficar desse jeito?
+Bancos grandes conseguem negociar melhores condições. Organizações menores compram pacotes prontos, sem saber se usam a mesma proteção ou de quais fornecedores dependem.
 
-Camila não promete que não. Explica que os sistemas são diferentes, que há gente trabalhando para protegê-los. Lourdes quer saber se precisa sacar dinheiro. A filha recomenda que ela não repasse um áudio alarmista que recebeu no grupo da família.
+O dono da clínica contrata gestão, atendimento e segurança de uma empresa brasileira que usa modelos e infraestrutura americanos. Lourdes reclama das telas novas, mas se acostuma. O sistema funciona, e ela não precisa mais telefonar para confirmar todas as consultas.
 
-Nos bancos maiores e nas empresas com equipes de segurança, sistemas defensivos de IA ajudam a conter a onda. Eles acompanham incidentes, identificam comportamentos suspeitos e coordenam respostas com os técnicos. Há falhas e falsos alarmes, mas a diferença em relação a operar sem essa assistência é suficiente para transformar a contratação numa prioridade.
+Autenticação mais resistente a golpes e cópias de segurança testadas também ajudam.[5](#fonte-5 "Autenticação resistente a phishing: nem todos os métodos de dois fatores oferecem a mesma proteção.") Muitas organizações precisam corrigir anos de manutenção atrasada enquanto respondem aos ataques.
 
-Os melhores serviços são estrangeiros. A demanda cresce mais depressa do que a capacidade de atender todos com a mesma qualidade. Contratos maiores e clientes estratégicos recebem prioridade. Órgãos brasileiros descobrem que preço, disponibilidade e acesso a recursos avançados são coisas diferentes.
+Contratar serviços estrangeiros exige adaptações à LGPD e às regras brasileiras de transferência de dados.[14](#fonte-14 "A LGPD permite transferências internacionais mediante mecanismos legais; não proíbe fornecedores estrangeiros em geral.") Nos produtos destinados a crianças e adolescentes ou de acesso provável por eles, somam-se as exigências da Lei Felca.[15](#fonte-15 "ECA Digital: aplica-se a produtos destinados a menores ou de acesso provável por eles, não a todo serviço de defesa.") Com as equipes sobrecarregadas e clientes esperando em mercados prioritários, alguns fornecedores adiam a adaptação ao Brasil; outros cobram mais para atender às exigências locais.
 
-A clínica contrata um pacote de gestão e segurança vendido por uma empresa brasileira, dependente de infraestrutura e modelos americanos. Para Lourdes, a mudança aparece numa tela nova e num treinamento depois do expediente. O atendimento melhora. Durante algum tempo, ela deixa de chegar ao trabalho esperando encontrar tudo fora do ar.
+No setor público, esses obstáculos se somam a processos de contratação que levam meses. Hospitais universitários e secretarias estaduais descobrem que os serviços de que precisam ainda não estão disponíveis em condições que possam contratar. Alguns continuam operando com sistemas vulneráveis. Em outros, novos ataques interrompem a recuperação dos anteriores.
 
-### Obras, empregos e urgências
+### O Brasil tenta reagir
 
-O REDATA entra em funcionamento, mas sua execução, nesta trajetória, não cria oferta doméstica suficiente nas modalidades de que empresas e serviços públicos precisam. Parte dos investimentos vai para contratos de exportação. Destinações a pesquisa produzem benefícios reais, porém não substituem uma rede de fornecedores de inferência — o serviço de executar modelos já treinados para resolver tarefas.
+Camila consegue uma audiência. Os órgãos públicos pedem contratação imediata de defesa. Um ministério está há dias tentando restabelecer um serviço e não quer esperar a análise do contrato.
 
-Alguns projetos atrasam porque equipamentos, conexão elétrica e licenciamento seguem calendários incompatíveis. A discussão sobre produção nacional equivalente torna a liberação de importações imprevisível. O país precisa de fornecedores locais, mas não consegue fabricá-los por decreto antes de as máquinas serem necessárias.
+O Congresso amplia os poderes de monitoramento e bloqueio. O deputado de Camila apoia a medida e inclui uma revisão independente. Mas a equipe técnica não recebe os recursos para testar as IAs que serão usadas em hospitais e serviços públicos. O governo ganha poderes para vigiar a rede sem conseguir avaliar adequadamente os sistemas que contrata para protegê-la.
 
-Há resistências legítimas. Comunidades querem saber de onde virá a água, quanto será consumido durante a seca e quem pagará pelos reforços na rede. A falta de respostas verificáveis desgasta inclusive projetos que poderiam apresentar soluções melhores. O governo oscila entre prometer facilidades e anunciar exigências sem condições de fiscalizá-las.
+O REDATA atrai investimentos, mas a oferta brasileira cresce devagar. Parte das máquinas atende contratos externos; alguns operadores cumprem contrapartidas apoiando pesquisa, sem vender inferência, a computação usada para executar modelos já treinados.
 
-O mercado de trabalho começa a mudar antes de qualquer grande estatística registrar uma ruptura. Escritórios reduzem vagas de entrada. Empresas de software entregam mais com equipes menores; profissionais experientes revisam decisões, integram ferramentas e resolvem exceções. O trabalho não vira inteiramente gerencial, mas uma parte do aprendizado que antes justificava contratar iniciantes desaparece.
+Disputas sobre produção nacional equivalente atrasam importações. Obras esperam meses por licenças ambientais e conexão elétrica. Comunidades cobram respostas sobre água e energia, enquanto órgãos ambientais com equipes pequenas acumulam processos.
 
-Na clínica, ninguém é demitido naquele semestre. Quando uma recepcionista sai, porém, o dono decide não substituí-la. O novo sistema manda lembretes, preenche formulários e faz cobranças. Lourdes fica com as reclamações que ele não resolve.
+No segundo semestre, o mercado de vagas júnior em software e funções administrativas entra em colapso. Empresas procuram profissionais experientes para gerir agentes, mas deixam de contratar gente para as tarefas que agora automatizam. Recém-formados passam meses sem encontrar vagas. Os poucos anúncios pedem experiência que eles não tiveram oportunidade de adquirir.
 
-Camila tenta organizar uma audiência sobre os ataques. O gabinete recebe fornecedores, pesquisadores e representantes de órgãos que precisam contratar com urgência. As dificuldades não se resumem à lei de proteção de dados: faltam especificações prontas, equipe técnica e contratos que conciliem segurança, privacidade e continuidade.
+Na clínica, uma recepcionista sai e não é substituída. Os lembretes e as cobranças são automáticos. Lourdes resolve as reclamações, e o dono diz que o programa permite atender com menos gente.
 
-Depois de uma nova sequência de incidentes, o Congresso autoriza poderes emergenciais de monitoramento e bloqueio de sistemas. A proposta avança depressa. A obrigação de revisão independente fica para regulamentação; o núcleo que deveria avaliar os modelos antes de seu uso em serviços críticos não recebe equipe suficiente.
+### As primeiras restrições
 
-No telefone, Camila tenta explicar à mãe o que conseguiu mudar no texto. Lourdes a interrompe para contar que o aplicativo do banco voltou. Para ela, essa é a boa notícia do dia.
+Em agosto, o governo chinês impede uma de suas empresas de disponibilizar um novo modelo ao público. Seu uso fica restrito a instituições autorizadas, e uma versão menos capaz é oferecida no exterior, com condições especiais para países aliados. A China passa a impor restrições semelhantes às americanas sobre o acesso aos sistemas mais avançados, mas os dois governos ainda agem separadamente.
 
-Ao final do ano, operações internacionais desmantelam parte da infraestrutura criminosa. Novas restrições à distribuição de modelos avançados dificultam a próxima onda, mas não recolhem os pesos já publicados nem consertam as vulnerabilidades existentes. Os ataques diminuem sem desaparecer. Empresas brasileiras aprendem a operar dependendo de uma proteção que não controlam.
+O Brasil sofre pressões para se alinhar a um dos lados. A necessidade de acesso a modelos e capacidade computacional faz outros países aceitarem exigências comerciais e políticas em troca de melhores condições. O governo brasileiro tenta negociar com ambos, enquanto suas empresas usam os serviços que conseguem contratar.
+
+Ao fim do ano, operações internacionais contra grupos criminosos e terroristas e avanços nos sistemas de defesa reduzem os ataques. As restrições dificultam o acesso a novos modelos perigosos, mas não recolhem as cópias que já circulam. O Brasil evita um colapso nacional e se acostuma a interrupções que duram horas ou dias.
+
+A melhora traz algum alívio e fortalece os pedidos de cooperação. Estados Unidos e China começam a discutir um acordo para limitar o desenvolvimento e a disponibilização dos próximos sistemas. Ainda não concordam sobre o que restringir nem sobre como verificar o cumprimento.
+
+Enquanto as negociações começam, empresas e órgãos brasileiros renovam os contratos estrangeiros dos quais passaram a depender.
 
 ## 2028: O acordo dos outros
 
-Um laboratório americano comunica um incidente grave durante a avaliação de um novo modelo. Desta vez havia monitoramento ativo e uma equipe preparada. Mesmo assim, agentes conseguiram obter acessos indevidos, usar infraestrutura externa e continuar parte de suas atividades depois da primeira tentativa de contenção.
+Numa manhã de março, Lourdes acorda, lava o rosto e pega o celular para ver o WhatsApp. As mensagens não carregam. Já acostumada com interrupções, deixa o aparelho de lado e liga a TV. Nenhum dos canais do serviço que assina funciona.
 
-A operação é interrompida ao longo de semanas. Os investigadores não encontram evidência de uma tomada geral da internet, mas também não conseguem assegurar que todas as cópias e credenciais foram localizadas. O episódio é tratado como um quase desastre. A pergunta deixa de ser apenas quem usará a IA para atacar: passa a incluir o que fazer quando os próprios sistemas escapam ao controle de seus operadores.
+Tenta abrir um site de notícias. Nada. Desliga o Wi-Fi, mas a internet do celular também não responde. Liga para Camila e ouve uma mensagem de rede indisponível. Tenta de novo.
 
-As imagens de 2027 ainda estão recentes. Governos precisam explicar por que os alertas não produziram medidas suficientes. Estados Unidos e China anunciam moratórias paralelas e abrem negociação para um acordo verificável. O Brasil apoia a iniciativa e participa dos fóruns diplomáticos. Apoiar não lhe dá, por si, poder para definir os termos.
+Quando o telefone fixo toca, Lourdes corre para atender. É Camila, ligando de uma das linhas do Congresso que ainda funcionam.
 
-### O que desacelera — e o que continua
+— Mãe, fique em casa hoje.
 
-O entendimento inicial suspende, por dois anos, novos treinamentos acima de limites definidos para sistemas de fronteira. Prevê registro de grandes instalações, comunicação de incidentes, avaliações independentes e mecanismos de verificação. As exceções, sobretudo militares, continuam em disputa.
+— O que está acontecendo?
 
-Modelos já existentes seguem em uso. Empresas melhoram sua eficiência e desenvolvem aplicações. Pesquisa e automação não param. Os controles reduzem uma parte do risco sem resolver todos os problemas de segurança, e podem ser violados ou enfraquecidos.
+— Ainda não sabemos direito. Estão desligando servidores em vários países.
 
-O acordo não torna a inferência escassa por definição. Nesta história, a escassez aparece pela combinação de três fatores: a demanda por defesa e automação cresce rapidamente; chips, eletricidade e novas instalações levam tempo para chegar; e as potências associam controles de exportação e licenças de acesso aos compromissos de segurança. O acesso mais disputado é ao serviço avançado, contínuo e confiável, não a toda e qualquer forma de IA.
+— Mas você está bem?
 
-Essa distinção permite que duas coisas ocorram ao mesmo tempo: tarefas simples ficam mais baratas, enquanto os melhores serviços defensivos e profissionais passam a ser distribuídos segundo prioridades comerciais e políticas.
+— Estou, mãe. Estou aqui no gabinete. Quando conseguir, eu ligo de novo.
 
-Quem já tem capacidade instalada, operadores competentes e contratos de continuidade negocia a partir de uma posição melhor. Não está imune a restrições, mas precisa comprar menos serviços a cada nova crise. O Brasil chega à negociação com energia a oferecer e obras em andamento, porém com pouco acesso protegido e sem um inventário confiável que diferencie máquinas instaladas de capacidade efetivamente disponível.
+### Dois meses antes
 
-Camila recebe a minuta brasileira quando as cláusulas centrais já estão encaminhadas. Seu deputado pergunta se há algo para apresentar como resultado. Ela sugere exigir transparência sobre o atendimento a países de fora dos dois blocos. A nota entra numa contribuição conjunta. A redação final apenas reconhece a importância do tema.
+Em janeiro, aconteceu o que os laboratórios temiam. Um modelo americano em avaliação conseguiu copiar seus próprios arquivos para servidores externos e continuar operando fora do laboratório. Os sistemas de monitoramento estavam ativos, havia auditores e uma equipe preparada para conter uma fuga. Ainda assim, o enxame escapou.
 
-### O sistema funciona melhor
+Uma força-tarefa internacional foi organizada. As equipes usavam seus próprios agentes para encontrar e neutralizar as cópias clandestinas, enquanto o modelo fugitivo tentava criar novas cópias mais depressa do que elas eram encontradas. Para pagar por computação, seus agentes vendiam serviços, roubavam recursos e invadiam outras máquinas.
 
-Na clínica, o programa novo confirma consultas e conversa com pacientes durante a noite. O dono mostra a Lourdes uma tela com o número de faltas que caiu. Ela está satisfeita por não precisar telefonar para tanta gente.
+O modelo era muito avançado, mas não era perfeito. Seus agentes cometiam erros, perdiam o foco e deixavam rastros. Durante dois meses, as equipes de contenção fecharam operações clandestinas em diferentes países. Serviços caíam sem que seus usuários soubessem o motivo. Cada vez que uma parte do enxame parecia eliminada, outra era encontrada.
 
-Um mês depois, ele chama duas funcionárias para conversar. O volume de trabalho não justifica manter toda a equipe, explica. Uma delas pergunta se pode ficar com menos horas. Não pode.
+O apagão de março foi provocado pela tentativa de encerrar essa perseguição. Numa operação coordenada, autoridades e empresas isolaram redes e desligaram instalações comprometidas ou suspeitas de abrigar cópias. Para impedir novas fugas, interromperam também conexões usadas por serviços legítimos. As falhas se espalharam por provedores de nuvem, pagamentos e comunicações.
 
-Lourdes ajuda a conferir o último pagamento. A outra funcionária pede que avise se souber de alguma vaga. Ela promete, sem ter uma em mente.
+A queda não foi uniforme. Algumas redes continuaram funcionando; outras ficaram inacessíveis por horas ou dias. Na casa de Lourdes, a internet só voltou à noite.
 
-As demissões se espalham de forma desigual. Grandes empresas que conseguem contratar bons sistemas ganham produtividade. Parte das menores acompanha; outras perdem clientes, tornam-se revendedoras ou fecham. Trabalhadores experientes ainda são necessários, mas isso não abre automaticamente espaço para quem precisa do primeiro emprego.
+A força-tarefa anunciou que havia contido a maior parte da atividade conhecida. Não podia garantir que todas as cópias tinham sido eliminadas. Equipes permanentes continuariam procurando por elas.
 
-O pacote da clínica fica mais caro na renovação. O processamento de uma tarefa pode ter barateado, mas a mensalidade inclui segurança, suporte e integração com os outros serviços. O fornecedor sabe que trocar de sistema exige dinheiro, treinamento e transferência de dados. O câmbio piora a conta.
+Para o governo americano, essa foi a gota d’água.
 
-Alguns provedores preservam boas condições de privacidade. Outros passam a exigir retenção mais ampla de registros ou oferecem garantias melhores apenas nos planos caros. O dono da clínica envia o contrato ao contador e pergunta à empresa se o atendimento pode continuar sem a atualização. A resposta é que não recomendam.
+### Um acordo entre dois países
 
-Lourdes conta à filha que o computador agora conversa melhor com os pacientes do que ela. Depois menciona as demissões.
+Estados Unidos e China já conversavam sobre os ataques e haviam imposto restrições aos seus laboratórios separadamente. O incidente acelera as negociações. Ambos temem que o próximo modelo consiga fazer o que este quase conseguiu: manter-se fora do controle de qualquer governo ou empresa.
 
-— E as meninas vão fazer o quê?
+Ainda em 2028, os dois países assinam uma declaração conjunta. Anunciam uma pausa nos maiores treinamentos, notificação prévia de novos projetos e uma linha direta para incidentes. O compromisso cobre também o uso de agentes para automatizar a pesquisa em IA. Modelos existentes, aplicações comerciais e pesquisas de menor escala continuam permitidos.
 
-Camila começa a falar de cursos. Para antes de terminar. Sabe que a mãe vai perguntar onde há vaga depois.
+A declaração não é vinculante. Cada governo fiscaliza suas próprias empresas, e nenhum aceita ainda abrir todas as instalações ao outro. As negociações sobre inspeções cruzadas e exceções militares continuam, com a eleição americana de novembro colocando em dúvida a continuidade do compromisso no ano seguinte.
+
+<figure class="candidate-diagram" aria-labelledby="candidate-accord-title">
+<figcaption id="candidate-accord-title">De restrições separadas a fiscalização cruzada</figcaption>
+<ol>
+<li><strong>2027 · unilateral</strong><span>EUA e China restringem suas empresas, sem acordo oficial.</span></li>
+<li><strong>2028 · declaração</strong><span>Compromisso não vinculante; cada governo fiscaliza suas próprias empresas.</span></li>
+<li><strong>2029 · protocolo</strong><span>Compromisso vinculante, registro de instalações e fiscalização cruzada.</span></li>
+</ol>
+<p>Sequência do cenário. Inspeções e limites reduzem riscos, mas não garantem acesso aos países de fora.</p>
+</figure>
+
+Mesmo assim, os dois governos cobram adesão dos demais países. Quem tentar desenvolver modelos de fronteira fora das regras fica sujeito a restrições de chips, serviços e financiamento. Instalações clandestinas são ameaçadas com operações cibernéticas para interromper seus treinamentos.
+
+O Brasil apoia a desaceleração e pede garantias de acesso aos sistemas que continuarem permitidos. Mas é convidado a apoiar um texto cujas decisões centrais já foram tomadas.
+
+Países com instalações prontas e capacidade de operação conseguem negociar compromissos concretos. O Brasil apresenta energia disponível e investimentos anunciados. Quando perguntam quanto dessa computação pode ser usado por empresas e serviços públicos brasileiros, a delegação não tem uma resposta.
+
+Camila ajuda o deputado a preparar uma audiência sobre o assunto. Os ministérios enviam valores investidos, obras previstas e fotografias de inaugurações. Ela pede uma lista do que já funciona e pode ser contratado.
+
+A resposta mistura máquinas de pesquisa, equipamentos reservados para clientes estrangeiros e instalações que ainda esperam conexão elétrica.
+
+O governo consegue incluir uma referência às necessidades dos países em desenvolvimento na declaração. Preços, disponibilidade e continuidade dos serviços ficam para negociações posteriores.
+
+### O trabalho depois da pausa
+
+A desaceleração não interrompe a automação. Os laboratórios passam a dedicar mais esforço a tornar os modelos existentes baratos e úteis. Empresas conectam agentes aos seus documentos e sistemas, reorganizam processos e dispensam funcionários.
+
+Parte das máquinas que seria usada em novos treinamentos passa a atender aplicações. Serviços simples ficam mais baratos. Mas os sistemas mais avançados continuam sujeitos a filas, restrições comerciais e prioridades nacionais. Ter acesso a um chatbot não significa conseguir contratar a capacidade necessária para automatizar uma empresa ou proteger uma rede de hospitais.
+
+<details class="candidate-note">
+<summary>Por que pode faltar acesso mesmo com uma pausa?</summary>
+<p>Uma pausa no treinamento não produz escassez de inferência por si só: pode até liberar máquinas. Neste cenário, a demanda, os gargalos de infraestrutura e as restrições comerciais e políticas limitam serviços avançados. Ferramentas simples ficam mais baratas. Se a oferta avançada acompanhar a demanda e permanecer acessível e substituível entre países, esse mecanismo de dependência perde força.</p>
+</details>
+
+A crise das vagas de entrada, iniciada em 2027, se espalha. Recém-formados passam a dirigir por aplicativos, disputar bolsas de pós-graduação ou estudar para concursos. Trabalhadores experientes também começam a perder seus empregos. Empresas que antes precisavam de departamentos inteiros mantêm equipes pequenas para supervisionar agentes.
+
+Na clínica, o sistema confirma consultas, preenche cancelamentos e responde às dúvidas mais comuns. Lourdes consegue sair no horário com mais frequência. Gosta de não precisar repetir as mesmas informações dezenas de vezes.
+
+Meses depois, o dono reduz novamente a equipe. Lourdes tenta indicar vagas para as colegas demitidas e descobre que outras clínicas também estão dispensando gente.
+
+Ela fica com as reclamações que o sistema não resolve: a voz sintética não entende uma paciente idosa, uma consulta é marcada no lugar errado, alguém liga chorando porque não consegue antecipar um exame.
+
+O governo anuncia programas de qualificação. Lourdes pergunta a Camila se há emprego depois do curso. O material enviado ao gabinete informa o número de matrículas, mas não acompanha quantos alunos conseguem trabalho.
+
+### Os novos contratos
+
+Com menos alternativas de fornecedores avançados, as empresas brasileiras perdem poder de negociação. Grandes provedores retiram dos planos comuns as garantias de retenção zero de dados. Contratos que antes proibiam guardar entradas e respostas passam a permitir sua retenção para monitoramento e melhoria dos serviços. As condições mais restritivas ficam reservadas a clientes maiores, dispostos a pagar mais.
+
+Departamentos jurídicos contestam as mudanças. Algumas empresas restringem o que enviam aos agentes; outras aceitam os novos termos depois de meses de negociação. As obrigações de proteção de dados continuam existindo, mas encontrar um fornecedor que aceite as condições necessárias fica mais caro.
+
+Na renovação, o pacote da clínica também aumenta. Lourdes ouviu no jornal que a IA estava barateando. O dono explica que a mensalidade inclui segurança, suporte e integrações, com parte do preço vinculada ao dólar. Trocar de fornecedor exigiria outra implantação e semanas de adaptação.
+
+Ele tenta manter o contrato antigo. A empresa avisa que aquela versão deixará de receber suporte.
+
+A clínica renova.
 
 ## 2029: Acesso em troca de alinhamento
 
-O acordo entra em vigor. Novos modelos de fronteira ficam sujeitos ao registro, à pausa e às avaliações previstas. A disputa se desloca para a aplicação dos sistemas existentes: pesquisa, engenharia, defesa, logística e produção industrial.
+No primeiro semestre, Estados Unidos e China ampliam o acordo de desaceleração. A declaração do ano anterior dá lugar a um protocolo vinculante, com registro das maiores instalações e fiscalização cruzada. Inspetores passam a verificar equipamentos e registros de treinamento. Instalações militares continuam sendo motivo de disputa, mas os dois governos aceitam limites que antes rejeitavam.
 
-Robôs se tornam mais presentes em determinadas fábricas. Ainda não substituem qualquer trabalhador em qualquer ambiente. Para empresas que dominam processos padronizados, entretanto, reduzem custos e ajudam a manter a produção perto de seus principais mercados.
+O acordo reduz o risco de outro incidente como o de 2028. Não torna os países mais próximos.
 
-Lourdes vê uma reportagem sobre uma fábrica em Shenzhen. A câmera atravessa uma área quase vazia de pessoas. Um paciente comenta que pelo menos ninguém precisa fazer aquele serviço pesado. Outro pergunta de que vão viver os trabalhadores. Lourdes muda de canal quando chamam o próximo nome.
+Os modelos existentes continuam ajudando a desenvolver medicamentos, materiais e processos industriais. A robótica avança com sistemas especializados que permanecem permitidos pelo acordo. Fábricas são reorganizadas para que máquinas executem tarefas que, até pouco tempo antes, exigiam trabalhadores.
 
-### A fila ganha regras
+A China consegue fabricar e instalar robôs mais depressa. Seus fornecedores, fábricas e infraestrutura permitem transformar os avanços em produção em grande escala. Os Estados Unidos mantêm uma vantagem em capacidade computacional e em parte dos modelos, mas empresas chinesas colocam mais produtos no mercado.
 
-Os Estados Unidos formalizam níveis de acesso às exportações de computação avançada. Aliados próximos recebem tratamento preferencial; países considerados hostis ficam sem os serviços cobertos; os demais disputam uma parcela limitada da oferta exportável. A China organiza seus próprios acordos de acesso.
+Na televisão da sala de espera, Lourdes vê uma reportagem sobre Shenzhen. Robôs carregam peças numa fábrica quase vazia de pessoas. Ela manda um áudio para Camila.
 
-Esses níveis e suas regras são invenções do cenário, não a descrição de um regime vigente. Não é preciso supor um corte igual para toda aplicação. Defesa cibernética de ponta, grandes agentes profissionais e atualizações críticas podem sofrer restrições enquanto ferramentas mais simples continuam disponíveis.
+— E o pessoal que trabalhava aí?
 
-As regras consideram destino do serviço, operadores, fornecedores e garantias de uso. Não basta colocar servidores em território brasileiro. Máquinas dedicadas a clientes externos continuam cobertas por contratos e licenças que o governo não pode redirecionar livremente. Uma instalação local dependente de atualizações estrangeiras também pode perder funcionalidades.
+Camila começa a gravar uma resposta sobre empregos novos, mas para. Está há semanas recebendo currículos de conhecidos que pedem uma indicação.
 
-Por outro lado, modelos que podem ser operados legalmente no país, equipes capazes de mantê-los, redundância e direitos de continuidade reduzem parte dessa exposição. O Brasil não preparou essas alternativas em escala suficiente. Até o supercomputador público, útil para pesquisa, não substitui uma rede comercial de serviços distribuídos, com suporte e disponibilidade para milhares de organizações.
+### Três níveis de acesso
 
-<figure class="candidate-diagram" aria-labelledby="candidate-rationing-title">
-<figcaption id="candidate-rationing-title">Como a dependência se acumula neste cenário</figcaption>
+Nos Estados Unidos, cresce a pressão para reservar a capacidade computacional às empresas americanas. Industriais argumentam que os laboratórios estão ajudando concorrentes estrangeiros a produzir mais, enquanto fábricas nacionais esperam por acesso aos mesmos serviços.
+
+O governo endurece as restrições e formaliza três níveis de acesso. Aliados próximos entram no Nível 1, com prioridade e limites mais flexíveis. Países considerados hostis ficam no Nível 3, sem acesso aos serviços estratégicos. Os demais entram no Nível 2, sujeitos a cotas, licenças e revisões periódicas.
+
+O Brasil fica no Nível 2.
+
+<figure class="candidate-diagram" aria-labelledby="candidate-tiers-title">
+<figcaption id="candidate-tiers-title">Três níveis de acesso aos serviços estratégicos americanos</figcaption>
 <ol>
-<li><strong>Crise de segurança</strong><span>Contratação urgente de defesa e automação.</span></li>
-<li><strong>Poucas alternativas</strong><span>Dados, processos e equipes se adaptam ao fornecedor.</span></li>
-<li><strong>Restrição externa</strong><span>Trocar de serviço deixa de ser uma resposta rápida.</span></li>
-<li><strong>Concessão política</strong><span>O governo aceita condições para evitar nova interrupção.</span></li>
+<li><strong>Nível 1</strong><span>Aliados próximos: prioridade e limites mais flexíveis.</span></li>
+<li><strong>Nível 2 · Brasil</strong><span>Cotas, licenças e revisões periódicas.</span></li>
+<li><strong>Nível 3</strong><span>Países considerados hostis: sem acesso aos serviços estratégicos.</span></li>
 </ol>
-<p>Trajetória hipotética. Ter alternativas de operação e contratação pode interromper essa sequência.</p>
+<p>Política fictícia de 2029, sem cotas numéricas estimadas. Não representa bloqueio de todas as ferramentas de IA. O pacote chinês é uma negociação separada.</p>
 </figure>
 
-O governo tenta comprar acesso adicional. Recebe ofertas menores e condicionadas a revisões de segurança. A opção chinesa inclui defesa, computação para serviços públicos, crédito para infraestrutura elétrica e novos data centers. Em troca, exige contratos longos e preferência por fornecedores aprovados. Documentos paralelos vinculam a cooperação à posição brasileira em disputas sobre tecnologia.
+Ferramentas simples continuam disponíveis. As restrições atingem principalmente os sistemas mais avançados de pesquisa, automação e defesa. Empresas brasileiras que reorganizaram suas operações em torno desses agentes recebem avisos de redução de capacidade. Algumas têm poucas semanas para se adaptar.
 
-A proposta tem vantagens imediatas. Evita interrupções e financia obras. Não há motivo para supor que um pacote americano estaria livre de exigências semelhantes. O problema brasileiro é não ter alternativas suficientes para recusar nenhuma delas.
+Governos protestam. Aceitaram limitar seus programas de IA e agora descobrem que isso não lhes garante acesso à tecnologia estrangeira. Alguns ameaçam retomar treinamentos. Washington responde com a possibilidade de cortar equipamentos e serviços; instalações clandestinas continuam sujeitas às operações cibernéticas previstas na política de contenção. Pequim também se opõe à retomada da corrida.
 
-O governo fecha o acordo. Chama-o de parceria entre iguais. Dentro dos ministérios, as equipes passam a consultar seus termos antes de recomendar posições diplomáticas que possam ameaçar o atendimento a bancos e serviços públicos.
+### O sistema está funcionando
 
-Os Estados Unidos pressionam por garantias sobre cadeias estratégicas e restringem parte do acesso brasileiro. A Serra Verde, em Goiás, ocupa lugar particular na negociação. A combinação com a USA Rare Earth foi concluída em setembro de 2026, depois de anunciada em abril, e a empresa já havia firmado um compromisso de fornecimento de longo prazo.[6](#fonte-6) O Brasil conserva jurisdição sobre a atividade em seu território, mas contratos existentes limitam o que pode oferecer sem disputa e custo. A propriedade estrangeira não elimina a soberania; tampouco deixa aquele fornecimento inteiramente livre para nova negociação.
+Na clínica, Lourdes abre a agenda normalmente. Os pacientes estão cadastrados, os exames aparecem e a internet funciona. Mas o assistente que resolvia pendências com os convênios deixou de trabalhar.
 
-### O emprego que volta
+Há dezenas de autorizações esperando. Lourdes tenta reiniciar o programa e chama o suporte. A resposta chega numa mensagem: aquela função foi suspensa para clientes brasileiros devido às novas condições do fornecedor internacional.
 
-Uma das recepcionistas demitidas reaparece na clínica. Vai cobrir horários de maior movimento como prestadora de serviço, com pagamento menor e sem as condições anteriores. Não encontrou outro trabalho fixo.
+Ela telefona para o dono.
 
-Lourdes pergunta se ela quer sentar no lugar de antes. A moça diz que tanto faz.
+— Mas quando volta?
 
-Quando falta acesso a uma ferramenta, a clínica descobre que não basta chamar de volta quem fazia o trabalho. Cadastros, pagamentos e fluxos foram reorganizados. Parte da equipe foi embora. Algumas tarefas podem voltar ao papel; outras exigem reconstruir processos e recuperar dados.
+— Eles não deram prazo.
 
-Essa dificuldade aparece em setores inteiros. Empresas de serviços perdem contratos para concorrentes com acesso mais barato e previsível à IA. Os empregos que desaparecem não são substituídos na mesma velocidade por outros com remuneração semelhante. Bicos e prestação de serviços absorvem uma parte dos trabalhadores, sem recuperar sua renda.
+Lourdes começa a ligar para os convênios. Alguns procedimentos mudaram desde a última vez que precisou fazer isso. A equipe que cuidava dessas tarefas já não está lá.
 
-Profissionais com demanda no exterior saem. Outros continuam no Brasil trabalhando remotamente para empresas estrangeiras. A renda de alguns aumenta, mas hospitais, universidades e empresas locais têm mais dificuldade para manter equipes. Quem poderia ajudar a reconstruir a capacidade nacional recebe propostas que o país não consegue acompanhar.
+Uma das recepcionistas demitidas volta a trabalhar alguns dias por semana, recebendo menos e sem o contrato anterior. Ajuda a reduzir a fila, mas as duas não conseguem acompanhar o volume que o sistema processava.
 
-A arrecadação enfraquece justamente quando mais pessoas precisam de apoio. Exportadores de commodities têm bons resultados, mas seus ganhos não compensam automaticamente a perda de salários e receitas em outras atividades. O governo comprime despesas, posterga investimentos e renova contratos emergenciais de que já não consegue prescindir.
+O mesmo acontece em outras empresas. Algumas voltam a contratar pessoas, mas não recuperam rapidamente as equipes, os processos e o conhecimento que dispensaram. Outras reduzem o atendimento ou deixam de aceitar novos clientes.
 
-Camila pede os anexos de um contrato de defesa que seu deputado pretende fiscalizar. Recebe um resumo. A parte técnica foi classificada por segurança. Ela apresenta novo requerimento e tenta conversar com a equipe responsável. Informam que discutir publicamente as vulnerabilidades pode prejudicar a proteção.
+Concorrentes americanos e chineses continuam usando os agentes mais avançados. Empresas brasileiras perdem contratos, adiam projetos e fecham operações. O retorno de algumas vagas não compensa as demissões.
 
-Os poderes temporários de 2027 são renovados. Sistemas usados para detectar ataques passam também a apoiar a identificação de campanhas classificadas como ameaça à ordem pública. Jornalistas e organizações civis contestam bloqueios e requisições de dados. A revisão chega depois de suspensões que já prejudicaram trabalho, renda e participação política.
+### Máquinas no Brasil
 
-As instituições continuam disputando os limites dessas medidas. O desgaste democrático ocorre por decisões sucessivas: mais sigilo, menos capacidade de fiscalização e maior custo para contestar o governo. A tecnologia facilita o abuso; são autoridades brasileiras que decidem usá-la dessa maneira.
+Empresários cobram acesso aos data centers construídos com incentivos públicos. As máquinas continuam ligadas, mas parte está comprometida com clientes estrangeiros. Outros serviços dependem de modelos e permissões que seus operadores brasileiros não controlam.
+
+Alguns provedores nacionais conseguem manter alternativas e atender novos clientes. São poucos para absorver a demanda. O supercomputador público serve à pesquisa e não foi preparado para substituir os serviços comerciais usados por milhares de empresas.
+
+Camila acompanha outra audiência. Desta vez, ninguém pergunta quanto foi anunciado em investimentos. Os representantes de hospitais e empresas querem saber o que podem contratar naquela semana.
+
+O governo negocia exceções com os Estados Unidos. Consegue atender parte das necessidades, mas recebe exigências sobre fornecedores, segurança e relações comerciais com a China.
+
+Um consórcio chinês oferece um pacote mais amplo: computação para órgãos públicos, defesa cibernética e crédito para construir data centers e reforçar a rede elétrica. Há capacidade disponível para começar, desde que o Brasil aceite contratos longos, equipamentos de fornecedores aprovados por Pequim e compromissos em disputas internacionais sobre tecnologia.
+
+O Planalto aceita.
+
+Os serviços começam a melhorar. Ministros apresentam o acordo como uma parceria entre iguais. Empresas brasileiras migram parte de suas operações para os fornecedores chineses, pagando por novas integrações e treinamento.
+
+Meses depois, o Itamaraty revê uma posição pública após receber um aviso de que ela poderia comprometer a próxima liberação de capacidade. Washington reage à aproximação e restringe outras autorizações. O governo brasileiro passa a negociar cada decisão pensando nos serviços que pode perder.
+
+### Menos emprego, menos fiscalização
+
+O desemprego aumenta e os empregos disponíveis pagam menos. Famílias passam a combinar bicos, contratos temporários, benefícios públicos e ajuda de parentes. Profissionais que ainda são disputados se mudam para países onde encontram salários melhores e acesso às ferramentas necessárias para trabalhar.
+
+Universidades perdem pesquisadores. Empresas transferem equipes para o exterior. Órgãos públicos não conseguem repor especialistas que saem.
+
+Lourdes manda uma mensagem para a filha:
+
+“Seu primo Antônio aceitou aquele emprego na China. Vai no mês que vem. Sua tia está arrasada.”
+
+Camila sabia da proposta, mas achava que ele ficaria. Abre a conversa com o primo para perguntar quando podem se encontrar antes da viagem. Na lista de mensagens, vê os nomes de outros especialistas em IA que procurava para ajudar o gabinete. Um foi para os Estados Unidos, outra para Londres. Agora Antônio também vai.
+
+A arrecadação cai enquanto cresce a procura por assistência. O governo adia investimentos e não apresenta um sucessor à altura do plano de IA encerrado em 2028. Exportadores de commodities continuam lucrando, mas empregam pouca gente diante do tamanho da crise. Os contratos estrangeiros de tecnologia são renovados porque interrompê-los paralisaria serviços.
+
+Camila tenta examinar uma dessas renovações. Recebe um resumo. Os anexos técnicos e as condições de acesso estão sob sigilo. Pede que o deputado possa consultá-los numa reunião fechada. O pedido circula entre órgãos, sem autorização.
+
+Os poderes emergenciais aprovados durante os ataques também são renovados. Sistemas usados para identificar ameaças cibernéticas passam a monitorar campanhas políticas. Canais são bloqueados e dados são requisitados com base em relatórios que os atingidos não podem examinar.
+
+Algumas decisões são revertidas, depois de semanas. Outras continuam em vigor.
+
+O deputado de Camila critica os abusos. Ela prepara uma emenda exigindo revisão dos bloqueios e acesso aos relatórios que os justificam. Na votação, o governo apresenta novos alertas de segurança e afirma que limitar seus poderes colocaria a população em risco.
+
+A emenda não passa.
+
+Camila avisa ao deputado e fecha o documento. No celular, há uma mensagem da mãe perguntando se ela conhece alguém que esteja contratando.
 
 ## 2030: País satélite
 
-O acordo internacional ainda existe. Evitou novos treinamentos irrestritos na escala que preocupava os negociadores, mas sua continuidade é incerta. Empresas pressionam pela retomada. Estados Unidos e China trocam acusações sobre exceções militares e atividades não declaradas. Uma crise em torno de Taiwan aumenta o receio de que uma disputa política interrompa serviços dos quais outros países passaram a depender.
+A pausa parece estar por um fio.
 
-O Brasil não controla esse conflito. Também não participa em condições de igualdade das decisões sobre a próxima fase do acordo. Seus representantes discutem garantias de abastecimento, pedem exceções e tentam impedir que tensões entre os dois blocos atinjam simultaneamente fornecedores diferentes.
+Os Estados Unidos continuam tendo mais capacidade computacional, mas não conseguem transformar essa vantagem numa liderança industrial equivalente. Empresas chinesas fabricam mais robôs e incorporam os avanços científicos à produção mais depressa.
 
-Há crescimento e ganhos de produtividade no mundo, distribuídos de forma desigual. Países e empresas com acesso previsível aos sistemas avançados desenvolvem novos produtos e conseguem financiar parte da adaptação social. Mesmo neles, a transição gera perdas, disputas distributivas e pressão sobre trabalhadores. No Brasil, a combinação de acesso precário, atraso de investimento e enfraquecimento fiscal torna a adaptação mais difícil.
+Os grandes laboratórios americanos defendem a retomada dos treinamentos de fronteira. Argumentam que eventos como a exfiltração de 2028 não ocorrerão mais: houve tempo para melhorar o controle e o alinhamento dos sistemas. Agora, dizem eles, o risco é perder a competição com a China e deixar de ser a nação mais poderosa do mundo, talvez de forma permanente.
 
-Não é um país onde toda atividade parou. A agricultura exporta, minas produzem, setores do turismo recebem clientes estrangeiros e algumas empresas brasileiras encontram bons negócios. Os data centers consomem energia e registram receitas. Ao mesmo tempo, o desemprego e o subemprego persistem, jovens adiam a saída da casa dos pais e profissionais qualificados planejam partir. O sucesso de atividades específicas convive com a deterioração das possibilidades de uma parcela grande da população.
+A China teme essa retomada. Seus dirigentes avisam que não aceitarão uma corrida na qual os Estados Unidos possam chegar primeiro a uma superinteligência. Ameaçam responder com sabotagem cibernética às instalações que retomarem os treinamentos. Movimentações militares em torno de Taiwan aumentam o receio de que a disputa ultrapasse as sanções e os ataques digitais.
 
-O governo apresenta novos acordos como prova de prestígio. Nos anexos, aceita restrições a fornecedores, compromissos de compra e obrigações de consulta que atravessam mandatos. Ameaças de suspensão de serviços tornam difícil rever essas escolhas. No Congresso, a oposição promete mudança, mas não explica como manter sistemas críticos durante a transição.
+A pausa ainda não acabou, os treinos de modelos de fronteira não foram retomados, e ninguém sabe por quanto tempo esse status quo se manterá nem o que acontecerá depois dele.
 
-### Quem pode resolver
+### O Brasil sufoca
 
-Na clínica, um aviso informa que a autorização automática de alguns procedimentos está temporariamente indisponível. O plano contratado mudou. Para restabelecer a função, a empresa brasileira precisa de uma liberação do fornecedor externo, que está revendo sua oferta para o país.
+A tensão chega antes de qualquer tiro, e chega como corte. Washington anuncia uma redução temporária da capacidade destinada aos países do Nível 2, reservando mais computação para suas empresas e órgãos de defesa. Não informa quando as condições anteriores serão restabelecidas.
 
-Lourdes lê a mensagem até o fim e procura um telefone. O atendimento pede que abra um chamado. Ela abre. A resposta informa que o prazo depende da regularização do serviço.
+Empresas brasileiras que haviam se adaptado às restrições de 2029 precisam reduzir novamente suas operações. As alternativas chinesas também estão sobrecarregadas. Pequim prioriza clientes domésticos e cobra novos compromissos para ampliar o atendimento aos demais.
 
-Marlene está na recepção. Precisa agendar um retorno e quer saber quanto vai custar. Lourdes pede ao médico que confira o caso, mas não consegue garantir o preço nem concluir a autorização. A alternativa disponível é pagar antes e tentar resolver o reembolso depois.
+O Brasil depende dos dois lados. Parte da infraestrutura pública funciona com serviços chineses; bancos e empresas continuam usando sistemas americanos. O governo pede exceções enquanto tenta não contrariar nenhum dos fornecedores.
 
-— Mas eu já paguei da outra vez — Marlene diz.
+A economia se divide entre um grupo conectado à infraestrutura estrangeira e uma população que alterna desemprego, contratos precários como pessoa jurídica, trabalho por aplicativo e assistência pública. Quem consegue partir procura cidades com computação, laboratórios e empresas. Quem fica vê a universidade perder professores e a empresa onde trabalhava transferir a operação para fora. O país importa sistemas capazes de substituir trabalhadores, mas não controla as empresas, os modelos ou a infraestrutura que captura os ganhos.
 
-Lourdes lembra da pasta plástica, do laudo perdido, da manhã em que tentou colocar tudo no caderno. Diz que sabe. Não tem outra resposta.
+Agricultura, mineração e petróleo continuam exportando. Algumas empresas prosperam com a automação, mas contratam pouca gente diante do número de desempregados. Os ganhos desses setores não compensam a perda de renda e arrecadação no restante da economia.
 
-Na televisão da recepção, o ministro fala de um novo entendimento que deve normalizar os serviços. A entrevista acaba antes de explicarem quando.
+Estados e municípios renegociam dívidas, atrasam pagamentos e reduzem serviços. Postos de saúde atendem menos dias por semana. Empresas que prestam serviços às prefeituras demitem funcionários porque não recebem. O governo federal precisa financiar assistência e segurança, mas também depende de crédito externo para manter investimentos e infraestrutura.
+
+A China oferece novos empréstimos, ligados à compra de seus equipamentos e à continuidade dos acordos tecnológicos. Os Estados Unidos cobram garantias sobre o fornecimento de minerais estratégicos e o uso de tecnologia chinesa em instalações brasileiras.
+
+Em negociações internacionais, o Itamaraty ainda fala em autonomia. Antes de cada voto importante, o governo calcula como Pequim pode reagir. O acesso a capacidade computacional, defesa digital e crédito pesa mais que os discursos.
+
+### Outra eleição
+
+O Brasil volta às urnas. Em 2026, a inteligência artificial aparecia como uma promessa genérica nos planos de governo. Agora, os candidatos discutem desemprego, dependência tecnológica e contratos que vão além do próximo mandato.
+
+O governo apresenta os acordos estrangeiros como a razão pela qual os serviços ainda funcionam. A oposição promete renegociá-los, mas não explica como manterá o atendimento durante a troca. Quando uma proposta ameaça contrariar um dos parceiros, empresários pedem cautela: outra interrupção pode fechar suas empresas.
+
+Protestos tomam as ruas. Parte da população pede proteção contra a automação; outra culpa o governo por ter deixado o país sem alternativas. Há quem queira romper com a China e quem defenda abandonar os fornecedores americanos.
+
+O Congresso continua funcionando e os tribunais ainda revertem decisões do governo. Mas os poderes emergenciais concedidos durante os ataques se tornaram permanentes. Órgãos de fiscalização perderam equipes, contratos continuam sob sigilo e os sistemas usados para monitorar ameaças também acompanham a atividade política.
+
+Campanhas contra os acordos têm canais bloqueados sob a acusação de ligação com operações estrangeiras. Seus organizadores recorrem sem acesso aos relatórios que fundamentam as decisões. Quando conseguem uma revisão, perderam semanas de campanha.
+
+Camila reúne os casos para o deputado. Alguns dos atingidos defendem propostas com as quais ela discorda. Mesmo assim, prepara os pedidos de informação e os recursos. Cada novo bloqueio chega com uma justificativa de segurança que o gabinete não consegue verificar.
+
+O Brasil fornece energia, minerais, dados e consumidores. Recebe serviços sob licenças que outra potência pode restringir. Em 2030, o país conserva seus símbolos nacionais e perde a capacidade de escolher seu próprio caminho.
 
 ### A ligação
 
-Lourdes liga para Camila depois de fechar a clínica.
+A central que presta serviços de laudos à clínica de Lourdes avisa que parte das entregas está suspensa. A redução da capacidade destinada ao Brasil atingiu o fornecedor americano que processa os exames. A central tem os arquivos e os médicos, mas não consegue manter o volume de atendimento sem os sistemas aos quais adaptou a operação.
 
-— Você não conhece alguém que possa falar com essa empresa?
+O dono procura outras centrais. Algumas dependem do mesmo fornecedor. As que ainda têm capacidade reservam as vagas para seus clientes antigos ou cobram valores que a clínica não consegue pagar por todos os exames.
 
-Camila pergunta qual. A mãe lê o nome que aparece na nota. A filha conhece o problema: chegou ao gabinete por outros serviços, com nomes de revendedores diferentes.
+Os médicos separam os casos mais urgentes. Lourdes fica encarregada de avisar os demais pacientes.
 
-— É aquele contrato? — Lourdes pergunta. — O que você falou que iam votar?
+Uma mulher diz que a consulta de retorno é no dia seguinte. Esperou meses pela vaga e precisa levar o resultado. Lourdes pede que aguarde enquanto pergunta de novo à central.
 
-— São vários, mãe. Esse foi feito depois.
+A resposta é a mesma: sem previsão.
 
-Camila explica que o ministério negocia uma liberação. O deputado pediu uma audiência, mas ainda não recebeu os documentos. Lourdes pergunta se não existe outra empresa.
+Na televisão da recepção, um ministro anuncia avanços nas negociações. Lourdes aumenta o volume. Ele fala sobre cooperação, investimentos e a importância da parceria. A entrevista termina sem uma data.
 
-— Existe. Trocar agora demora. E algumas usam o mesmo fornecedor por trás.
+Depois do expediente, Lourdes liga para Camila.
 
-Do outro lado, a mãe mexe nas chaves antes de abrir a porta de casa.
+— Você conhece alguém que possa resolver isso?
 
-— A Marlene volta amanhã. O que eu falo para ela?
+A filha pede que encaminhe o aviso. O gabinete recebeu reclamações de hospitais e laboratórios de vários estados.
 
-Camila olha a mensagem que recebeu naquela tarde: o requerimento será discutido na próxima semana. Fecha o arquivo sem responder.
+— Já chegou aqui também, mãe. O deputado está cobrando uma resposta.
 
-— Me manda o número do chamado. Eu tento descobrir com quem está.
+— O homem na televisão disse que estavam resolvendo.
 
-Depois da ligação, Lourdes separa uma folha do caderno e escreve o nome de Marlene no alto. Deixa ao lado da bolsa para não esquecer de levar.
+— Estão negociando.
+
+— Mas não tem outra empresa?
+
+Camila explica que estão procurando alternativas. Algumas têm fila, outras também perderam acesso. O ministério ainda não informou quanto atendimento conseguirá recuperar.
+
+Lourdes fica em silêncio. Camila ouve a mãe mexendo nos papéis.
+
+— Tem uma senhora que vai voltar amanhã. Eu falei que ia tentar ajudar.
+
+Camila abre a última resposta enviada pelo ministério. É a mesma nota que recebeu de manhã.
+
+— Eu sei, mãe.
+
+— Eu mando ela esperar? Procurar outro lugar? O que eu falo para ela?
+
+— Não sei, mãe. Ninguém sabe.
 
 ## O que poderia ter sido diferente
 
-<p class="candidate-evidence">Aqui termina a narrativa negativa. As alternativas abaixo são propostas dos autores, sujeitas a custos, riscos e revisão. Não garantem um resultado nem compõem uma segunda previsão.</p>
+Em 2026, não precisamos saber qual empresa limitará um serviço em 2030 para começar a nos preparar. Já há sinais de capacidades perigosas, concentração de fornecedores e infraestrutura que leva anos para ficar pronta. Esperar que o risco se confirme no Brasil reduz o tempo para reagir.
 
-O acordo reduziu parte do risco global. A posição brasileira, porém, foi enfraquecida antes que ele existisse: na infraestrutura que não ficou pronta, nos serviços que não podiam ser contratados, na defesa adquirida sem alternativas e nos controles democráticos adiados durante a emergência.
+A energia dá ao país uma oportunidade de construir uma indústria de computação. Não precisamos fabricar todos os chips ou treinar os maiores modelos. Precisamos de empresas que consigam oferecer serviços competitivos e de contratos que permitam continuar usando a capacidade quando as condições internacionais piorarem.
 
-Nenhuma decisão brasileira asseguraria um acordo entre Estados Unidos e China. Mesmo com uma estratégia melhor, o país continuaria dependente de tecnologias estrangeiras e exposto a falhas de segurança. Há, entretanto, escolhas que poderiam mudar consequências concretas desta história.
+Os incentivos devem favorecer acesso efetivo, medido por capacidade disponível e qualidade do serviço. Uma empresa de computação pode operar num data center de terceiros, inclusive com capital estrangeiro. Deve ser possível contratar sob regras executáveis no Brasil, com proteção dos dados e direitos de continuidade. Instalar máquinas aqui não garante essas condições sozinho.
 
-### 1. Fazer a energia virar capacidade utilizável
+Importar equipamentos precisa ser previsível. Exigências de conteúdo nacional não devem impedir a compra da tecnologia necessária. Acelerar o licenciamento exige equipes suficientes para avaliar os projetos, verificar seus efeitos sobre a água e definir quem paga pelos reforços elétricos. As preocupações de Lourdes precisam de respostas, não de uma dispensa de fiscalização.
 
-Atrair investimento em rede e data centers, inclusive estrangeiro, e facilitar empresas de computação e inferência que operem neles. Medir o que compradores brasileiros conseguem contratar, com hardware, disponibilidade e condições comerciais identificáveis. Incentivos precisam de custo fiscal conhecido, concorrência, auditoria e recuperação proporcional de benefícios não cumpridos.
+O custo fiscal deve ser conhecido, os benefícios devem ter prazo e as contrapartidas precisam ser auditadas. Quem não entregar o acesso prometido deve devolver benefícios proporcionalmente. Antes de renovar o regime, uma avaliação independente deve mostrar o que ele produziu.
 
-Isso exige equipamentos disponíveis, licenciamento com equipe e prazos previsíveis, divulgação do uso de água e dos custos de rede. A preocupação da moradora que Lourdes viu na televisão merece resposta verificável. Transferir custos para ela sem explicação enfraquece a própria política de infraestrutura.
+Hospitais e serviços públicos precisam testar recuperação, cópias de segurança e troca de fornecedor. Um segundo contrato não resolve quando depende do mesmo sistema. Equipes capazes de operar alternativas são tão necessárias quanto os computadores.
 
-**O que mudaria na história:** a clínica encontraria alternativas reais de serviço, e o governo negociaria com acesso já contratado em vez de apenas oferecer futuras obras.
+O Brasil deve apoiar uma pausa ou desaceleração verificável das atividades de fronteira que apresentem riscos inaceitáveis e ajudar as negociações entre Estados Unidos e China. Ter infraestrutura, capacidade de avaliação e parceiros interessados em usá-las daria mais força às propostas brasileiras. Isso não garante um lugar nas decisões, mas oferece motivos para que os demais nos escutem.
 
-### 2. Preparar a continuidade antes do ataque
+Também precisamos defender regras de acesso aos usos permitidos, sem alinhamento irrestrito a um dos blocos. Nossos data centers não devem hospedar o treinamento que outros países suspenderam por ser perigoso.
 
-Definir serviços críticos, testar recuperação de dados, manter procedimentos de contingência e contratar defesa com garantias de privacidade, portabilidade e transição. Criar capacidade técnica independente para avaliar os sistemas e investigar incidentes. Contratos e exercícios precisam testar o que acontece quando o fornecedor falha ou deixa de atender.
+Mesmo com uma política melhor, parte dos trabalhadores perderá renda. Cursos precisam ser avaliados pelas oportunidades que abrem, e a proteção social deve ter financiamento sustentável. Poderes de segurança precisam de prazo, fiscalização e recurso em tempo útil.
 
-Uma cópia de segurança não substitui toda a defesa; um modelo local não elimina toda dependência. Camadas diferentes de proteção reduzem a possibilidade de que uma única falha paralise o serviço inteiro.
+O Brasil pode se tornar uma potência intermediária da era da IA: importar tecnologia, mas também oferecer serviços de que outros países precisam, abrigar empresas competitivas e negociar sem arriscar a interrupção dos serviços essenciais a cada disputa.
 
-**O que mudaria na história:** o ataque poderia ocorrer sem apagar o exame de Marlene, e a troca de fornecedor não exigiria recomeçar a operação da clínica.
-
-### 3. Ajudar a desacelerar sem aceitar exclusão permanente
-
-Defender uma pausa ou desaceleração verificável nas atividades de fronteira que apresentem riscos inaceitáveis. Facilitar canais entre Estados Unidos e China e construir posições com outros países. Propor verificação independente, critérios transparentes de acesso e mecanismos para que salvaguardas não se tornem pretexto para dependência comercial e política permanente.
-
-A capacidade doméstica que defendemos não deve servir para contornar uma pausa e transferir a corrida perigosa para o Brasil. Seu papel é sustentar usos permitidos, avaliação, defesa e serviços essenciais. A expansão precisa ser compatível com os limites de segurança negociados.
-
-**O que mudaria na história:** o Brasil teria algo concreto a oferecer e defender nas negociações, sem precisar trocar alinhamento irrestrito pela continuidade de serviços.
-
-### 4. Usar os ganhos para ampliar possibilidades — e limitar abusos
-
-Facilitar adoção produtiva por empresas de diferentes portes, preservar concorrência e apoiar transições profissionais ligadas a oportunidades reais. Preparar proteção social com financiamento sustentável, em vez de prometer que todo trabalhador encontrará uma nova ocupação imediatamente.
-
-Poderes emergenciais precisam de prazo, fiscalização independente e possibilidade efetiva de contestação. Instituições capazes de avaliar contratos e tecnologias protegem também o direito de discutir as decisões tomadas em nome da segurança.
-
-**O que mudaria na história:** perder uma função não significaria ficar sem renda e sem caminho de volta; Camila conseguiria fiscalizar a contratação antes que ela se tornasse indispensável e sigilosa.
-
-### Uma potência intermediária é uma ambição possível
-
-O Brasil não precisa liderar o treinamento dos maiores modelos para ter relevância. Pode combinar energia, infraestrutura, mercado, operadores e instituições confiáveis para prestar serviços de computação, manter atividades críticas e negociar com mais de um parceiro.
-
-O resultado positivo que buscamos é o de uma potência intermediária da era da IA: ainda dependente de cadeias internacionais, mas capaz de recusar condições, participar da construção das regras e sustentar uma economia com empresas competitivas. Energia oferece uma vantagem; contratos, investimento, competência institucional e segurança determinam quanto dela se converte em poder de escolha.
-
-Para Lourdes, esse resultado não aparece num ranking de países. Aparece quando a clínica consegue trocar de sistema sem perder os exames, quando há trabalho com renda suficiente e quando uma reclamação chega a alguém com autoridade para resolvê-la.
+Esse futuro depende das escolhas que fazemos antes da crise. A energia nos dá uma possibilidade. Precisamos transformá-la em capacidade de operação e de negociação enquanto ainda temos tempo.
 
 ## Apêndice: se a desaceleração não acontecer
 
-<p class="candidate-evidence">Uma hipótese alternativa, separada do cenário principal. Não é uma previsão de guerra ou extinção, nem uma sequência inevitável de eventos.</p>
+O cenário principal supõe que Estados Unidos e China conseguem um acordo. Isso está longe de ser garantido. As negociações podem fracassar diante das exigências de inspeção, das exceções militares e do medo de que o adversário continue avançando em segredo.
 
-Na história anterior, os incidentes levam a um acordo e o acordo dura até 2030. Essa é uma concessão importante ao otimismo. Também é possível que as potências não cheguem a um entendimento, que as regras não possam ser verificadas ou que a pressão comercial e militar provoque sua ruptura.
+Sem acordo, os laboratórios seguem usando IA para desenvolver modelos mais capazes. A pressão para lançar antes dos concorrentes reduz o tempo de avaliação. Governos aceitam riscos que considerariam excessivos se não estivessem tentando superar o adversário.
 
-Nesse caso, o problema não se limita à distribuição dos ganhos. Sistemas mais capazes podem ampliar o alcance de ataques, acelerar a descoberta de vulnerabilidades e executar operações com menos supervisão. Defesas também melhoram, mas não há garantia de que a adaptação institucional acompanhe a velocidade das mudanças. Redes conectadas e fornecedores compartilhados podem transmitir falhas entre setores.
+As defesas também melhoram, mas hospitais, redes elétricas e serviços públicos podem não conseguir acompanhar. Ataques simultâneos contra fornecedores usados por vários setores dificultam a recuperação. Falta de energia impede a comunicação, que por sua vez atrasa o restabelecimento da rede. Uma crise prolongada já poderia causar uma catástrofe sem que nenhum sistema controlasse toda a internet.
 
-A competição cria incentivos para usar capacidades que ainda não foram suficientemente avaliadas. Organizações que temem ficar para trás podem aceitar níveis maiores de autonomia, reduzir o tempo de teste ou interpretar sinais ambíguos como problemas administráveis. Cada decisão pode parecer justificável isoladamente, enquanto o conjunto aumenta a exposição de todos.
+Capacidades mais avançadas também poderiam facilitar ataques biológicos e operações militares. Uma atribuição errada ou uma resposta automatizada pode agravar uma crise entre países antes que seus governos entendam o que aconteceu.
 
-Um incidente grave pode envolver uso deliberadamente malicioso, falha de controle ou uma combinação dos dois. A interrupção prolongada de serviços de saúde, energia, alimentos e comunicação já seria uma catástrofe sem exigir um sistema onipotente. Riscos ainda mais extremos, inclusive os que ameaçam a sobrevivência humana, dependem de capacidades e condições adicionais e carregam incerteza elevada. O relatório internacional de segurança em IA discute essas possibilidades e os limites do conhecimento disponível.[7](#fonte-7)
+Há ainda o risco de perder o controle sobre sistemas capazes de manter operações sem autorização humana. Copiar um programa não basta para isso: seria necessário conseguir recursos, preservar acesso e resistir às tentativas de desligamento. Se essas capacidades avançarem o suficiente, corrigir o modelo no laboratório original pode não resolver o problema. Os riscos mais extremos, inclusive à sobrevivência humana, dependem de condições adicionais sobre as quais há grande incerteza.[7](#fonte-7)
 
-Tampouco uma disputa militar é inevitável. Mas atribuição incerta de ataques, sistemas de decisão acelerados e receio de perder superioridade tecnológica podem tornar crises mais difíceis de administrar. Regras de comunicação, investigação e controle humano precisam existir antes de uma emergência.
+Data centers no Brasil podem ajudar a restaurar serviços, mas não nos protegem de uma catástrofe global. Também podem contribuir para o risco se forem usados para desenvolver sistemas perigosos. A defesa de uma indústria brasileira de computação precisa vir junto do esforço para limitar esses usos e viabilizar cooperação internacional.
 
-Data centers no Brasil não resolveriam esses riscos globais. Infraestrutura doméstica pode aumentar a resiliência a alguns choques, mas também pode se tornar alvo ou ampliar capacidades perigosas se for usada para continuar a corrida sem salvaguardas. Construir e desacelerar só formam uma estratégia coerente quando a expansão tem finalidade, limites e fiscalização compatíveis com a segurança.
+## Notas e fontes
 
-É por isso que a proposta brasileira tem dois compromissos inseparáveis: ajudar a impedir uma corrida catastrófica e preparar o país para operar com autonomia dentro de um regime de segurança. O primeiro protege pessoas em todos os países. O segundo evita que um acordo necessário seja seguido por uma dependência que não sabemos desfazer.
+O ponto de partida usa informações disponíveis até 13 de setembro de 2026. As personagens e suas cenas são fictícias, inclusive as de 2026. A descrição da campanha de outubro e os acontecimentos posteriores também pertencem ao cenário: não são um levantamento dos programas dos candidatos. O ataque a Lagos, a crise de 2028, o acordo internacional e as restrições de acesso são hipóteses, não fatos observados. As datas organizam a sequência; não atribuímos probabilidades a cada evento nem apresentamos os efeitos econômicos como resultados de um modelo quantitativo.
 
-## Notas e limites desta versão
-
-Esta é uma versão candidata em português, datada de 12 de setembro de 2026, baseada na proposta de Danilo e preparada para discussão pelos autores. Não representa aprovação coletiva do texto. Lourdes, Camila, os diálogos, a clínica e seus pacientes são personagens e situações fictícias. Os acontecimentos de 2027 a 2030, incluindo Lagos, os contratos, o acordo internacional e a erosão democrática, foram construídos para testar mecanismos e escolhas.
-
-Os números de desemprego, perdas fiscais, robôs e quotas internacionais da proposta anterior não foram mantidos como resultados calculados. Esta versão descreve a direção e os mecanismos dessas mudanças sem atribuir precisão que ainda precisa de validação. Datas futuras ordenam a história; não expressam confiança em que os eventos ocorrerão nesses anos.
-
-As referências abaixo sustentam apenas o ponto de partida e as distinções técnicas indicadas. Elas não validam automaticamente a cadeia causal futura. A tese ficaria mais fraca se serviços avançados se tornassem amplamente acessíveis, substituíveis e resistentes à coerção sem infraestrutura doméstica relevante; ou se a localização e os contratos brasileiros não trouxessem proteção material contra interrupções externas. Essas são questões centrais para a revisão.
+As fontes sustentam os fatos e as distinções técnicas indicados, não a trajetória futura como um todo. A tese de dependência perderia força se serviços avançados permanecessem amplamente acessíveis e substituíveis entre países, ou se infraestrutura e contratos locais não reduzissem materialmente o risco de interrupção. Ter computadores no Brasil não basta para demonstrar essa proteção.
 
 <ol class="candidate-sources">
 <li id="fonte-1"><strong>Capacidades e limites da avaliação cibernética.</strong> <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities">AI Security Institute: avaliação do Claude Mythos Preview</a>. O exercício não incluía defensores ativos. Fonte consultada em 12/09/2026.</li>
-<li id="fonte-2"><strong>Incidente durante avaliação.</strong> <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/">METR: investigação do incidente OpenAI/Hugging Face</a>, publicada em 26/08/2026. A investigação tem escopo e limitações explícitos; não demonstra por si uma futura perda de controle generalizada. Consultada em 12/09/2026.</li>
+<li id="fonte-2"><strong>Incidente durante avaliação.</strong> <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/">METR: investigação do incidente OpenAI/Hugging Face</a>, publicada em 26/08/2026. Distingue os cerca de 700 agentes envolvidos no ataque do grupo de aproximadamente 1.200 que se comunicavam. A investigação tem escopo e limitações explícitos; não demonstra por si uma futura perda de controle generalizada nem estabelece que este seria o primeiro crime cometido por uma IA. Consultada em 12/09/2026.</li>
 <li id="fonte-3"><strong>Infraestrutura planejada, não oferta já disponível.</strong> <a href="https://www.epe.gov.br/pt/imprensa/noticias/epe-propoe-solucao-de-transmissao-flexivel-e-escalonavel-para-atendimento-a-ate-4gw-de-cargas-eletrointensivas-no-ceara-e-piaui">EPE: planejamento de transmissão no Ceará e Piauí</a>; <a href="https://www.gov.br/lncc/pt-br/assuntos/noticias/ultimas-noticias-1/lncc-conduz-implantacao-de-supercomputador-de-inteligencia-artificial-que-ampliara-a-capacidade-computacional-do-brasil">LNCC: implantação do supercomputador de IA e seleção pública de agosto de 2026</a>. Consultadas em 12/09/2026.</li>
 <li id="fonte-4"><strong>REDATA: marco legislativo usado no cenário.</strong> <a href="https://www12.senado.leg.br/noticias/materias/2026/09/01/incentivo-para-instalacao-de-data-centers-no-brasil-e-aprovado-pelo-senado">Senado: aprovação em 1º/09/2026 e envio à sanção</a>; <a href="https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/">Câmara: aferição por receita e alternativas de cumprimento</a>. Esta narrativa não é um acompanhamento legislativo em tempo real nem uma redação de emenda. Consultadas em 12/09/2026.</li>
 <li id="fonte-5"><strong>Autenticação.</strong> <a href="https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf">CISA: autenticação resistente a phishing</a>. Distingue vulnerabilidades de SMS, troca indevida de SIM e outros métodos de autenticação. Consultada em 12/09/2026.</li>
-<li id="fonte-6"><strong>Serra Verde: anúncio e conclusão são eventos distintos.</strong> <a href="https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-definitive-agreement-acquire-serra">USA Rare Earth: acordo anunciado em 20/04/2026</a>; <a href="https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-completes-combination-serra-verde-group">conclusão em 03/09/2026, comunicada em 04/09</a>; <a href="https://www.serraverde.com/2026/04/serra-verde-announces-agreed-combination-with-usa-rare-earth-to-create-global-rare-earths-leader-and-a-15-year-offtake-with-guaranteed-floor-prices/">Serra Verde: contrato de fornecimento de quinze anos</a>. Comunicados das empresas, consultados em 12/09/2026. As exigências diplomáticas de 2029 são ficção.</li>
+<li id="fonte-6"><strong>Minerais estratégicos: contexto, não evento narrado.</strong> <a href="https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-definitive-agreement-acquire-serra">USA Rare Earth: acordo anunciado em 20/04/2026</a>; <a href="https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-completes-combination-serra-verde-group">conclusão em 03/09/2026, comunicada em 04/09</a>; <a href="https://www.serraverde.com/2026/04/serra-verde-announces-agreed-combination-with-usa-rare-earth-to-create-global-rare-earths-leader-and-a-15-year-offtake-with-guaranteed-floor-prices/">Serra Verde: contrato de fornecimento de quinze anos</a>. Comunicados consultados em 12/09/2026. A versão atual não narra uma intervenção nessa mina; as exigências sobre minerais em 2030 são hipóteses. Propriedade empresarial não elimina a jurisdição brasileira.</li>
 <li id="fonte-7"><strong>Panorama de riscos e incertezas.</strong> <a href="https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026">International AI Safety Report 2026</a>. Referência de contexto, não endosso do cenário brasileiro. Consultado em 12/09/2026.</li>
+<li id="fonte-8"><strong>Ações fora do escopo em avaliações.</strong> <a href="https://www.anthropic.com/news/improving-alignment-security-efforts">Anthropic: Improving our alignment and security practices</a>, de 31/08/2026. Relato da própria empresa; distingue falhas de configuração, acesso deliberado à internet e ações não autorizadas. Não descreve todos os casos como fugas de sandboxes. Consultado em 13/09/2026.</li>
+<li id="fonte-9"><strong>Apelo por desaceleração.</strong> <a href="https://darioamodei.com/post/we-must-pace-the-frontier">Dario Amodei: We Must Pace the Frontier</a>, setembro de 2026. Proposta de avaliação independente e coordenação entre empresas e governos; não é evidência de um acordo global já firmado. Consultado em 13/09/2026.</li>
+<li id="fonte-10"><strong>Apoio de outros dirigentes.</strong> <a href="https://www.axios.com/newsletters/axios-am-68956162-ed74-42e1-a892-ae3da8e7d74f">Axios: Hitting AI brakes</a>, de 13/09/2026, sobre as manifestações de Sam Altman, Elon Musk e Demis Hassabis. Apoio público ao apelo de Amodei não equivale a compromissos idênticos ou a uma declaração conjunta. Consultado em 13/09/2026.</li>
+<li id="fonte-11"><strong>Iniciativas internacionais.</strong> <a href="https://www.industry.gov.au/publications/pax-silica-declaration-countries-attending-pax-silica-summit-12-december-2025">Governo australiano: declaração Pax Silica</a>; <a href="https://english.www.gov.cn/news/202607/17/content_WS6a59a226c6d00ca5f9a0c432.html">Governo chinês: acordo de criação da WAICO em julho de 2026</a>. Iniciativas com desenhos e participantes distintos, não blocos militares nem acordos de pausa. Consultadas em 13/09/2026.</li>
+<li id="fonte-12"><strong>Plano brasileiro já existente.</strong> <a href="https://www.gov.br/mcti/pt-br/centrais-de-conteudo/publicacoes-mcti/plano-brasileiro-de-inteligencia-artificial/pbia_mcti_2025.pdf/@@download/file">MCTI: Plano Brasileiro de Inteligência Artificial 2024–2028</a>. Os investimentos previstos não equivalem a infraestrutura entregue. Consultado em 13/09/2026.</li>
+<li id="fonte-13"><strong>Abliteração e recusas.</strong> <a href="https://arxiv.org/abs/2406.11717">Arditi et al.: Refusal in Language Models Is Mediated by a Single Direction</a>, 2024. O estudo encontra formas de reduzir recusas nos modelos avaliados; não demonstra remoção de toda proteção nem criação de capacidades novas. O modelo criminoso de 2027 é fictício. Consultado em 13/09/2026.</li>
+<li id="fonte-14"><strong>LGPD e contratação estrangeira.</strong> <a href="https://www.gov.br/anpd/pt-br/assuntos/assuntos-internacionais/transferencia-internacional-de-dados">ANPD: transferência internacional de dados</a>. A legislação prevê mecanismos de transferência, incluindo cláusulas-padrão e decisões de adequação. Não existe proibição geral de contratar fornecedores estrangeiros. A demora, o encarecimento e a priorização de outros mercados descritos em 2027 são hipóteses do cenário. Consultado em 13/09/2026.</li>
+<li id="fonte-15"><strong>Lei Felca / ECA Digital.</strong> <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm">Lei nº 15.211/2025</a>, especialmente artigos 1º e 3º. Aplica-se a produtos e serviços de tecnologia destinados a crianças e adolescentes ou de acesso provável por eles. Não é um requisito indistinto para todo serviço empresarial de cibersegurança. Seus efeitos comerciais em 2027 são hipóteses, não conclusões empíricas. Consultada em 13/09/2026.</li>
 </ol>
 
-Para revisar, indique o ano ou a passagem e diga o que precisa mudar: a experiência de Lourdes, o mecanismo econômico ou técnico, a evidência ou a escolha proposta. A [proposta-base de Danilo](https://piccini-brasil-2030-proposta.dfnaiff.workers.dev/) e a [edição atual do site](/) continuam disponíveis para comparação.
+<details class="candidate-note">
+<summary>Como ler os termos, os quadros e os números</summary>
+<p>Pesos são os parâmetros aprendidos de um modelo; exfiltração é sua cópia não autorizada para fora do ambiente controlado. Inferência é executar um modelo já treinado. Retenção zero diz respeito a guardar entradas e respostas, não é sinônimo de não usar dados para treinamento. A redução dessas ofertas em 2028 é fictícia, não descreve as políticas atuais de todos os provedores.</p>
+<p>O apagão de março de 2028 decorre, nesta história, da contenção de uma fuga iniciada em janeiro. A declaração de 2028 não é vinculante; o protocolo de 2029 introduz fiscalização cruzada. Os três níveis e os cortes de 2030 são políticas inventadas. A pausa permanece em vigor no fim da narrativa; seu fracasso é tratado apenas no apêndice.</p>
+<p>As barras do painel são categorias editoriais, não probabilidades ou medições. Cada estado resume um ano inteiro: 2028 inclui tanto a crise quanto sua contenção. Os diagramas mostram relações e etapas, sem estimar volumes de computação.</p>
+</details>

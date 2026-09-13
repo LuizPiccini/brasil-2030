@@ -1,49 +1,51 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CandidateDashboard from "../components/CandidateDashboard.astro";
 import CandidateContent, { getHeadings } from "../content/scenario-candidate-pt.md";
 import candidateSource from "../content/scenario-candidate-pt.md?raw";
 import "../styles/candidate.css";
 
 const headings = getHeadings().filter(({ depth }) => depth === 2);
-const choices = headings.find(({ text }) => text === "O que poderia ter sido diferente")!;
 const minutes = Math.ceil(candidateSource.replace(/<[^>]*>/g, " ").split(/\s+/).length / 210);
+const chapters = headings.map((heading, index) => ({ ...heading,
+  year: heading.text.match(/^20\d{2}/)?.[0] ?? ["Escolhas", "Apêndice", "Fontes"][index - 5],
+  label: heading.text.replace(/^20\d{2}:\s*/, ""),
+}));
 ---
 <BaseLayout
   locale="pt"
   pageKey="scenario"
   candidate
-  title="Versão candidata · Energia para Escolher"
-  description="Texto para revisão: Lourdes atravessa um Brasil dependente de IA entre 2026 e 2030. Baseado na proposta de Danilo, com escolhas alternativas e apêndice de risco."
+  title="Energia para Escolher"
+  description="Um cenário para o Brasil entre 2026 e 2030: a corrida da IA desacelera, mas o país chega ao acordo sem ter preparado suas alternativas."
   markdownHref="/candidato.md"
-  bodyClass="candidate-page"
+  bodyClass="scenario-page candidate-page"
 >
-  <section class="candidate-banner" aria-label="Status editorial">
-    <strong>Versão candidata · 12 set 2026</strong>
-    <span>Texto para revisão dos autores. Não substitui a <a href="/">edição atual</a>.</span>
-  </section>
-  <header class="candidate-intro">
-    <p class="candidate-eyebrow">Brasil 2030 · Proposta de narrativa</p>
-    <h1>Energia para Escolher</h1>
-    <p class="candidate-deck">O mundo desacelera a corrida da IA. O Brasil chega ao acordo sem ter preparado suas alternativas. Na clínica de Lourdes, a perda de autonomia tem nome, rosto e hora marcada.</p>
-    <p class="candidate-byline">Baseado na proposta de Danilo · nova redação preparada com assistência de IA, a pedido de Luiz Piccini · aprovação coletiva pendente</p>
-    <div class="candidate-actions">
-      <a href={`#${headings[0].slug}`}>Ler o cenário</a>
-      <a href={`#${choices.slug}`}>O que poderia ser diferente</a>
-      <a href="/candidato.md">Texto em Markdown</a>
-      <span>Cerca de {minutes} min de leitura</span>
-    </div>
-    <p class="candidate-scope">Uma trajetória negativa com desaceleração, seguida de alternativas e de um apêndice sobre a ausência de acordo. Cenas e acontecimentos futuros são ficção de cenário. Esta candidata está disponível apenas em português; as demais páginas mantêm a edição anterior.</p>
-  </header>
-  <div class="candidate-reading">
-    <nav class="candidate-nav" aria-label="Capítulos da versão candidata">
-      <p>Nesta versão</p>
+  <div class="reading-layout">
+    <section class="candidate-opening" aria-labelledby="candidate-title">
+      <h1 id="candidate-title">Brasil 2030<span>Energia para Escolher</span></h1>
+      <p class="candidate-deck">A inteligência artificial já está transformando o trabalho, a segurança e as relações entre países. O Brasil não está preparado para essas mudanças, e as decisões dos próximos anos terão consequências permanentes para o país.</p>
+      <p class="candidate-deck">Escrevemos este cenário porque a trajetória brasileira nos preocupa. Nele, acompanhamos o Brasil até 2030 para mostrar o que pode acontecer se continuarmos ignorando ou errando as decisões importantes. Queremos reunir brasileiros em torno dessa discussão, entender nossas possibilidades e fazer das escolhas sobre inteligência artificial uma prioridade nacional.</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href={`#${headings[0].slug}`}>Começar em 2026</a>
+        <a class="button-link" href="#resumo-do-cenario">Resumo</a>
+      </div>
+      <p class="candidate-reading-time">Cerca de {minutes} min de leitura</p>
+      <p class="candidate-disclaimer">Este é um cenário, não uma previsão. As personagens são fictícias; os acontecimentos futuros exploram escolhas e consequências possíveis. As fontes do ponto de partida estão nas notas.</p>
+    </section>
+    <nav class="chapter-nav" data-candidate-nav aria-label="Linha do tempo">
+      <span class="chapter-nav-label">Linha do tempo</span>
       <ol>
-        {headings.map(({ slug, text }) => <li><a href={`#${slug}`}>{text}</a></li>)}
+        {chapters.map(({ slug, text, year, label }, index) => <li><a href={`#${slug}`} class={index === 0 ? "is-active" : undefined} data-chapter-label={text} aria-current={index === 0 ? "location" : undefined}><span>{year}</span><span>{label}</span></a></li>)}
       </ol>
-      <a class="candidate-compare" href="https://piccini-brasil-2030-proposta.dfnaiff.workers.dev/">Comparar com a proposta de Danilo</a>
     </nav>
-    <article class="scenario-prose candidate-prose" aria-label="Narrativa candidata completa">
+    <article class="scenario-prose candidate-prose" aria-label="Energia para Escolher: texto completo">
       <CandidateContent />
     </article>
+    <CandidateDashboard />
   </div>
+  <div class="mobile-chapter-bar" aria-live="polite"><span>Capítulo</span><span class="mobile-chapter-copy"><span data-current-chapter>{headings[0].text}</span><small data-mobile-state>Projetos em preparação · Acesso a regulamentar</small></span><a href="#main-content" aria-label="Voltar ao início">↑</a></div>
+  <script>
+    import "../scripts/candidate-reader";
+  </script>
 </BaseLayout>

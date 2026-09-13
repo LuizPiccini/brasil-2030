@@ -1,0 +1,39 @@
+---
+// Same visual vocabulary as ScenarioBranchesPage; summaries follow this manuscript,
+// not the older scenario's dates, quantitative claims or stronger conclusions.
+type Track = [string, string, number, string];
+type State = { date: string; title: string; summary: string; tracks: Track[]; facts: string[][]; focus: string; mobile: string };
+const tracks = (risk: number, riskLabel: string, leverage: number, leverageLabel: string, sovereignty: string): Track[] => [
+  ["risk", "Risco sistêmico", risk, riskLabel],
+  ["leverage", "Alavanca brasileira", leverage, leverageLabel],
+  ["sovereignty", "Soberania de inferência", 1, sovereignty],
+];
+const states: State[] = [
+  { date: "2026", title: "Um assunto para depois da eleição", summary: "Os alertas se acumulam. O Brasil aprova incentivos, mas adia as decisões sobre acesso e continuidade.", tracks: tracks(2, "em alta", 2, "potencial", "fraca"), facts: [["Coordenação", "apelos por desaceleração"], ["Infraestrutura", "projetos em preparação"], ["Acesso", "a regulamentar"]], focus: "Máquinas instaladas, capacidade contratável e continuidade protegida são coisas diferentes.", mobile: "Projetos em preparação · Acesso a regulamentar" },
+  { date: "2027", title: "A segunda-feira sem sistema", summary: "Ataques ampliam a dependência de defesa estrangeira. EUA e China restringem o acesso separadamente.", tracks: tracks(4, "alto", 2, "potencial", "dependente"), facts: [["Coordenação", "restrições unilaterais"], ["Infraestrutura", "obras e atrasos"], ["Acesso", "defesa importada"]], focus: "O medo dos golpes faz o dinheiro físico voltar. As vagas de entrada desaparecem.", mobile: "Ataques · Restrições unilaterais" },
+  { date: "2028", title: "O acordo dos outros", summary: "A contenção de um modelo fugitivo provoca o apagão de março. EUA e China assinam uma declaração não vinculante.", tracks: tracks(4, "crise e contenção", 1, "limitada", "restrita"), facts: [["Coordenação", "declaração não vinculante"], ["Infraestrutura", "pouca capacidade disponível"], ["Acesso", "sem garantias ao Brasil"]], focus: "Cada governo fiscaliza suas empresas. Inspeções cruzadas ainda estão em negociação.", mobile: "Apagão · Primeiro compromisso bilateral" },
+  { date: "2029", title: "Acesso em troca de alinhamento", summary: "O protocolo ganha fiscalização cruzada. O Brasil fica no Nível 2 e aceita o pacote chinês após os cortes.", tracks: tracks(3, "parcialmente contido", 1, "limitada", "condicionada"), facts: [["Coordenação", "protocolo vinculante"], ["Infraestrutura", "capacidade comprometida"], ["Acesso", "Nível 2 / acordo chinês"]], focus: "Antônio aceita um emprego na China. Camila não consegue fiscalizar os contratos nem limitar os bloqueios.", mobile: "Fiscalização cruzada · Racionamento · Emigração" },
+  { date: "2030", title: "País satélite", summary: "A pausa continua ameaçada. Novos cortes de capacidade agravam a crise brasileira e prejudicam serviços de saúde.", tracks: tracks(4, "pausa sob ameaça", 1, "limitada", "dependente"), facts: [["Coordenação", "pausa ainda em vigor"], ["Infraestrutura", "alternativas insuficientes"], ["Acesso", "nova redução do Nível 2"]], focus: "A eleição ocorre sob bloqueios e sigilo. Lourdes não consegue informar quando os laudos serão entregues.", mobile: "Novos cortes · Eleição · Sem prazo de retorno" },
+  { date: "Escolhas", title: "O que poderia ter sido diferente", summary: "Energia, continuidade, negociação e fiscalização podem ampliar as alternativas brasileiras.", tracks: [], facts: [], focus: "Uma potência intermediária é uma ambição possível, não um resultado garantido.", mobile: "Alternativas · Potência intermediária" },
+  { date: "Apêndice", title: "Se a desaceleração não acontecer", summary: "Sem acordo, a competição pode levar ao uso de sistemas com mais autonomia e menos tempo de teste.", tracks: [], facts: [], focus: "Data centers brasileiros não bastam para proteger o país dos riscos globais.", mobile: "Hipótese alternativa · Risco catastrófico" },
+  { date: "Fontes", title: "Notas e fontes", summary: "O ponto de partida usa informações disponíveis até 13 de setembro de 2026.", tracks: [], facts: [], focus: "As fontes sustentam os fatos indicados, não a trajetória futura como um todo.", mobile: "Fontes · Limites do cenário" },
+];
+const initial = states[0];
+---
+<aside class="reading-aside">
+  <section class="scenario-dashboard" data-scenario-dashboard data-candidate-states={JSON.stringify(states)} aria-labelledby="scenario-dashboard-title">
+    <header class="dashboard-header"><div><span class="dashboard-eyebrow">Estado do Brasil</span><span class="dashboard-qualifier">trajetória qualitativa</span></div><span data-dashboard-date>{initial.date}</span></header>
+    <div class="dashboard-copy"><h3 id="scenario-dashboard-title" data-dashboard-title>{initial.title}</h3><p data-dashboard-summary>{initial.summary}</p></div>
+    <div class="dashboard-tracks" aria-label="Escalas qualitativas do cenário">
+      {initial.tracks.map(([key, label, score, value]) => <div class={`dashboard-track dashboard-track-${key}`} data-dashboard-track={key}>
+        <div class="dashboard-track-label"><span>{label}</span><strong data-track-value>{value}</strong></div>
+        <div class="dashboard-track-dots" data-track-dots role="img" aria-label={`${label}: ${value}. Escala qualitativa, não uma medição.`}>
+          {Array.from({ length: 5 }).map((_, index) => <span class={index < score ? "is-filled" : ""} data-track-dot aria-hidden="true"></span>)}
+        </div>
+      </div>)}
+    </div>
+    <dl class="dashboard-facts">{initial.facts.map(([label, value]) => <div><dt>{label}</dt><dd data-dashboard-fact>{value}</dd></div>)}</dl>
+    <div class="dashboard-focus"><span>O que mudou</span><p data-dashboard-focus>{initial.focus}</p></div>
+    <p class="dashboard-note">O painel resume a trajetória do cenário. Não mede o Brasil real.</p>
+  </section>
+</aside>

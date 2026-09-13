@@ -1,49 +1,116 @@
-.candidate-language { font: 600 0.875rem/1.4 var(--sans); white-space: nowrap; color: var(--amber); }
-.candidate-banner { padding: 0.85rem max(1rem, calc((100vw - 80rem) / 2)); background: var(--amber-pale); border-bottom: 1px solid var(--line-dark); font: 400 1rem/1.5 var(--sans); display: flex; flex-wrap: wrap; gap: 0.3rem 1.5rem; }
-.candidate-banner strong { color: var(--amber); }
-.candidate-intro { max-width: 80rem; margin: 0 auto; padding: 3.5rem 1.25rem 2.75rem; border-bottom: 1px solid var(--line); }
-.candidate-eyebrow { font: 650 0.875rem/1.4 var(--sans); color: var(--forest); text-transform: uppercase; letter-spacing: 0.08em; }
-.candidate-intro h1 { margin: 0.8rem 0 1.4rem; max-width: 19ch; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 550; letter-spacing: -0.045em; }
-.candidate-deck { max-width: 48rem; font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.6; }
-.candidate-byline, .candidate-scope { max-width: 49rem; font: 400 0.95rem/1.6 var(--sans); color: var(--ink-soft); }
-.candidate-actions { display: flex; gap: 0.9rem 1.5rem; flex-wrap: wrap; align-items: center; margin: 1.6rem 0; font: 500 1rem/1.5 var(--sans); }
-.candidate-actions a { color: var(--forest); padding-block: 0.3rem; }
-.candidate-actions span { font-size: 0.875rem; color: var(--ink-soft); }
-.candidate-reading { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem 5rem; display: grid; grid-template-columns: 15rem minmax(0, 45rem); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
-.candidate-nav { position: sticky; top: 6.4rem; margin-top: 4rem; max-height: calc(100svh - 8rem); overflow-y: auto; font: 450 0.95rem/1.5 var(--sans); }
-.candidate-nav > p { font-weight: 650; }
-.candidate-nav ol { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--line-dark); }
-.candidate-nav li a { display: block; padding: 0.6rem 0.85rem; text-decoration: none; }
-.candidate-nav li a:hover { background: var(--forest-pale); }
-.candidate-compare { display: block; margin-top: 1.5rem; font-size: 0.875rem; }
+/* Keep the existing editorial theme; this composition belongs only to /candidato. */
+.candidate-page .reading-layout {
+  grid-template-columns: 10rem minmax(0, 44rem) minmax(16rem, 20rem);
+  grid-template-areas: ". opening dashboard" "timeline prose dashboard";
+  grid-template-rows: auto 1fr;
+  gap: 2.25rem;
+  padding-block: 2.5rem 7rem;
+}
+.candidate-opening { grid-area: opening; min-width: 0; }
+.candidate-opening h1 {
+  margin: 0;
+  font: 650 clamp(2.75rem, 5.2vw, 4.5rem)/1.12 var(--serif);
+  letter-spacing: -0.045em;
+}
+.candidate-opening h1 span {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--forest);
+  font-size: clamp(1.55rem, 2.7vw, 2.15rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+.candidate-deck { margin: 1.65rem 0 1.25rem; font: 400 1.18rem/1.65 var(--serif); }
+.candidate-opening .hero-actions { margin-top: 0; gap: 0.65rem; }
+.candidate-reading-time { margin: 1rem 0 0; color: var(--ink-soft); font: 450 0.8125rem/1.5 var(--sans); }
+.candidate-disclaimer { margin: 0.65rem 0 0; color: var(--ink-soft); font: 400 0.875rem/1.6 var(--sans); }
+.candidate-page .chapter-nav { grid-area: timeline; }
+.candidate-page .candidate-prose { grid-area: prose; }
+/* The aside spans both rows, so the existing sticky panel follows the whole story. */
+.candidate-page .reading-aside { grid-area: dashboard; min-width: 0; }
+.candidate-page .scenario-dashboard { top: 6rem; }
+.candidate-page .mobile-menu { display: block; position: relative; }
+.candidate-page .mobile-menu summary {
+  width: 2.75rem; height: 2.75rem; display: grid; align-content: center;
+  gap: 0.28rem; padding: 0.5rem; border: 1px solid var(--line-dark);
+  cursor: pointer; list-style: none;
+}
+.candidate-page .mobile-menu summary::-webkit-details-marker { display: none; }
+.candidate-page .mobile-menu summary span { display: block; height: 1px; background: var(--ink); }
+.candidate-page .mobile-menu nav {
+  position: absolute; top: 3rem; right: 0;
+  width: min(19rem, calc(100vw - 2rem)); max-height: calc(100dvh - 6rem); overflow-y: auto;
+  padding: 0.7rem; border: 1px solid var(--ink); background: var(--paper-light);
+  box-shadow: 0 1rem 2rem rgba(38, 33, 25, 0.15);
+}
+.candidate-page .mobile-menu nav a {
+  display: block; min-height: 2.75rem; padding: 0.8rem;
+  border-bottom: 1px solid var(--line); font: 600 0.875rem/1.3 var(--sans); text-decoration: none;
+}
+.candidate-page .mobile-menu nav a:last-child { border-bottom: 0; }
+@media (min-width: 961px) {
+  .candidate-page .header-inner { grid-template-columns: 1fr auto 1fr; gap: 1.5rem; }
+  .candidate-page .desktop-nav { display: flex; font-size: 0.875rem; gap: 1.5rem; }
+}
+.candidate-page .language-switch [aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; }
 .candidate-prose { min-width: 0; overflow-wrap: anywhere; }
-.candidate-prose h2 { font-size: clamp(1.9rem, 3.3vw, 2.8rem); line-height: 1.15; scroll-margin-top: 6rem; }
-.candidate-prose h3 { font-size: 1.25rem; }
-.candidate-prose .candidate-evidence { padding: 0.85rem 1rem; border-left: 3px solid var(--amber); background: var(--amber-pale); font: 450 0.95rem/1.6 var(--sans); }
+.candidate-page .dashboard-copy h3 { margin: 0; font: 650 1.15rem/1.18 var(--sans); letter-spacing: -0.02em; }
+.candidate-page .dashboard-header [data-dashboard-date] { flex: none; padding: 0.38rem 0.48rem; border-radius: 0.28rem; background: var(--ink); color: var(--paper-light); font: 680 0.875rem/1 var(--mono); white-space: nowrap; }
+.candidate-page .scenario-dashboard [hidden] { display: none; }
+.candidate-page .scenario-dashboard[data-section-kind="choices"] { border-color: var(--forest); }
+.candidate-prose .candidate-note { margin: 1.6rem 0 2rem; border-block: 1px solid var(--line); padding: 0.8rem 0; font: 400 1rem/1.65 var(--sans); }
+.candidate-note summary { color: var(--forest); cursor: pointer; font-weight: 600; }
+.candidate-note summary:focus-visible { outline: 2px solid var(--forest); outline-offset: 5px; }
+.candidate-prose .candidate-note p { margin: 0.8rem 0 0; font: inherit; color: var(--ink-soft); }
 .candidate-prose .candidate-diagram { margin: 2.5rem 0; padding: 1.4rem; background: var(--paper-light); border: 1px solid var(--line-dark); }
 .candidate-diagram figcaption { font: 650 1.1rem/1.5 var(--sans); }
-.candidate-prose .candidate-diagram ol { padding: 0; list-style: none; display: grid; gap: 0.8rem; margin: 1.25rem 0; counter-reset: stage; }
+.candidate-prose .candidate-diagram ol { padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin: 1.25rem 0; counter-reset: stage; }
+.candidate-prose .candidate-diagram:has(li:nth-child(4)) ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .candidate-prose .candidate-diagram li { padding: 0.9rem 1rem; border-left: 3px solid var(--forest); background: var(--forest-pale); font: 450 1rem/1.5 var(--sans); counter-increment: stage; }
 .candidate-diagram li strong::before { content: counter(stage, decimal-leading-zero) " · "; color: var(--forest); }
 .candidate-diagram li span { display: block; margin-top: 0.3rem; }
 .candidate-prose .candidate-diagram p { margin-bottom: 0; font: 400 0.95rem/1.6 var(--sans); color: var(--ink-soft); }
 .candidate-prose .candidate-sources li { margin-bottom: 1.2rem; font: 400 1rem/1.6 var(--sans); scroll-margin-top: 6rem; }
-@media (max-width: 850px) {
-  .candidate-reading { display: block; max-width: 47.5rem; }
-  .candidate-nav { position: static; max-height: none; margin: 1.5rem 0 0; }
-  .candidate-nav ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.2rem; }
-  .candidate-intro { padding-top: 2rem; }
-  .candidate-prose h2 { margin-top: 3rem; }
+.candidate-page #resumo-do-cenario { scroll-margin-top: 6rem; }
+.candidate-table-scroll { overflow-x: auto; margin-top: 1rem; }
+.candidate-table-scroll table { width: 100%; border-collapse: collapse; font: 400 0.92rem/1.55 var(--sans); }
+.candidate-table-scroll th, .candidate-table-scroll td { padding: 0.7rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.candidate-table-scroll th { background: var(--forest-pale); }
+.candidate-table-scroll caption { padding-bottom: 0.65rem; text-align: left; color: var(--ink-soft); }
+.candidate-table-scroll:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+.candidate-diagram:has(#candidate-tiers-title) li strong::before,
+.candidate-diagram:has(#candidate-accord-title) li strong::before { content: none; }
+@media (max-width: 600px) {
+  .candidate-table-scroll table { min-width: 32rem; }
 }
-@media (max-width: 430px) {
-  .candidate-nav ol { grid-template-columns: 1fr; }
-  .candidate-banner { display: block; }
-  .candidate-banner span { display: block; margin-top: 0.25rem; }
+@media (max-width: 1280px) {
+  .candidate-page .reading-layout {
+    width: min(100% - 3rem, 78rem);
+    grid-template-columns: minmax(0, 44rem) minmax(16rem, 20rem);
+    grid-template-areas: "opening dashboard" "prose dashboard";
+    gap: 2rem;
+  }
+  .candidate-page .chapter-nav { display: none; }
+}
+@media (max-width: 960px) {
+  .candidate-page .reading-layout {
+    width: min(100% - 2rem, 45rem);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "opening" "prose";
+  }
+}
+@media (max-width: 760px) {
+  .candidate-page .reading-layout { padding-block: 1.5rem 6rem; gap: 1.75rem; }
+  .candidate-deck { margin-top: 1.25rem; font-size: 1.04rem; line-height: 1.65; }
+  .candidate-opening h1 { font-size: clamp(2.65rem, 11.5vw, 3.5rem); }
+}
+@media (max-width: 600px) {
+  .candidate-prose .candidate-diagram ol, .candidate-prose .candidate-diagram:has(li:nth-child(4)) ol { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .candidate-page { scroll-behavior: auto; } html:has(.candidate-page) { scroll-behavior: auto; } }
 @media print {
-  .candidate-page .site-header, .candidate-page .site-footer, .candidate-nav, .candidate-actions { display: none; }
-  .candidate-reading { display: block; max-width: none; }
+  .candidate-page .site-header, .candidate-page .site-footer, .candidate-page .chapter-nav, .candidate-page .reading-aside, .candidate-page .mobile-chapter-bar, .candidate-page .hero-actions { display: none; }
+  .candidate-page .reading-layout { display: block; max-width: none; }
   .candidate-prose h2 { break-after: avoid; }
   .candidate-diagram { break-inside: avoid; }
 }

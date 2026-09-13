@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 6,
+  "revision": 24,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
   "status": "review",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-12T18:58:04Z",
+  "updated_at": "2026-09-13T20:01:55Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Candidate deployed at https://brasil-2030.piccini.app/candidato from pushed content commit 3397ca41816858a31a39f74489f93e0993c04557; Cloudflare version 8c962c6b-23b3-472a-8ac3-03ef1c59e1e3. All 22 tests passed; live article and Markdown match the build. Main remains unchanged.",
-  "next_action": "Authors review the candidate; decide whether to integrate its implementation and replace the existing narrative.",
+  "current_state": "Approved year-by-year candidate integrated with coherent synopsis, three diagrams, fifteen sources, source tooltips and exact final dialogue. 7854 words, 38 min; 27 tests and build checks pass. Publication and Git authorized.",
+  "next_action": "Commit exact candidate files, push task branch, direct-upload existing Cloudflare Worker, verify live HTML and Markdown and record receipt.",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -70,6 +70,22 @@
       "scope": "Deploy the clearly labeled candidate at /candidato on the existing public website, preserving the current narrative.",
       "evidence": "Current user request explicitly asks to deploy as a candidate on the site.",
       "recorded_at": "2026-09-12T18:54:43Z"
+    },
+    {
+      "gate": "git",
+      "decision": "approved",
+      "approver": "luiz",
+      "scope": "Commit and push reviewed candidate and coherent supporting UI on codex/narrative-candidate-2026-09-12; no main integration.",
+      "evidence": "Luiz: Faça a nova versão do site com esse texto. Revise quadros, diagramas, tooltips e footnotes para ficar coerente. Commit, push e deploy.",
+      "recorded_at": "2026-09-13T20:00:40Z"
+    },
+    {
+      "gate": "publication",
+      "decision": "approved",
+      "approver": "luiz",
+      "scope": "Deploy approved Portuguese candidate at existing /candidato and /candidato.md, coherent diagrams, summary and notes; preserve main edition and existing hosting.",
+      "evidence": "Current instruction explicitly requests site update, coherent supporting visuals, commit, push and deploy.",
+      "recorded_at": "2026-09-13T20:01:13Z"
     }
   ],
   "history": [
@@ -112,6 +128,146 @@
       "from": "active",
       "to": "review",
       "note": ""
+    },
+    {
+      "at": "2026-09-12T19:10:29Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T19:24:23Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T20:51:46Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T20:54:27Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T21:11:59Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T21:20:13Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T21:27:53Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T21:28:47Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T23:06:06Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-12T23:11:41Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
+    },
+    {
+      "at": "2026-09-13T13:20:55Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-13T13:41:27Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": "Completed in the approved October-election style using write-well. Audit records source qualifications, continuity checks and local-only scope."
+    },
+    {
+      "at": "2026-09-13T14:01:42Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-13T14:10:09Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": "Removed Rafael, André, Juliana and Marlene arcs and cut repeated explanations. Audit records exact reduction, voice preservation and unavailable stop-slop bridge fallback."
+    },
+    {
+      "at": "2026-09-13T20:00:12Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": ""
+    },
+    {
+      "at": "2026-09-13T20:00:40Z",
+      "actor": "codex",
+      "event": "approval_recorded",
+      "note": "git: approved"
+    },
+    {
+      "at": "2026-09-13T20:01:13Z",
+      "actor": "codex",
+      "event": "approval_recorded",
+      "note": "publication: approved"
+    },
+    {
+      "at": "2026-09-13T20:01:55Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": ""
     }
   ],
   "completion": {
@@ -127,11 +283,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Candidate deployed at https://brasil-2030.piccini.app/candidato from pushed content commit 3397ca41816858a31a39f74489f93e0993c04557; Cloudflare version 8c962c6b-23b3-472a-8ac3-03ef1c59e1e3. All 22 tests passed; live article and Markdown match the build. Main remains unchanged.
+Approved year-by-year candidate integrated with coherent synopsis, three diagrams, fifteen sources, source tooltips and exact final dialogue. 7854 words, 38 min; 27 tests and build checks pass. Publication and Git authorized.
 
 ## Next action
 
-Authors review the candidate; decide whether to integrate its implementation and replace the existing narrative.
+Commit exact candidate files, push task branch, direct-upload existing Cloudflare Worker, verify live HTML and Markdown and record receipt.
 
 ## Authority gates
 
