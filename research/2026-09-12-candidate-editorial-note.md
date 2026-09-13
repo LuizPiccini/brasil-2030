@@ -162,3 +162,12 @@ Luiz approved the revised annual chapters, including the final line “Não sei,
 - Validation: zero Astro errors/warnings/hints; 27 passing tests; 56 deployment assets pass the private-artifact check. Tests cover approved chronology, exact final line, summary links, three diagrams, fifteen source notes and all navigation anchors.
 - The author-approved expansions replace the previous 6,000-word ceiling. Current manuscript plus notes/apparatus: 7,854 words and 38 minutes under the unchanged 210-word formula. Regression ceiling is now 8,200 to prevent further unreviewed expansion, not to hide reading time.
 - Publication uses the existing Cloudflare Worker through direct upload, not a new Sites project or Git integration. Deployment receipt follows after live verification.
+
+### Publication receipt
+
+- Source commit: `914f58b5fef1e961ab12ab7cb6db51a75ed7a59b`, pushed normally to `origin/codex/narrative-candidate-2026-09-12`. No integration into main.
+- Cloudflare version: `fae3caaa-9cd8-4a3f-b9d8-c1a90f78ae1e`. Publisher uploaded three changed assets: candidate HTML, candidate Markdown and candidate CSS.
+- Public https://brasil-2030.piccini.app/candidato and /candidato.md return HTTP 200 and match the validated build byte-for-byte. The exact final line is present in both.
+- Main page matches its pre-deployment content byte-for-byte, SHA-256 `a819e7a12f379d5a5e8006e3b75082690314e61ac6e58181b1d236733e363aa5`.
+- Candidate HTML SHA-256: `d42524fea750ac507253642b7950af8d86d7f92a1f198e64754f59d20f5f1ebc`; Markdown: `da5615474146e183fe2292c6b5a42242073fd54e1446b1c4dc618d4eaf3757c8`.
+- This receipt is documentation only; it does not change the deployed source or require another deployment.

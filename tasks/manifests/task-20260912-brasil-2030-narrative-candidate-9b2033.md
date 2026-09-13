@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 24,
+  "revision": 25,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "review",
+  "status": "done",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-13T20:01:55Z",
+  "updated_at": "2026-09-13T20:03:34Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Approved year-by-year candidate integrated with coherent synopsis, three diagrams, fifteen sources, source tooltips and exact final dialogue. 7854 words, 38 min; 27 tests and build checks pass. Publication and Git authorized.",
-  "next_action": "Commit exact candidate files, push task branch, direct-upload existing Cloudflare Worker, verify live HTML and Markdown and record receipt.",
+  "current_state": "Published approved candidate with final dialogue, three coherent diagrams, synopsis, tooltips and fifteen source notes. 27 tests pass; 38-minute honest estimate. Main edition unchanged.",
+  "next_action": "",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -268,11 +268,19 @@
       "from": "active",
       "to": "review",
       "note": ""
+    },
+    {
+      "at": "2026-09-13T20:03:34Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "done",
+      "note": "Luiz approved manuscript and authorized publication. Source commit 914f58b5fef1e961ab12ab7cb6db51a75ed7a59b pushed; Cloudflare fae3caaa-9cd8-4a3f-b9d8-c1a90f78ae1e deployed. Public candidate HTML/Markdown match build; main unchanged."
     }
   ],
   "completion": {
-    "summary": null,
-    "completed_at": null
+    "summary": "Luiz approved manuscript and authorized publication. Source commit 914f58b5fef1e961ab12ab7cb6db51a75ed7a59b pushed; Cloudflare fae3caaa-9cd8-4a3f-b9d8-c1a90f78ae1e deployed. Public candidate HTML/Markdown match build; main unchanged.",
+    "completed_at": "2026-09-13T20:03:34Z"
   }
 }
 ```
@@ -283,11 +291,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Approved year-by-year candidate integrated with coherent synopsis, three diagrams, fifteen sources, source tooltips and exact final dialogue. 7854 words, 38 min; 27 tests and build checks pass. Publication and Git authorized.
+Published approved candidate with final dialogue, three coherent diagrams, synopsis, tooltips and fifteen source notes. 27 tests pass; 38-minute honest estimate. Main edition unchanged.
 
 ## Next action
 
-Commit exact candidate files, push task branch, direct-upload existing Cloudflare Worker, verify live HTML and Markdown and record receipt.
+Not set.
 
 ## Authority gates
 
