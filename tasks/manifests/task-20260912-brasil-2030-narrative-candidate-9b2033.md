@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 26,
+  "revision": 27,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "active",
+  "status": "done",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-13T20:29:22Z",
+  "updated_at": "2026-09-13T20:30:44Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Fixed caption collapse, inherited comparison labels, clipped cells and narrow-screen footer overflow. Nine browser viewport checks and 27 tests pass.",
-  "next_action": "Publish and verify candidate mobile repair.",
+  "current_state": "Candidate mobile summary fixed and verified in production: caption, labels, wrapping and footer. No narrative changes.",
+  "next_action": "",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -284,11 +284,19 @@
       "from": "done",
       "to": "active",
       "note": "Mobile synopsis regression reported by Luiz; candidate-scoped CSS repair."
+    },
+    {
+      "at": "2026-09-13T20:30:44Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "done",
+      "note": "Committed and pushed 483c26d; deployed Cloudflare version 4713553a-1dee-4123-8e60-cd11c29e3c94. Browser checks pass on production at nine widths (320 to 1440px); 27 tests pass; only candidate HTML/CSS assets changed, narrative untouched."
     }
   ],
   "completion": {
-    "summary": null,
-    "completed_at": null
+    "summary": "Committed and pushed 483c26d; deployed Cloudflare version 4713553a-1dee-4123-8e60-cd11c29e3c94. Browser checks pass on production at nine widths (320 to 1440px); 27 tests pass; only candidate HTML/CSS assets changed, narrative untouched.",
+    "completed_at": "2026-09-13T20:30:44Z"
   }
 }
 ```
@@ -299,11 +307,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Fixed caption collapse, inherited comparison labels, clipped cells and narrow-screen footer overflow. Nine browser viewport checks and 27 tests pass.
+Candidate mobile summary fixed and verified in production: caption, labels, wrapping and footer. No narrative changes.
 
 ## Next action
 
-Publish and verify candidate mobile repair.
+Not set.
 
 ## Authority gates
 
