@@ -73,7 +73,7 @@
 .candidate-prose .candidate-sources li { margin-bottom: 1.2rem; font: 400 1rem/1.6 var(--sans); scroll-margin-top: 6rem; }
 .candidate-page #resumo-do-cenario { scroll-margin-top: 6rem; }
 .candidate-table-scroll { overflow-x: auto; margin-top: 1rem; }
-.candidate-table-scroll table { width: 100%; border-collapse: collapse; font: 400 0.92rem/1.55 var(--sans); }
+.candidate-page .candidate-table-scroll table { display: table; width: 100%; min-width: 0; white-space: normal; border-collapse: collapse; font: 400 0.92rem/1.55 var(--sans); }
 .candidate-table-scroll th, .candidate-table-scroll td { padding: 0.7rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
 .candidate-table-scroll th { background: var(--forest-pale); }
 .candidate-table-scroll caption { padding-bottom: 0.65rem; text-align: left; color: var(--ink-soft); }
@@ -81,7 +81,25 @@
 .candidate-diagram:has(#candidate-tiers-title) li strong::before,
 .candidate-diagram:has(#candidate-accord-title) li strong::before { content: none; }
 @media (max-width: 600px) {
-  .candidate-table-scroll table { min-width: 32rem; }
+  .candidate-page .footer-links { flex-wrap: wrap; }
+  /* The global mobile table is a 2026-vs-2030 comparison. This is a timeline. */
+  #resumo-do-cenario .candidate-table-scroll { overflow: visible; }
+  #resumo-do-cenario table,
+  #resumo-do-cenario caption,
+  #resumo-do-cenario tbody,
+  #resumo-do-cenario tr,
+  #resumo-do-cenario th[scope="row"],
+  #resumo-do-cenario td { display: block; width: 100%; min-width: 0; white-space: normal; }
+  #resumo-do-cenario table { margin-block: 0.75rem 0; }
+  #resumo-do-cenario caption { padding: 0 0 0.8rem; }
+  #resumo-do-cenario tbody tr { padding: 1rem; }
+  #resumo-do-cenario th[scope="row"] {
+    padding: 0 0 0.6rem; border: 0; background: transparent;
+    color: var(--forest); font-size: 1.1rem;
+  }
+  #resumo-do-cenario td { padding: 0.55rem 0; border: 0; }
+  #resumo-do-cenario td:nth-child(2)::before { content: "O que acontece"; }
+  #resumo-do-cenario td:nth-child(3)::before { content: "Consequência para o Brasil"; }
 }
 @media (max-width: 1280px) {
   .candidate-page .reading-layout {

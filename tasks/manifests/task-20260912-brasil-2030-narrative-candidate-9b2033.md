@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 25,
+  "revision": 26,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "done",
+  "status": "active",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-13T20:03:34Z",
+  "updated_at": "2026-09-13T20:29:22Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Published approved candidate with final dialogue, three coherent diagrams, synopsis, tooltips and fifteen source notes. 27 tests pass; 38-minute honest estimate. Main edition unchanged.",
-  "next_action": "",
+  "current_state": "Fixed caption collapse, inherited comparison labels, clipped cells and narrow-screen footer overflow. Nine browser viewport checks and 27 tests pass.",
+  "next_action": "Publish and verify candidate mobile repair.",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -276,11 +276,19 @@
       "from": "review",
       "to": "done",
       "note": "Luiz approved manuscript and authorized publication. Source commit 914f58b5fef1e961ab12ab7cb6db51a75ed7a59b pushed; Cloudflare fae3caaa-9cd8-4a3f-b9d8-c1a90f78ae1e deployed. Public candidate HTML/Markdown match build; main unchanged."
+    },
+    {
+      "at": "2026-09-13T20:29:22Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "done",
+      "to": "active",
+      "note": "Mobile synopsis regression reported by Luiz; candidate-scoped CSS repair."
     }
   ],
   "completion": {
-    "summary": "Luiz approved manuscript and authorized publication. Source commit 914f58b5fef1e961ab12ab7cb6db51a75ed7a59b pushed; Cloudflare fae3caaa-9cd8-4a3f-b9d8-c1a90f78ae1e deployed. Public candidate HTML/Markdown match build; main unchanged.",
-    "completed_at": "2026-09-13T20:03:34Z"
+    "summary": null,
+    "completed_at": null
   }
 }
 ```
@@ -291,11 +299,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Published approved candidate with final dialogue, three coherent diagrams, synopsis, tooltips and fifteen source notes. 27 tests pass; 38-minute honest estimate. Main edition unchanged.
+Fixed caption collapse, inherited comparison labels, clipped cells and narrow-screen footer overflow. Nine browser viewport checks and 27 tests pass.
 
 ## Next action
 
-Not set.
+Publish and verify candidate mobile repair.
 
 ## Authority gates
 
