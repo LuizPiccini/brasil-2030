@@ -1,0 +1,26 @@
+# Publicação alternativa, para revisão da equipe.
+# Worker separado, sem domínio próprio e sem banco: não toca a produção.
+#
+#   npm run deploy:alt
+#
+# Diferenças deliberadas em relação a wrangler.toml:
+#   - name diferente, então é outro Worker, com outra URL *.workers.dev
+#   - sem [[routes]], então não assume brasil-2030.piccini.app
+#   - sem [[d1_databases]], então o formulário de apoio responde 503 em vez de
+#     gravar assinaturas de teste no banco real de signatários
+#   - worker.js já carimba noindex/nofollow/noarchive em hosts .workers.dev
+
+name = "piccini-brasil-2030-proposta"
+compatibility_date = "2026-08-05"
+main = "./worker.js"
+workers_dev = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+html_handling = "none"
+not_found_handling = "404-page"
+run_worker_first = true
+
+[vars]
+PROPOSTA = "1"

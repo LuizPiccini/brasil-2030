@@ -1,0 +1,41 @@
+---
+// Só aparece na publicação alternativa (PUBLIC_PROPOSTA=1). A produção não muda.
+import type { Locale } from "../data/site";
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const show = import.meta.env.PUBLIC_PROPOSTA === "1";
+---
+{show && (
+  <div class="proposal-banner">
+    <div class="proposal-inner">
+      <strong>{pt ? "Versão de proposta" : "Proposal version"}</strong>
+      <span>{pt
+        ? "Reescrita do cenário em discussão, publicada a partir do ramo danilo/candidate-edits. Não é a edição pública."
+        : "Scenario rewrite under discussion, published from branch danilo/candidate-edits. This is not the public edition."}</span>
+      <a href="https://brasil-2030.piccini.app/">{pt ? "Ver a edição atual" : "See the current edition"}</a>
+    </div>
+  </div>
+)}
+<style>
+  .proposal-banner {
+    background: #7a1f16;
+    color: #fdf6f4;
+    font-family: "IBM Plex Sans Variable", system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .proposal-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 9px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 14px;
+  }
+  .proposal-inner strong { font-weight: 600; letter-spacing: .04em; text-transform: uppercase; font-size: 11px; }
+  .proposal-inner span { opacity: .9; }
+  .proposal-inner a { color: inherit; text-underline-offset: 3px; margin-left: auto; white-space: nowrap; }
+  @media (max-width: 720px) { .proposal-inner a { margin-left: 0; } }
+</style>

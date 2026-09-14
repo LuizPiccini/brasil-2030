@@ -14,7 +14,9 @@
     "validate": "npm run build && npm test && node scripts/check-build.mjs",
     "preview": "astro preview",
     "deploy:dry": "npm run validate && wrangler deploy --dry-run",
-    "deploy": "npm run validate && wrangler deploy"
+    "deploy": "npm run validate && wrangler deploy",
+    "build:alt": "PUBLIC_PROPOSTA=1 astro check && PUBLIC_PROPOSTA=1 astro build",
+    "deploy:alt": "npm run build:alt && npm test && wrangler deploy --config wrangler.alt.toml"
   },
   "dependencies": {
     "@fontsource-variable/ibm-plex-sans": "^5.3.0",

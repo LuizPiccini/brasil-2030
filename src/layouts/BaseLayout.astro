@@ -2,6 +2,7 @@
 import "@fontsource-variable/literata";
 import "@fontsource-variable/ibm-plex-sans";
 import "../styles/global.css";
+import ProposalBanner from "../components/ProposalBanner.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { routes, siteCopy, type Locale, type PageKey } from "../data/site";
@@ -58,6 +59,7 @@ const socialImage = new URL("/og.png", Astro.site);
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main-content">{copy.skip}</a>
+    <ProposalBanner locale={locale} />
     <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} candidate={candidate} />
     <main id="main-content" tabindex="-1">
       <slot />

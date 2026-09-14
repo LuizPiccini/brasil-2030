@@ -132,3 +132,17 @@
   .candidate-prose h2 { break-after: avoid; }
   .candidate-diagram { break-inside: avoid; }
 }
+
+/* Marcação de edição em revisão: <del>texto anterior</del><ins>texto proposto</ins>.
+   Remover com: node scripts/resolve-edits.mjs src/content/scenario-candidate-pt.md */
+.candidate-page .candidate-prose del {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  color: #7a7a80;
+}
+.candidate-page .candidate-prose ins {
+  text-decoration: none;
+  color: #b0241a;
+  border-bottom: 1.5px solid #b0241a;
+}
+.candidate-page .candidate-prose del + ins { margin-left: 0.25em; }

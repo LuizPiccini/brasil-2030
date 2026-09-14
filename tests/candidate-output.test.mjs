@@ -95,7 +95,11 @@ test("complete candidate keeps the approved opening and October-to-2030 chronolo
     assert.doesNotMatch(output, /A notícia que fica para depois|Todos os candidatos à presidência|os CEOs das quatro maiores empresas/);
     assert.doesNotMatch(output, /Rafael|André|Juliana|Marlene/, "only Camila and Lourdes retain fictional character arcs");
   }
-  assert.ok(markdown.includes("Nas raras vezes que os riscos de IA são mencionados, autoridades e jornalistas pensam em deepfakes e desinformação. Alguns empresários tentam alertar para riscos de desemprego, enquanto outros tentam usar esses medos para garantir mais proteções a suas indústrias."), "preserve Luiz's opening language");
+  // Edições em revisão ficam no manuscrito como <del>/<ins>. Enquanto pendentes, a linguagem
+  // aprovada é conferida na versão sem as edições. Aceitá-las (scripts/resolve-edits.mjs) volta
+  // a exigir que esta frase seja revista junto com quem a aprovou.
+  const withoutPendingEdits = markdown.replace(/<ins>[\s\S]*?<\/ins>/g, "").replace(/<\/?del>/g, "");
+  assert.ok(withoutPendingEdits.includes("Nas raras vezes que os riscos de IA são mencionados, autoridades e jornalistas pensam em deepfakes e desinformação. Alguns empresários tentam alertar para riscos de desemprego, enquanto outros tentam usar esses medos para garantir mais proteções a suas indústrias."), "preserve Luiz's opening language");
   assert.ok(markdown.includes("Camila não tira os olhos da tela e continua trabalhando enquanto seu colega reclama em voz alta."));
   const source = readFileSync(new URL("../src/content/scenario-candidate-pt.md", import.meta.url), "utf8");
   const words = source.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length;
