@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 34,
+  "revision": 35,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "active",
+  "status": "done",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-15T01:19:55Z",
+  "updated_at": "2026-09-15T01:21:37Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Publishing reviewed local edition.",
-  "next_action": "Validate, commit exact session paths, push task branch, deploy direct upload and verify production.",
+  "current_state": "Reviewed reader edition published and verified.",
+  "next_action": "",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -348,11 +348,19 @@
       "from": "review",
       "to": "active",
       "note": "User explicitly authorized commit, push and deployment of the reviewed local edition including About, summary, glossary, year navigation and letter preview."
+    },
+    {
+      "at": "2026-09-15T01:21:37Z",
+      "actor": "generic",
+      "event": "status_changed",
+      "from": "active",
+      "to": "done",
+      "note": "Source 790b1ee committed and pushed to codex/narrative-candidate-2026-09-12. Direct Cloudflare deployment 8651549c-7e1a-411d-8bfb-2571992f7428. 30 tests pass and reader checks at 320,393,768,1440px pass. Production homepage, About HTML and Markdown, letter and summary return 200 and match build byte-for-byte. Letter form remains non-transmitting preview."
     }
   ],
   "completion": {
-    "summary": null,
-    "completed_at": null
+    "summary": "Source 790b1ee committed and pushed to codex/narrative-candidate-2026-09-12. Direct Cloudflare deployment 8651549c-7e1a-411d-8bfb-2571992f7428. 30 tests pass and reader checks at 320,393,768,1440px pass. Production homepage, About HTML and Markdown, letter and summary return 200 and match build byte-for-byte. Letter form remains non-transmitting preview.",
+    "completed_at": "2026-09-15T01:21:37Z"
   }
 }
 ```
@@ -363,11 +371,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Publishing reviewed local edition.
+Reviewed reader edition published and verified.
 
 ## Next action
 
-Validate, commit exact session paths, push task branch, deploy direct upload and verify production.
+Not set.
 
 ## Authority gates
 
