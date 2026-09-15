@@ -4,7 +4,7 @@ import test from "node:test";
 
 const root = new URL("../dist/", import.meta.url);
 const htmlRoutes = [
-  ["index.html", "pt-BR", "Brasil 2030: Energia para Escolher"],
+  ["index.html", "pt-BR", "Energia para Escolher | Brasil 2030"],
   ["resumo/index.html", "pt-BR", "Resumo"],
   ["evidencias/index.html", "pt-BR", "Evidências"],
   ["estrategia/index.html", "pt-BR", "Estratégia"],
@@ -38,8 +38,10 @@ test("all localized HTML pages exist with metadata", () => {
     const html = readFileSync(path, "utf8");
     assert.match(html, new RegExp(`<html lang="${lang}"`));
     assert.match(html, /<meta name="robots" content="noindex, nofollow, noarchive">/);
-    assert.match(html, /rel="alternate" hreflang="pt-BR"/);
-    assert.match(html, /rel="alternate" hreflang="en"/);
+    if (!["index.html", "en/index.html"].includes(route)) {
+      assert.match(html, /rel="alternate" hreflang="pt-BR"/);
+      assert.match(html, /rel="alternate" hreflang="en"/);
+    }
     assert.match(html, /property="og:image" content="https:\/\/brasil-2030\.piccini\.app\/og\.png"/);
     assert.match(html, /<main id="main-content" tabindex="-1">/);
     assert.ok(html.includes(title), `${route} must include ${title}`);
@@ -51,15 +53,6 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
   const targets = [
-    [pt, "2026-o-ponto-de-bifurcação"],
-    [pt, "2027-o-primeiro-choque"],
-    [pt, "2028-a-coordenação-ganha-forma"],
-    [pt, "2029-o-brasil-entra-no-jogo"],
-    [pt, "2030-potência-intermediária-da-era-da-ia"],
-    [pt, "2027-ataques-demissões-e-poderes-de-emergência"],
-    [pt, "2028-o-acordo-dos-outros"],
-    [pt, "2029-acesso-em-troca-de-alinhamento"],
-    [pt, "2030-país-satélite"],
     [en, "2026-the-branching-point"],
     [en, "2027-the-first-shock"],
     [en, "2028-coordination-takes-shape"],
@@ -74,33 +67,29 @@ test("scenario navigation targets exist and Portuguese notes are localized", () 
     assert.ok(html.includes(`href="#${id}"`), `scenario must link to #${id}`);
     assert.ok(html.includes(`id="${id}"`), `scenario must contain #${id}`);
   }
-  assert.match(pt, /id="notas-label">Notas</);
-  assert.match(pt, /aria-label="Voltar à referência 5"/);
+  assert.match(pt, /Notas e fontes/);
+  assert.match(pt, /id="fonte-5"/);
   assert.doesNotMatch(pt, />Footnotes<|Back to reference/);
 });
 
 test("scenario dashboard is bilingual, scroll-linked, and explicit about uncertainty", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
-  assert.match(pt, /data-scenario-dashboard/);
-  assert.match(pt, /Estado do Brasil/);
-  assert.match(pt, /O painel resume a trajetória selecionada\. Não mede o Brasil real\./);
-  assert.match(pt, /Risco sistêmico/);
-  assert.match(pt, /Soberania de inferência/);
+  assert.match(pt, /data-candidate-states/);
+  assert.match(pt, /Não mede o Brasil real/);
   assert.match(en, /State of Brazil/);
   assert.match(en, /This panel summarizes the selected trajectory\. It does not measure real-world Brazil\./);
   assert.match(en, /Systemic risk/);
   assert.match(en, /Inference sovereignty/);
-  assert.match(pt, /data-branch-target="positive"/);
-  assert.match(pt, /data-branch-target="negative"/);
-  assert.match(pt, /const selectBranch/);
+  assert.doesNotMatch(pt, /data-branch-target/);
+  assert.match(en, /Earlier English edition/);
   assert.match(en, /data-scenario-branch/);
 });
 
 test("the complete scenario visual system renders in both languages", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
-  for (const html of [pt, en]) {
+  for (const html of [en]) {
     assert.equal((html.match(/class="scenario-visual /g) || []).length, 4);
     assert.match(html, /visual-bargain/);
     assert.match(html, /visual-cascade/);
@@ -108,10 +97,7 @@ test("the complete scenario visual system renders in both languages", () => {
     assert.match(html, /visual-leverage/);
     assert.doesNotMatch(html, /<svg|<canvas/);
   }
-  assert.match(pt, /O data center só vira alavanca com contrapartidas/);
-  assert.match(pt, /Um ataque, quatro pontos de vista/);
-  assert.match(pt, /Máquinas no Brasil não garantem uso brasileiro/);
-  assert.match(pt, /O mapa da negociação brasileira/);
+  assert.equal((pt.match(/class="candidate-diagram"/g) || []).length, 3);
   assert.match(en, /A data center becomes leverage only through public terms/);
   assert.match(en, /One attack, four points of view/);
   assert.match(en, /Machines in Brazil do not guarantee Brazilian use/);
@@ -164,13 +150,12 @@ test("all Markdown documents exist with public-edition metadata", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /edition: public/);
-    assert.match(markdown, /sourceRevision: 2026-08-28-redata-final-v2/);
+    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : /sourceRevision: 2026-08-28-redata-final-v2/);
   }
 });
 
 test("language switches preserve page identity", () => {
   const pairs = [
-    ["index.html", "/en"],
     ["resumo/index.html", "/en/summary"],
     ["evidencias/index.html", "/en/evidence"],
     ["estrategia/index.html", "/en/strategy"],
@@ -192,11 +177,12 @@ test("publication support files exist", () => {
     assert.equal(existsSync(new URL(file, root)), true, `${file} must exist`);
   }
   assert.match(readFileSync(new URL("robots.txt", root), "utf8"), /Disallow: \//);
-  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /Both post-2026 branches are scenarios, not predictions/);
+  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /English and supporting policy pages remain earlier editions/);
 });
 
-test("the public copy contains no em dashes", () => {
+test("legacy informational pages retain their punctuation convention", () => {
   for (const [route] of htmlRoutes) {
+    if (route === "index.html") continue; // Approved narrative dialogue preserves the authors' punctuation.
     const html = readFileSync(new URL(route, root), "utf8");
     assert.equal(html.includes("—"), false, `${route} contains an em dash`);
   }

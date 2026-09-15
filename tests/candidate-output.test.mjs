@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import worker from "../worker.js";
 import { chapterAtReadingLine } from "../src/scripts/candidate-reader.ts";
+import { candidateReadingTime } from "../src/data/candidate-reading-time.ts";
 
 const html = readFileSync(new URL("../dist/candidato/index.html", import.meta.url), "utf8");
 const markdown = readFileSync(new URL("../dist/candidato.md", import.meta.url), "utf8");
@@ -11,11 +12,11 @@ test("candidate reads as a publication without implying a translated edition", (
   assert.match(html, /<title>Energia para Escolher \| Brasil 2030<\/title>/);
   assert.match(html, /Este é um cenário, não uma previsão/);
   assert.match(html, /noindex, nofollow, noarchive/);
-  assert.match(html, /rel="canonical" href="https:\/\/brasil-2030.piccini.app\/candidato"/);
+  assert.match(html, /rel="canonical" href="https:\/\/brasil-2030.piccini.app\/"/);
   assert.doesNotMatch(html, /hreflang="en"/);
   assert.match(html, /aria-disabled="true" title="Este texto ainda não tem tradução em inglês"/);
-  assert.match(html, /href="\/candidato.md"/);
-  assert.match(readFileSync(new URL("../dist/index.html", import.meta.url), "utf8"), /href="\/candidato"/);
+  assert.match(html, /href="\/cenario.md"/);
+  assert.equal(readFileSync(new URL("../dist/index.html", import.meta.url), "utf8"), html);
 });
 
 test("candidate has a compact single-scenario opening within the existing reading design", () => {
@@ -31,12 +32,12 @@ test("candidate has a compact single-scenario opening within the existing readin
   assert.match(html, /Começar em 2026/);
   assert.equal((html.match(/data-candidate-states=/g) || []).length, 1, "one dashboard follows the full narrative");
   const primaryNav = html.match(/<nav class="desktop-nav"[^>]*>(.*?)<\/nav>/s)[1];
-  assert.deepEqual([...primaryNav.matchAll(/href="([^"]+)"/g)].map((match) => match[1]), ["/candidato", "/candidato#resumo-do-cenario", "/redata", "/sobre"]);
+  assert.deepEqual([...primaryNav.matchAll(/href="([^"]+)"/g)].map((match) => match[1]), ["/", "/#resumo-do-cenario", "/redata", "/sobre"]);
   assert.doesNotMatch(html, /class="header-cta"/);
   assert.match(markdown, /A inteligência artificial já está transformando o trabalho, a segurança e as relações entre países/);
   const rootHtml = readFileSync(new URL("../dist/index.html", import.meta.url), "utf8");
-  assert.match(rootHtml, /scenario-hero-branches/);
-  assert.match(rootHtml, /class="header-cta"/);
+  assert.doesNotMatch(rootHtml, /scenario-hero-branches/);
+  assert.match(rootHtml, /candidate-opening/);
 });
 
 test("reader tracks forward, backward and appendix navigation without conflating years", () => {
@@ -74,7 +75,7 @@ test("reader artifacts are removed in both formats while sourcing remains availa
   const backstage = /basead[oa] na proposta de Danilo|assistência de IA|aprovação coletiva|versão candidata|proposta de narrativa|PT · revisão|o que mudaria na história|para revisar, indique|candidate-banner|candidate-evidence|candidate-byline/i;
   for (const output of [html, markdown]) {
     assert.doesNotMatch(output, backstage);
-    for (let source = 1; source <= 15; source++) {
+    for (let source = 1; source <= 19; source++) {
       assert.match(output, new RegExp(`id="fonte-${source}"`));
     }
   }
@@ -95,14 +96,23 @@ test("complete candidate keeps the approved opening and October-to-2030 chronolo
     assert.doesNotMatch(output, /A notícia que fica para depois|Todos os candidatos à presidência|os CEOs das quatro maiores empresas/);
     assert.doesNotMatch(output, /Rafael|André|Juliana|Marlene/, "only Camila and Lourdes retain fictional character arcs");
   }
-  assert.ok(markdown.includes("Nas raras vezes que os riscos de IA são mencionados, autoridades e jornalistas pensam em deepfakes e desinformação. Alguns empresários tentam alertar para riscos de desemprego, enquanto outros tentam usar esses medos para garantir mais proteções a suas indústrias."), "preserve Luiz's opening language");
+  assert.ok(markdown.includes("Quando riscos de IA são mencionados, autoridades e jornalistas pensam em deepfakes e desinformação."), "preserve the approved revision");
   assert.ok(markdown.includes("Camila não tira os olhos da tela e continua trabalhando enquanto seu colega reclama em voz alta."));
   const source = readFileSync(new URL("../src/content/scenario-candidate-pt.md", import.meta.url), "utf8");
-  const words = source.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length;
-  // The author approved longer 2027–2030 chapters in the year-by-year review.
-  // Keep the real 210 wpm estimate; never shorten approved prose to pass the old ceiling.
-  assert.ok(words <= 8200, `prevent unreviewed expansion beyond the approved edition and apparatus: ${words} words`);
-  assert.match(html, new RegExp(`Cerca de ${Math.ceil(words / 210)} min de leitura`));
+  const { words, minutes } = candidateReadingTime(source);
+  assert.ok(words <= 6500, `prevent unreviewed expansion of the main narrative: ${words} words`);
+  assert.match(html, new RegExp(`Cerca de ${minutes} min de leitura`));
+  assert.doesNotMatch(source, /<\/?(?:del|ins)>/);
+});
+
+test("reading time excludes apparatus and link targets but retains main prose and introduction", () => {
+  const source = 'ignored\n## 2026: Ano\nOlá [mundo](https://example.com/long-title) [1](#fonte-1 "long tooltip").\n<details><summary>extra</summary>extra</details>\n<figure>diagram</figure><table>cells</table><aside>aside</aside>\n## 2030: Fim\nBoa noite\n## O que poderia ter sido diferente\nrecommendations\n## Notas e fontes\nreferences';
+  const base = candidateReadingTime(source, ['Uma introdução']);
+  assert.equal(base.words, 10);
+  assert.equal(base.minutes, 1);
+  assert.deepEqual(candidateReadingTime(source.replace('diagram', 'diagram '.repeat(1000)), ['Uma introdução']), base);
+  assert.deepEqual(candidateReadingTime(source + ' references'.repeat(1000), ['Uma introdução']), base);
+  assert.throws(() => candidateReadingTime('unrecognized manuscript'));
 });
 
 test("approved chronology and ending agree across manuscript, synopsis and dashboard", () => {

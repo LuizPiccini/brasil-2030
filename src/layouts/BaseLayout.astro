@@ -20,7 +20,7 @@ const { locale, pageKey, markdownHref, bodyClass = "", candidate = false } = Ast
 const copy = siteCopy[locale];
 const title = Astro.props.title ? `${Astro.props.title} | ${locale === "pt" ? "Brasil 2030" : "Brazil 2030"}` : copy.title;
 const description = Astro.props.description ?? copy.description;
-const canonical = new URL(candidate ? "/candidato" : Astro.url.pathname, Astro.site);
+const canonical = new URL(candidate ? "/" : Astro.url.pathname, Astro.site);
 const ptAlternate = new URL(routes.pt[pageKey], Astro.site);
 const enAlternate = new URL(routes.en[pageKey], Astro.site);
 const socialImage = new URL("/og.png", Astro.site);
@@ -35,7 +35,7 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta name="description" content={description} />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <link rel="canonical" href={canonical} />
-    {!candidate && <>
+    {!candidate && pageKey !== "scenario" && <>
       <link rel="alternate" hreflang="pt-BR" href={ptAlternate} />
       <link rel="alternate" hreflang="en" href={enAlternate} />
       <link rel="alternate" hreflang="x-default" href={ptAlternate} />
@@ -60,6 +60,7 @@ const socialImage = new URL("/og.png", Astro.site);
     <a class="skip-link" href="#main-content">{copy.skip}</a>
     <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} candidate={candidate} />
     <main id="main-content" tabindex="-1">
+      {locale === "en" && pageKey === "scenario" && <p class="edition-notice" style="padding: 1rem 1.5rem; border-bottom: 1px solid currentColor;">Earlier English edition. The revised Portuguese narrative is not yet translated. <a href="/">Read the current Portuguese edition</a>.</p>}
       <slot />
     </main>
     <SiteFooter locale={locale} markdownHref={markdownHref} />

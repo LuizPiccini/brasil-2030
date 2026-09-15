@@ -14,7 +14,7 @@ const navKeys: ContentPageKey[] = candidate
   ? ["scenario", "summary", "redata", "about"]
   : ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
 const secondaryKeys: ContentPageKey[] = candidate ? ["evidence", "strategy", "letter"] : [];
-const navHref = (key: ContentPageKey) => candidate && key === "scenario" ? "/candidato" : candidate && key === "summary" ? "/candidato#resumo-do-cenario" : routes[locale][key];
+const navHref = (key: ContentPageKey) => locale === "pt" && key === "summary" ? "/#resumo-do-cenario" : routes[locale][key];
 ---
 
 <header class="site-header">
@@ -30,7 +30,6 @@ const navHref = (key: ContentPageKey) => candidate && key === "scenario" ? "/can
           {copy.nav[key as keyof typeof copy.nav]}
         </a>
       ))}
-      {locale === "pt" && !candidate && <a href="/candidato">Candidata</a>}
     </nav>
 
     <div class="header-tools">
@@ -41,7 +40,7 @@ const navHref = (key: ContentPageKey) => candidate && key === "scenario" ? "/can
         <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
       </div>}
       {candidate && <div class="language-switch" aria-label="Idioma">
-        <a href="/candidato" lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span>
+        <a href="/" lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span>
         <span aria-disabled="true" title="Este texto ainda não tem tradução em inglês">EN</span>
       </div>}
       {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>}
@@ -54,7 +53,6 @@ const navHref = (key: ContentPageKey) => candidate && key === "scenario" ? "/can
             </a>
           ))}
           {secondaryKeys.map((key) => <a href={routes[locale][key]}>{copy.nav[key as keyof typeof copy.nav]}</a>)}
-          {locale === "pt" && !candidate && <a href="/candidato">Versão candidata</a>}
           <a href={routes[locale].support}>{copy.nav.support}</a>
           <a href={routes[locale].signatories}>{copy.nav.signatories}</a>
           {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>}

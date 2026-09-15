@@ -3,10 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CandidateDashboard from "../components/CandidateDashboard.astro";
 import CandidateContent, { getHeadings } from "../content/scenario-candidate-pt.md";
 import candidateSource from "../content/scenario-candidate-pt.md?raw";
+import { candidateIntroduction, candidateReadingTime } from "../data/candidate-reading-time";
 import "../styles/candidate.css";
 
 const headings = getHeadings().filter(({ depth }) => depth === 2);
-const minutes = Math.ceil(candidateSource.replace(/<[^>]*>/g, " ").split(/\s+/).length / 210);
+const { minutes } = candidateReadingTime(candidateSource);
 const chapters = headings.map((heading, index) => ({ ...heading,
   year: heading.text.match(/^20\d{2}/)?.[0] ?? ["Escolhas", "Apêndice", "Fontes"][index - 5],
   label: heading.text.replace(/^20\d{2}:\s*/, ""),
@@ -18,19 +19,18 @@ const chapters = headings.map((heading, index) => ({ ...heading,
   candidate
   title="Energia para Escolher"
   description="Um cenário para o Brasil entre 2026 e 2030: a corrida da IA desacelera, mas o país chega ao acordo sem ter preparado suas alternativas."
-  markdownHref="/candidato.md"
+  markdownHref="/cenario.md"
   bodyClass="scenario-page candidate-page"
 >
   <div class="reading-layout">
     <section class="candidate-opening" aria-labelledby="candidate-title">
       <h1 id="candidate-title">Brasil 2030<span>Energia para Escolher</span></h1>
-      <p class="candidate-deck">A inteligência artificial já está transformando o trabalho, a segurança e as relações entre países. O Brasil não está preparado para essas mudanças, e as decisões dos próximos anos terão consequências permanentes para o país.</p>
-      <p class="candidate-deck">Escrevemos este cenário porque a trajetória brasileira nos preocupa. Nele, acompanhamos o Brasil até 2030 para mostrar o que pode acontecer se continuarmos ignorando ou errando as decisões importantes. Queremos reunir brasileiros em torno dessa discussão, entender nossas possibilidades e fazer das escolhas sobre inteligência artificial uma prioridade nacional.</p>
+      {candidateIntroduction.map(paragraph => <p class="candidate-deck">{paragraph}</p>)}
       <div class="hero-actions">
         <a class="button-link primary" href={`#${headings[0].slug}`}>Começar em 2026</a>
         <a class="button-link" href="#resumo-do-cenario">Resumo</a>
       </div>
-      <p class="candidate-reading-time">Cerca de {minutes} min de leitura</p>
+      <p class="candidate-reading-time" title="Introdução e narrativa de 2026–2030, a 210 palavras por minuto. Não inclui resumo, quadros, notas, recomendações ou apêndice.">Cerca de {minutes} min de leitura</p>
       <p class="candidate-disclaimer">Este é um cenário, não uma previsão. As personagens são fictícias; os acontecimentos futuros exploram escolhas e consequências possíveis. As fontes do ponto de partida estão nas notas.</p>
     </section>
     <nav class="chapter-nav" data-candidate-nav aria-label="Linha do tempo">

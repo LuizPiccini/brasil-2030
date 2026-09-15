@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 27,
+  "revision": 30,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "done",
+  "status": "active",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-13T20:30:44Z",
+  "updated_at": "2026-09-15T00:11:48Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Candidate mobile summary fixed and verified in production: caption, labels, wrapping and footer. No narrative changes.",
-  "next_action": "",
+  "current_state": "Reviewed narrative promoted to homepage locally; aliases and Markdown aligned; earlier EN labeled; 28 tests and nine viewport checks pass.",
+  "next_action": "Commit exact reviewed files, push task branch, deploy and verify public homepage.",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -292,11 +292,35 @@
       "from": "active",
       "to": "done",
       "note": "Committed and pushed 483c26d; deployed Cloudflare version 4713553a-1dee-4123-8e60-cd11c29e3c94. Browser checks pass on production at nine widths (320 to 1440px); 27 tests pass; only candidate HTML/CSS assets changed, narrative untouched."
+    },
+    {
+      "at": "2026-09-14T23:56:43Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "done",
+      "to": "active",
+      "note": "Luiz requests incorporating Danilo wording with qualified 2027 adoption and main-prose-only reading time. Local-only revision."
+    },
+    {
+      "at": "2026-09-14T23:57:51Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": "Local Danilo integration complete. 28 tests pass, 5935 main-prose words / 29 minutes. Wording changes recorded in research/2026-09-14-danilo-integration-wording.md. No commit/push/deploy."
+    },
+    {
+      "at": "2026-09-15T00:11:48Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": "Luiz explicitly approves commit, push and deployment as homepage at brasil-2030.piccini.app. Existing Cloudflare hosting retained."
     }
   ],
   "completion": {
-    "summary": "Committed and pushed 483c26d; deployed Cloudflare version 4713553a-1dee-4123-8e60-cd11c29e3c94. Browser checks pass on production at nine widths (320 to 1440px); 27 tests pass; only candidate HTML/CSS assets changed, narrative untouched.",
-    "completed_at": "2026-09-13T20:30:44Z"
+    "summary": null,
+    "completed_at": null
   }
 }
 ```
@@ -307,11 +331,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Candidate mobile summary fixed and verified in production: caption, labels, wrapping and footer. No narrative changes.
+Reviewed narrative promoted to homepage locally; aliases and Markdown aligned; earlier EN labeled; 28 tests and nine viewport checks pass.
 
 ## Next action
 
-Not set.
+Commit exact reviewed files, push task branch, deploy and verify public homepage.
 
 ## Authority gates
 

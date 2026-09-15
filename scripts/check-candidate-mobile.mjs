@@ -9,7 +9,7 @@ const browser = await chromium.launch({ headless: true, channel: "chrome" });
 try {
   for (const width of [320, 360, 393, 430, 600, 601, 760, 768, 1440]) {
     const page = await browser.newPage({ viewport: { width, height: 852 } });
-    await page.goto(new URL("/candidato", base).href);
+    await page.goto(new URL(process.env.CANDIDATE_PATH || "/candidato", base).href);
     await page.locator('.hero-actions').getByRole("link", { name: "Resumo", exact: true }).click();
     await page.waitForFunction(() => document.querySelector("#resumo-do-cenario").open);
     await page.evaluate(() => document.fonts.ready);
