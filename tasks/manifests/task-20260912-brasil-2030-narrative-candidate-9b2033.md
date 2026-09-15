@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 30,
+  "revision": 31,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "active",
+  "status": "done",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-15T00:11:48Z",
+  "updated_at": "2026-09-15T00:13:26Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Reviewed narrative promoted to homepage locally; aliases and Markdown aligned; earlier EN labeled; 28 tests and nine viewport checks pass.",
-  "next_action": "Commit exact reviewed files, push task branch, deploy and verify public homepage.",
+  "current_state": "Reviewed Portuguese narrative is the public homepage, 29-minute main-prose reading time; English remains labeled earlier edition. Existing noindex policy preserved.",
+  "next_action": "",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -316,11 +316,19 @@
       "from": "review",
       "to": "active",
       "note": "Luiz explicitly approves commit, push and deployment as homepage at brasil-2030.piccini.app. Existing Cloudflare hosting retained."
+    },
+    {
+      "at": "2026-09-15T00:13:26Z",
+      "actor": "codex",
+      "event": "status_changed",
+      "from": "active",
+      "to": "done",
+      "note": "Luiz approved homepage promotion. Source f5c4209 committed and pushed on task branch; Cloudflare c428d94e-4aa9-41a8-a91f-f481239892a7 deployed. Homepage, candidate alias, scenario Markdown and EN notice match validated build after propagation. 28 tests pass."
     }
   ],
   "completion": {
-    "summary": null,
-    "completed_at": null
+    "summary": "Luiz approved homepage promotion. Source f5c4209 committed and pushed on task branch; Cloudflare c428d94e-4aa9-41a8-a91f-f481239892a7 deployed. Homepage, candidate alias, scenario Markdown and EN notice match validated build after propagation. 28 tests pass.",
+    "completed_at": "2026-09-15T00:13:26Z"
   }
 }
 ```
@@ -331,11 +339,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Reviewed narrative promoted to homepage locally; aliases and Markdown aligned; earlier EN labeled; 28 tests and nine viewport checks pass.
+Reviewed Portuguese narrative is the public homepage, 29-minute main-prose reading time; English remains labeled earlier edition. Existing noindex policy preserved.
 
 ## Next action
 
-Commit exact reviewed files, push task branch, deploy and verify public homepage.
+Not set.
 
 ## Authority gates
 
