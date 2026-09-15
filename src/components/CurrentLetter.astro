@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Content } from "../content/letter-current-pt.md";
+---
+<BaseLayout locale="pt" pageKey="letter" title="Carta e compromissos" markdownHref="/carta-aberta.md">
+  <div class="page-content narrow-content">
+    <article class="letter-sheet"><Content /></article>
+    <section id="assinar" class="letter-sheet" aria-labelledby="adhesion-title">
+      <h2 id="adhesion-title">Assinar a carta</h2>
+      <p>Escolha o que deseja declarar. Os apoios anteriores ao REDATA não serão transferidos para esta carta.</p>
+      <p class="callout"><strong>Teste de leitura:</strong> este formulário é uma demonstração local. Não envia, armazena ou publica dados. Use informações fictícias.</p>
+      <form id="letter-preview">
+        <label for="adhesion-kind">Tipo de adesão</label>
+        <select id="adhesion-kind" required>
+          <option value="">Selecione</option>
+          <option>Apoio pessoal à carta</option>
+          <option>Compromisso de candidatura com as quatro propostas</option>
+          <option>Apoio de organização, com autorização para representá-la</option>
+        </select>
+        <label for="adhesion-name">Nome a publicar</label><input id="adhesion-name" autocomplete="off" required maxlength="100" />
+        <label for="adhesion-role">Cargo ou candidatura, se aplicável</label><input id="adhesion-role" autocomplete="off" maxlength="120" />
+        <label class="consent-field"><input type="checkbox" required />Li a carta e autorizo a publicação do nome e do tipo de adesão, após conferência. Sei que isso não significa endosso eleitoral.</label>
+        <button class="button-link primary" type="submit">Testar assinatura, sem enviar</button>
+        <p id="adhesion-status" role="status"></p>
+      </form>
+      <h3>Signatários</h3><p>A lista desta carta será aberta após a revisão. Nenhum apoio antigo foi incorporado. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.</p>
+    </section>
+  </div>
+  <script>
+    document.querySelector("#letter-preview")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const status = document.querySelector("#adhesion-status");
+      if (status) status.textContent = "Teste concluído. Nenhum dado foi enviado, armazenado ou publicado.";
+    });
+  </script>
+</BaseLayout>

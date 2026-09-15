@@ -10,38 +10,30 @@ try {
   for (const width of [320, 360, 393, 430, 600, 601, 760, 768, 1440]) {
     const page = await browser.newPage({ viewport: { width, height: 852 } });
     await page.goto(new URL(process.env.CANDIDATE_PATH || "/candidato", base).href);
-    await page.locator('.hero-actions').getByRole("link", { name: "Resumo", exact: true }).click();
+    await page.locator('#resumo-do-cenario > summary').click();
     await page.waitForFunction(() => document.querySelector("#resumo-do-cenario").open);
     await page.evaluate(() => document.fonts.ready);
     const result = await page.locator("#resumo-do-cenario").evaluate(root => {
-      const table = root.querySelector("table");
-      const caption = table.querySelector("caption");
-      const wrapper = root.querySelector(".candidate-table-scroll");
-      const rect = caption.getBoundingClientRect();
-      const cells = [...table.querySelectorAll("td")];
+      const paragraphs = [...root.querySelectorAll("p")];
       return {
-        width: wrapper.clientWidth,
-        scrollWidth: wrapper.scrollWidth,
+        width: root.clientWidth,
+        scrollWidth: root.scrollWidth,
         pageWidth: document.documentElement.clientWidth,
         pageScrollWidth: document.documentElement.scrollWidth,
-        captionWidth: rect.width,
-        captionHeight: rect.height,
-        labels: cells.map(cell => getComputedStyle(cell, "::before").content),
-        overflowingCells: cells.filter(cell => cell.scrollWidth > cell.clientWidth + 1).length,
-        years: [...table.querySelectorAll('th[scope="row"]')].map(cell => cell.textContent),
+        tables: root.querySelectorAll("table").length,
+        paragraphs: paragraphs.length,
+        overflowingParagraphs: paragraphs.filter(p => p.scrollWidth > p.clientWidth + 1).length,
+        minParagraphWidth: Math.min(...paragraphs.map(p => p.getBoundingClientRect().width)),
+        text: root.textContent,
       };
     });
     assert.ok(result.pageScrollWidth <= result.pageWidth + 1, `page overflow at ${width}`);
     assert.ok(result.scrollWidth <= result.width + 1, `summary overflow at ${width}`);
-    assert.ok(result.captionWidth >= result.width - 2, `narrow caption at ${width}`);
-    assert.ok(result.captionHeight < 100, `vertical caption at ${width}`);
-    assert.equal(result.overflowingCells, 0, `clipped text at ${width}`);
-    assert.deepEqual(result.years, ["2026", "2027", "2028", "2029", "2030"]);
-    if (width <= 600) {
-      assert.deepEqual(result.labels, Array.from({ length: 5 }, () => ['"O que acontece"', '"Consequência para o Brasil"']).flat());
-    } else {
-      assert.ok(result.labels.every(label => label === "none" || label === "normal"));
-    }
+    assert.equal(result.tables, 0, "summary is prose, not a table");
+    assert.equal(result.paragraphs, 6);
+    assert.equal(result.overflowingParagraphs, 0, `clipped text at ${width}`);
+    assert.ok(result.minParagraphWidth >= 240, `narrow prose at ${width}`);
+    for (const phrase of ["Camila", "Lourdes", "não uma previsão", "2026", "2027", "2028", "2030"]) assert.ok(result.text.includes(phrase));
     if (width === 393 && process.env.CANDIDATE_SCREENSHOT) {
       await page.locator('#resumo-do-cenario').evaluate(element => {
         document.documentElement.style.scrollBehavior = 'auto';
@@ -49,7 +41,7 @@ try {
       });
       await page.screenshot({ path: process.env.CANDIDATE_SCREENSHOT });
     }
-    console.log(`PASS ${width}px: caption ${Math.round(result.captionWidth)}×${Math.round(result.captionHeight)}, no overflow, correct labels`);
+    console.log(`PASS ${width}px: six readable summary paragraphs, no table or overflow`);
     await page.close();
   }
 } finally {

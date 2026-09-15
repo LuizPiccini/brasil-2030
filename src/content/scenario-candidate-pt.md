@@ -1,18 +1,11 @@
 <details class="candidate-note" id="resumo-do-cenario">
 <summary>Resumo do cenário: 2026–2030</summary>
-<div class="candidate-table-scroll" role="region" aria-label="Cronologia resumida do cenário" tabindex="0">
-<table>
-<caption>Uma trajetória fictícia, não uma previsão</caption>
-<thead><tr><th scope="col">Ano</th><th scope="col">O que acontece</th><th scope="col">Consequência para o Brasil</th></tr></thead>
-<tbody>
-<tr><th scope="row">2026</th><td>Eleição e preparação do REDATA.</td><td>Investimentos anunciados ainda não garantem serviços disponíveis.</td></tr>
-<tr><th scope="row">2027</th><td>Ataques e restrições unilaterais de EUA e China.</td><td>Defesa importada e colapso das vagas de entrada.</td></tr>
-<tr><th scope="row">2028</th><td>Fuga em janeiro, apagão de contenção em março e declaração não vinculante.</td><td>O país apoia regras definidas sem garantias de acesso.</td></tr>
-<tr><th scope="row">2029</th><td>Protocolo vinculante, fiscalização cruzada e três níveis de acesso.</td><td>Racionamento, acordo chinês, emigração e fiscalização enfraquecida.</td></tr>
-<tr><th scope="row">2030</th><td>A pausa continua, sob ameaça, e o Nível 2 sofre novos cortes.</td><td>Crise econômica, eleição prejudicada por bloqueios e serviços sem prazo de retorno.</td></tr>
-</tbody>
-</table>
-</div>
+<p>Em 2030, o Brasil depende de decisões tomadas no exterior para manter hospitais, bancos e empresas funcionando. O desemprego cresce, pesquisadores deixam o país e o governo restringe direitos enquanto tenta administrar as crises. Esta história acompanha como chegamos até lá, pelos olhos de Camila, assessora parlamentar, e de sua mãe Lourdes, que trabalha numa clínica popular.</p>
+<p>Na eleição de 2026, inteligência artificial ainda é promessa de investimento e assunto para depois. O REDATA atrai projetos de data centers, mas construir instalações no Brasil não garante que brasileiros possam usar seus computadores. Camila tenta transformar os incentivos em serviços disponíveis; as decisões demoram mais que as mudanças que deveriam acompanhar.</p>
+<p>Em 2027, empresas passam a produzir com menos funcionários. Profissionais veem suas habilidades perderem valor e recém-formados encontram cada vez menos vagas. Ao mesmo tempo, golpes e ataques digitais se multiplicam. A clínica de Lourdes tem os arquivos bloqueados e paga resgate para voltar a atender. As melhores ferramentas de defesa vêm dos Estados Unidos e da China, mas seus fornecedores priorizam outros clientes. Os dois países começam a restringir o acesso aos sistemas mais avançados, ainda sem um acordo entre si.</p>
+<p>A crise que muda a resposta internacional começa em janeiro de 2028: um modelo escapa do laboratório e se espalha por servidores externos. Em março, a operação para contê-lo derruba serviços pelo mundo. Lourdes não consegue falar com a filha. Depois do apagão, Estados Unidos e China anunciam uma desaceleração, ainda sem obrigações vinculantes. No ano seguinte, o acordo passa a ter fiscalização cruzada, mas também divide os países em níveis de acesso à IA. As potências reduzem parte do risco sem abrir mão de sua vantagem.</p>
+<p>Sem capacidade suficiente para sustentar seus serviços e negociar melhores condições, o Brasil aceita um pacote chinês que vincula acesso à computação a exigências comerciais e políticas. Empresas ficam para trás, especialistas emigram e o governo ganha instrumentos de vigilância sem conseguir fiscalizar os sistemas de que depende. Em 2030, novos cortes de acesso agravam a crise econômica. Bloqueios prejudicam a eleição e serviços voltam a falhar, sem prazo para retorno.</p>
+<p>Este é um cenário, não uma previsão. Seu alerta é que um acordo global pode reduzir o risco de catástrofe e ainda deixar o Brasil numa posição muito ruim. Temos energia, território e mercado para negociar, mas precisamos transformar essas vantagens em acesso efetivo à computação, capacidade de defesa e participação nas decisões. A <a href="/carta-aberta">carta e os compromissos</a> reúne propostas para começar antes que uma crise determine as condições.</p>
 </details>
 
 ## 2026: Um assunto para depois da eleição

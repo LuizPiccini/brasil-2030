@@ -26,10 +26,6 @@ const chapters = headings.map((heading, index) => ({ ...heading,
     <section class="candidate-opening" aria-labelledby="candidate-title">
       <h1 id="candidate-title">Brasil 2030<span>Energia para Escolher</span></h1>
       {candidateIntroduction.map(paragraph => <p class="candidate-deck">{paragraph}</p>)}
-      <div class="hero-actions">
-        <a class="button-link primary" href={`#${headings[0].slug}`}>Começar em 2026</a>
-        <a class="button-link" href="#resumo-do-cenario">Resumo</a>
-      </div>
       <p class="candidate-reading-time" title="Introdução e narrativa de 2026–2030, a 210 palavras por minuto. Não inclui resumo, quadros, notas, recomendações ou apêndice.">Cerca de {minutes} min de leitura</p>
       <p class="candidate-disclaimer">Este é um cenário, não uma previsão. As personagens são fictícias; os acontecimentos futuros exploram escolhas e consequências possíveis. As fontes do ponto de partida estão nas notas.</p>
     </section>
@@ -44,7 +40,17 @@ const chapters = headings.map((heading, index) => ({ ...heading,
     </article>
     <CandidateDashboard />
   </div>
-  <div class="mobile-chapter-bar" aria-live="polite"><span>Capítulo</span><span class="mobile-chapter-copy"><span data-current-chapter>{headings[0].text}</span><small data-mobile-state>Projetos em preparação · Acesso a regulamentar</small></span><a href="#main-content" aria-label="Voltar ao início">↑</a></div>
+  <div class="mobile-chapter-bar" aria-live="polite">
+    <a class="year-arrow" data-previous-year aria-label="Ano anterior" aria-disabled="true" tabindex="-1">←</a>
+    <span class="mobile-chapter-copy"><span data-current-chapter>{headings[0].text}</span><small data-mobile-state>Projetos em preparação · Acesso a regulamentar</small></span>
+    <a class="year-arrow" data-next-year href={`#${headings[1].slug}`} aria-label="Próximo ano: 2027">→</a>
+  </div>
+  <style>
+    .mobile-chapter-bar { grid-template-columns:44px minmax(0,1fr) 44px; }
+    .mobile-chapter-bar .year-arrow { display:flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; font-size:1.6rem; text-decoration:none; }
+    .year-arrow[aria-disabled="true"] { opacity:.3; cursor:default; }
+    .year-arrow:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+  </style>
   <script>
     import "../scripts/candidate-reader";
   </script>

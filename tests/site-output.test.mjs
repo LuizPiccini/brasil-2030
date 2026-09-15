@@ -8,10 +8,10 @@ const htmlRoutes = [
   ["resumo/index.html", "pt-BR", "Resumo"],
   ["evidencias/index.html", "pt-BR", "Evidências"],
   ["estrategia/index.html", "pt-BR", "Estratégia"],
-  ["carta-aberta/index.html", "pt-BR", "Carta aberta"],
+  ["carta-aberta/index.html", "pt-BR", "Carta e compromissos"],
   ["redata/index.html", "pt-BR", "REDATA"],
   ["redata/nota-executiva/index.html", "pt-BR", "Nota executiva"],
-  ["apoie/index.html", "pt-BR", "Apoie"],
+  ["apoie/index.html", "pt-BR", "Assinar a carta"],
   ["signatarios/index.html", "pt-BR", "Signatários"],
   ["sobre/index.html", "pt-BR", "Sobre"],
   ["en/index.html", "en", "Brazil 2030: The Energy to Choose"],
@@ -38,7 +38,7 @@ test("all localized HTML pages exist with metadata", () => {
     const html = readFileSync(path, "utf8");
     assert.match(html, new RegExp(`<html lang="${lang}"`));
     assert.match(html, /<meta name="robots" content="noindex, nofollow, noarchive">/);
-    if (!["index.html", "en/index.html"].includes(route)) {
+    if (!["index.html", "en/index.html", "resumo/index.html", "carta-aberta/index.html", "apoie/index.html", "sobre/index.html", "en/summary/index.html", "en/open-letter/index.html", "en/support/index.html", "en/about/index.html"].includes(route)) {
       assert.match(html, /rel="alternate" hreflang="pt-BR"/);
       assert.match(html, /rel="alternate" hreflang="en"/);
     }
@@ -107,12 +107,19 @@ test("the complete scenario visual system renders in both languages", () => {
 test("core pages remain discoverable and progressive enhancement is explicit", () => {
   const ptEvidence = readFileSync(new URL("evidencias/index.html", root), "utf8");
   const enEvidence = readFileSync(new URL("en/evidence/index.html", root), "utf8");
-  assert.match(ptEvidence, /href="\/carta-aberta"[^>]*>Carta</);
+  assert.match(ptEvidence, /href="\/carta-aberta"[^>]*>Carta e compromissos</);
   assert.match(enEvidence, /href="\/en\/open-letter"[^>]*>Letter</);
   assert.match(ptEvidence, /class="evidence-filter"[^>]*hidden/);
   assert.match(enEvidence, /data-evidence-count[^>]*aria-live="polite"/);
   assert.match(ptEvidence, /href="\/evidencias\.md"[^>]*>Markdown</);
-  assert.match(ptEvidence, /href="\/redata"[^>]*>REDATA</);
+  const about = readFileSync(new URL("sobre/index.html", root), "utf8");
+  assert.match(about, /href="\/carta-aberta"/);
+  for (const name of ["Luiz Piccini", "Danilo Naiff", "Pedro Castilho", "Ivan M. Franco"]) {
+    assert.ok(about.includes(name));
+    assert.ok(readFileSync(new URL("sobre.md", root), "utf8").includes(name));
+  }
+  assert.match(about, /Calibrating Posteriors/);
+  assert.match(about, /Como construímos o cenário/);
   assert.equal(existsSync(new URL("og.png", root)), true, "social card must exist");
 });
 
@@ -150,7 +157,7 @@ test("all Markdown documents exist with public-edition metadata", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /edition: public/);
-    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : /sourceRevision: 2026-08-28-redata-final-v2/);
+    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : ["resumo.md", "carta-aberta.md", "sobre.md"].includes(route) ? /sourceRevision: 2026-09-14-reader-review/ : /sourceRevision: 2026-08-28-redata-final-v2/);
   }
 });
 
@@ -168,6 +175,11 @@ test("language switches preserve page identity", () => {
   ];
   for (const [route, counterpart] of pairs) {
     const html = readFileSync(new URL(route, root), "utf8");
+    if (["resumo/index.html", "carta-aberta/index.html", "apoie/index.html", "sobre/index.html"].includes(route)) {
+      assert.match(html, /Este texto ainda não tem tradução em inglês/);
+      assert.doesNotMatch(html, /hreflang="en"/);
+      continue;
+    }
     assert.ok(html.includes(`href="${counterpart}"`), `${route} must link to ${counterpart}`);
   }
 });
@@ -188,8 +200,8 @@ test("legacy informational pages retain their punctuation convention", () => {
   }
 });
 
-test("support form and signatories page expose a moderated public flow", () => {
-  const support = readFileSync(new URL("apoie/index.html", root), "utf8");
+test("legacy English support flow is preserved and new letter consent stays in local preview", () => {
+  const support = readFileSync(new URL("en/support/index.html", root), "utf8");
   const signatories = readFileSync(new URL("signatarios/index.html", root), "utf8");
   assert.match(support, /name="name"/);
   assert.match(support, /name="roleTitle"/);
@@ -197,7 +209,11 @@ test("support form and signatories page expose a moderated public flow", () => {
   assert.match(support, /name="email"/);
   assert.match(support, /name="consent"/);
   assert.match(support, /fetch\("\/api\/apoios"/);
-  assert.match(support, /O e-mail não aparece no site/);
+  const preview = readFileSync(new URL("apoie/index.html", root), "utf8");
+  assert.match(preview, /Nenhum dado foi enviado/);
+  assert.match(preview, /não serão transferidos/);
+  assert.doesNotMatch(preview, /fetch\(/);
+  assert.match(signatories, /Arquivo histórico/);
   assert.match(signatories, /fetch\("\/api\/signatarios"/);
   assert.match(signatories, /Cargos públicos, mandatos e candidaturas passam por conferência/);
 });

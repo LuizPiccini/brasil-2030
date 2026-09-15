@@ -9,6 +9,13 @@ export function chapterAtReadingLine(tops: number[], line: number): number {
   return index;
 }
 
+export function adjacentYears(index: number, yearCount: number) {
+  return {
+    previous: index > 0 ? Math.min(index - 1, yearCount - 1) : null,
+    next: index < yearCount - 1 ? index + 1 : null,
+  };
+}
+
 // Same scroll rule as the original scenario; the candidate has one continuous
 // manuscript rather than two switchable branches. Never change the URL on scroll.
 if (typeof document !== "undefined") {
@@ -44,6 +51,26 @@ if (typeof document !== "undefined") {
       link.classList.toggle("is-active", i === index);
       if (i === index) link.setAttribute("aria-current", "location"); else link.removeAttribute("aria-current");
     });
+    const yearCount = entries.filter(({ link }) => /^20\d{2}:/.test(link.dataset.chapterLabel ?? "")).length;
+    const adjacent = adjacentYears(index, yearCount);
+    for (const [selector, target, label] of [
+      ["[data-previous-year]", adjacent.previous, "Ano anterior"],
+      ["[data-next-year]", adjacent.next, "Próximo ano"],
+    ] as const) {
+      const arrow = document.querySelector<HTMLAnchorElement>(selector);
+      if (!arrow) continue;
+      if (target === null) {
+        arrow.removeAttribute("href");
+        arrow.setAttribute("aria-disabled", "true");
+        arrow.setAttribute("tabindex", "-1");
+        arrow.setAttribute("aria-label", label);
+      } else {
+        arrow.href = entries[target].link.hash;
+        arrow.removeAttribute("aria-disabled");
+        arrow.removeAttribute("tabindex");
+        arrow.setAttribute("aria-label", `${label}: ${entries[target].link.dataset.chapterLabel?.slice(0,4)}`);
+      }
+    }
     const state = states[index];
     if (!dashboard || !state) return;
     const setText = (selector: string, text: string) => { const element = document.querySelector(selector); if (element) element.textContent = text; };

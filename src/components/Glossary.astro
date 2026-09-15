@@ -1,0 +1,25 @@
+<dialog id="term-dialog" aria-labelledby="term-title" aria-describedby="term-definition">
+  <button type="button" id="term-close" aria-label="Fechar explicação">Fechar ×</button>
+  <h2 id="term-title"></h2><p id="term-definition"></p>
+  <a id="term-more" target="_blank" rel="noopener noreferrer" hidden>Saiba mais ↗</a>
+</dialog>
+<script>
+  import { installGlossary } from "../scripts/glossary";
+  installGlossary();
+</script>
+<style is:global>
+  .term-trigger { font:inherit; color:inherit; background:none; padding:0; border:0; border-bottom:1px dotted currentColor; cursor:pointer; text-align:inherit; }
+  .term-trigger:hover,.term-trigger:focus-visible { color:#205a45; outline:2px solid #205a45; outline-offset:3px; }
+  #term-dialog { width:min(32rem,calc(100vw - 2rem)); max-height:80dvh; overflow:auto; box-sizing:border-box; padding:1.5rem; background:#f4f0e6; color:#20231f; border:1px solid #205a45; }
+  #term-dialog::backdrop { background:rgb(0 0 0 / .4); }
+  #term-close { float:right; font:inherit; padding:.4rem; cursor:pointer; }
+  #term-dialog h2 { clear:both; padding-top:1rem; }
+  #term-more { display:inline-block; margin-top:1rem; color:#205a45; }
+  #term-more[hidden] { display:none; }
+  #letter-preview { display:grid; gap:.75rem; }
+  #letter-preview input:not([type=checkbox]),#letter-preview select { width:100%; min-width:0; padding:.7rem; font:inherit; box-sizing:border-box; }
+  #assinar { scroll-margin-top:7rem; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:1rem; min-width:0; }
+  .page-content { overflow-wrap:break-word; }
+  @media(max-width:600px) { .header-tools .header-cta { display:none; } }
+</style>

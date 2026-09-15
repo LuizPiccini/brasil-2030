@@ -23,17 +23,18 @@ test("candidate has a compact single-scenario opening within the existing readin
   for (const className of ["candidate-opening", "reading-layout", "chapter-nav", "reading-aside", "scenario-dashboard", "mobile-chapter-bar"]) {
     assert.match(html, new RegExp(`class="${className}"`));
   }
-  for (const path of ["redata", "evidencias", "estrategia", "carta-aberta", "sobre", "apoie"]) {
+  for (const path of ["evidencias", "carta-aberta", "sobre"]) {
     assert.ok(html.includes(`href="/${path}"`), `missing navigation to ${path}`);
   }
   assert.match(html, /data-candidate-states=/);
   assert.match(html, /Não mede o Brasil real/);
   assert.doesNotMatch(html, /data-branch-target|scenario-hero-branches|hero-branch-positive|scenario-disclaimer/);
-  assert.match(html, /Começar em 2026/);
+  assert.doesNotMatch(html, /Começar em 2026/);
+  assert.doesNotMatch(html.match(/<section class="candidate-opening"[\s\S]*?<\/section>/)?.[0] ?? "", /hero-actions/);
   assert.equal((html.match(/data-candidate-states=/g) || []).length, 1, "one dashboard follows the full narrative");
   const primaryNav = html.match(/<nav class="desktop-nav"[^>]*>(.*?)<\/nav>/s)[1];
-  assert.deepEqual([...primaryNav.matchAll(/href="([^"]+)"/g)].map((match) => match[1]), ["/", "/#resumo-do-cenario", "/redata", "/sobre"]);
-  assert.doesNotMatch(html, /class="header-cta"/);
+  assert.deepEqual([...primaryNav.matchAll(/href="([^"]+)"/g)].map((match) => match[1]), ["/", "/carta-aberta", "/sobre"]);
+  assert.match(html, /href="\/carta-aberta#assinar"/);
   assert.match(markdown, /A inteligência artificial já está transformando o trabalho, a segurança e as relações entre países/);
   const rootHtml = readFileSync(new URL("../dist/index.html", import.meta.url), "utf8");
   assert.doesNotMatch(rootHtml, /scenario-hero-branches/);
@@ -55,7 +56,7 @@ test("all candidate navigation and source anchors resolve uniquely", () => {
     assert.ok(ids.includes(decodeURIComponent(href)), `missing #${href}`);
   }
   const chapterCount = (html.match(/<h2\b/g) || []).length;
-  assert.equal(chapterCount, 8, "five years, alternatives, appendix and notes");
+  assert.equal(chapterCount, 9, "five years, alternatives, appendix, notes and separate glossary dialog");
 });
 
 test("candidate HTML and Markdown preserve the full manuscript and its boundaries", () => {
@@ -135,7 +136,7 @@ test("approved chronology and ending agree across manuscript, synopsis and dashb
     assert.ok(html.includes(phrase), `HTML missing: ${phrase}`);
     assert.ok(markdown.includes(phrase), `Markdown missing: ${phrase}`);
   }
-  assert.match(html, /declaração não vinculante/);
+  assert.match(html, /sem obrigações vinculantes/);
   assert.match(html, /nova redução do Nível 2/);
   assert.match(html, /title="A LGPD permite transferências internacionais/);
   assert.match(html, /title="ECA Digital: aplica-se/);
@@ -143,7 +144,10 @@ test("approved chronology and ending agree across manuscript, synopsis and dashb
   assert.match(html, /retenção zero diz respeito/i);
   assert.match(html, /não é sinônimo de não usar dados para treinamento/);
   assert.equal((html.match(/<figure class="candidate-diagram"/g) || []).length, 3);
-  assert.match(html, /href="#resumo-do-cenario"/);
+  assert.match(html, /href="\/#resumo-do-cenario"/);
+  const synopsis = html.match(/<details class="candidate-note" id="resumo-do-cenario">([\s\S]*?)<\/details>/)[1];
+  assert.doesNotMatch(synopsis, /<table/);
+  assert.equal((synopsis.match(/<p>/g) || []).length, 6);
   assert.doesNotMatch(html, /href="\/resumo"/);
 });
 

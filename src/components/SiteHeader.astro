@@ -10,10 +10,12 @@ interface Props {
 
 const { locale, pageKey, markdownHref, candidate = false } = Astro.props;
 const copy = siteCopy[locale];
-const navKeys: ContentPageKey[] = candidate
-  ? ["scenario", "summary", "redata", "about"]
+const untranslated = locale === "pt" && (candidate || ["summary", "letter", "about", "support"].includes(pageKey));
+const navKeys: ContentPageKey[] = locale === "pt"
+  ? ["scenario", "letter", "about"]
   : ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
-const secondaryKeys: ContentPageKey[] = candidate ? ["evidence", "strategy", "letter"] : [];
+const secondaryKeys: ContentPageKey[] = locale === "pt" ? ["summary", "evidence"] : [];
+const navLabel = (key: ContentPageKey) => locale === "pt" && key === "letter" ? "Carta e compromissos" : copy.nav[key as keyof typeof copy.nav];
 const navHref = (key: ContentPageKey) => locale === "pt" && key === "summary" ? "/#resumo-do-cenario" : routes[locale][key];
 ---
 
@@ -27,20 +29,20 @@ const navHref = (key: ContentPageKey) => locale === "pt" && key === "summary" ? 
     <nav class="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : "Primary navigation"}>
       {navKeys.map((key) => (
         <a href={navHref(key)} aria-current={pageKey === key ? "page" : undefined}>
-          {copy.nav[key as keyof typeof copy.nav]}
+          {navLabel(key)}
         </a>
       ))}
     </nav>
 
     <div class="header-tools">
-      {!candidate && <a class="header-cta" href={routes[locale].support}>{copy.nav.support}</a>}
-      {!candidate && <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
+      <a class="header-cta" href={locale === "pt" ? "/carta-aberta#assinar" : routes[locale].support}>{locale === "pt" ? "Assinar a carta" : copy.nav.support}</a>
+      {!untranslated && <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
         <a href={routes.pt[pageKey]} lang="pt-BR" aria-current={locale === "pt" ? "true" : undefined}>PT</a>
         <span aria-hidden="true">/</span>
         <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
       </div>}
-      {candidate && <div class="language-switch" aria-label="Idioma">
-        <a href="/" lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span>
+      {untranslated && <div class="language-switch" aria-label="Idioma">
+        <a href={routes.pt[pageKey]} lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span>
         <span aria-disabled="true" title="Este texto ainda não tem tradução em inglês">EN</span>
       </div>}
       {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>}
@@ -49,12 +51,12 @@ const navHref = (key: ContentPageKey) => locale === "pt" && key === "summary" ? 
         <nav aria-label={candidate ? "Navegação completa" : locale === "pt" ? "Navegação móvel" : "Mobile navigation"}>
           {navKeys.map((key) => (
             <a href={navHref(key)} aria-current={pageKey === key ? "page" : undefined}>
-              {copy.nav[key as keyof typeof copy.nav]}
+              {navLabel(key)}
             </a>
           ))}
-          {secondaryKeys.map((key) => <a href={routes[locale][key]}>{copy.nav[key as keyof typeof copy.nav]}</a>)}
-          <a href={routes[locale].support}>{copy.nav.support}</a>
-          <a href={routes[locale].signatories}>{copy.nav.signatories}</a>
+          {secondaryKeys.map((key) => <a href={navHref(key)}>{copy.nav[key as keyof typeof copy.nav]}</a>)}
+          <a href={locale === "pt" ? "/carta-aberta#assinar" : routes[locale].support}>{locale === "pt" ? "Assinar a carta" : copy.nav.support}</a>
+          {locale === "en" && <a href={routes[locale].signatories}>{copy.nav.signatories}</a>}
           {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>}
         </nav>
       </details>

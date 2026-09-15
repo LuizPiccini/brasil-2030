@@ -4,18 +4,18 @@
 ```json task-manifest
 {
   "schema_version": 1,
-  "revision": 31,
+  "revision": 34,
   "task_id": "task-20260912-brasil-2030-narrative-candidate-9b2033",
   "title": "Brasil 2030 narrative candidate",
   "owner_persona": "generic",
-  "status": "done",
+  "status": "active",
   "created_at": "2026-09-12T18:52:48Z",
-  "updated_at": "2026-09-15T00:13:26Z",
+  "updated_at": "2026-09-15T01:19:55Z",
   "creation_surface": "codex-desktop",
   "data_class": "public",
   "objective": "Publish a review candidate based on Danilo's proposal, preserving the current edition.",
-  "current_state": "Reviewed Portuguese narrative is the public homepage, 29-minute main-prose reading time; English remains labeled earlier edition. Existing noindex policy preserved.",
-  "next_action": "",
+  "current_state": "Publishing reviewed local edition.",
+  "next_action": "Validate, commit exact session paths, push task branch, deploy direct upload and verify production.",
   "context_files": [
     "src/content/scenario-candidate-pt.md"
   ],
@@ -324,11 +324,35 @@
       "from": "active",
       "to": "done",
       "note": "Luiz approved homepage promotion. Source f5c4209 committed and pushed on task branch; Cloudflare c428d94e-4aa9-41a8-a91f-f481239892a7 deployed. Homepage, candidate alias, scenario Markdown and EN notice match validated build after propagation. 28 tests pass."
+    },
+    {
+      "at": "2026-09-15T00:36:15Z",
+      "actor": "generic",
+      "event": "status_changed",
+      "from": "done",
+      "to": "active",
+      "note": "User approved local restructuring, summary and letter review and clickable glossary; stop before reader outreach or publication."
+    },
+    {
+      "at": "2026-09-15T00:40:10Z",
+      "actor": "generic",
+      "event": "status_changed",
+      "from": "active",
+      "to": "review",
+      "note": "Local reader edition implemented. 28 tests and mobile synopsis checks pass. Simplified navigation, revised summary and letter, accessible glossary. Signature prototype does not transmit data; historical approvals preserved. No commit, push or deploy."
+    },
+    {
+      "at": "2026-09-15T01:19:55Z",
+      "actor": "generic",
+      "event": "status_changed",
+      "from": "review",
+      "to": "active",
+      "note": "User explicitly authorized commit, push and deployment of the reviewed local edition including About, summary, glossary, year navigation and letter preview."
     }
   ],
   "completion": {
-    "summary": "Luiz approved homepage promotion. Source f5c4209 committed and pushed on task branch; Cloudflare c428d94e-4aa9-41a8-a91f-f481239892a7 deployed. Homepage, candidate alias, scenario Markdown and EN notice match validated build after propagation. 28 tests pass.",
-    "completed_at": "2026-09-15T00:13:26Z"
+    "summary": null,
+    "completed_at": null
   }
 }
 ```
@@ -339,11 +363,11 @@ Publish a review candidate based on Danilo's proposal, preserving the current ed
 
 ## Current state
 
-Reviewed Portuguese narrative is the public homepage, 29-minute main-prose reading time; English remains labeled earlier edition. Existing noindex policy preserved.
+Publishing reviewed local edition.
 
 ## Next action
 
-Not set.
+Validate, commit exact session paths, push task branch, deploy direct upload and verify production.
 
 ## Authority gates
 
