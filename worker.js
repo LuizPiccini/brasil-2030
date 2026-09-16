@@ -1,4 +1,5 @@
-const WORKING_HOST = "brasil-2030.piccini.app";
+import { NOINDEX, shouldBlockIndexing } from "./src/data/publication.mjs";
+
 const ASSET_REVISION = "2026-08-28-redata-support";
 const MAX_SUPPORT_BODY_BYTES = 16_000;
 const SUPPORTER_TYPES = new Set(["citizen", "public_official", "expert", "organization"]);
@@ -137,8 +138,12 @@ function withPublicationHeaders(response, url) {
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   headers.set("Content-Security-Policy", "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
 
-  if (url.hostname === WORKING_HOST || url.hostname.endsWith(".workers.dev")) {
-    headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+  // Derived from src/data/publication.mjs: closed before launch, and afterwards still
+  // closed on every host that is not production, so previews never outrank the real site.
+  if (shouldBlockIndexing(url.hostname)) {
+    headers.set("X-Robots-Tag", NOINDEX);
+  } else {
+    headers.delete("X-Robots-Tag");
   }
 
   if (/\/_astro\//.test(url.pathname)) {
@@ -193,6 +198,18 @@ export default {
     }
 
     const response = await env.ASSETS.fetch(new Request(assetUrl, request));
+
+    // Cloudflare's not_found_handling serves the Portuguese /404.html for every miss.
+    // English visitors get the English one instead.
+    if (response.status === 404 && readsAsset && url.pathname.startsWith("/en")) {
+      const englishNotFound = new URL(url);
+      englishNotFound.pathname = "/en/404/index.html";
+      const localized = await env.ASSETS.fetch(new Request(englishNotFound, { method: "GET" }));
+      if (localized.ok) {
+        return withPublicationHeaders(new Response(localized.body, { status: 404, headers: localized.headers }), url);
+      }
+    }
+
     return withPublicationHeaders(response, url);
   },
 };

@@ -5,10 +5,11 @@ import { evidenceFor } from "../data/evidence";
 import { strategyFor } from "../data/strategy";
 import { buildDateIso } from "../data/build-info";
 import { siteCopy, type Locale } from "../data/site";
+import { siteOrigin } from "../data/publication.mjs";
 
 type Key = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
 
-const SITE = "https://brasil-2030.piccini.app";
+const SITE = siteOrigin();
 
 const sharedHeader = (locale: Locale) =>
   `---\ntitle: ${siteCopy[locale].title}\nlocale: ${siteCopy[locale].locale}\nedition: public\nupdated: ${buildDateIso}\nsourceRevision: ${buildDateIso}-derived\n---\n\n`;
@@ -84,7 +85,6 @@ export function markdownResponse(locale: Locale, key: Key): Response {
       "Content-Type": "text/markdown; charset=utf-8",
       "Content-Disposition": "inline",
       "Cache-Control": "public, max-age=0, must-revalidate",
-      "X-Robots-Tag": "noindex, nofollow, noarchive",
     },
   });
 }

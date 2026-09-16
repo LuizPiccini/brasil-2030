@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { routes } from "../../data/site";
+---
+<BaseLayout locale="en" pageKey="scenario" title="Page not found">
+  <div class="page-content narrow-content" style="min-height: 65vh; padding-top: 8rem">
+    <p class="eyebrow">Error 404</p>
+    <h1 style="font-size: clamp(3rem, 8vw, 6rem); margin: 0 0 1.5rem; line-height: 1">This page does not exist.</h1>
+    <p>The address may have changed while the document was being revised.</p>
+    <p><a class="button-link primary" href={routes.en.scenario}>Back to the scenario</a></p>
+  </div>
+</BaseLayout>

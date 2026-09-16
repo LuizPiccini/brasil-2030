@@ -3,6 +3,14 @@ compatibility_date = "2026-08-05"
 main = "./worker.js"
 workers_dev = true
 
+# Launch step that src/data/publication.mjs cannot do for you: point the production
+# domain here as well, after the DNS record exists in Cloudflare. Flipping
+# PUBLICATION_OPEN without this leaves brasil-2030.com unrouted.
+#
+# [[routes]]
+# pattern = "brasil-2030.com"
+# custom_domain = true
+
 [[routes]]
 pattern = "brasil-2030.piccini.app"
 custom_domain = true

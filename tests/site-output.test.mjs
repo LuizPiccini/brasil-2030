@@ -154,7 +154,7 @@ test("publication support files exist", () => {
     assert.equal(existsSync(new URL(file, root)), true, `${file} must exist`);
   }
   assert.match(readFileSync(new URL("robots.txt", root), "utf8"), /Disallow: \//);
-  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /English and supporting policy pages remain earlier editions/);
+  assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /English pages remain an earlier edition/);
 });
 
 test("legacy informational pages retain their punctuation convention", () => {

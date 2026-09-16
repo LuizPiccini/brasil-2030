@@ -6,6 +6,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Glossary from "../components/Glossary.astro";
 import { routes, siteCopy, type Locale, type PageKey } from "../data/site";
+import { NOINDEX, PUBLICATION_OPEN } from "../data/publication.mjs";
 
 interface Props {
   locale: Locale;
@@ -34,7 +35,7 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f4f0e6" />
     <meta name="description" content={description} />
-    <meta name="robots" content="noindex, nofollow, noarchive" />
+    {!PUBLICATION_OPEN && <meta name="robots" content={NOINDEX} />}
     <link rel="canonical" href={canonical} />
     {!candidate && pageKey !== "scenario" && !["summary", "letter", "about", "support"].includes(pageKey) && <>
       <link rel="alternate" hreflang="pt-BR" href={ptAlternate} />

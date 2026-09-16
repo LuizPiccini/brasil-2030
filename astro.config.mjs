@@ -1,7 +1,8 @@
 import { defineConfig } from "astro/config";
+import { siteOrigin } from "./src/data/publication.mjs";
 
 export default defineConfig({
-  site: "https://brasil-2030.piccini.app",
+  site: siteOrigin(),
   output: "static",
   trailingSlash: "ignore",
   redirects: {

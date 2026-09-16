@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /
-
-# Search indexing remains closed until the public launch decision.
