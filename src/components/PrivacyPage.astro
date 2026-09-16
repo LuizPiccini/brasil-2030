@@ -13,8 +13,8 @@ const pt = locale === "pt";
   pageKey="privacy"
   title={pt ? "Privacidade" : "Privacy"}
   description={pt
-    ? "Que dados este site coleta, por que, e como pedir a exclusão."
-    : "What data this site collects, why, and how to ask for its deletion."}
+    ? "Que dados coletamos quando você assina a carta, o que publicamos, e como pedir a exclusão."
+    : "What we collect when you sign the letter, what we publish, and how to ask for deletion."}
 >
   <PageHero
     compact
@@ -22,96 +22,134 @@ const pt = locale === "pt";
     eyebrow={pt ? "Dados pessoais" : "Personal data"}
     title={pt ? "Privacidade" : "Privacy"}
     intro={pt
-      ? "Este site é um documento público, não um produto. A coleta de dados é mínima e está descrita abaixo."
-      : "This site is a public document, not a product. Data collection is minimal and described below."}
+      ? "Este site é um documento público, não um produto. A única coleta acontece quando você decide assinar a carta, e está descrita abaixo."
+      : "This site is a public document, not a product. The only collection happens when you choose to sign the letter, and it is described below."}
   />
 
   <div class="page-content narrow-content">
     {pt ? (
       <>
-        <h2>O que o site coleta hoje</h2>
+        <h2>Navegar no site não coleta nada</h2>
         <p>
-          Nada. As páginas são estáticas, não há analytics, cookies de rastreamento, pixels de
-          terceiros nem login. Nenhuma requisição sai para outro domínio: as fontes e os estilos são
-          servidos pelo próprio site.
-        </p>
-        <p>
-          O formulário de adesão à carta é uma demonstração local. Ele não envia, não armazena e não
-          publica nada; o que você digita permanece no seu navegador.
+          As páginas são estáticas. Não há analytics, cookies de rastreamento, pixels de terceiros
+          nem login. Nenhuma requisição sai para outro domínio: fontes e estilos são servidos pelo
+          próprio site. Ler o cenário, o resumo ou as evidências não deixa registro associado a você.
         </p>
 
-        <h2>O que foi coletado antes</h2>
+        <h2>O que coletamos quando você assina a carta</h2>
+        <ul>
+          <li><strong>Nome.</strong> Publicado na lista de signatários.</li>
+          <li><strong>Tipo de adesão.</strong> Apoio pessoal, compromisso de candidatura ou apoio institucional. Publicado.</li>
+          <li><strong>Cargo ou candidatura, se você informar.</strong> Publicado.</li>
+          <li><strong>E-mail.</strong> Usado para confirmar que a assinatura é sua e para falar com você se houver dúvida na conferência. <strong>Nunca é publicado</strong> e não é usado para enviar newsletter ou qualquer outra comunicação não solicitada.</li>
+        </ul>
         <p>
-          Entre agosto e setembro de 2026, uma campanha anterior sobre o PL 278/2026, o REDATA,
-          recebeu apoios por formulário. Foram guardados nome, e-mail, cargo, organização e mensagem,
-          com registro do consentimento. Esse formulário foi desativado e não recebe novos envios.
-        </p>
-        <p>
-          Os registros daquela campanha continuam armazenados até que sejam apagados ou migrados para
-          a nova carta, o que exigirá uma nova autorização. O e-mail nunca foi publicado no site.
-        </p>
-
-        <h2>Como pedir a exclusão dos seus dados</h2>
-        <p>
-          Escreva para <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> pedindo a exclusão. Não
-          é preciso justificar. Você também pode pedir uma cópia do que está guardado, a correção de
-          alguma informação, ou a retirada do seu nome da lista de signatários.
-        </p>
-        <p>
-          A LGPD, a Lei 13.709/2018, garante esses direitos. O responsável pelo tratamento é a equipe
-          do Brasil 2030, pelo mesmo endereço.
+          Compromissos de candidatura e representações institucionais passam por verificação antes de
+          aparecerem na lista, porque afirmam algo sobre terceiros. Essa conferência pode envolver
+          contato por e-mail ou consulta a fontes públicas, como registros eleitorais.
         </p>
 
-        <h2>Base legal e retenção</h2>
+        <h2>Com quem compartilhamos</h2>
         <p>
-          A base legal é o consentimento, dado no momento do envio do formulário. Ele pode ser
-          retirado a qualquer momento pelo e-mail acima, sem efeito sobre o tratamento já realizado.
-          Os dados não são vendidos, compartilhados com terceiros nem usados para outra finalidade
-          além de publicar a lista de signatários.
+          Com ninguém. Os dados não são vendidos, cedidos, nem usados para publicidade. Ficam
+          armazenados na infraestrutura da Cloudflare, que opera como operadora de dados a nosso
+          pedido, e são acessados apenas pela equipe do projeto.
+        </p>
+
+        <h2>Por quanto tempo guardamos</h2>
+        <p>
+          O nome e o tipo de adesão ficam publicados enquanto a carta estiver ativa, porque uma lista
+          de signatários é um registro público. O e-mail é apagado quando a carta for encerrada, ou
+          antes disso se você pedir.
+        </p>
+        <p>
+          Uma campanha anterior, sobre o PL 278/2026, o REDATA, coletou os mesmos campos entre agosto
+          e setembro de 2026. Aquele formulário foi desativado. Os registros continuam armazenados e
+          <strong> não serão migrados</strong> para esta carta: quem assinou antes precisará assinar
+          de novo, com novo consentimento.
+        </p>
+
+        <h2>Seus direitos e como exercê-los</h2>
+        <p>
+          Escreva para <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Não é preciso
+          justificar. Você pode pedir a exclusão dos seus dados, uma cópia do que está guardado, a
+          correção de alguma informação, ou a retirada do seu nome da lista mantendo o restante.
+          Respondemos no prazo da lei.
+        </p>
+        <p>
+          A LGPD, Lei 13.709/2018, garante esses direitos. A base legal do tratamento é o seu
+          consentimento, dado no momento em que você envia o formulário. Ele pode ser retirado a
+          qualquer momento pelo mesmo e-mail, sem efeito sobre o que já foi publicado antes do
+          pedido. O controlador é a equipe do Brasil 2030, pelo mesmo endereço.
+        </p>
+
+        <h2>Situação atual</h2>
+        <p>
+          O formulário de adesão ainda está em pré-visualização e não envia nada. Esta política já
+          descreve como o tratamento funcionará quando a lista for aberta, para que ninguém assine
+          sem saber de antemão o que acontece com seus dados.
         </p>
       </>
     ) : (
       <>
-        <h2>What the site collects today</h2>
+        <h2>Browsing the site collects nothing</h2>
         <p>
-          Nothing. The pages are static. There is no analytics, no tracking cookies, no third-party
-          pixels and no login. No request leaves for another domain: fonts and styles are served by
-          the site itself.
-        </p>
-        <p>
-          The letter's signing form is a local demonstration. It does not send, store or publish
-          anything; what you type stays in your browser.
+          The pages are static. There is no analytics, no tracking cookies, no third-party pixels and
+          no login. No request leaves for another domain: fonts and styles are served by the site
+          itself. Reading the scenario, the summary or the evidence leaves no record tied to you.
         </p>
 
-        <h2>What was collected before</h2>
+        <h2>What we collect when you sign the letter</h2>
+        <ul>
+          <li><strong>Name.</strong> Published in the signatory list.</li>
+          <li><strong>Type of endorsement.</strong> Personal support, candidacy commitment or institutional support. Published.</li>
+          <li><strong>Role or candidacy, if you provide one.</strong> Published.</li>
+          <li><strong>Email.</strong> Used to confirm the signature is yours and to reach you if a check raises a question. It is <strong>never published</strong> and is not used for newsletters or any other unsolicited message.</li>
+        </ul>
         <p>
-          Between August and September 2026, an earlier campaign about Bill 278/2026, known as
-          REDATA, accepted support through a form. It stored name, email, role, organization and
-          message, along with a record of consent. That form has been switched off and accepts no
-          new submissions.
-        </p>
-        <p>
-          Records from that campaign remain stored until they are deleted or migrated to the new
-          letter, which will require fresh authorization. Email addresses were never published.
-        </p>
-
-        <h2>How to ask for your data to be deleted</h2>
-        <p>
-          Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> asking for deletion. No
-          justification is needed. You can also ask for a copy of what is stored, a correction, or
-          the removal of your name from the signatory list.
-        </p>
-        <p>
-          Brazil's data protection law, LGPD (Law 13.709/2018), guarantees these rights. The
-          controller is the Brasil 2030 team, at the same address.
+          Candidacy commitments and institutional representations are verified before appearing on
+          the list, because they assert something about third parties. That check may involve contact
+          by email or consulting public sources, such as electoral records.
         </p>
 
-        <h2>Legal basis and retention</h2>
+        <h2>Who we share it with</h2>
         <p>
-          The legal basis is consent, given when the form was submitted. It can be withdrawn at any
-          time through the address above, without affecting processing already carried out. The data
-          is not sold, shared with third parties, or used for any purpose other than publishing the
-          signatory list.
+          Nobody. The data is not sold, transferred, or used for advertising. It is stored on
+          Cloudflare infrastructure, acting as a data processor on our instruction, and is accessed
+          only by the project team.
+        </p>
+
+        <h2>How long we keep it</h2>
+        <p>
+          Name and type of endorsement stay published while the letter is active, because a signatory
+          list is a public record. Email addresses are deleted when the letter closes, or earlier if
+          you ask.
+        </p>
+        <p>
+          An earlier campaign, about Bill 278/2026 known as REDATA, collected the same fields between
+          August and September 2026. That form has been switched off. Those records remain stored and
+          <strong> will not be migrated</strong> to this letter: anyone who signed before will need to
+          sign again, with fresh consent.
+        </p>
+
+        <h2>Your rights and how to use them</h2>
+        <p>
+          Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. No justification is
+          needed. You can ask for deletion, a copy of what is stored, a correction, or the removal of
+          your name while the rest of the list stays. We answer within the period the law sets.
+        </p>
+        <p>
+          Brazil's data protection law, LGPD (Law 13.709/2018), guarantees these rights. The legal
+          basis for processing is your consent, given when you submit the form. It can be withdrawn
+          at any time through the same address, without affecting what was published before the
+          request. The controller is the Brasil 2030 team, at that address.
+        </p>
+
+        <h2>Current status</h2>
+        <p>
+          The signing form is still a preview and sends nothing. This policy already describes how
+          processing will work once the list opens, so that nobody signs without knowing in advance
+          what happens to their data.
         </p>
       </>
     )}

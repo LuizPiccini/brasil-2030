@@ -15,6 +15,11 @@ const SUPPORTER_TYPES = new Set(["citizen", "public_official", "expert", "organi
 // signatory list keeps rendering. Set to true only together with a real verification step.
 const SUPPORT_WRITES_OPEN = false;
 
+// Stamped on each stored record so it is possible to tell which consent text someone
+// agreed to. Bump it whenever the letter's consent wording or the privacy page changes,
+// together with reopening writes.
+const CONSENT_VERSION = "2026-09-16-letter";
+
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -93,7 +98,7 @@ async function receiveSupport(request, env) {
       message,
       locale,
       now,
-      "2026-08-28",
+      CONSENT_VERSION,
       existing.id,
     ).run();
   } else {
@@ -111,7 +116,7 @@ async function receiveSupport(request, env) {
       message,
       email,
       locale,
-      "2026-08-28",
+      CONSENT_VERSION,
       now,
       now,
     ).run();

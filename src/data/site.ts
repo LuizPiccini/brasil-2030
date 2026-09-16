@@ -2,7 +2,7 @@ import { buildDateLabel } from "./build-info.mjs";
 
 export type Locale = "pt" | "en";
 export type ContentPageKey = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
-export type PageKey = ContentPageKey | "support" | "signatories" | "privacy";
+export type PageKey = ContentPageKey | "signatories" | "privacy";
 
 /** Where data deletion requests go, per the privacy page. */
 export const CONTACT_EMAIL = "luiz@piccini.app";
@@ -22,7 +22,6 @@ export const siteCopy = {
       strategy: "Estratégia",
       letter: "Carta",
       about: "Sobre",
-      support: "Apoie",
       signatories: "Signatários",
       privacy: "Privacidade",
     },
@@ -45,7 +44,6 @@ export const siteCopy = {
       strategy: "Strategy",
       letter: "Letter",
       about: "About",
-      support: "Support",
       signatories: "Signatories",
       privacy: "Privacy",
     },
@@ -64,7 +62,6 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     strategy: "/estrategia",
     letter: "/carta-aberta",
     about: "/sobre",
-    support: "/apoie",
     signatories: "/signatarios",
     privacy: "/privacidade",
   },
@@ -75,7 +72,6 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     strategy: "/en/strategy",
     letter: "/en/open-letter",
     about: "/en/about",
-    support: "/en/support",
     signatories: "/en/signatories",
     privacy: "/en/privacy",
   },

@@ -18,17 +18,25 @@ submit.
 
 ## Content map
 
-- `src/content/scenario-common-*.md`: shared 2026 baseline in Portuguese and English.
-- `src/content/scenario-positive-*.md`: positive branch from 2027 to 2030.
-- `src/content/scenario-negative-*.md`: negative branch from 2027 to 2030.
-- `src/data/site.ts`: summary, strategy, evidence labels, and author credits.
-- `src/components/`: structured pages for evidence,
-  strategy, the open letter, and project background.
-- `src/lib/markdown.ts`: machine-readable Markdown editions.
-- `public/llms.txt`: index of the machine-readable editions.
+- `src/content/scenario-candidate-{pt,en}.md`: the narrative, 2026 to 2030, plus the
+  appendix and the notes. The two editions share the same chapter structure and the same
+  `fonte-N` footnote ids.
+- `src/content/letter-current-{pt,en}.md` and `about-current-{pt,en}.md`: the letter and
+  the project background.
+- `src/data/evidence.ts` and `src/data/strategy.ts`: the evidence register and the five
+  commitments. The `.astro` pages and the Markdown editions both read these, so a claim
+  added here reaches both formats.
+- `src/data/site.ts`: titles, navigation labels, routes and author credits.
+- `src/data/publication.mjs`: the single publication switch. See the launch checklist in
+  the README before touching it.
+- `src/pages/*.md.ts`: the machine-readable editions, all generated. Never write one by
+  hand; `src/lib/markdown.ts` only renders evidence and strategy from the shared data.
 
-When changing public prose, check whether the corresponding HTML page, Markdown
-edition, and translation also need updating.
+When changing public prose, change it in one place. The Markdown editions are generated,
+and `npm run validate` fails if an edition drifts from its page, if an internal anchor
+stops resolving, or if the copy needs a character outside the loaded font subsets.
+Translations are the exception: `-pt` and `-en` content files are edited separately and
+must be kept in step by hand.
 
 ## Evidence discipline
 
