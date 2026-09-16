@@ -33,7 +33,7 @@ function createDb({ existing = null, published = [] } = {}) {
   };
 }
 
-test("a valid support request enters the moderation queue without exposing email", async () => {
+test("the support endpoint is closed and never writes", async () => {
   const DB = createDb();
   const response = await worker.fetch(new Request("https://brasil-2030.piccini.app/api/apoios", {
     method: "POST",
@@ -41,39 +41,34 @@ test("a valid support request enters the moderation queue without exposing email
     body: JSON.stringify({
       supporterType: "citizen",
       name: "Maria da Silva",
-      roleTitle: "Gerente administrativa",
-      organization: "Clínica popular",
-      message: "Quero capacidade disponível no Brasil.",
-      email: "Maria@example.com",
+      email: "maria@example.com",
       consent: true,
       locale: "pt",
     }),
   }), { DB });
 
-  assert.equal(response.status, 202);
-  assert.deepEqual(await response.json(), { ok: true, status: "pending" });
-  assert.equal(DB.calls.some((call) => call.method === "run" && call.sql.includes("INSERT INTO supporters")), true);
+  assert.equal(response.status, 503);
+  assert.deepEqual(await response.json(), { ok: false, error: "support_closed" });
+  assert.equal(DB.calls.length, 0, "a closed endpoint must not touch the database");
   assert.equal(response.headers.get("cache-control"), "no-store");
 });
 
-test("public officials must provide a role", async () => {
-  const DB = createDb();
+test("a closed endpoint cannot unpublish an approved signatory", async () => {
+  const DB = createDb({ existing: { id: "already-approved" } });
   const response = await worker.fetch(new Request("https://brasil-2030.piccini.app/api/apoios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      supporterType: "public_official",
-      name: "João da Silva",
-      roleTitle: "",
-      email: "joao@example.com",
+      supporterType: "citizen",
+      name: "Nome Trocado",
+      email: "signatario@example.com",
       consent: true,
       locale: "pt",
     }),
   }), { DB });
 
-  assert.equal(response.status, 422);
-  assert.equal((await response.json()).fields.roleTitle, "required");
-  assert.equal(DB.calls.length, 0);
+  assert.equal(response.status, 503);
+  assert.equal(DB.calls.some((call) => call.sql.includes("UPDATE supporters")), false);
 });
 
 test("the public signatory endpoint returns approved public fields only", async () => {

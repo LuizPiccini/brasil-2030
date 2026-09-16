@@ -3,6 +3,12 @@ const ASSET_REVISION = "2026-08-28-redata-support";
 const MAX_SUPPORT_BODY_BYTES = 16_000;
 const SUPPORTER_TYPES = new Set(["citizen", "public_official", "expert", "organization"]);
 
+// The REDATA support drive was retired and the new letter has no submission flow yet.
+// Until one exists, /api/apoios accepts nothing: an unverified email could otherwise
+// overwrite and unpublish an approved signatory. Reads stay open so the existing
+// signatory list keeps rendering. Set to true only together with a real verification step.
+const SUPPORT_WRITES_OPEN = false;
+
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -23,6 +29,7 @@ function validEmail(value) {
 }
 
 async function receiveSupport(request, env) {
+  if (!SUPPORT_WRITES_OPEN) return jsonResponse({ ok: false, error: "support_closed" }, 503);
   if (!env.DB) return jsonResponse({ ok: false, error: "support_unavailable" }, 503);
 
   const contentLength = Number(request.headers.get("content-length") || "0");

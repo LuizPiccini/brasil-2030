@@ -90,3 +90,25 @@ test("/apoie redirects to the letter instead of duplicating it", () => {
   assert.match(stub, /rel="canonical" href="[^"]*\/carta-aberta#assinar"/);
   assert.doesNotMatch(stub, /letter-preview/, "the signing form must live on one page only");
 });
+
+// Guards P1: the card used to declare 1734x907 while the file was 1729x910, and weighed
+// 1.6 MB, over the size several chat clients will fetch for a preview.
+test("the social card matches the dimensions the pages declare, and stays small", () => {
+  const png = readFileSync(new URL("og.png", root));
+  assert.equal(png.subarray(1, 4).toString("ascii"), "PNG", "og.png must be a PNG");
+  const width = png.readUInt32BE(16);
+  const height = png.readUInt32BE(20);
+
+  assert.equal(width, 1200);
+  assert.equal(height, 630);
+  assert.ok(
+    png.length < 500_000,
+    `og.png is ${(png.length / 1024).toFixed(0)} KB; keep it under 500 KB so chat clients fetch it`,
+  );
+
+  for (const page of ["index.html", "evidencias/index.html", "en/index.html"]) {
+    const html = readFileSync(new URL(page, root), "utf8");
+    assert.match(html, new RegExp(`property="og:image:width" content="${width}"`), `${page} declares the wrong width`);
+    assert.match(html, new RegExp(`property="og:image:height" content="${height}"`), `${page} declares the wrong height`);
+  }
+});
