@@ -9,7 +9,8 @@ const monthsEn = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
 export const buildDateIso = builtAt.toISOString().slice(0, 10);
 
 /** Human label matching the "28 ago 2026" style the site already used. */
+/** @type {{ pt: string, en: string }} */
 export const buildDateLabel = {
   pt: `${builtAt.getUTCDate()} ${monthsPt[builtAt.getUTCMonth()]} ${builtAt.getUTCFullYear()}`,
   en: `${builtAt.getUTCDate()} ${monthsEn[builtAt.getUTCMonth()]} ${builtAt.getUTCFullYear()}`,
-} as const;
+};

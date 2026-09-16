@@ -48,6 +48,10 @@ const initial = states[0];
 const text = pt
   ? { eyebrow: "Estado do Brasil", qualifier: "trajetória qualitativa", scale: "Escalas qualitativas do cenário", changed: "O que mudou", note: "O painel resume a trajetória do cenário. Não mede o Brasil real.", scaleHint: "Escala qualitativa, não uma medição." }
   : { eyebrow: "State of Brazil", qualifier: "qualitative trajectory", scale: "Qualitative scenario scales", changed: "What changed", note: "This panel summarizes the scenario's trajectory. It does not measure real-world Brazil.", scaleHint: "A qualitative scale, not a measurement." };
+
+const noScript = pt
+  ? "Sem JavaScript, este painel fica parado em 2026. O texto do cenário continua completo; use a linha do tempo para navegar."
+  : "Without JavaScript, this panel stays on 2026. The scenario text is complete either way; use the timeline to navigate.";
 ---
 <aside class="reading-aside">
   <section class="scenario-dashboard" data-scenario-dashboard data-candidate-states={JSON.stringify(states)} aria-labelledby="scenario-dashboard-title">
@@ -63,6 +67,7 @@ const text = pt
     </div>
     <dl class="dashboard-facts">{initial.facts.map(([label, value]) => <div><dt>{label}</dt><dd data-dashboard-fact>{value}</dd></div>)}</dl>
     <div class="dashboard-focus"><span>{text.changed}</span><p data-dashboard-focus>{initial.focus}</p></div>
+    <noscript><p class="dashboard-note">{noScript}</p></noscript>
     <p class="dashboard-note">{text.note}</p>
   </section>
 </aside>

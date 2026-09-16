@@ -15,7 +15,21 @@ Source repository for the public working site of the Brasil 20XX scenario projec
 - Data-center support is conditional on a public bargain covering contractable compute access, water, grid costs, affected communities, and measurable local benefits.
 - Scenario inventions and open estimates must keep their visible evidence labels.
 - Pedro's 2030 model values remain open and must not be filled without the model.
-- Search indexing remains disabled until the authors approve publication. It is **one switch**: `PUBLICATION_OPEN` in `src/data/publication.mjs`. Flipping it moves `robots.txt`, the robots meta tag, the Worker's `X-Robots-Tag`, and the canonical/`og:url`/hreflang origin together, from `brasil-2030.piccini.app` to `brasil-2030.com`. Hosts other than production stay `noindex` either way, so previews never compete with the real site. Two things it cannot do for you: add the production route in `wrangler.toml`, and create a `sitemap.xml`.
+- The English pages are a translation of the current Portuguese narrative, not a separate edition. Both editions share the same chapters and the same footnote ids.
+- Search indexing remains disabled until the authors approve publication. It is **one switch**: `PUBLICATION_OPEN` in `src/data/publication.mjs`. Flipping it moves `robots.txt`, the robots meta tag, the Worker's `X-Robots-Tag`, `Strict-Transport-Security`, and the canonical/`og:url`/hreflang/sitemap origin together, from `brasil-2030.piccini.app` to `brasil-2030.com`. Hosts other than production stay `noindex` and never receive HSTS, so previews cannot compete with the real site or pin a year-long HTTPS policy onto a staging domain.
+
+## Launch checklist
+
+The switch above handles everything inside the build. These steps are manual:
+
+1. Create the DNS record for `brasil-2030.com` in Cloudflare.
+2. Uncomment the production route in `wrangler.toml`.
+3. **Update `src/pages/sitemap.xml.ts`.** Its page list is written by hand. Adding or removing a route does not update it automatically; `tests/publication-switch.test.mjs` checks the origin and the exclusions, not completeness.
+4. Set `PUBLICATION_OPEN = true` in `src/data/publication.mjs`.
+5. Run `npm run validate`, then `npm run deploy`.
+6. Apply any pending D1 migrations with `wrangler d1 migrations apply brasil-2030-supporters`.
+
+Note that `/api/apoios` is closed (`SUPPORT_WRITES_OPEN` in `worker.js`). Reopening it requires an email verification step first: without one, an unverified address can overwrite and unpublish an approved signatory.
 
 ## Contributing
 

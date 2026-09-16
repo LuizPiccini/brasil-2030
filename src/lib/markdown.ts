@@ -1,6 +1,6 @@
 import { evidenceFor } from "../data/evidence";
 import { strategyFor } from "../data/strategy";
-import { buildDateIso } from "../data/build-info";
+import { buildDateIso } from "../data/build-info.mjs";
 import { siteCopy, type Locale } from "../data/site";
 import { siteOrigin } from "../data/publication.mjs";
 

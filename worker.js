@@ -1,6 +1,11 @@
 import { NOINDEX, shouldBlockIndexing } from "./src/data/publication.mjs";
+import { buildDateIso } from "./src/data/build-info.mjs";
 
-const ASSET_REVISION = "2026-08-28-redata-support";
+// Cache buster for the asset fetch. It used to be a hand written string, which meant it
+// silently stopped busting anything the first time someone forgot to bump it: it still
+// read "2026-08-28-redata-support" long after that campaign was retired. Derived from the
+// build now, so every deploy changes it without anyone remembering to.
+const ASSET_REVISION = buildDateIso;
 const MAX_SUPPORT_BODY_BYTES = 16_000;
 const SUPPORTER_TYPES = new Set(["citizen", "public_official", "expert", "organization"]);
 
@@ -132,6 +137,13 @@ async function listSignatories(env) {
 
 function withPublicationHeaders(response, url) {
   const headers = new Headers(response.headers);
+
+  // Tell browsers never to try this origin over plain HTTP again. Deliberately set only
+  // once publication is open: the max-age sticks in browsers for a year and is awkward to
+  // undo, so staging hosts stay out of it.
+  if (!shouldBlockIndexing(url.hostname)) {
+    headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  }
 
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");

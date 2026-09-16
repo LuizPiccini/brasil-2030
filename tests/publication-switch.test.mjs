@@ -100,3 +100,62 @@ test("English visitors get the English 404", async () => {
   assert.match(await pt.text(), /Esta página não existe/);
   assert.equal(requested.includes("/en/404/index.html"), false);
 });
+
+test("HSTS is sent on production only, never on staging", async () => {
+  const production = await worker.fetch(new Request(`${PRODUCTION_ORIGIN}/`), assetEnv());
+  const staging = await worker.fetch(new Request("https://brasil-2030.piccini.app/"), assetEnv());
+
+  // Tied to the same switch: a year-long max-age on a staging host is painful to undo.
+  assert.equal(
+    production.headers.has("strict-transport-security"),
+    PUBLICATION_OPEN,
+    "production HSTS must follow PUBLICATION_OPEN",
+  );
+  assert.equal(staging.headers.get("strict-transport-security"), null, "staging must never send HSTS");
+});
+
+test("the sitemap lists every indexable page and no excluded one", () => {
+  const sitemap = read("sitemap.xml");
+  const origin = siteOrigin();
+  const listed = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+
+  assert.ok(listed.length > 0, "the sitemap must list pages");
+  for (const loc of listed) {
+    assert.ok(loc.startsWith(origin), `${loc} does not use the published origin`);
+  }
+  for (const page of [`${origin}/`, `${origin}/en`, `${origin}/evidencias`, `${origin}/en/evidence`]) {
+    assert.ok(listed.includes(page), `the sitemap must list ${page}`);
+  }
+  // Redirects, error pages and placeholders stay out.
+  for (const excluded of ["/apoie", "/candidato", "/en/404", "/signatarios", "/en/signatories"]) {
+    assert.equal(listed.includes(`${origin}${excluded}`), false, `${excluded} must not be advertised`);
+  }
+  if (PUBLICATION_OPEN) assert.match(read("robots.txt"), /Sitemap: /);
+});
+
+test("the asset cache buster is derived, not a forgotten string", async () => {
+  const worker_source = readFileSync(new URL("../worker.js", import.meta.url), "utf8");
+  assert.doesNotMatch(worker_source, /ASSET_REVISION = "/, "ASSET_REVISION must not be hand written");
+
+  let requested;
+  const env = { ASSETS: { fetch: async (request) => { requested = new URL(request.url); return new Response("<html></html>", { headers: { "Content-Type": "text/html" } }); } } };
+  await worker.fetch(new Request(`${PRODUCTION_ORIGIN}/`), env);
+  assert.match(requested.searchParams.get("__asset_revision") ?? "", /^\d{4}-\d{2}-\d{2}$/);
+});
+
+test("the privacy page names a contact for deletion in both editions", () => {
+  for (const [route, marker] of [["privacidade/index.html", /exclusão/], ["en/privacy/index.html", /deletion/]]) {
+    const html = read(route);
+    assert.match(html, /luiz@piccini\.app/, `${route} must name the deletion contact`);
+    assert.match(html, marker);
+  }
+  // Reachable from anywhere.
+  assert.match(read("index.html"), /href="\/privacidade"/);
+  assert.match(read("en/index.html"), /href="\/en\/privacy"/);
+});
+
+test("pages that need JavaScript say so", () => {
+  assert.match(read("index.html"), /<noscript>/, "the scenario panel degrades and must explain it");
+  assert.match(read("carta-aberta/index.html"), /<noscript>/, "the signing form does nothing without JS");
+  assert.match(read("en/open-letter/index.html"), /<noscript>/);
+});

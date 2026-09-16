@@ -1,8 +1,11 @@
-import { buildDateLabel } from "./build-info";
+import { buildDateLabel } from "./build-info.mjs";
 
 export type Locale = "pt" | "en";
 export type ContentPageKey = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
-export type PageKey = ContentPageKey | "support" | "signatories";
+export type PageKey = ContentPageKey | "support" | "signatories" | "privacy";
+
+/** Where data deletion requests go, per the privacy page. */
+export const CONTACT_EMAIL = "luiz@piccini.app";
 
 export const siteCopy = {
   pt: {
@@ -21,6 +24,7 @@ export const siteCopy = {
       about: "Sobre",
       support: "Apoie",
       signatories: "Signatários",
+      privacy: "Privacidade",
     },
     menu: "Menu",
     format: "Markdown",
@@ -43,6 +47,7 @@ export const siteCopy = {
       about: "About",
       support: "Support",
       signatories: "Signatories",
+      privacy: "Privacy",
     },
     menu: "Menu",
     format: "Markdown",
@@ -61,6 +66,7 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     about: "/sobre",
     support: "/apoie",
     signatories: "/signatarios",
+    privacy: "/privacidade",
   },
   en: {
     scenario: "/en",
@@ -71,6 +77,7 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     about: "/en/about",
     support: "/en/support",
     signatories: "/en/signatories",
+    privacy: "/en/privacy",
   },
 };
 

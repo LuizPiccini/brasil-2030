@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "./PageHero.astro";
+import { CONTACT_EMAIL } from "../data/site";
+import type { Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+---
+<BaseLayout
+  locale={locale}
+  pageKey="privacy"
+  title={pt ? "Privacidade" : "Privacy"}
+  description={pt
+    ? "Que dados este site coleta, por que, e como pedir a exclusão."
+    : "What data this site collects, why, and how to ask for its deletion."}
+>
+  <PageHero
+    compact
+    locale={locale}
+    eyebrow={pt ? "Dados pessoais" : "Personal data"}
+    title={pt ? "Privacidade" : "Privacy"}
+    intro={pt
+      ? "Este site é um documento público, não um produto. A coleta de dados é mínima e está descrita abaixo."
+      : "This site is a public document, not a product. Data collection is minimal and described below."}
+  />
+
+  <div class="page-content narrow-content">
+    {pt ? (
+      <>
+        <h2>O que o site coleta hoje</h2>
+        <p>
+          Nada. As páginas são estáticas, não há analytics, cookies de rastreamento, pixels de
+          terceiros nem login. Nenhuma requisição sai para outro domínio: as fontes e os estilos são
+          servidos pelo próprio site.
+        </p>
+        <p>
+          O formulário de adesão à carta é uma demonstração local. Ele não envia, não armazena e não
+          publica nada; o que você digita permanece no seu navegador.
+        </p>
+
+        <h2>O que foi coletado antes</h2>
+        <p>
+          Entre agosto e setembro de 2026, uma campanha anterior sobre o PL 278/2026, o REDATA,
+          recebeu apoios por formulário. Foram guardados nome, e-mail, cargo, organização e mensagem,
+          com registro do consentimento. Esse formulário foi desativado e não recebe novos envios.
+        </p>
+        <p>
+          Os registros daquela campanha continuam armazenados até que sejam apagados ou migrados para
+          a nova carta, o que exigirá uma nova autorização. O e-mail nunca foi publicado no site.
+        </p>
+
+        <h2>Como pedir a exclusão dos seus dados</h2>
+        <p>
+          Escreva para <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> pedindo a exclusão. Não
+          é preciso justificar. Você também pode pedir uma cópia do que está guardado, a correção de
+          alguma informação, ou a retirada do seu nome da lista de signatários.
+        </p>
+        <p>
+          A LGPD, a Lei 13.709/2018, garante esses direitos. O responsável pelo tratamento é a equipe
+          do Brasil 2030, pelo mesmo endereço.
+        </p>
+
+        <h2>Base legal e retenção</h2>
+        <p>
+          A base legal é o consentimento, dado no momento do envio do formulário. Ele pode ser
+          retirado a qualquer momento pelo e-mail acima, sem efeito sobre o tratamento já realizado.
+          Os dados não são vendidos, compartilhados com terceiros nem usados para outra finalidade
+          além de publicar a lista de signatários.
+        </p>
+      </>
+    ) : (
+      <>
+        <h2>What the site collects today</h2>
+        <p>
+          Nothing. The pages are static. There is no analytics, no tracking cookies, no third-party
+          pixels and no login. No request leaves for another domain: fonts and styles are served by
+          the site itself.
+        </p>
+        <p>
+          The letter's signing form is a local demonstration. It does not send, store or publish
+          anything; what you type stays in your browser.
+        </p>
+
+        <h2>What was collected before</h2>
+        <p>
+          Between August and September 2026, an earlier campaign about Bill 278/2026, known as
+          REDATA, accepted support through a form. It stored name, email, role, organization and
+          message, along with a record of consent. That form has been switched off and accepts no
+          new submissions.
+        </p>
+        <p>
+          Records from that campaign remain stored until they are deleted or migrated to the new
+          letter, which will require fresh authorization. Email addresses were never published.
+        </p>
+
+        <h2>How to ask for your data to be deleted</h2>
+        <p>
+          Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> asking for deletion. No
+          justification is needed. You can also ask for a copy of what is stored, a correction, or
+          the removal of your name from the signatory list.
+        </p>
+        <p>
+          Brazil's data protection law, LGPD (Law 13.709/2018), guarantees these rights. The
+          controller is the Brasil 2030 team, at the same address.
+        </p>
+
+        <h2>Legal basis and retention</h2>
+        <p>
+          The legal basis is consent, given when the form was submitted. It can be withdrawn at any
+          time through the address above, without affecting processing already carried out. The data
+          is not sold, shared with third parties, or used for any purpose other than publishing the
+          signatory list.
+        </p>
+      </>
+    )}
+  </div>
+</BaseLayout>

@@ -1,4 +1,4 @@
-import { buildDateIso } from "../../data/build-info";
+import { buildDateIso } from "../../data/build-info.mjs";
 import { siteOrigin } from "../../data/publication.mjs";
 import narrative from "../../content/scenario-candidate-en.md?raw";
 import { candidateIntroduction } from "../../data/candidate-reading-time";

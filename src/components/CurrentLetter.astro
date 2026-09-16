@@ -28,6 +28,7 @@ const text = pt
       consent: "Li a carta e autorizo a publicação do nome e do tipo de adesão, após conferência. Sei que isso não significa endosso eleitoral.",
       submit: "Testar assinatura, sem enviar",
       done: "Teste concluído. Nenhum dado foi enviado, armazenado ou publicado.",
+      noScript: "Este formulário de teste depende de JavaScript e não responderá sem ele. Como ele não envia nada de qualquer forma, você não perde nenhuma etapa: para aderir à carta, escreva para a equipe quando a lista abrir.",
       signatories: "Signatários",
       signatoriesBody: "A lista desta carta será aberta após a revisão. Nenhum apoio antigo foi incorporado. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.",
     }
@@ -49,6 +50,7 @@ const text = pt
       consent: "I have read the letter and authorize publication of my name and type of endorsement, after verification. I understand that this is not an electoral endorsement.",
       submit: "Test the signature, without sending",
       done: "Test complete. No data was sent, stored or published.",
+      noScript: "This test form depends on JavaScript and will not respond without it. Since it sends nothing either way, you are not missing a step: to endorse the letter, write to the team once the list opens.",
       signatories: "Signatories",
       signatoriesBody: "The list for this letter opens after review. No earlier support was carried over. Candidacy commitments and institutional representations will need verification before appearing here.",
     };
@@ -60,6 +62,7 @@ const text = pt
       <h2 id="adhesion-title">{text.sign}</h2>
       <p>{text.intro}</p>
       <p class="callout"><strong>{text.preview}</strong> {text.previewBody}</p>
+      <noscript><p class="callout">{text.noScript}</p></noscript>
       <form id="letter-preview">
         <label for="adhesion-kind">{text.kind}</label>
         <select id="adhesion-kind" required>
