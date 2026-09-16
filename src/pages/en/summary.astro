@@ -1,4 +1,7 @@
 ---
-import SummaryPage from "../../components/SummaryPage.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import narrative from "../../content/scenario-candidate-en.md?raw";
+import "../../styles/candidate.css";
+const summary = narrative.slice(0, narrative.indexOf("## 2026")).replace("<details ", "<details open ");
 ---
-<SummaryPage locale="en" />
+<BaseLayout locale="en" pageKey="summary" title="Summary" markdownHref="/en/summary.md"><div class="page-content narrow-content scenario-prose candidate-prose"><h1>Brazil 2030: summary</h1><Fragment set:html={summary} /><p><a href="/en">Read the full scenario</a></p></div></BaseLayout>

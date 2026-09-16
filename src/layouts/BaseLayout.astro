@@ -63,7 +63,7 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta name="description" content={description} />
     {!PUBLICATION_OPEN && <meta name="robots" content={NOINDEX} />}
     <link rel="canonical" href={canonical} />
-    {!candidate && pageKey !== "scenario" && !["summary", "letter", "about", "support"].includes(pageKey) && <>
+    {!candidate && <>
       <link rel="alternate" hreflang="pt-BR" href={ptAlternate} />
       <link rel="alternate" hreflang="en" href={enAlternate} />
       <link rel="alternate" hreflang="x-default" href={ptAlternate} />
@@ -88,7 +88,6 @@ const socialImage = new URL("/og.png", Astro.site);
     <a class="skip-link" href="#main-content">{copy.skip}</a>
     <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} candidate={candidate} />
     <main id="main-content" tabindex="-1">
-      {locale === "en" && <p class="edition-notice" style="padding: 1rem 1.5rem; border-bottom: 1px solid currentColor;">Earlier English edition. The revised Portuguese pages are not yet translated. <a href={routes.pt[pageKey]}>Read the current Portuguese edition</a>.</p>}
       {locale === "pt" && pageKey === "strategy" && <aside class="edition-notice" style="padding:1.5rem;border-bottom:1px solid currentColor"><strong>Arquivo histórico.</strong> Esta página preserva a edição anterior e não representa uma campanha em andamento. Os apoios ao REDATA não são assinaturas da nova carta. <a href="/carta-aberta">Leia a carta e os compromissos atuais</a>.</aside>}
       <slot />
     </main>

@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CandidateDashboard from "./CandidateDashboard.astro";
+import ScenarioPt, { getHeadings as getHeadingsPt } from "../content/scenario-candidate-pt.md";
+import ScenarioEn, { getHeadings as getHeadingsEn } from "../content/scenario-candidate-en.md";
+import sourcePt from "../content/scenario-candidate-pt.md?raw";
+import sourceEn from "../content/scenario-candidate-en.md?raw";
+import { candidateIntroduction, candidateReadingTime } from "../data/candidate-reading-time";
+import { markdownRoutes, type Locale } from "../data/site";
+import "../styles/candidate.css";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+
+const CandidateContent = pt ? ScenarioPt : ScenarioEn;
+const headings = (pt ? getHeadingsPt() : getHeadingsEn()).filter(({ depth }) => depth === 2);
+const { minutes } = candidateReadingTime(pt ? sourcePt : sourceEn, locale);
+
+// The five year chapters are followed by three unnumbered sections; label them by position.
+const tailLabels = pt ? ["Escolhas", "Apêndice", "Fontes"] : ["Choices", "Appendix", "Sources"];
+const chapters = headings.map((heading, index) => ({
+  ...heading,
+  year: heading.text.match(/^20\d{2}/)?.[0] ?? tailLabels[index - 5],
+  label: heading.text.replace(/^20\d{2}:\s*/, ""),
+}));
+
+const text = pt
+  ? {
+      title: "O custo do atraso na era da IA",
+      description: "Um cenário para o Brasil entre 2026 e 2030: a corrida da IA desacelera, mas o país chega ao acordo sem ter preparado suas alternativas.",
+      proseLabel: "O custo do atraso na era da IA: texto completo",
+      timeline: "Linha do tempo",
+      readingTime: `Cerca de ${minutes} min de leitura`,
+      readingTimeHint: "Introdução e narrativa de 2026–2030, a 210 palavras por minuto. Não inclui resumo, quadros, notas, recomendações ou apêndice.",
+      disclaimer: "Este é um cenário, não uma previsão. As personagens são fictícias; os acontecimentos futuros exploram escolhas e consequências possíveis. As fontes do ponto de partida estão nas notas.",
+      previousYear: "Ano anterior",
+      nextYear: "Próximo ano: 2027",
+      initialState: "Projetos em preparação · Acesso a regulamentar",
+    }
+  : {
+      title: "The Cost of Delay in the AI Era",
+      description: "A scenario for Brazil between 2026 and 2030: the AI race slows down, but the country reaches the agreement without having prepared its alternatives.",
+      proseLabel: "The Cost of Delay in the AI Era: full text",
+      timeline: "Timeline",
+      readingTime: `About ${minutes} min read`,
+      readingTimeHint: "Introduction and the 2026–2030 narrative, at 210 words per minute. Excludes the summary, boxes, notes, recommendations and appendix.",
+      disclaimer: "This is a scenario, not a forecast. The characters are fictional; the future events explore possible choices and consequences. The sources for the starting point are in the notes.",
+      previousYear: "Previous year",
+      nextYear: "Next year: 2027",
+      initialState: "Projects in preparation · Access unregulated",
+    };
+---
+<BaseLayout
+  locale={locale}
+  pageKey="scenario"
+  candidate
+  title={text.title}
+  description={text.description}
+  markdownHref={markdownRoutes[locale].scenario}
+  bodyClass="scenario-page candidate-page"
+>
+  <div class="reading-layout">
+    <section class="candidate-opening" aria-labelledby="candidate-title">
+      <h1 id="candidate-title">{pt ? "Brasil 2030" : "Brazil 2030"}<span>{text.title}</span></h1>
+      {candidateIntroduction[locale].map((paragraph) => <p class="candidate-deck">{paragraph}</p>)}
+      <p class="candidate-reading-time" title={text.readingTimeHint}>{text.readingTime}</p>
+      <p class="candidate-disclaimer">{text.disclaimer}</p>
+    </section>
+    <nav class="chapter-nav" data-candidate-nav aria-label={text.timeline}>
+      <span class="chapter-nav-label">{text.timeline}</span>
+      <ol>
+        {chapters.map(({ slug, text: headingText, year, label }, index) => <li><a href={`#${slug}`} class={index === 0 ? "is-active" : undefined} data-chapter-label={headingText} aria-current={index === 0 ? "location" : undefined}><span>{year}</span><span>{label}</span></a></li>)}
+      </ol>
+    </nav>
+    <article class="scenario-prose candidate-prose" aria-label={text.proseLabel}>
+      <CandidateContent />
+    </article>
+    <CandidateDashboard locale={locale} />
+  </div>
+  <div class="mobile-chapter-bar" aria-live="polite">
+    <a class="year-arrow" data-previous-year aria-label={text.previousYear} aria-disabled="true" tabindex="-1">←</a>
+    <span class="mobile-chapter-copy"><span data-current-chapter>{headings[0].text}</span><small data-mobile-state>{text.initialState}</small></span>
+    <a class="year-arrow" data-next-year href={`#${headings[1].slug}`} aria-label={text.nextYear}>→</a>
+  </div>
+  <style>
+    .mobile-chapter-bar { grid-template-columns:44px minmax(0,1fr) 44px; }
+    .mobile-chapter-bar .year-arrow { display:flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; font-size:1.6rem; text-decoration:none; }
+    .year-arrow[aria-disabled="true"] { opacity:.3; cursor:default; }
+    .year-arrow:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+  </style>
+  <script>
+    import "../scripts/candidate-reader";
+  </script>
+</BaseLayout>

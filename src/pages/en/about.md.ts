@@ -1,2 +1,3 @@
-import { markdownResponse } from "../../lib/markdown";
-export const GET = () => markdownResponse("en", "about");
+import { buildDateIso } from "../../data/build-info";
+import content from "../../content/about-current-en.md?raw";
+export const GET = () => new Response(`---\nedition: public\nsourceRevision: ${buildDateIso}-en\n---\n\n` + content, { headers: { "Content-Type": "text/markdown; charset=utf-8" } });

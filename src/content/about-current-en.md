@@ -6,11 +6,11 @@ We want to bring Brazilians together around this discussion, understand our poss
 
 ## Why tell a story?
 
-A discussion about computing, contracts, and international agreements can feel distant. It changes shape when a clinic loses its patient records, a recent graduate can't find a job, or a government has to accept foreign conditions to keep its services running.
+A discussion about computing, contracts, and international agreements can feel distant. It changes shape when a clinic loses its patient records, a recent graduate cannot find a job, or a government has to accept foreign conditions to keep its services running.
 
-Camila and Lourdes help us follow these consequences. One works in Congress; the other lives through the effects of decisions she doesn't always understand. The story connects what happens in laboratories and international negotiations to everyday life in Brazil.
+Camila and Lourdes help us follow these consequences. One works in Congress; the other lives through the effects of decisions she does not always understand. The story connects what happens in laboratories and international negotiations to everyday life in Brazil.
 
-We chose to follow a bad trajectory to examine how the country could get there. Even when the great powers manage to slow down AI development, Brazil can remain vulnerable. Having energy and hosting data centers isn't enough if the country can't contract the computing it needs, protect its services, and take part in the decisions.
+We chose to follow a bad trajectory to examine how the country could get there. Even when the great powers manage to slow down AI development, Brazil can remain vulnerable. Having energy and hosting data centers is not enough if the country cannot contract the computing it needs, protect its services, and take part in the decisions.
 
 ## Who writes
 
@@ -44,25 +44,25 @@ Brought an earlier proposal, Brasil 2028, to the group, which helped start this 
 
 ## How we built the scenario
 
-The text was developed from the authors' proposals, source research, and collective review. Contributions were gathered into a shared chronology and worked through successive versions of the narrative. The notes let readers check the sources behind the facts and hypotheses discussed in the text; the [evidence](/evidencias) page collects supporting material.
+The text was developed from the authors' proposals, source research, and collective review. Contributions were gathered into a shared chronology and worked through successive versions of the narrative. The notes let readers check the sources behind the facts and hypotheses discussed in the text; the [evidence](/en/evidence) page collects supporting material.
 
 The format draws on [AI 2027](https://ai-2027.com/), [AI 2040](https://ai-2040.com/), and [Europe 2031](https://europe2031.ai/). We have no affiliation with those projects, and the reference does not imply that their authors endorse our conclusions.
 
 We used AI tools to support research, writing, editing, and building the site. Responsibility for the text, for checking the sources, and for the positions defended rests with the authors.
 
-## What this scenario claims and what it doesn't
+## What this scenario claims and what it does not
 
 Brasil 2030 is a scenario, not a forecast with calculated probabilities. Camila and Lourdes are fictional. The future episodes, the agreements, and their consequences were built to explore a possible trajectory; the dates should not be read as deadlines we know will be met.
 
 A source about a current vulnerability does not demonstrate that the attack narrated will happen. Likewise, the possibility of an international agreement does not establish that it will have the terms described here. The sequence, the speed of change, and countries' capacity to react are important parts of the uncertainty.
 
-The scenario also doesn't exhaust the risks of AI. A slowdown can fail, and the damage could be much greater than what is narrated. Our focus is what happens to Brazil when some global threats are contained, but the country reaches the negotiations without enough capacity to defend its interests.
+The scenario also does not exhaust the risks of AI. A slowdown can fail, and the damage could be much greater than what is narrated. Our focus is what happens to Brazil when some global threats are contained, but the country reaches the negotiations without enough capacity to defend its interests.
 
 ## Independence
 
 This is an independent research project, without funding. The positions expressed are the authors' own and do not represent their employers or other institutions. The affiliations in the profiles above serve only to give context to their experience.
 
-The [letter and commitments](/carta-aberta) present proposals to avoid this trajectory. Supporting the letter does not require agreeing with every episode in the narrative. Likewise, reviewing the text does not mean being a co-author or endorsing its conclusions.
+The [letter and commitments](/en/open-letter) present proposals to avoid this trajectory. Supporting the letter does not require agreeing with every episode in the narrative. Likewise, reviewing the text does not mean being a co-author or endorsing its conclusions.
 
 ## Help us improve
 

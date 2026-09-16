@@ -1,36 +1,85 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Content } from "../content/letter-current-pt.md";
+import { Content as LetterPt } from "../content/letter-current-pt.md";
+import { Content as LetterEn } from "../content/letter-current-en.md";
+import { markdownRoutes, type Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+const Letter = pt ? LetterPt : LetterEn;
+
+const text = pt
+  ? {
+      title: "Carta e compromissos",
+      sign: "Assinar a carta",
+      intro: "Escolha o que deseja declarar. Os apoios anteriores ao REDATA não serão transferidos para esta carta.",
+      preview: "Teste de leitura:",
+      previewBody: "este formulário é uma demonstração local. Não envia, armazena ou publica dados. Use informações fictícias.",
+      kind: "Tipo de adesão",
+      choose: "Selecione",
+      options: [
+        "Apoio pessoal à carta",
+        "Compromisso de candidatura com as quatro propostas",
+        "Apoio de organização, com autorização para representá-la",
+      ],
+      name: "Nome a publicar",
+      role: "Cargo ou candidatura, se aplicável",
+      consent: "Li a carta e autorizo a publicação do nome e do tipo de adesão, após conferência. Sei que isso não significa endosso eleitoral.",
+      submit: "Testar assinatura, sem enviar",
+      done: "Teste concluído. Nenhum dado foi enviado, armazenado ou publicado.",
+      signatories: "Signatários",
+      signatoriesBody: "A lista desta carta será aberta após a revisão. Nenhum apoio antigo foi incorporado. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.",
+    }
+  : {
+      title: "Letter and commitments",
+      sign: "Sign the letter",
+      intro: "Choose what you want to declare. Support given to the earlier REDATA request will not be carried over to this letter.",
+      preview: "Reading test:",
+      previewBody: "this form is a local demonstration. It does not send, store or publish data. Use fictional information.",
+      kind: "Type of endorsement",
+      choose: "Select",
+      options: [
+        "Personal support for the letter",
+        "Candidacy commitment to the four proposals",
+        "Organizational support, with authorization to represent it",
+      ],
+      name: "Name to publish",
+      role: "Role or candidacy, if applicable",
+      consent: "I have read the letter and authorize publication of my name and type of endorsement, after verification. I understand that this is not an electoral endorsement.",
+      submit: "Test the signature, without sending",
+      done: "Test complete. No data was sent, stored or published.",
+      signatories: "Signatories",
+      signatoriesBody: "The list for this letter opens after review. No earlier support was carried over. Candidacy commitments and institutional representations will need verification before appearing here.",
+    };
 ---
-<BaseLayout locale="pt" pageKey="letter" title="Carta e compromissos" markdownHref="/carta-aberta.md">
+<BaseLayout locale={locale} pageKey="letter" title={text.title} markdownHref={markdownRoutes[locale].letter}>
   <div class="page-content narrow-content">
-    <article class="letter-sheet"><Content /></article>
+    <article class="letter-sheet"><Letter /></article>
     <section id="assinar" class="letter-sheet" aria-labelledby="adhesion-title">
-      <h2 id="adhesion-title">Assinar a carta</h2>
-      <p>Escolha o que deseja declarar. Os apoios anteriores ao REDATA não serão transferidos para esta carta.</p>
-      <p class="callout"><strong>Teste de leitura:</strong> este formulário é uma demonstração local. Não envia, armazena ou publica dados. Use informações fictícias.</p>
+      <h2 id="adhesion-title">{text.sign}</h2>
+      <p>{text.intro}</p>
+      <p class="callout"><strong>{text.preview}</strong> {text.previewBody}</p>
       <form id="letter-preview">
-        <label for="adhesion-kind">Tipo de adesão</label>
+        <label for="adhesion-kind">{text.kind}</label>
         <select id="adhesion-kind" required>
-          <option value="">Selecione</option>
-          <option>Apoio pessoal à carta</option>
-          <option>Compromisso de candidatura com as quatro propostas</option>
-          <option>Apoio de organização, com autorização para representá-la</option>
+          <option value="">{text.choose}</option>
+          {text.options.map((option) => <option>{option}</option>)}
         </select>
-        <label for="adhesion-name">Nome a publicar</label><input id="adhesion-name" autocomplete="off" required maxlength="100" />
-        <label for="adhesion-role">Cargo ou candidatura, se aplicável</label><input id="adhesion-role" autocomplete="off" maxlength="120" />
-        <label class="consent-field"><input type="checkbox" required />Li a carta e autorizo a publicação do nome e do tipo de adesão, após conferência. Sei que isso não significa endosso eleitoral.</label>
-        <button class="button-link primary" type="submit">Testar assinatura, sem enviar</button>
+        <label for="adhesion-name">{text.name}</label><input id="adhesion-name" autocomplete="off" required maxlength="100" />
+        <label for="adhesion-role">{text.role}</label><input id="adhesion-role" autocomplete="off" maxlength="120" />
+        <label class="consent-field"><input type="checkbox" required />{text.consent}</label>
+        <button class="button-link primary" type="submit">{text.submit}</button>
         <p id="adhesion-status" role="status"></p>
       </form>
-      <h3>Signatários</h3><p>A lista desta carta será aberta após a revisão. Nenhum apoio antigo foi incorporado. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.</p>
+      <h3>{text.signatories}</h3><p>{text.signatoriesBody}</p>
     </section>
   </div>
-  <script>
+  <script is:inline define:vars={{ done: text.done }}>
     document.querySelector("#letter-preview")?.addEventListener("submit", (event) => {
       event.preventDefault();
       const status = document.querySelector("#adhesion-status");
-      if (status) status.textContent = "Teste concluído. Nenhum dado foi enviado, armazenado ou publicado.";
+      if (status) status.textContent = done;
     });
   </script>
 </BaseLayout>

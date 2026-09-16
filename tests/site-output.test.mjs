@@ -15,10 +15,10 @@ const htmlRoutes = [
   ["en/summary/index.html", "en", "Summary"],
   ["en/evidence/index.html", "en", "Evidence"],
   ["en/strategy/index.html", "en", "Strategy"],
-  ["en/open-letter/index.html", "en", "Open letter"],
-  ["en/support/index.html", "en", "Support"],
+  ["en/open-letter/index.html", "en", "Letter and commitments"],
   ["en/signatories/index.html", "en", "Signatories"],
   ["en/about/index.html", "en", "About"],
+  ["en/404/index.html", "en", "Page not found"],
 ];
 
 const markdownRoutes = [
@@ -33,7 +33,7 @@ test("all localized HTML pages exist with metadata", () => {
     const html = readFileSync(path, "utf8");
     assert.match(html, new RegExp(`<html lang="${lang}"`));
     assert.match(html, /<meta name="robots" content="noindex, nofollow, noarchive">/);
-    if (!["index.html", "en/index.html", "resumo/index.html", "carta-aberta/index.html", "sobre/index.html", "en/summary/index.html", "en/open-letter/index.html", "en/support/index.html", "en/about/index.html"].includes(route)) {
+    if (!["index.html", "en/index.html"].includes(route)) {
       assert.match(html, /rel="alternate" hreflang="pt-BR"/);
       assert.match(html, /rel="alternate" hreflang="en"/);
     }
@@ -44,59 +44,57 @@ test("all localized HTML pages exist with metadata", () => {
   }
 });
 
-test("scenario navigation targets exist and Portuguese notes are localized", () => {
+test("both editions carry the single narrative, its chapters and its notes", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
-  const targets = [
-    [en, "2026-the-branching-point"],
-    [en, "2027-the-first-shock"],
-    [en, "2028-coordination-takes-shape"],
-    [en, "2029-brazil-enters-the-game"],
-    [en, "2030-an-ai-era-middle-power"],
-    [en, "2027-attacks-layoffs-and-emergency-powers"],
-    [en, "2028-someone-elses-agreement"],
-    [en, "2029-access-in-exchange-for-alignment"],
-    [en, "2030-satellite-country"],
-  ];
-  for (const [html, id] of targets) {
-    assert.ok(html.includes(`href="#${id}"`), `scenario must link to #${id}`);
-    assert.ok(html.includes(`id="${id}"`), `scenario must contain #${id}`);
+  const chapters = {
+    pt: ["2026-um-assunto-para-depois-da-eleição", "2027-a-segunda-feira-sem-sistema", "2028-o-acordo-dos-outros",
+         "2029-acesso-em-troca-de-alinhamento", "2030-país-satélite", "o-que-poderia-ter-sido-diferente"],
+    en: ["2026-a-matter-for-after-the-election", "2027-the-monday-without-a-system", "2028-someone-elses-agreement",
+         "2029-access-in-exchange-for-alignment", "2030-satellite-country", "what-could-have-been-different"],
+  };
+  for (const [html, ids] of [[pt, chapters.pt], [en, chapters.en]]) {
+    for (const id of ids) {
+      assert.ok(html.includes(`href="#${id}"`), `the timeline must link to #${id}`);
+      assert.ok(html.includes(`id="${id}"`), `the narrative must contain #${id}`);
+    }
+  }
+  // The footnote apparatus is shared: the ids stay identical across editions.
+  for (const html of [pt, en]) {
+    assert.match(html, /id="fonte-5"/);
+    assert.equal((html.match(/id="fonte-\d+"/g) || []).length, 19);
   }
   assert.match(pt, /Notas e fontes/);
-  assert.match(pt, /id="fonte-5"/);
-  assert.doesNotMatch(pt, />Footnotes<|Back to reference/);
+  assert.match(en, /Notes and sources/);
+  assert.doesNotMatch(en, /Notas e fontes/);
 });
 
-test("scenario dashboard is bilingual, scroll-linked, and explicit about uncertainty", () => {
+test("the scenario dashboard is bilingual and explicit about uncertainty", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
   assert.match(pt, /data-candidate-states/);
+  assert.match(en, /data-candidate-states/);
+  assert.match(pt, /Estado do Brasil/);
   assert.match(pt, /Não mede o Brasil real/);
   assert.match(en, /State of Brazil/);
-  assert.match(en, /This panel summarizes the selected trajectory\. It does not measure real-world Brazil\./);
+  assert.match(en, /It does not measure real-world Brazil/);
   assert.match(en, /Systemic risk/);
   assert.match(en, /Inference sovereignty/);
-  assert.doesNotMatch(pt, /data-branch-target/);
-  assert.match(en, /Earlier English edition/);
-  assert.match(en, /data-scenario-branch/);
+  // The two-scenario edition is gone from both.
+  for (const html of [pt, en]) {
+    assert.doesNotMatch(html, /data-branch-target/);
+    assert.doesNotMatch(html, /data-scenario-branch/);
+  }
+  assert.doesNotMatch(en, /Earlier English edition/);
 });
 
-test("the complete scenario visual system renders in both languages", () => {
+test("the narrative diagrams render in both editions without images", () => {
   const pt = readFileSync(new URL("index.html", root), "utf8");
   const en = readFileSync(new URL("en/index.html", root), "utf8");
-  for (const html of [en]) {
-    assert.equal((html.match(/class="scenario-visual /g) || []).length, 4);
-    assert.match(html, /visual-bargain/);
-    assert.match(html, /visual-cascade/);
-    assert.match(html, /visual-capacity/);
-    assert.match(html, /visual-leverage/);
+  for (const html of [pt, en]) {
+    assert.equal((html.match(/class="candidate-diagram"/g) || []).length, 3);
     assert.doesNotMatch(html, /<svg|<canvas/);
   }
-  assert.equal((pt.match(/class="candidate-diagram"/g) || []).length, 3);
-  assert.match(en, /A data center becomes leverage only through public terms/);
-  assert.match(en, /One attack, four points of view/);
-  assert.match(en, /Machines in Brazil do not guarantee Brazilian use/);
-  assert.match(en, /Brazil's negotiation map/);
 });
 
 test("core pages remain discoverable and progressive enhancement is explicit", () => {
@@ -125,7 +123,7 @@ test("all Markdown documents exist with public-edition metadata", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /edition: public/);
-    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : ["resumo.md", "carta-aberta.md", "sobre.md"].includes(route) ? /sourceRevision: 2026-09-14-reader-review/ : /sourceRevision: \d{4}-\d{2}-\d{2}-derived/);
+    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : ["resumo.md", "carta-aberta.md", "sobre.md"].includes(route) ? /sourceRevision: 2026-09-14-reader-review/ : /sourceRevision: \d{4}-\d{2}-\d{2}-(derived|en)/);
   }
 });
 
@@ -137,15 +135,16 @@ test("language switches preserve page identity", () => {
     ["carta-aberta/index.html", "/en/open-letter"],
     ["signatarios/index.html", "/en/signatories"],
     ["sobre/index.html", "/en/about"],
+    ["en/summary/index.html", "/resumo"],
+    ["en/evidence/index.html", "/evidencias"],
+    ["en/open-letter/index.html", "/carta-aberta"],
+    ["en/about/index.html", "/sobre"],
   ];
   for (const [route, counterpart] of pairs) {
     const html = readFileSync(new URL(route, root), "utf8");
-    if (["resumo/index.html", "carta-aberta/index.html", "sobre/index.html"].includes(route)) {
-      assert.match(html, /Este texto ainda não tem tradução em inglês/);
-      assert.doesNotMatch(html, /hreflang="en"/);
-      continue;
-    }
     assert.ok(html.includes(`href="${counterpart}"`), `${route} must link to ${counterpart}`);
+    // Nothing is untranslated any more, so the switch is never disabled.
+    assert.doesNotMatch(html, /ainda não tem tradução/, `${route} must not claim a missing translation`);
   }
 });
 
@@ -157,30 +156,28 @@ test("publication support files exist", () => {
   assert.match(readFileSync(new URL("llms.txt", root), "utf8"), /English pages remain an earlier edition/);
 });
 
-test("legacy informational pages retain their punctuation convention", () => {
+test("informational pages retain their punctuation convention", () => {
+  // The two narrative editions keep the authors' dialogue punctuation; the rest does not.
+  const narrative = ["index.html", "en/index.html", "resumo/index.html", "en/summary/index.html"];
   for (const [route] of htmlRoutes) {
-    if (route === "index.html") continue; // Approved narrative dialogue preserves the authors' punctuation.
+    if (narrative.includes(route)) continue;
     const html = readFileSync(new URL(route, root), "utf8");
     assert.equal(html.includes("—"), false, `${route} contains an em dash`);
   }
 });
 
-test("legacy English support flow is preserved and new letter consent stays in local preview", () => {
-  const support = readFileSync(new URL("en/support/index.html", root), "utf8");
-  const signatories = readFileSync(new URL("signatarios/index.html", root), "utf8");
-  assert.match(support, /name="name"/);
-  assert.match(support, /name="roleTitle"/);
-  assert.match(support, /name="message"/);
-  assert.match(support, /name="email"/);
-  assert.match(support, /name="consent"/);
-  assert.match(support, /fetch\("\/api\/apoios"/);
-  const preview = readFileSync(new URL("carta-aberta/index.html", root), "utf8");
-  assert.match(preview, /Nenhum dado foi enviado/);
-  assert.match(preview, /não serão transferidos/);
-  assert.doesNotMatch(preview, /fetch\(/);
-  assert.match(signatories, /A lista ainda não está aberta/);
-  assert.match(signatories, /Nenhum apoio registrado na campanha anterior foi transferido/);
-  assert.doesNotMatch(signatories, /fetch\(/);
+test("the letter's signing form is a local preview in both editions", () => {
+  for (const [route, marker] of [["carta-aberta/index.html", /Nenhum dado foi enviado/],
+                                 ["en/open-letter/index.html", /No data was sent/]]) {
+    const html = readFileSync(new URL(route, root), "utf8");
+    assert.match(html, marker);
+    assert.doesNotMatch(html, /fetch\(/, `${route} must not call the retired support API`);
+  }
+  for (const route of ["signatarios/index.html", "en/signatories/index.html"]) {
+    const html = readFileSync(new URL(route, root), "utf8");
+    assert.doesNotMatch(html, /fetch\(/, `${route} must not call the retired support API`);
+  }
+  assert.equal(existsSync(new URL("en/support/index.html", root)), false, "the REDATA support page is retired");
 });
 
 test("the public edition contains no draft labels", () => {

@@ -8,13 +8,12 @@ import { candidateReadingTime } from "../src/data/candidate-reading-time.ts";
 const html = readFileSync(new URL("../dist/candidato/index.html", import.meta.url), "utf8");
 const markdown = readFileSync(new URL("../dist/candidato.md", import.meta.url), "utf8");
 
-test("candidate reads as a publication without implying a translated edition", () => {
+test("candidate reads as a publication in both editions", () => {
   assert.match(html, /<title>O custo do atraso na era da IA \| Brasil 2030<\/title>/);
   assert.match(html, /Este é um cenário, não uma previsão/);
   assert.match(html, /noindex, nofollow, noarchive/);
   assert.match(html, /rel="canonical" href="https:\/\/brasil-2030.piccini.app\/"/);
   assert.doesNotMatch(html, /hreflang="en"/);
-  assert.match(html, /aria-disabled="true" title="Este texto ainda não tem tradução em inglês"/);
   assert.match(html, /href="\/cenario.md"/);
   assert.equal(readFileSync(new URL("../dist/index.html", import.meta.url), "utf8"), html);
 });
@@ -108,11 +107,11 @@ test("complete candidate keeps the approved opening and October-to-2030 chronolo
 
 test("reading time excludes apparatus and link targets but retains main prose and introduction", () => {
   const source = 'ignored\n## 2026: Ano\nOlá [mundo](https://example.com/long-title) [1](#fonte-1 "long tooltip").\n<details><summary>extra</summary>extra</details>\n<figure>diagram</figure><table>cells</table><aside>aside</aside>\n## 2030: Fim\nBoa noite\n## O que poderia ter sido diferente\nrecommendations\n## Notas e fontes\nreferences';
-  const base = candidateReadingTime(source, ['Uma introdução']);
+  const base = candidateReadingTime(source, 'pt', ['Uma introdução']);
   assert.equal(base.words, 10);
   assert.equal(base.minutes, 1);
-  assert.deepEqual(candidateReadingTime(source.replace('diagram', 'diagram '.repeat(1000)), ['Uma introdução']), base);
-  assert.deepEqual(candidateReadingTime(source + ' references'.repeat(1000), ['Uma introdução']), base);
+  assert.deepEqual(candidateReadingTime(source.replace('diagram', 'diagram '.repeat(1000)), 'pt', ['Uma introdução']), base);
+  assert.deepEqual(candidateReadingTime(source + ' references'.repeat(1000), 'pt', ['Uma introdução']), base);
   assert.throws(() => candidateReadingTime('unrecognized manuscript'));
 });
 

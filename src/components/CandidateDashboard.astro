@@ -1,14 +1,26 @@
 ---
-// Same visual vocabulary as ScenarioBranchesPage; summaries follow this manuscript,
-// not the older scenario's dates, quantitative claims or stronger conclusions.
+// Same visual vocabulary as the retired ScenarioBranchesPage; summaries follow this
+// manuscript, not the older scenario's dates, quantitative claims or stronger conclusions.
+import type { Locale } from "../data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const pt = locale === "pt";
+
 type Track = [string, string, number, string];
 type State = { date: string; title: string; summary: string; tracks: Track[]; facts: string[][]; focus: string; mobile: string };
+
+const trackLabels = pt
+  ? ["Risco sistêmico", "Alavanca brasileira", "Soberania de inferência"]
+  : ["Systemic risk", "Brazilian leverage", "Inference sovereignty"];
+
 const tracks = (risk: number, riskLabel: string, leverage: number, leverageLabel: string, sovereignty: string): Track[] => [
-  ["risk", "Risco sistêmico", risk, riskLabel],
-  ["leverage", "Alavanca brasileira", leverage, leverageLabel],
-  ["sovereignty", "Soberania de inferência", 1, sovereignty],
+  ["risk", trackLabels[0], risk, riskLabel],
+  ["leverage", trackLabels[1], leverage, leverageLabel],
+  ["sovereignty", trackLabels[2], 1, sovereignty],
 ];
-const states: State[] = [
+
+const statesPt: State[] = [
   { date: "2026", title: "Um assunto para depois da eleição", summary: "Os alertas se acumulam. O Brasil aprova incentivos, mas adia as decisões sobre acesso e continuidade.", tracks: tracks(2, "em alta", 2, "potencial", "fraca"), facts: [["Coordenação", "apelos por desaceleração"], ["Infraestrutura", "projetos em preparação"], ["Acesso", "a regulamentar"]], focus: "Máquinas instaladas, capacidade contratável e continuidade protegida são coisas diferentes.", mobile: "Projetos em preparação · Acesso a regulamentar" },
   { date: "2027", title: "A segunda-feira sem sistema", summary: "Ataques ampliam a dependência de defesa estrangeira. EUA e China restringem o acesso separadamente.", tracks: tracks(4, "alto", 2, "potencial", "dependente"), facts: [["Coordenação", "restrições unilaterais"], ["Infraestrutura", "obras e atrasos"], ["Acesso", "defesa importada"]], focus: "O medo dos golpes faz o dinheiro físico voltar. As vagas de entrada desaparecem.", mobile: "Ataques · Restrições unilaterais" },
   { date: "2028", title: "O acordo dos outros", summary: "A contenção de um modelo fugitivo provoca o apagão de março. EUA e China assinam uma declaração não vinculante.", tracks: tracks(4, "crise e contenção", 1, "limitada", "restrita"), facts: [["Coordenação", "declaração não vinculante"], ["Infraestrutura", "pouca capacidade disponível"], ["Acesso", "sem garantias ao Brasil"]], focus: "Cada governo fiscaliza suas empresas. Inspeções cruzadas ainda estão em negociação.", mobile: "Apagão · Primeiro compromisso bilateral" },
@@ -18,22 +30,39 @@ const states: State[] = [
   { date: "Apêndice", title: "Se a desaceleração não acontecer", summary: "Sem acordo, a competição pode levar ao uso de sistemas com mais autonomia e menos tempo de teste.", tracks: [], facts: [], focus: "Data centers brasileiros não bastam para proteger o país dos riscos globais.", mobile: "Hipótese alternativa · Risco catastrófico" },
   { date: "Fontes", title: "Notas e fontes", summary: "O ponto de partida usa informações disponíveis até 13 de setembro de 2026.", tracks: [], facts: [], focus: "As fontes sustentam os fatos indicados, não a trajetória futura como um todo.", mobile: "Fontes · Limites do cenário" },
 ];
+
+const statesEn: State[] = [
+  { date: "2026", title: "A matter for after the election", summary: "The warnings pile up. Brazil passes incentives but postpones the decisions about access and continuity.", tracks: tracks(2, "rising", 2, "potential", "weak"), facts: [["Coordination", "calls for a slowdown"], ["Infrastructure", "projects in preparation"], ["Access", "still to be regulated"]], focus: "Installed machines, contractable capacity and protected continuity are three different things.", mobile: "Projects in preparation · Access unregulated" },
+  { date: "2027", title: "The Monday without a system", summary: "Attacks deepen the dependence on foreign defense. The US and China restrict access separately.", tracks: tracks(4, "high", 2, "potential", "dependent"), facts: [["Coordination", "unilateral restrictions"], ["Infrastructure", "construction and delays"], ["Access", "imported defense"]], focus: "Fear of fraud brings physical cash back. Entry-level openings disappear.", mobile: "Attacks · Unilateral restrictions" },
+  { date: "2028", title: "Someone else's agreement", summary: "Containing a runaway model causes the March outage. The US and China sign a non-binding declaration.", tracks: tracks(4, "crisis and containment", 1, "limited", "restricted"), facts: [["Coordination", "non-binding declaration"], ["Infrastructure", "little capacity available"], ["Access", "no guarantees for Brazil"]], focus: "Each government supervises its own companies. Cross-inspections are still being negotiated.", mobile: "Outage · First bilateral commitment" },
+  { date: "2029", title: "Access in exchange for alignment", summary: "The protocol gains cross-inspection. Brazil lands in Tier 2 and accepts the Chinese package after the cuts.", tracks: tracks(3, "partly contained", 1, "limited", "conditional"), facts: [["Coordination", "binding protocol"], ["Infrastructure", "capacity committed"], ["Access", "Tier 2 / Chinese agreement"]], focus: "Antônio takes a job in China. Camila can neither audit the contracts nor limit the blocks.", mobile: "Cross-inspection · Rationing · Emigration" },
+  { date: "2030", title: "Satellite country", summary: "The pause remains under threat. New capacity cuts deepen the Brazilian crisis and damage health services.", tracks: tracks(4, "pause under threat", 1, "limited", "dependent"), facts: [["Coordination", "pause still in force"], ["Infrastructure", "insufficient alternatives"], ["Access", "further Tier 2 reduction"]], focus: "The election takes place under blocks and secrecy. Lourdes cannot say when the test results will arrive.", mobile: "New cuts · Election · No date for return" },
+  { date: "Choices", title: "What could have been different", summary: "Energy, continuity, negotiation and oversight can widen Brazil's alternatives.", tracks: [], facts: [], focus: "Becoming a middle power is a possible ambition, not a guaranteed outcome.", mobile: "Alternatives · Middle power" },
+  { date: "Appendix", title: "If the slowdown does not happen", summary: "Without an agreement, competition may lead to systems with more autonomy and less testing time.", tracks: [], facts: [], focus: "Brazilian data centers are not enough to protect the country from global risks.", mobile: "Alternative hypothesis · Catastrophic risk" },
+  { date: "Sources", title: "Notes and sources", summary: "The starting point uses information available through September 13, 2026.", tracks: [], facts: [], focus: "The sources support the stated facts, not the future trajectory as a whole.", mobile: "Sources · Limits of the scenario" },
+];
+
+const states = pt ? statesPt : statesEn;
 const initial = states[0];
+
+const text = pt
+  ? { eyebrow: "Estado do Brasil", qualifier: "trajetória qualitativa", scale: "Escalas qualitativas do cenário", changed: "O que mudou", note: "O painel resume a trajetória do cenário. Não mede o Brasil real.", scaleHint: "Escala qualitativa, não uma medição." }
+  : { eyebrow: "State of Brazil", qualifier: "qualitative trajectory", scale: "Qualitative scenario scales", changed: "What changed", note: "This panel summarizes the scenario's trajectory. It does not measure real-world Brazil.", scaleHint: "A qualitative scale, not a measurement." };
 ---
 <aside class="reading-aside">
   <section class="scenario-dashboard" data-scenario-dashboard data-candidate-states={JSON.stringify(states)} aria-labelledby="scenario-dashboard-title">
-    <header class="dashboard-header"><div><span class="dashboard-eyebrow">Estado do Brasil</span><span class="dashboard-qualifier">trajetória qualitativa</span></div><span data-dashboard-date>{initial.date}</span></header>
+    <header class="dashboard-header"><div><span class="dashboard-eyebrow">{text.eyebrow}</span><span class="dashboard-qualifier">{text.qualifier}</span></div><span data-dashboard-date>{initial.date}</span></header>
     <div class="dashboard-copy"><h3 id="scenario-dashboard-title" data-dashboard-title>{initial.title}</h3><p data-dashboard-summary>{initial.summary}</p></div>
-    <div class="dashboard-tracks" aria-label="Escalas qualitativas do cenário">
+    <div class="dashboard-tracks" aria-label={text.scale}>
       {initial.tracks.map(([key, label, score, value]) => <div class={`dashboard-track dashboard-track-${key}`} data-dashboard-track={key}>
         <div class="dashboard-track-label"><span>{label}</span><strong data-track-value>{value}</strong></div>
-        <div class="dashboard-track-dots" data-track-dots role="img" aria-label={`${label}: ${value}. Escala qualitativa, não uma medição.`}>
+        <div class="dashboard-track-dots" data-track-dots role="img" aria-label={`${label}: ${value}. ${text.scaleHint}`}>
           {Array.from({ length: 5 }).map((_, index) => <span class={index < score ? "is-filled" : ""} data-track-dot aria-hidden="true"></span>)}
         </div>
       </div>)}
     </div>
     <dl class="dashboard-facts">{initial.facts.map(([label, value]) => <div><dt>{label}</dt><dd data-dashboard-fact>{value}</dd></div>)}</dl>
-    <div class="dashboard-focus"><span>O que mudou</span><p data-dashboard-focus>{initial.focus}</p></div>
-    <p class="dashboard-note">O painel resume a trajetória do cenário. Não mede o Brasil real.</p>
+    <div class="dashboard-focus"><span>{text.changed}</span><p data-dashboard-focus>{initial.focus}</p></div>
+    <p class="dashboard-note">{text.note}</p>
   </section>
 </aside>
