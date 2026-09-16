@@ -1,5 +1,6 @@
 ---
 import { siteCopy, type Locale } from "../data/site";
+import { buildDateIso } from "../data/build-info";
 interface Props { locale: Locale; eyebrow: string; title: string; intro: string; compact?: boolean; }
 const { locale, eyebrow, title, intro, compact = false } = Astro.props;
 const copy = siteCopy[locale];
@@ -13,7 +14,7 @@ const copy = siteCopy[locale];
       <span class="status-dot" aria-hidden="true"></span>
       <span>{copy.status}</span>
       <span class="status-separator" aria-hidden="true"></span>
-      <time datetime="2026-08-28">{copy.updated}</time>
+      <time datetime={buildDateIso}>{copy.updated}</time>
     </div>
   </div>
 </header>

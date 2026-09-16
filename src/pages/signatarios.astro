@@ -1,4 +1,39 @@
 ---
-import SignatoriesPage from "../components/SignatoriesPage.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { routes } from "../data/site";
 ---
-<SignatoriesPage locale="pt" />
+<BaseLayout
+  locale="pt"
+  pageKey="signatories"
+  title="Signatários"
+  description="A lista de signatários da carta e dos compromissos será aberta após a revisão."
+>
+  <PageHero
+    compact
+    locale="pt"
+    eyebrow="Apoio público"
+    title="A lista ainda não está aberta"
+    intro="A carta e os quatro compromissos substituíram o pedido anterior ao REDATA. A lista de signatários desta carta será publicada depois da revisão editorial."
+  />
+
+  <div class="page-content narrow-content">
+    <div class="callout">
+      Nenhum apoio registrado na campanha anterior foi transferido para esta carta. Quem assinou o
+      pedido sobre o REDATA precisará assinar de novo quando a lista abrir.
+    </div>
+
+    <h2>O que vai aparecer aqui</h2>
+    <p>
+      Nome e tipo de adesão, depois de conferidos. Compromissos de candidaturas e representações
+      institucionais passam por verificação antes da publicação. Endereços de e-mail não são
+      publicados.
+    </p>
+
+    <h2>Enquanto isso</h2>
+    <p class="hero-actions">
+      <a class="button-link primary" href={`${routes.pt.letter}#assinar`}>Ler a carta e os compromissos</a>
+      <a class="button-link" href={routes.pt.strategy}>Ver a estratégia</a>
+    </p>
+  </div>
+</BaseLayout>

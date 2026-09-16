@@ -1,19 +1,20 @@
+import { buildDateLabel } from "./build-info";
+
 export type Locale = "pt" | "en";
-export type ContentPageKey = "scenario" | "summary" | "redata" | "evidence" | "strategy" | "letter" | "about";
-export type PageKey = ContentPageKey | "redataNote" | "support" | "signatories";
+export type ContentPageKey = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
+export type PageKey = ContentPageKey | "support" | "signatories";
 
 export const siteCopy = {
   pt: {
     locale: "pt-BR",
     shortLocale: "PT",
-    title: "Brasil 2030: Energia para Escolher",
-    description: "Dois cenários sobre como escolhas em risco, diplomacia e computação podem mudar a posição do Brasil até 2030.",
+    title: "Brasil 2030: O custo do atraso na era da IA",
+    description: "Um cenário sobre o que acontece com o Brasil até 2030 se as decisões sobre inteligência artificial continuarem sendo adiadas.",
     status: "Atualizado",
-    updated: "28 ago 2026",
+    updated: buildDateLabel.pt,
     nav: {
       scenario: "Cenários",
       summary: "Resumo",
-      redata: "REDATA",
       evidence: "Evidências",
       strategy: "Estratégia",
       letter: "Carta",
@@ -29,14 +30,13 @@ export const siteCopy = {
   en: {
     locale: "en",
     shortLocale: "EN",
-    title: "Brazil 2030: The Energy to Choose",
-    description: "Two scenarios for how choices about risk, diplomacy, and compute could change Brazil's position through 2030.",
+    title: "Brazil 2030: The Cost of Delay in the AI Era",
+    description: "A scenario for what happens to Brazil through 2030 if decisions about artificial intelligence keep being postponed.",
     status: "Updated",
-    updated: "28 Aug 2026",
+    updated: buildDateLabel.en,
     nav: {
       scenario: "Scenarios",
       summary: "Summary",
-      redata: "REDATA",
       evidence: "Evidence",
       strategy: "Strategy",
       letter: "Letter",
@@ -55,24 +55,20 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
   pt: {
     scenario: "/",
     summary: "/resumo",
-    redata: "/redata",
     evidence: "/evidencias",
     strategy: "/estrategia",
     letter: "/carta-aberta",
     about: "/sobre",
-    redataNote: "/redata/nota-executiva",
     support: "/apoie",
     signatories: "/signatarios",
   },
   en: {
     scenario: "/en",
     summary: "/en/summary",
-    redata: "/en/redata",
     evidence: "/en/evidence",
     strategy: "/en/strategy",
     letter: "/en/open-letter",
     about: "/en/about",
-    redataNote: "/en/redata/executive-note",
     support: "/en/support",
     signatories: "/en/signatories",
   },
@@ -82,7 +78,6 @@ export const markdownRoutes: Record<Locale, Record<ContentPageKey, string>> = {
   pt: {
     scenario: "/cenario.md",
     summary: "/resumo.md",
-    redata: "/redata.md",
     evidence: "/evidencias.md",
     strategy: "/estrategia.md",
     letter: "/carta-aberta.md",
@@ -91,7 +86,6 @@ export const markdownRoutes: Record<Locale, Record<ContentPageKey, string>> = {
   en: {
     scenario: "/en/scenario.md",
     summary: "/en/summary.md",
-    redata: "/en/redata.md",
     evidence: "/en/evidence.md",
     strategy: "/en/strategy.md",
     letter: "/en/open-letter.md",

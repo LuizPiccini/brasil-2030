@@ -1,4 +1,4 @@
-# Brasil 2030: Energia para Escolher
+# Brasil 2030: O custo do atraso na era da IA
 
 > A 2026–2030 narrative about Brazil, AI risk and geopolitical dependence. Portuguese narrative updated 2026-09-14. English and supporting policy pages remain earlier editions.
 
@@ -9,7 +9,6 @@
 - [Evidências](https://brasil-2030.piccini.app/evidencias.md)
 - [Estratégia](https://brasil-2030.piccini.app/estrategia.md)
 - [Carta aberta](https://brasil-2030.piccini.app/carta-aberta.md)
-- [REDATA: aprovar com cinco ajustes](https://brasil-2030.piccini.app/redata.md)
 - [Sobre e método](https://brasil-2030.piccini.app/sobre.md)
 
 ## English — earlier edition, not a translation of the current Portuguese narrative
@@ -19,9 +18,8 @@
 - [Evidence](https://brasil-2030.piccini.app/en/evidence.md)
 - [Strategy](https://brasil-2030.piccini.app/en/strategy.md)
 - [Open letter](https://brasil-2030.piccini.app/en/open-letter.md)
-- [REDATA: pass with five changes](https://brasil-2030.piccini.app/en/redata.md)
 - [About and method](https://brasil-2030.piccini.app/en/about.md)
 
 ## Evidence warning
 
-The current Portuguese narrative distinguishes observed starting conditions from future scenario events in its notes and sources. It is a scenario, not a prediction. The earlier English edition retains two branches and must not be treated as the current translation. REDATA and supporting policy pages retain their own review dates.
+The current Portuguese narrative distinguishes observed starting conditions from future scenario events in its notes and sources. It is a scenario, not a prediction. The earlier English edition retains two branches and must not be treated as the current translation. The REDATA advocacy pages were retired; REDATA now appears only as a documented 2026 event inside the narrative and the evidence register.

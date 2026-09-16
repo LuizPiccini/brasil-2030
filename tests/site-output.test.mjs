@@ -4,31 +4,27 @@ import test from "node:test";
 
 const root = new URL("../dist/", import.meta.url);
 const htmlRoutes = [
-  ["index.html", "pt-BR", "Energia para Escolher | Brasil 2030"],
+  ["index.html", "pt-BR", "O custo do atraso na era da IA | Brasil 2030"],
   ["resumo/index.html", "pt-BR", "Resumo"],
   ["evidencias/index.html", "pt-BR", "Evidências"],
   ["estrategia/index.html", "pt-BR", "Estratégia"],
   ["carta-aberta/index.html", "pt-BR", "Carta e compromissos"],
-  ["redata/index.html", "pt-BR", "REDATA"],
-  ["redata/nota-executiva/index.html", "pt-BR", "Nota executiva"],
   ["apoie/index.html", "pt-BR", "Assinar a carta"],
   ["signatarios/index.html", "pt-BR", "Signatários"],
   ["sobre/index.html", "pt-BR", "Sobre"],
-  ["en/index.html", "en", "Brazil 2030: The Energy to Choose"],
+  ["en/index.html", "en", "Brazil 2030: The Cost of Delay in the AI Era"],
   ["en/summary/index.html", "en", "Summary"],
   ["en/evidence/index.html", "en", "Evidence"],
   ["en/strategy/index.html", "en", "Strategy"],
   ["en/open-letter/index.html", "en", "Open letter"],
-  ["en/redata/index.html", "en", "REDATA"],
-  ["en/redata/executive-note/index.html", "en", "REDATA executive note"],
   ["en/support/index.html", "en", "Support"],
   ["en/signatories/index.html", "en", "Signatories"],
   ["en/about/index.html", "en", "About"],
 ];
 
 const markdownRoutes = [
-  "cenario.md", "resumo.md", "evidencias.md", "estrategia.md", "carta-aberta.md", "redata.md", "sobre.md",
-  "en/scenario.md", "en/summary.md", "en/evidence.md", "en/strategy.md", "en/open-letter.md", "en/redata.md", "en/about.md",
+  "cenario.md", "resumo.md", "evidencias.md", "estrategia.md", "carta-aberta.md", "sobre.md",
+  "en/scenario.md", "en/summary.md", "en/evidence.md", "en/strategy.md", "en/open-letter.md", "en/about.md",
 ];
 
 test("all localized HTML pages exist with metadata", () => {
@@ -123,33 +119,6 @@ test("core pages remain discoverable and progressive enhancement is explicit", (
   assert.equal(existsSync(new URL("og.png", root)), true, "social card must exist");
 });
 
-test("REDATA page includes the complete amendment review in both languages", () => {
-  const pt = readFileSync(new URL("redata/index.html", root), "utf8");
-  const en = readFileSync(new URL("en/redata/index.html", root), "utf8");
-  for (const html of [pt, en]) {
-    assert.equal((html.match(/class="amendment-stance /g) || []).length, 22);
-    assert.match(html, /dm=10215127/);
-    assert.match(html, /0\/5/);
-    assert.match(html, /1\/7/);
-  }
-  assert.match(pt, /Falta um bloco novo de emendas/);
-  assert.match(pt, /Porta brasileira/);
-  assert.match(pt, /avaliação independente antes de qualquer renovação/);
-  assert.match(pt, /Apoie esse pedido/);
-  assert.match(pt, /Acompanhar no Senado/);
-  assert.match(pt, /Irajá/);
-  assert.match(pt, /Jayme Campos/);
-  assert.match(pt, /A emenda foi retirada pelo autor/);
-  assert.match(pt, /Duas linhas vermelhas/);
-  assert.match(pt, /Aceitar só como fallback/);
-  assert.match(pt, /Precedente de conteúdo local no Inovar-Auto/);
-  assert.match(en, /A new amendment package is still needed/);
-  assert.match(en, /Brazilian contracting door/);
-  assert.match(en, /independent review before any renewal/);
-  assert.match(en, /Two red lines/);
-  assert.match(en, /Fallback only/);
-});
-
 test("all Markdown documents exist with public-edition metadata", () => {
   for (const route of markdownRoutes) {
     const path = new URL(route, root);
@@ -157,7 +126,7 @@ test("all Markdown documents exist with public-edition metadata", () => {
     const markdown = readFileSync(path, "utf8");
     assert.match(markdown, /^---\n/);
     assert.match(markdown, /edition: public/);
-    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : ["resumo.md", "carta-aberta.md", "sobre.md"].includes(route) ? /sourceRevision: 2026-09-14-reader-review/ : /sourceRevision: 2026-08-28-redata-final-v2/);
+    assert.match(markdown, route === "cenario.md" ? /sourceRevision: 2026-09-14-narrative/ : ["resumo.md", "carta-aberta.md", "sobre.md"].includes(route) ? /sourceRevision: 2026-09-14-reader-review/ : /sourceRevision: \d{4}-\d{2}-\d{2}-derived/);
   }
 });
 
@@ -167,8 +136,6 @@ test("language switches preserve page identity", () => {
     ["evidencias/index.html", "/en/evidence"],
     ["estrategia/index.html", "/en/strategy"],
     ["carta-aberta/index.html", "/en/open-letter"],
-    ["redata/index.html", "/en/redata"],
-    ["redata/nota-executiva/index.html", "/en/redata/executive-note"],
     ["apoie/index.html", "/en/support"],
     ["signatarios/index.html", "/en/signatories"],
     ["sobre/index.html", "/en/about"],
@@ -213,9 +180,9 @@ test("legacy English support flow is preserved and new letter consent stays in l
   assert.match(preview, /Nenhum dado foi enviado/);
   assert.match(preview, /não serão transferidos/);
   assert.doesNotMatch(preview, /fetch\(/);
-  assert.match(signatories, /Arquivo histórico/);
-  assert.match(signatories, /fetch\("\/api\/signatarios"/);
-  assert.match(signatories, /Cargos públicos, mandatos e candidaturas passam por conferência/);
+  assert.match(signatories, /A lista ainda não está aberta/);
+  assert.match(signatories, /Nenhum apoio registrado na campanha anterior foi transferido/);
+  assert.doesNotMatch(signatories, /fetch\(/);
 });
 
 test("the public edition contains no draft labels", () => {

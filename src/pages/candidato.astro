@@ -17,14 +17,14 @@ const chapters = headings.map((heading, index) => ({ ...heading,
   locale="pt"
   pageKey="scenario"
   candidate
-  title="Energia para Escolher"
+  title="O custo do atraso na era da IA"
   description="Um cenário para o Brasil entre 2026 e 2030: a corrida da IA desacelera, mas o país chega ao acordo sem ter preparado suas alternativas."
   markdownHref="/cenario.md"
   bodyClass="scenario-page candidate-page"
 >
   <div class="reading-layout">
     <section class="candidate-opening" aria-labelledby="candidate-title">
-      <h1 id="candidate-title">Brasil 2030<span>Energia para Escolher</span></h1>
+      <h1 id="candidate-title">Brasil 2030<span>O custo do atraso na era da IA</span></h1>
       {candidateIntroduction.map(paragraph => <p class="candidate-deck">{paragraph}</p>)}
       <p class="candidate-reading-time" title="Introdução e narrativa de 2026–2030, a 210 palavras por minuto. Não inclui resumo, quadros, notas, recomendações ou apêndice.">Cerca de {minutes} min de leitura</p>
       <p class="candidate-disclaimer">Este é um cenário, não uma previsão. As personagens são fictícias; os acontecimentos futuros exploram escolhas e consequências possíveis. As fontes do ponto de partida estão nas notas.</p>
@@ -35,7 +35,7 @@ const chapters = headings.map((heading, index) => ({ ...heading,
         {chapters.map(({ slug, text, year, label }, index) => <li><a href={`#${slug}`} class={index === 0 ? "is-active" : undefined} data-chapter-label={text} aria-current={index === 0 ? "location" : undefined}><span>{year}</span><span>{label}</span></a></li>)}
       </ol>
     </nav>
-    <article class="scenario-prose candidate-prose" aria-label="Energia para Escolher: texto completo">
+    <article class="scenario-prose candidate-prose" aria-label="O custo do atraso na era da IA: texto completo">
       <CandidateContent />
     </article>
     <CandidateDashboard />

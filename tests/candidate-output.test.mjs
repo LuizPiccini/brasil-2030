@@ -9,7 +9,7 @@ const html = readFileSync(new URL("../dist/candidato/index.html", import.meta.ur
 const markdown = readFileSync(new URL("../dist/candidato.md", import.meta.url), "utf8");
 
 test("candidate reads as a publication without implying a translated edition", () => {
-  assert.match(html, /<title>Energia para Escolher \| Brasil 2030<\/title>/);
+  assert.match(html, /<title>O custo do atraso na era da IA \| Brasil 2030<\/title>/);
   assert.match(html, /Este é um cenário, não uma previsão/);
   assert.match(html, /noindex, nofollow, noarchive/);
   assert.match(html, /rel="canonical" href="https:\/\/brasil-2030.piccini.app\/"/);

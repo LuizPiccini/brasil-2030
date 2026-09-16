@@ -1,17 +1,17 @@
-# Brasil 2030: Energia para Escolher
+# Brasil 2030: O custo do atraso na era da IA
 
 Source repository for the public working site of the Brasil 20XX scenario project:
 [brasil-2030.piccini.app](https://brasil-2030.piccini.app/).
 
 ## Editorial state
 
-- The isolated Portuguese review candidate dated 2026-09-12 is available at `/candidato` and `/candidato.md`. It adapts Danilo's proposal into one negative narrative with a slowdown, decision points and a separate no-slowdown appendix. It is not collectively approved; `/` and all existing translations remain unchanged in content.
-- Candidate source and editorial provenance: `src/content/scenario-candidate-pt.md` and `research/2026-09-12-candidate-editorial-note.md`.
+- The site carries **one** Portuguese narrative, served at `/` and `/candidato` from `src/content/scenario-candidate-pt.md`. It runs from "2026: Um assunto para depois da eleição" to "2030: País satélite", followed by "O que poderia ter sido diferente", a no-slowdown appendix, and sources. Editorial provenance: `research/2026-09-12-candidate-editorial-note.md`.
 - Portuguese is the default and editorially leading public language.
-- English follows the 2026-08-27 two-scenario revision.
+- The English pages are an **earlier, untranslated edition** that still shows the retired two-scenario structure. They are scheduled to be rebuilt; do not treat them as a translation of the current narrative.
 - The public argument has three commitments: a verifiable global slowdown, Brazilian support for US-China negotiations, and domestic data-center and grid infrastructure for leverage and inference sovereignty.
-- The main narrative branches after the shared 2026 baseline into a positive path of coordination and a negative path of dependence.
-- The REDATA page is a focused policy intervention for the Senate debate, with facts reviewed through 2026-08-27.
+- The REDATA advocacy pages were retired. REDATA survives only as a documented 2026 event inside the narrative and the evidence register.
+- Markdown editions are **generated**, never written twice. `/evidencias.md` and `/estrategia.md` derive from `src/data/evidence.ts` and `src/data/strategy.ts`, the same modules the pages render; `/cenario.md`, `/resumo.md`, `/carta-aberta.md` and `/sobre.md` derive from their content files. `tests/derivation-and-anchors.test.mjs` fails the build if an edition drifts.
+- The "updated" date shown on the site is the build date, from `src/data/build-info.ts`. Do not hardcode it.
 - Data-center support is conditional on a public bargain covering contractable compute access, water, grid costs, affected communities, and measurable local benefits.
 - Scenario inventions and open estimates must keep their visible evidence labels.
 - Pedro's 2030 model values remain open and must not be filled without the model.

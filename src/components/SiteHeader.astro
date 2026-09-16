@@ -13,7 +13,7 @@ const copy = siteCopy[locale];
 const untranslated = locale === "pt" && (candidate || ["summary", "letter", "about", "support"].includes(pageKey));
 const navKeys: ContentPageKey[] = locale === "pt"
   ? ["scenario", "letter", "about"]
-  : ["scenario", "summary", "redata", "evidence", "strategy", "letter", "about"];
+  : ["scenario", "summary", "evidence", "strategy", "letter", "about"];
 const secondaryKeys: ContentPageKey[] = locale === "pt" ? ["summary", "evidence"] : [];
 const navLabel = (key: ContentPageKey) => locale === "pt" && key === "letter" ? "Carta e compromissos" : copy.nav[key as keyof typeof copy.nav];
 const navHref = (key: ContentPageKey) => locale === "pt" && key === "summary" ? "/#resumo-do-cenario" : routes[locale][key];

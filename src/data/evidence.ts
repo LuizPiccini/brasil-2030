@@ -1,0 +1,245 @@
+import type { Locale } from "./site";
+
+// Single source for the evidence register. EvidencePage.astro renders it as a table and
+// lib/markdown.ts renders the same rows as Markdown, so the two can no longer drift.
+export function evidenceFor(locale: Locale) {
+  const pt = locale === "pt";
+  return [
+  {
+    kind: "fact", labelPt: "Situação legislativa", labelEn: "Legislative status", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Em 28 de agosto de 2026, o PL 278/2026 estava no Plenário do Senado, sem relator definido e com 22 emendas. A Agência Senado informou que a matéria poderia ser votada na semana de 31 de agosto a 4 de setembro.",
+    claimEn: "On August 28, 2026, Bill 278/2026 was before the Senate plenary, had no appointed rapporteur, and had received 22 amendments. Senate News reported that the bill could be voted during the August 31 to September 4 session week.",
+    source: "Senado Federal / Agência Senado", url: "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers", checked: "28/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Análise dos autores", labelEn: "Author analysis", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A leitura do texto-base e das 22 emendas não encontrou nenhuma emenda que cubra integralmente qualquer um dos cinco pedidos centrais. Apenas a Emenda 21 cobre parcialmente um dos sete pontos de regulamentação.",
+    claimEn: "Our review of the base bill and all 22 amendments found no amendment that fully covers any of the five core requests. Only Amendment 21 partly covers one of the seven regulatory points.",
+    source: "Senado Federal, PL 278/2026", url: "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786", checked: "28/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Texto aprovado", labelEn: "Passed text", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O texto da Câmara prevê 10% de oferta doméstica, mas mede o percentual pela receita. Permite substituição integral por investimento adicional em P&D e reduz o compromisso para 8% em regiões incentivadas.",
+    claimEn: "The Chamber text provides for 10% domestic supply but measures the share through revenue. It allows full substitution through additional R&D and lowers the commitment to 8% in incentivized regions.",
+    source: "Agência Câmara, REDATA", url: "https://www.camara.leg.br/noticias/1247282-camara-aprova-incentivo-fiscal-para-investimentos-em-centros-de-processamento-de-dados/", checked: "27/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A oferta interna de eletricidade do Brasil chegou a 783,3 TWh em 2025, com 86,8% de fontes renováveis.",
+    claimEn: "Brazil's domestic electricity supply reached 783.3 TWh in 2025, with 86.8% from renewable sources.",
+    source: "EPE, BEN 2026", url: "https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-975/topico-847/BEN_S%C3%ADntese_2026_PT.pdf", checked: "06/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A EPE registrou 719 MW de carga total de data centers no Brasil em 2025. O número inclui telecomunicações, nuvem e processamento empresarial; ele não funciona como inventário de GPUs.",
+    claimEn: "EPE recorded 719 MW of total Brazilian data-center load in 2025. The figure includes telecom, cloud, and enterprise processing; it is not a GPU inventory.",
+    source: "EPE, Coleta Data Center", url: "https://www.epe.gov.br/sites-pt/areas-de-atuacao/energia-eletrica/WorkshopCOPAM/%5BEPE%5D%20Coleta%20Data%20Center%20na%20distribui%C3%A7%C3%A3o%202025%20IV%20COPAM_12-2025.pdf", checked: "06/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A EPE propôs R$ 5,68 bilhões em novas instalações de transmissão para conectar até 4 GW de cargas eletrointensivas no Ceará e no Piauí.",
+    claimEn: "EPE proposed R$5.68 billion in new transmission assets to connect up to 4 GW of electro-intensive load in Ceará and Piauí.",
+    source: "EPE, proposta de transmissão", url: "https://www.epe.gov.br/pt/imprensa/noticias/epe-propoe-solucao-de-transmissao-flexivel-e-escalonavel-para-atendimento-a-ate-4gw-de-cargas-eletrointensivas-no-ceara-e-piaui", checked: "19/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Plano publicado", labelEn: "Published plan", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O PBIA prevê R$ 23,03 bilhões em investimento entre 2024 e 2028, com R$ 5,79 bilhões destinados a infraestrutura e desenvolvimento de IA. Os valores são planejados, não executados: em setembro de 2025, 31% das ações estavam entregues ou iniciadas. O FNDCT pagou cerca de 28% do autorizado em 2024, mas 100% do que lhe foi liberado; a liberação integral só é permitida a partir de 2027 (MP 1.136/2022), e a LC 177/2021 impede o contingenciamento.",
+    claimEn: "The PBIA sets out R$23.03 billion in planned investment from 2024 to 2028, including R$5.79 billion for infrastructure and AI development. These are planned, not executed, amounts: by September 2025, 31% of actions were delivered or under way. The FNDCT paid about 28% of its authorized budget in 2024 but 100% of what was released; full release is only allowed from 2027 (MP 1,136/2022), and LC 177/2021 bars freezes.",
+    source: "MCTI, PBIA", url: "https://www.gov.br/mcti/pt-br/centrais-de-conteudo/publicacoes-mcti/plano-brasileiro-de-inteligencia-artificial/pbia_mcti_2025.pdf", checked: "06/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Síntese científica", labelEn: "Scientific assessment", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O International AI Safety Report 2026 encontra evidência forte de uso de IA por grupos criminosos e atores estatais em operações cibernéticas. O relatório também registra que ataques autônomos de ponta a ponta ainda não foram reportados e que o efeito sobre a escala total dos ataques permanece incerto.",
+    claimEn: "The 2026 International AI Safety Report finds strong evidence that criminal groups and state actors use AI in cyber operations. It also records that fully autonomous end-to-end attacks have not been reported and that the effect on overall attack scale remains uncertain.",
+    source: "International AI Safety Report 2026", url: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026", checked: "07/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Mecanismo internacional", labelEn: "International mechanism", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A Assembleia Geral da ONU criou um Diálogo Global sobre Governança de IA com participação dos 193 Estados-membros. A primeira sessão ocorreu em julho de 2026 e a segunda está prevista para maio de 2027.",
+    claimEn: "The UN General Assembly created a Global Dialogue on AI Governance for all 193 member states. Its first session took place in July 2026, with a second scheduled for May 2027.",
+    source: "ONU, Diálogo Global sobre IA", url: "https://www.un.org/global-dialogue-ai-governance/en/faq", checked: "07/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Polo institucional", labelEn: "Institutional pole", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Os Estados Unidos lançaram a Pax Silica em dezembro de 2025 como iniciativa para cadeias seguras de IA, semicondutores, computação e energia.",
+    claimEn: "The United States launched Pax Silica in December 2025 as an initiative for secure AI, semiconductor, compute, and energy supply chains.",
+    source: "Casa Branca, balanço de 2025", url: "https://www.whitehouse.gov/wp-content/uploads/2026/01/WHOSTP-2025-Wins.pdf", checked: "28/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Polo institucional", labelEn: "Institutional pole", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Em julho de 2026, 29 países fundaram em Xangai a Organização Mundial para Cooperação em Inteligência Artificial, a WAICO.",
+    claimEn: "In July 2026, 29 countries founded the World AI Cooperation Organization, or WAICO, in Shanghai.",
+    source: "Governo da China, WAICO", url: "https://english.www.gov.cn/news/202607/17/content_WS6a59a226c6d00ca5f9a0c432.html", checked: "28/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente comercial", labelEn: "Trade precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "No caso DS472, a OMC considerou incompatíveis com regras comerciais medidas brasileiras que condicionavam benefícios tributários a conteúdo e produção local, incluindo o Inovar-Auto.",
+    claimEn: "In dispute DS472, the WTO found Brazilian measures conditioning tax benefits on local content and production, including Inovar-Auto, inconsistent with trade rules.",
+    source: "OMC, caso DS472", url: "https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds472_e.htm", checked: "28/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Projeto reportado", labelEn: "Reported project", confidencePt: "Média", confidenceEn: "Medium",
+    claimPt: "Reportagens descrevem uma primeira fase de cerca de 200 MW para o campus da ByteDance em Pecém, com ambição de expansão para perto de 1 GW e contrato eólico de vinte anos.",
+    claimEn: "Reports describe an initial phase of about 200 MW for ByteDance's Pecém campus, an ambition to expand toward 1 GW, and a twenty-year wind-power agreement.",
+    source: "Bloomberg / w.media", url: "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/", checked: "06/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Resposta regulatória", labelEn: "Regulatory response", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O CONAMA pediu diretrizes nacionais para consumo de água e energia, emissões, impactos territoriais, tarifas e participação pública no licenciamento de data centers.",
+    claimEn: "CONAMA called for national rules covering water and electricity use, emissions, territorial impacts, tariffs, and public participation in data-center licensing.",
+    source: "CONAMA, Moção 147/2026", url: "https://conama.mma.gov.br/?id=858&option=com_sisconama&task=arquivo.download", checked: "19/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Alegação do empreendedor", labelEn: "Developer claim", confidencePt: "Exige verificação", confidenceEn: "Verification required",
+    claimPt: "A ByteDance afirma que o projeto de Pecém usará energia renovável e resfriamento com reuso de água. Fonte, limites, reposição em secas e obrigações auditáveis continuam relevantes.",
+    claimEn: "ByteDance says the Pecém project will use renewable power and cooling with water reuse. The source, limits, drought-period replenishment, and auditable obligations remain relevant.",
+    source: "TikTok, anúncio do projeto", url: "https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-r-200-billhoes?lang=pt-BR", checked: "19/08/2026",
+  },
+  {
+    kind: "estimate", labelPt: "Estimativa dos autores", labelEn: "Author estimate", confidencePt: "Baixa", confidenceEn: "Low",
+    claimPt: "A participação brasileira na computação relevante para IA pode estar entre 0,1% e 0,5%. Não existe censo mundial comparável; a faixa serve como hipótese de trabalho.",
+    claimEn: "Brazil's share of AI-relevant compute may fall between 0.1% and 0.5%. No comparable global census exists; the range is an author estimate.",
+    source: "Brasil 20XX, cálculo de trabalho", url: pt ? "/evidencias#metodo" : "/en/evidence#method", checked: "06/08/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A automação bancária brasileira reduziu o emprego no setor de cerca de 750 mil (1990) para cerca de 390 mil (2000), uma queda de 46% em dez anos. Os cenários usam esse ritmo, de quatro a cinco pontos ao ano, como referência para o emprego administrativo.",
+    claimEn: "Brazilian banking automation cut sector employment from about 750,000 (1990) to about 390,000 (2000), a 46% fall over ten years. The scenarios use that pace, four to five points a year, as the reference for administrative employment.",
+    source: "Ensaios FEE 25(1), 2004; DIEESE", url: "https://revistas.planejamento.rs.gov.br/index.php/ensaios/article/download/2054/2436/0", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Média", confidenceEn: "Medium",
+    claimPt: "Nos Estados Unidos, o emprego relativo de trabalhadores de 22 a 25 anos em ocupações mais expostas à IA caiu 13% entre o fim de 2022 e julho de 2025, sem queda equivalente para os mais experientes. O efeito aparece nas admissões de entrada, não no estoque. Máximos da série brasileira: desocupação de 14,9% e 14,8 milhões de desocupados em 2021.",
+    claimEn: "In the United States, relative employment of 22-to-25-year-olds in AI-exposed occupations fell 13% between late 2022 and July 2025, with no equivalent fall for experienced workers. The effect shows up in entry-level hiring, not in the stock. Brazilian series maxima: 14.9% unemployment and 14.8 million unemployed in 2021.",
+    source: "Stanford Digital Economy Lab (2025); IBGE PNAD Contínua", url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A informalidade brasileira foi de 41,1% em 2019 para 38,7% em 2020, no colapso agudo da pandemia, e estava em 38,1% em 2025. Em recessões lentas, como 2015 a 2017, ela sobe; em colapsos agudos, cai, porque os postos informais desaparecem primeiro. Desemprego recorde e informalidade recorde nunca coincidiram na série.",
+    claimEn: "Brazilian informality went from 41.1% in 2019 to 38.7% in 2020, during the pandemic's acute collapse, and stood at 38.1% in 2025. In slow recessions, such as 2015 to 2017, it rises; in acute collapses it falls, because informal jobs disappear first. Record unemployment and record informality have never coincided in the series.",
+    source: "IBGE, PNAD Contínua", url: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/taxa-de-informalidade-cai-no-mercado-de-trabalho-mostra-ibge", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A arrecadação federal caiu 5,6% em termos reais em 2015, 3,0% em 2016 e 6,9% em 2020. A renegociação das dívidas estaduais veio em 2017 (LC 159) e em 2025 (LC 212). Os cenários usam essa faixa de 3% a 7% ao ano como limite de uma queda de receita plausível.",
+    claimEn: "Federal revenue fell 5.6% in real terms in 2015, 3.0% in 2016, and 6.9% in 2020. State debt renegotiations came in 2017 (LC 159) and 2025 (LC 212). The scenarios use that 3% to 7% a year range as the bound for a plausible revenue fall.",
+    source: "Receita Federal / Agência Brasil; Senado", url: "https://agenciabrasil.ebc.com.br/economia/noticia/2021-01/arrecadacao-federal-cai-691-em-2020", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Estados Unidos e China assinaram em novembro de 2024 uma declaração sobre controle humano de armas nucleares e só anunciaram um canal bilateral oficial sobre IA militar e segurança em maio de 2026, com conversas previstas para setembro. Não há texto vinculante.",
+    claimEn: "The United States and China signed a statement on human control of nuclear weapons in November 2024 and only announced an official bilateral channel on military AI and security in May 2026, with talks scheduled for September. There is no binding text.",
+    source: "IISS, junho de 2026; CNBC", url: "https://www.iiss.org/online-analysis/online-analysis/2026/06/military-ai-governance-under-strain-the-uschina-dialogue/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O acordo mais rápido entre superpotências depois de uma crise levou oito a dez meses: da crise de Cuba (outubro de 1962) à linha direta (junho de 1963) e ao Tratado de Proibição Parcial de Testes (agosto de 1963), mas após oito anos de negociação prévia. Moratórias tecnológicas duram em geral dois a três anos e terminam erodidas; das cinco conhecidas, uma foi rompida em menos de dois anos.",
+    claimEn: "The fastest superpower agreement after a crisis took eight to ten months: from the Cuban crisis (October 1962) to the Hot Line (June 1963) and the Limited Test Ban Treaty (August 1963), but after eight years of prior negotiation. Technology moratoria typically last two to three years and end eroded; of five known cases, one was broken in under two years.",
+    source: "Arms Control Association; CTBTO; NIH", url: "https://www.armscontrol.org/factsheets/nuclear-testing-and-comprehensive-test-ban-treaty-ctbt-timeline", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Média", confidenceEn: "Medium",
+    claimPt: "No Tratado de Não Proliferação, as minutas idênticas de Estados Unidos e União Soviética (agosto de 1967) não tinham artigos para países não nucleares; emendas de Brasil, México, Índia e Suécia produziram os artigos de uso pacífico, desarmamento e revisão. Terceiros influenciaram cláusulas de acesso e processo, em foro multilateral, não os limites entre as potências.",
+    claimEn: "In the Non-Proliferation Treaty, the identical US and Soviet drafts (August 1967) had no articles for non-nuclear states; amendments from Brazil, Mexico, India, and Sweden produced the peaceful-use, disarmament, and review articles. Third parties shaped access and process clauses, in a multilateral forum, not the limits between the powers.",
+    source: "National Security Archive; Arms Control Association", url: "https://nsarchive.gwu.edu/briefing-book/nuclear-vault/2018-05-24/nuclear-non-proliferation-treaty-mexican-amendments-negotiating-record", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O governo publicou em agosto de 2026 edital de R$ 1 bilhão para um supercomputador público de 7.200 petaflops no âmbito do PBIA. O Santos Dumont, ampliado em 2025, tem 18,85 petaflops.",
+    claimEn: "In August 2026 the government published a R$1 billion tender for a public 7,200-petaflop supercomputer under the PBIA. Santos Dumont, expanded in 2025, has 18.85 petaflops.",
+    source: "Mobile Time; Telesíntese", url: "https://www.mobiletime.com.br/noticias/20/08/2026/governo-supercomputador2/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A USA Rare Earth comprou a Serra Verde, mina de terras raras pesadas em Minaçu (GO), em abril de 2026, por cerca de US$ 2,8 bilhões, com contrato de compra de toda a produção da fase 1 por quinze anos. A mina produz desde janeiro de 2024, cerca de 5 mil toneladas de óxidos por ano, perto de 2% da oferta global; o Brasil não tem separação nem fabricação de ímãs.",
+    claimEn: "USA Rare Earth acquired Serra Verde, a heavy-rare-earth mine in Minaçu (GO), in April 2026 for about US$2.8 billion, with a fifteen-year offtake for all Phase 1 output. The mine has produced since January 2024, about 5,000 tonnes of oxides a year, near 2% of global supply; Brazil has no separation or magnet manufacturing.",
+    source: "Agência Brasil; Serra Verde", url: "https://agenciabrasil.ebc.com.br/en/economia/noticia/2026-04/us-company-acquires-brazilian-rare-earth-miner", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Fato observado", labelEn: "Observed fact", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A Pax Silica passou de 7 signatários em dezembro de 2025 para 25 em agosto de 2026; o Brasil não está entre eles. O American AI Exports Program (Federal Register, outubro de 2025; chamada de abril de 2026) exclui empresas e tecnologia da China de todas as camadas dos pacotes de exportação que financia.",
+    claimEn: "Pax Silica grew from 7 signatories in December 2025 to 25 in August 2026; Brazil is not among them. The American AI Exports Program (Federal Register, October 2025; April 2026 call) excludes Chinese companies and technology from every layer of the export packages it funds.",
+    source: "ITIF; Federal Register", url: "https://itif.org/publications/2026/08/13/pax-silica-timeline/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Da exigência americana ao desfecho: G42 (Emirados) cerca de nove meses até remover equipamento Huawei e receber investimento da Microsoft (abril de 2024); Reino Unido 18 a 30 meses até banir a Huawei do 5G (julho de 2020); Malásia quatro meses até controles de reexportação (2025). O Brasil resistiu no 5G em 2021 sem vetar a Huawei, criando uma rede privativa para o governo separada da rede comercial.",
+    claimEn: "From the US demand to the outcome: G42 (UAE) about nine months to remove Huawei equipment and receive Microsoft's investment (April 2024); the UK 18 to 30 months to ban Huawei from 5G (July 2020); Malaysia four months to re-export controls (2025). Brazil resisted on 5G in 2021 without banning Huawei, by creating a separate private network for government.",
+    source: "CNBC; Time; USTR; Poder360", url: "https://www.poder360.com.br/tecnologia/portaria-permite-huawei-no-leilao-do-5g-mas-governo-exige-rede-exclusiva/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Nenhum parceiro dos Estados Unidos obteve acesso a chips ou licenças de IA em 2024–2026 sem aceitar a exclusão de hardware chinês: Emirados (parceria de maio de 2025, licenças em novembro), Arábia Saudita, Malásia. O Vietnã sustenta relações tecnológicas com os dois blocos há seis a dez anos, com exposição difusa em muitas empresas e a Huawei fora do 5G.",
+    claimEn: "No US partner obtained AI chips or licenses in 2024–2026 without accepting the exclusion of Chinese hardware: the UAE (May 2025 partnership, licenses in November), Saudi Arabia, Malaysia. Vietnam has sustained technology ties with both blocs for six to ten years, with diffuse exposure across many firms and Huawei kept out of 5G.",
+    source: "US Commerce; East Asia Forum; Nikkei Asia", url: "https://www.commerce.gov/news/press-releases/2025/11/statement-uae-and-saudi-chip-exports", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "A ANPD levou de 2018 (LGPD) a novembro de 2020 para começar a operar e até 2026 para virar agência com autonomia (Lei 15.352); funcionou com quadro integralmente requisitado, a divisão de fiscalização chegou a ter cinco servidores e o concurso para carreira própria ainda estava em preparação em 2026. Da lei ao quadro próprio, cinco a oito anos.",
+    claimEn: "The ANPD took from 2018 (LGPD) to November 2020 to start operating and until 2026 to become an autonomous agency (Law 15,352); it ran on seconded staff only, its enforcement division once had five employees, and the exam for its own career was still being prepared in 2026. From law to own staff, five to eight years.",
+    source: "Câmara dos Deputados; Convergência Digital", url: "https://www.camara.leg.br/noticias/1014383-presidente-da-anpd-pede-concurso-para-agencia-divisao-de-fiscalizacao-tem-apenas-5-funcionarios/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente observado", labelEn: "Observed precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "Institutos de avaliação de segurança de IA sem poder regulatório passaram a operar em menos de um ano: o do Reino Unido, anunciado em novembro de 2023, publicava avaliações em 2024; o do Japão foi criado em fevereiro de 2024. O acesso a modelos veio por acordos voluntários com laboratórios, não por lei.",
+    claimEn: "AI safety evaluation institutes without regulatory power became operational in under a year: the UK's, announced in November 2023, was publishing evaluations in 2024; Japan's was created in February 2024. Model access came through voluntary agreements with labs, not through law.",
+    source: "UK AI Security Institute", url: "https://www.aisi.gov.uk/", checked: "02/09/2026",
+  },
+  {
+    kind: "fact", labelPt: "Precedente regulatório", labelEn: "Regulatory precedent", confidencePt: "Alta", confidenceEn: "High",
+    claimPt: "O regime americano de difusão de 2025 criou tiers para chips, pesos e treinamento. O texto não criou tiers para APIs comuns de inferência.",
+    claimEn: "The 2025 US diffusion framework created country tiers for chips, model weights, and training. It did not tier ordinary inference APIs.",
+    source: "US Federal Register", url: "https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion", checked: "06/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "Camila transforma as dúvidas de Lourdes sobre o REDATA em uma nota para o deputado durante o esforço concentrado de agosto de 2026.",
+    claimEn: "Camila turns Lourdes's questions about REDATA into a memo for the congressman during the August 2026 session push.",
+    source: pt ? "Cena de 2026" : "2026 scene", url: pt ? "/#2026-um-assunto-para-depois-da-eleição" : "/en#2026-the-branching-point", checked: "27/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "No cenário, Estados Unidos e China fecham um acordo de desaceleração em 2028 que preserva sua vantagem e não garante capacidade ao Brasil.",
+    claimEn: "In the negative scenario, the United States and China reach a slowdown agreement in 2028 that preserves their advantage and does not guarantee capacity to Brazil.",
+    source: pt ? "Cenário" : "Negative scenario", url: pt ? "/#2028-o-acordo-dos-outros" : "/en#2028-someone-elses-agreement", checked: "28/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "Empresas brasileiras trocam dados operacionais por ciberdefesa estrangeira após uma onda de ransomware em 2027.",
+    claimEn: "Brazilian firms exchange operational data for foreign cyberdefense after a ransomware wave in 2027.",
+    source: pt ? "Cenário" : "Negative scenario", url: pt ? "/#2027-a-segunda-feira-sem-sistema" : "/en#2027-attacks-layoffs-and-emergency-powers", checked: "28/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "No cenário, o Brasil aceita condições políticas para garantir computação, crédito e defesa digital em 2029.",
+    claimEn: "In the negative scenario, Brazil accepts political conditions to secure compute, credit, and cyber defense in 2029.",
+    source: pt ? "Cenário" : "Negative scenario", url: pt ? "/#2029-acesso-em-troca-de-alinhamento" : "/en#2029-access-in-exchange-for-alignment", checked: "28/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "O cenário projeta o maior número de desocupados da série histórica, fuga de talentos e a transformação do Brasil em um regime híbrido até 2030.",
+    claimEn: "The negative scenario projects the largest number of unemployed people in the statistical series, talent flight, and Brazil's transformation into a hybrid regime by 2030.",
+    source: pt ? "Cenário" : "Negative scenario", url: pt ? "/#2030-país-satélite" : "/en#2030-satellite-country", checked: "28/08/2026",
+  },
+  {
+    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
+    claimPt: "O Brasil propõe um canal técnico para incidentes na sessão da ONU de 2027, acompanha a declaração conjunta EUA–China de 2028 e obtém duas cláusulas no texto multilateral; o protocolo vinculante vem em 2029.",
+    claimEn: "Brazil proposes a technical incident channel at the 2027 UN session, follows the 2028 US–China joint declaration, and secures two clauses in the multilateral text; the binding protocol comes in 2029.",
+    source: pt ? "O que poderia ter sido diferente" : "Positive scenario", url: pt ? "/#o-que-poderia-ter-sido-diferente" : "/en#2028-coordination-takes-shape", checked: "27/08/2026",
+  },
+  {
+    kind: "open", labelPt: "Proposta em aberto", labelEn: "Open proposal", confidencePt: "Aberta", confidenceEn: "Open",
+    claimPt: "Uma desaceleração verificável exigiria limiares de capacidade, avaliações comuns, comunicação de incidentes e condições para retomar treinamento ou implantação. O projeto ainda precisa definir esses mecanismos.",
+    claimEn: "A verifiable slowdown would require capability thresholds, shared evaluations, incident communication, and conditions for resuming training or deployment. The project still needs to define those mechanisms.",
+    source: pt ? "Agenda de trabalho" : "Working agenda", url: pt ? "/estrategia" : "/en/strategy", checked: "07/08/2026",
+  },
+  {
+    kind: "open", labelPt: "Em modelagem", labelEn: "Model pending", confidencePt: "Aberta", confidenceEn: "Open",
+    claimPt: "Capacidade brasileira em 2030, parcela contratável e custo por trajetória. Pedro ainda está construindo o modelo.",
+    claimEn: "Brazilian capacity in 2030, contractable share, and cost by trajectory. Pedro is still building the model.",
+    source: pt ? "Modelo de Pedro" : "Pedro's model", url: pt ? "/evidencias#lacunas" : "/en/evidence#open-gaps", checked: "06/08/2026",
+  },
+  ];
+}
+
+export type EvidenceItem = ReturnType<typeof evidenceFor>[number];

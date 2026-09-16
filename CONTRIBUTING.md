@@ -22,7 +22,7 @@ submit.
 - `src/content/scenario-positive-*.md`: positive branch from 2027 to 2030.
 - `src/content/scenario-negative-*.md`: negative branch from 2027 to 2030.
 - `src/data/site.ts`: summary, strategy, evidence labels, and author credits.
-- `src/components/`: structured pages for the scenario branches, REDATA, evidence,
+- `src/components/`: structured pages for evidence,
   strategy, the open letter, and project background.
 - `src/lib/markdown.ts`: machine-readable Markdown editions.
 - `public/llms.txt`: index of the machine-readable editions.
