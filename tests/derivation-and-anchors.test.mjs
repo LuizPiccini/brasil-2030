@@ -83,3 +83,10 @@ test("every in-site anchor resolves to an element that exists", () => {
 
   assert.deepEqual(problems, [], `broken in-site anchors:\n${problems.join("\n")}`);
 });
+
+test("/apoie redirects to the letter instead of duplicating it", () => {
+  const stub = readFileSync(new URL("apoie/index.html", root), "utf8");
+  assert.match(stub, /http-equiv="refresh"[^>]*\/carta-aberta#assinar/);
+  assert.match(stub, /rel="canonical" href="[^"]*\/carta-aberta#assinar"/);
+  assert.doesNotMatch(stub, /letter-preview/, "the signing form must live on one page only");
+});

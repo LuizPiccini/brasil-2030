@@ -2632,62 +2632,25 @@ body[data-scenario-branch="negative"] .mobile-chapter-bar > span:first-child {
 .branch-summary-negative > span { background: var(--red-pale); color: var(--red); }
 
 @media (max-width: 900px) {
-  .redata-live { grid-template-columns: 1fr; }
-  .redata-live .button-link { width: fit-content; }
-  .redata-executive-summary { grid-template-columns: 1fr; gap: 1rem; }
-  .redata-metrics,
-  .compute-value-chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .redata-section-heading { grid-template-columns: 1fr; gap: 1rem; }
   .support-layout { grid-template-columns: 1fr; }
   .signatories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
   .branch-switch,
-  .branch-summary-grid,
-  .redata-sources { grid-template-columns: 1fr; }
+  .branch-summary-grid { grid-template-columns: 1fr; }
   .matrix-grid { grid-template-columns: 6rem repeat(2, minmax(0, 1fr)); }
   .matrix-grid > * { min-height: 5rem; padding: 0.45rem; font-size: 0.64rem; }
-  .redata-metrics,
-  .compute-value-chain { grid-template-columns: 1fr; }
-  .redata-changes article { grid-template-columns: 3rem minmax(0, 1fr); gap: 0.75rem; }
-  .coverage-strip,
-  .regulation-list,
-  .proposed-language-grid { grid-template-columns: 1fr; }
-  .regulation-list li:last-child:nth-child(odd),
-  .proposed-language-grid details:last-child:nth-child(odd) { grid-column: auto; }
   .form-grid,
   .signatories-grid { grid-template-columns: 1fr; }
   .signatories-toolbar { align-items: start; flex-direction: column; }
   .form-submit-row { align-items: stretch; flex-direction: column; }
-  .executive-note-page main { padding-inline: 0.65rem; }
-  .executive-note-actions { flex-wrap: wrap; }
 }
 
 @media print {
   .branch-switch { display: none; }
   [data-scenario-branch] { display: block !important; }
 
-  .executive-note-page .site-header,
-  .executive-note-page .site-footer,
-  .executive-note-page .executive-note-actions,
-  .executive-note-page .skip-link {
-    display: none !important;
-  }
-
-  .executive-note-page,
-  .executive-note-page main {
-    background: white;
-    padding: 0;
-  }
-
-  .executive-note-sheet {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-  }
 }
 
 @page {

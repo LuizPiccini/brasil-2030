@@ -7,15 +7,9 @@ export function evidenceFor(locale: Locale) {
   return [
   {
     kind: "fact", labelPt: "Situação legislativa", labelEn: "Legislative status", confidencePt: "Alta", confidenceEn: "High",
-    claimPt: "Em 28 de agosto de 2026, o PL 278/2026 estava no Plenário do Senado, sem relator definido e com 22 emendas. A Agência Senado informou que a matéria poderia ser votada na semana de 31 de agosto a 4 de setembro.",
-    claimEn: "On August 28, 2026, Bill 278/2026 was before the Senate plenary, had no appointed rapporteur, and had received 22 amendments. Senate News reported that the bill could be voted during the August 31 to September 4 session week.",
-    source: "Senado Federal / Agência Senado", url: "https://www12.senado.leg.br/noticias/materias/2026/08/27/senado-pode-votar-na-proxima-semana-incentivos-fiscais-para-data-centers", checked: "28/08/2026",
-  },
-  {
-    kind: "fact", labelPt: "Análise dos autores", labelEn: "Author analysis", confidencePt: "Alta", confidenceEn: "High",
-    claimPt: "A leitura do texto-base e das 22 emendas não encontrou nenhuma emenda que cubra integralmente qualquer um dos cinco pedidos centrais. Apenas a Emenda 21 cobre parcialmente um dos sete pontos de regulamentação.",
-    claimEn: "Our review of the base bill and all 22 amendments found no amendment that fully covers any of the five core requests. Only Amendment 21 partly covers one of the seven regulatory points.",
-    source: "Senado Federal, PL 278/2026", url: "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786", checked: "28/08/2026",
+    claimPt: "O Senado aprovou o REDATA, o PL 278/2026, em 1º de setembro de 2026 e enviou o texto à sanção presidencial. A tramitação passou pelo Plenário com 22 emendas apresentadas.",
+    claimEn: "The Senate approved REDATA, Bill 278/2026, on September 1, 2026, and sent the text for presidential sanction. It moved through the plenary with 22 filed amendments.",
+    source: "Agência Senado, aprovação e envio à sanção", url: "https://www12.senado.leg.br/noticias/materias/2026/09/01/incentivo-para-instalacao-de-data-centers-no-brasil-e-aprovado-pelo-senado", checked: "12/09/2026",
   },
   {
     kind: "fact", labelPt: "Texto aprovado", labelEn: "Passed text", confidencePt: "Alta", confidenceEn: "High",
@@ -220,12 +214,6 @@ export function evidenceFor(locale: Locale) {
     claimPt: "O cenário projeta o maior número de desocupados da série histórica, fuga de talentos e a transformação do Brasil em um regime híbrido até 2030.",
     claimEn: "The negative scenario projects the largest number of unemployed people in the statistical series, talent flight, and Brazil's transformation into a hybrid regime by 2030.",
     source: pt ? "Cenário" : "Negative scenario", url: pt ? "/#2030-país-satélite" : "/en#2030-satellite-country", checked: "28/08/2026",
-  },
-  {
-    kind: "scenario", labelPt: "Invenção narrativa", labelEn: "Narrative invention", confidencePt: "Não se aplica", confidenceEn: "Not applicable",
-    claimPt: "O Brasil propõe um canal técnico para incidentes na sessão da ONU de 2027, acompanha a declaração conjunta EUA–China de 2028 e obtém duas cláusulas no texto multilateral; o protocolo vinculante vem em 2029.",
-    claimEn: "Brazil proposes a technical incident channel at the 2027 UN session, follows the 2028 US–China joint declaration, and secures two clauses in the multilateral text; the binding protocol comes in 2029.",
-    source: pt ? "O que poderia ter sido diferente" : "Positive scenario", url: pt ? "/#o-que-poderia-ter-sido-diferente" : "/en#2028-coordination-takes-shape", checked: "27/08/2026",
   },
   {
     kind: "open", labelPt: "Proposta em aberto", labelEn: "Open proposal", confidencePt: "Aberta", confidenceEn: "Open",

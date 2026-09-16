@@ -9,7 +9,6 @@ const htmlRoutes = [
   ["evidencias/index.html", "pt-BR", "Evidências"],
   ["estrategia/index.html", "pt-BR", "Estratégia"],
   ["carta-aberta/index.html", "pt-BR", "Carta e compromissos"],
-  ["apoie/index.html", "pt-BR", "Assinar a carta"],
   ["signatarios/index.html", "pt-BR", "Signatários"],
   ["sobre/index.html", "pt-BR", "Sobre"],
   ["en/index.html", "en", "Brazil 2030: The Cost of Delay in the AI Era"],
@@ -34,7 +33,7 @@ test("all localized HTML pages exist with metadata", () => {
     const html = readFileSync(path, "utf8");
     assert.match(html, new RegExp(`<html lang="${lang}"`));
     assert.match(html, /<meta name="robots" content="noindex, nofollow, noarchive">/);
-    if (!["index.html", "en/index.html", "resumo/index.html", "carta-aberta/index.html", "apoie/index.html", "sobre/index.html", "en/summary/index.html", "en/open-letter/index.html", "en/support/index.html", "en/about/index.html"].includes(route)) {
+    if (!["index.html", "en/index.html", "resumo/index.html", "carta-aberta/index.html", "sobre/index.html", "en/summary/index.html", "en/open-letter/index.html", "en/support/index.html", "en/about/index.html"].includes(route)) {
       assert.match(html, /rel="alternate" hreflang="pt-BR"/);
       assert.match(html, /rel="alternate" hreflang="en"/);
     }
@@ -136,13 +135,12 @@ test("language switches preserve page identity", () => {
     ["evidencias/index.html", "/en/evidence"],
     ["estrategia/index.html", "/en/strategy"],
     ["carta-aberta/index.html", "/en/open-letter"],
-    ["apoie/index.html", "/en/support"],
     ["signatarios/index.html", "/en/signatories"],
     ["sobre/index.html", "/en/about"],
   ];
   for (const [route, counterpart] of pairs) {
     const html = readFileSync(new URL(route, root), "utf8");
-    if (["resumo/index.html", "carta-aberta/index.html", "apoie/index.html", "sobre/index.html"].includes(route)) {
+    if (["resumo/index.html", "carta-aberta/index.html", "sobre/index.html"].includes(route)) {
       assert.match(html, /Este texto ainda não tem tradução em inglês/);
       assert.doesNotMatch(html, /hreflang="en"/);
       continue;
@@ -176,7 +174,7 @@ test("legacy English support flow is preserved and new letter consent stays in l
   assert.match(support, /name="email"/);
   assert.match(support, /name="consent"/);
   assert.match(support, /fetch\("\/api\/apoios"/);
-  const preview = readFileSync(new URL("apoie/index.html", root), "utf8");
+  const preview = readFileSync(new URL("carta-aberta/index.html", root), "utf8");
   assert.match(preview, /Nenhum dado foi enviado/);
   assert.match(preview, /não serão transferidos/);
   assert.doesNotMatch(preview, /fetch\(/);
