@@ -1,7 +1,13 @@
 ---
-import "@fontsource-variable/literata";
-import "@fontsource-variable/ibm-plex-sans";
+// The fontsource entrypoints ship every subset: cyrillic, greek and vietnamese included.
+// The site's content uses nothing outside the latin subset, so the two faces are declared
+// here instead, which also lets them be preloaded. tests/font-subsets.test.mjs fails if
+// content ever introduces a character these files cannot render.
+import literataLatin from "@fontsource-variable/literata/files/literata-latin-wght-normal.woff2?url";
+import plexLatin from "@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-wght-normal.woff2?url";
 import "../styles/global.css";
+
+const LATIN_RANGE = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Glossary from "../components/Glossary.astro";
@@ -34,6 +40,26 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f4f0e6" />
+    <link rel="preload" as="font" type="font/woff2" href={literataLatin} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={plexLatin} crossorigin="anonymous" />
+    <style is:inline set:html={`
+      @font-face {
+        font-family: 'Literata Variable';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 200 900;
+        src: url(${literataLatin}) format('woff2-variations');
+        unicode-range: ${LATIN_RANGE};
+      }
+      @font-face {
+        font-family: 'IBM Plex Sans Variable';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 100 700;
+        src: url(${plexLatin}) format('woff2-variations');
+        unicode-range: ${LATIN_RANGE};
+      }
+    `}></style>
     <meta name="description" content={description} />
     {!PUBLICATION_OPEN && <meta name="robots" content={NOINDEX} />}
     <link rel="canonical" href={canonical} />
