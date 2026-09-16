@@ -88,7 +88,7 @@ const socialImage = new URL("/og.png", Astro.site);
     <a class="skip-link" href="#main-content">{copy.skip}</a>
     <SiteHeader locale={locale} pageKey={pageKey} markdownHref={markdownHref} candidate={candidate} />
     <main id="main-content" tabindex="-1">
-      {locale === "pt" && pageKey === "strategy" && <aside class="edition-notice" style="padding:1.5rem;border-bottom:1px solid currentColor"><strong>Arquivo histórico.</strong> Esta página preserva a edição anterior e não representa uma campanha em andamento. Os apoios ao REDATA não são assinaturas da nova carta. <a href="/carta-aberta">Leia a carta e os compromissos atuais</a>.</aside>}
+      {locale === "pt" && pageKey === "strategy" && <aside class="edition-notice" style="padding:1.5rem;border-bottom:1px solid currentColor"><strong>Arquivo histórico.</strong> Esta página preserva a edição anterior e não representa uma campanha em andamento. <a href="/carta-aberta">Leia a carta e os compromissos atuais</a>.</aside>}
       <slot />
     </main>
     <SiteFooter locale={locale} markdownHref={markdownHref} />

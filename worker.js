@@ -9,10 +9,10 @@ const ASSET_REVISION = buildDateIso;
 const MAX_SUPPORT_BODY_BYTES = 16_000;
 const SUPPORTER_TYPES = new Set(["citizen", "public_official", "expert", "organization"]);
 
-// The REDATA support drive was retired and the new letter has no submission flow yet.
-// Until one exists, /api/apoios accepts nothing: an unverified email could otherwise
-// overwrite and unpublish an approved signatory. Reads stay open so the existing
-// signatory list keeps rendering. Set to true only together with a real verification step.
+// No personal data has ever been collected through this endpoint, and the new letter has
+// no submission flow yet. Until one exists, /api/apoios accepts nothing: without email
+// verification, an unverified address could overwrite and unpublish an approved signatory
+// once a list does exist. Set to true only together with a real verification step.
 const SUPPORT_WRITES_OPEN = false;
 
 // Stamped on each stored record so it is possible to tell which consent text someone

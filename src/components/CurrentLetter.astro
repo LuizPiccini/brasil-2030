@@ -13,7 +13,7 @@ const text = pt
   ? {
       title: "Carta e compromissos",
       sign: "Assinar a carta",
-      intro: "Escolha o que deseja declarar. Os apoios anteriores ao REDATA não serão transferidos para esta carta.",
+      intro: "Escolha o que deseja declarar.",
       preview: "Teste de leitura:",
       previewBody: "este formulário é uma demonstração local. Não envia, armazena ou publica dados. Use informações fictícias.",
       kind: "Tipo de adesão",
@@ -30,12 +30,12 @@ const text = pt
       done: "Teste concluído. Nenhum dado foi enviado, armazenado ou publicado.",
       noScript: "Este formulário de teste depende de JavaScript e não responderá sem ele. Como ele não envia nada de qualquer forma, você não perde nenhuma etapa: para aderir à carta, escreva para a equipe quando a lista abrir.",
       signatories: "Signatários",
-      signatoriesBody: "A lista desta carta será aberta após a revisão. Nenhum apoio antigo foi incorporado. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.",
+      signatoriesBody: "A lista desta carta será aberta após a revisão. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.",
     }
   : {
       title: "Letter and commitments",
       sign: "Sign the letter",
-      intro: "Choose what you want to declare. Support given to the earlier REDATA request will not be carried over to this letter.",
+      intro: "Choose what you want to declare.",
       preview: "Reading test:",
       previewBody: "this form is a local demonstration. It does not send, store or publish data. Use fictional information.",
       kind: "Type of endorsement",
@@ -52,7 +52,7 @@ const text = pt
       done: "Test complete. No data was sent, stored or published.",
       noScript: "This test form depends on JavaScript and will not respond without it. Since it sends nothing either way, you are not missing a step: to endorse the letter, write to the team once the list opens.",
       signatories: "Signatories",
-      signatoriesBody: "The list for this letter opens after review. No earlier support was carried over. Candidacy commitments and institutional representations will need verification before appearing here.",
+      signatoriesBody: "The list for this letter opens after review. Candidacy commitments and institutional representations will need verification before appearing here.",
     };
 ---
 <BaseLayout locale={locale} pageKey="letter" title={text.title} markdownHref={markdownRoutes[locale].letter}>
