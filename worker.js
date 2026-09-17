@@ -65,7 +65,7 @@ async function receiveSupport(request, env) {
   const organization = cleanText(input.organization, 120);
   const message = cleanText(input.message, 480);
   const email = cleanText(input.email, 254).toLowerCase();
-  const locale = input.locale === "en" ? "en" : "pt";
+  const locale = input.locale === "es" ? "es" : input.locale === "en" ? "en" : "pt";
   const consent = input.consent === true;
 
   const fieldErrors = {};
@@ -217,11 +217,12 @@ export default {
     const response = await env.ASSETS.fetch(new Request(assetUrl, request));
 
     // Cloudflare's not_found_handling serves the Portuguese /404.html for every miss.
-    // English visitors get the English one instead.
-    if (response.status === 404 && readsAsset && url.pathname.startsWith("/en")) {
-      const englishNotFound = new URL(url);
-      englishNotFound.pathname = "/en/404/index.html";
-      const localized = await env.ASSETS.fetch(new Request(englishNotFound, { method: "GET" }));
+    // English and Spanish visitors get their localized one instead.
+    const localePrefix = url.pathname.startsWith("/en") ? "en" : url.pathname.startsWith("/es") ? "es" : null;
+    if (response.status === 404 && readsAsset && localePrefix) {
+      const localizedNotFound = new URL(url);
+      localizedNotFound.pathname = `/${localePrefix}/404/index.html`;
+      const localized = await env.ASSETS.fetch(new Request(localizedNotFound, { method: "GET" }));
       if (localized.ok) {
         return withPublicationHeaders(new Response(localized.body, { status: 404, headers: localized.headers }), url);
       }

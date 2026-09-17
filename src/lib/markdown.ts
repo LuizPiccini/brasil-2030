@@ -21,15 +21,17 @@ const absolute = (url: string) => (url.startsWith("/") ? `${SITE}${url}` : url);
 
 function evidenceMarkdown(locale: Locale): string {
   const pt = locale === "pt";
-  const heading = pt ? "# Evidências" : "# Evidence";
+  const heading = pt ? "# Evidências" : locale === "es" ? "# Evidencias" : "# Evidence";
   const lede = pt
     ? "Cada afirmação recebe uma categoria, uma fonte e uma data de verificação."
+    : locale === "es"
+    ? "Cada afirmación lleva una categoría, una fuente y una fecha de verificación."
     : "Each claim carries a category, a source, and a review date.";
-  const checkedLabel = pt ? "Verificado em" : "Checked";
+  const checkedLabel = pt ? "Verificado em" : locale === "es" ? "Verificado el" : "Checked";
   const rows = evidenceFor(locale).map((item) => {
-    const label = pt ? item.labelPt : item.labelEn;
-    const confidence = pt ? item.confidencePt : item.confidenceEn;
-    const claim = pt ? item.claimPt : item.claimEn;
+    const label = pt ? item.labelPt : locale === "es" ? item.labelEs : item.labelEn;
+    const confidence = pt ? item.confidencePt : locale === "es" ? item.confidenceEs : item.confidenceEn;
+    const claim = pt ? item.claimPt : locale === "es" ? item.claimEs : item.claimEn;
     return `- **${label}, ${confidence}.** ${claim} [${item.source}](${absolute(item.url)}). ${checkedLabel} ${item.checked}.`;
   });
   return `${heading}\n\n${lede}\n\n${rows.join("\n")}\n`;
@@ -37,8 +39,8 @@ function evidenceMarkdown(locale: Locale): string {
 
 function strategyMarkdown(locale: Locale): string {
   const pt = locale === "pt";
-  const heading = pt ? "# Estratégia" : "# Strategy";
-  const subheading = pt ? "## Cinco compromissos" : "## Five commitments";
+  const heading = pt ? "# Estratégia" : locale === "es" ? "# Estrategia" : "# Strategy";
+  const subheading = pt ? "## Cinco compromissos" : locale === "es" ? "## Cinco compromisos" : "## Five commitments";
   const rows = strategyFor(locale).map(
     (item, index) => `${index + 1}. **${item.title}.** ${item.body}\n   _${item.actor}:_ ${item.owner}`,
   );

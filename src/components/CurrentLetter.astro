@@ -2,12 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Content as LetterPt } from "../content/letter-current-pt.md";
 import { Content as LetterEn } from "../content/letter-current-en.md";
+import { Content as LetterEs } from "../content/letter-current-es.md";
 import { markdownRoutes, type Locale } from "../data/site";
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
-const Letter = pt ? LetterPt : LetterEn;
+const es = locale === "es";
+const Letter = pt ? LetterPt : es ? LetterEs : LetterEn;
 
 const text = pt
   ? {
@@ -32,6 +34,29 @@ const text = pt
       signatories: "Signatários",
       signatoriesBody: "A lista desta carta será aberta após a revisão. Compromissos de candidaturas e representações institucionais precisarão de verificação antes de aparecerem aqui.",
     }
+  : es
+    ? {
+        title: "Carta y compromisos",
+        sign: "Firmar la carta",
+        intro: "Elige lo que deseas declarar.",
+        preview: "Prueba de lectura:",
+        previewBody: "este formulario es una demostración local. No envía, almacena ni publica datos. Usa información ficticia.",
+        kind: "Tipo de adhesión",
+        choose: "Selecciona",
+        options: [
+          "Apoyo personal a la carta",
+          "Compromiso de candidatura con las cuatro propuestas",
+          "Apoyo de una organización, con autorización para representarla",
+        ],
+        name: "Nombre a publicar",
+        role: "Cargo o candidatura, si aplica",
+        consent: "He leído la carta y autorizo la publicación del nombre y del tipo de adhesión, tras verificación. Sé que esto no significa un respaldo electoral.",
+        submit: "Probar la firma, sin enviar",
+        done: "Prueba concluida. No se envió, almacenó ni publicó ningún dato.",
+        noScript: "Este formulario de prueba depende de JavaScript y no responderá sin él. Como no envía nada de todos modos, no pierdes ningún paso: para adherirte a la carta, escribe al equipo cuando la lista se abra.",
+        signatories: "Firmantes",
+        signatoriesBody: "La lista de esta carta se abrirá tras la revisión. Los compromisos de candidaturas y representaciones institucionales necesitarán verificación antes de aparecer aquí.",
+      }
   : {
       title: "Letter and commitments",
       sign: "Sign the letter",

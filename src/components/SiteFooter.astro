@@ -8,13 +8,13 @@ const copy = siteCopy[locale];
 
 <footer class="site-footer">
   <div>
-    <p class="footer-mark">{locale === "pt" ? "Brasil 2030" : "Brazil 2030"}</p>
+    <p class="footer-mark">{locale === "en" ? "Brazil 2030" : "Brasil 2030"}</p>
     <p>{copy.footerNote}</p>
   </div>
   <div class="footer-links">
-    <a href={locale === "pt" ? "/#resumo-do-cenario" : routes[locale].summary}>{copy.nav.summary}</a>
+    <a href={locale === "pt" ? "/#resumo-do-cenario" : locale === "es" ? "/es#resumo-do-cenario" : routes[locale].summary}>{copy.nav.summary}</a>
     <a href={routes[locale].evidence}>{copy.nav.evidence}</a>
-    <a href={routes[locale].letter}>{locale === "pt" ? "Carta e compromissos" : copy.nav.letter}</a>
+    <a href={routes[locale].letter}>{locale === "pt" ? "Carta e compromissos" : locale === "es" ? "Carta y compromisos" : copy.nav.letter}</a>
     <a href={routes[locale].about}>{copy.nav.about}</a>
     <a href={routes[locale].privacy}>{copy.nav.privacy}</a>
     {markdownHref && <a href={markdownHref}>{copy.format}</a>}

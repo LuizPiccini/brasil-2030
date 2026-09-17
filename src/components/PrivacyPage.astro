@@ -7,22 +7,27 @@ import type { Locale } from "../data/site";
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
+const es = locale === "es";
 ---
 <BaseLayout
   locale={locale}
   pageKey="privacy"
-  title={pt ? "Privacidade" : "Privacy"}
+  title={pt ? "Privacidade" : es ? "Privacidad" : "Privacy"}
   description={pt
     ? "Que dados coletamos quando você assina a carta, o que publicamos, e como pedir a exclusão."
+    : es
+    ? "Qué datos recopilamos cuando firmas la carta, qué publicamos y cómo pedir la eliminación."
     : "What we collect when you sign the letter, what we publish, and how to ask for deletion."}
 >
   <PageHero
     compact
     locale={locale}
-    eyebrow={pt ? "Dados pessoais" : "Personal data"}
-    title={pt ? "Privacidade" : "Privacy"}
+    eyebrow={pt ? "Dados pessoais" : es ? "Datos personales" : "Personal data"}
+    title={pt ? "Privacidade" : es ? "Privacidad" : "Privacy"}
     intro={pt
       ? "Este site é um documento público, não um produto. A única coleta acontece quando você decide assinar a carta, e está descrita abaixo."
+      : es
+      ? "Este sitio es un documento público, no un producto. La única recopilación ocurre cuando decides firmar la carta, y se describe abajo."
       : "This site is a public document, not a product. The only collection happens when you choose to sign the letter, and it is described below."}
   />
 
@@ -83,6 +88,66 @@ const pt = locale === "pt";
           não coletou nenhum dado pessoal. Esta política descreve como o tratamento funcionará
           quando a lista for aberta, para que ninguém assine sem saber de antemão o que acontece
           com seus dados.
+        </p>
+      </>
+    ) : es ? (
+      <>
+        <h2>Navegar por el sitio no recopila nada</h2>
+        <p>
+          Las páginas son estáticas. No hay analíticas, cookies de rastreo, píxeles de terceros
+          ni inicio de sesión. Ninguna solicitud sale a otro dominio: las fuentes y los estilos
+          los sirve el propio sitio. Leer el escenario, el resumen o las evidencias no deja
+          registro asociado a ti.
+        </p>
+
+        <h2>Qué recopilamos cuando firmas la carta</h2>
+        <ul>
+          <li><strong>Nombre.</strong> Publicado en la lista de firmantes.</li>
+          <li><strong>Tipo de adhesión.</strong> Apoyo personal, compromiso de candidatura o apoyo institucional. Publicado.</li>
+          <li><strong>Cargo o candidatura, si lo informas.</strong> Publicado.</li>
+          <li><strong>Correo electrónico.</strong> Se usa para confirmar que la firma es tuya y para contactarte si la verificación genera alguna duda. <strong>Nunca se publica</strong> y no se usa para enviar boletines ni ninguna otra comunicación no solicitada.</li>
+        </ul>
+        <p>
+          Los compromisos de candidaturas y las representaciones institucionales pasan por
+          verificación antes de aparecer en la lista, porque afirman algo sobre terceros. Esa
+          verificación puede implicar contacto por correo electrónico o consulta a fuentes
+          públicas, como los registros electorales.
+        </p>
+
+        <h2>Con quién lo compartimos</h2>
+        <p>
+          Con nadie. Los datos no se venden, no se ceden ni se usan para publicidad. Quedan
+          almacenados en la infraestructura de Cloudflare, que opera como encargada del
+          tratamiento a nuestro pedido, y solo accede a ellos el equipo del proyecto.
+        </p>
+
+        <h2>Cuánto tiempo los conservamos</h2>
+        <p>
+          El nombre y el tipo de adhesión permanecen publicados mientras la carta esté activa,
+          porque una lista de firmantes es un registro público. El correo electrónico se borra
+          cuando la carta se cierre, o antes si tú lo pides.
+        </p>
+
+        <h2>Tus derechos y cómo ejercerlos</h2>
+        <p>
+          Escribe a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. No hace falta
+          justificar. Puedes pedir la eliminación de tus datos, una copia de lo que está
+          guardado, la corrección de alguna información, o la retirada de tu nombre de la lista
+          manteniendo el resto. Respondemos en el plazo que fija la ley.
+        </p>
+        <p>
+          La LGPD, Ley 13.709/2018, garantiza estos derechos. La base legal del tratamiento es
+          tu consentimiento, otorgado al enviar el formulario. Puedes retirarlo en cualquier
+          momento por el mismo correo, sin efecto sobre lo que ya se haya publicado antes de la
+          solicitud. El responsable es el equipo de Brasil 2030, en la misma dirección.
+        </p>
+
+        <h2>Situación actual</h2>
+        <p>
+          El formulario de adhesión sigue en vista previa y no envía nada. Hasta hoy el proyecto
+          no ha recopilado ningún dato personal. Esta política describe cómo funcionará el
+          tratamiento cuando se abra la lista, para que nadie firme sin saber de antemano qué
+          ocurre con sus datos.
         </p>
       </>
     ) : (

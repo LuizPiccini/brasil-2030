@@ -40,7 +40,7 @@ At Brasil 2030, he works on the computing and data center model.
 
 ### Ivan M. Franco
 
-Brought an earlier proposal, Brasil 2028, to the group, which helped start this project. At Brasil 2030, he coordinates the work milestones, the organization of reader review, and outreach planning.
+National organizer of Altruísmo Efetivo Brasil, CVO, and partner at Little Brown Mouse Audiovisual, where he leads innovation and positioning initiatives in artificial intelligence. He brings more than 20 years of experience in audiovisual production, communication, and education. In recent years he has also dedicated himself to community building, event organization, and communication about AI safety. He holds a degree in Film from UFSCar and an MBA in Data Science and Artificial Intelligence from PUCRS.
 
 ## How we built the scenario
 

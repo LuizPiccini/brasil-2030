@@ -10,13 +10,13 @@ import { markdownRoutes, routes, type ContentPageKey, type Locale } from "../dat
 const CONTENT_PAGES: ContentPageKey[] = ["scenario", "summary", "evidence", "strategy", "letter", "about"];
 
 /** Pages that exist but should not be advertised: redirects, error pages, placeholders. */
-export const EXCLUDED_FROM_SITEMAP = ["apoie", "candidato", "en/404", "signatarios", "en/signatories"];
+export const EXCLUDED_FROM_SITEMAP = ["apoie", "candidato", "en/404", "signatarios", "en/signatories", "es/404", "es/signatarios"];
 
 export const GET = () => {
   const site = siteOrigin();
   const urls: { loc: string; priority: string }[] = [];
 
-  for (const locale of ["pt", "en"] as Locale[]) {
+  for (const locale of ["pt", "en", "es"] as Locale[]) {
     for (const key of CONTENT_PAGES) {
       urls.push({
         loc: `${site}${routes[locale][key]}`,

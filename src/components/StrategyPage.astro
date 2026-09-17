@@ -6,12 +6,13 @@ import { strategyFor } from "../data/strategy";
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
+const es = locale === "es";
 const items = strategyFor(locale);
 ---
-<BaseLayout locale={locale} pageKey="strategy" markdownHref={markdownRoutes[locale].strategy} title={pt ? "Estratégia" : "Strategy"}>
-  <PageHero compact locale={locale} eyebrow={pt ? "Cinco compromissos" : "Five commitments"} title={pt ? "Ganhar tempo e poder de barganha" : "Gain time and bargaining power"} intro={pt ? "O Brasil pode defender uma desaceleração global, preparar-se para seu fracasso e usar energia para negociar a capacidade de inferência necessária à própria defesa." : "Brazil can support a global slowdown, prepare for its failure, and use energy to negotiate the inference capacity required for its own defense."} />
+<BaseLayout locale={locale} pageKey="strategy" markdownHref={markdownRoutes[locale].strategy} title={pt ? "Estratégia" : es ? "Estrategia" : "Strategy"}>
+  <PageHero compact locale={locale} eyebrow={pt ? "Cinco compromissos" : es ? "Cinco compromisos" : "Five commitments"} title={pt ? "Ganhar tempo e poder de barganha" : es ? "Ganar tiempo y poder de negociación" : "Gain time and bargaining power"} intro={pt ? "O Brasil pode defender uma desaceleração global, preparar-se para seu fracasso e usar energia para negociar a capacidade de inferência necessária à própria defesa." : es ? "Brasil puede defender una desaceleración global, prepararse para su fracaso y usar energía para negociar la capacidad de inferencia necesaria para su propia defensa." : "Brazil can support a global slowdown, prepare for its failure, and use energy to negotiate the inference capacity required for its own defense."} />
   <div class="page-content">
-    <div class="callout">{pt ? "A estratégia precisa funcionar nos dois cenários. Se o acordo internacional avançar, a capacidade aumenta nossa influência. Se falhar, ela protege serviços críticos e reduz a dependência." : "The strategy must work in both scenarios. If international coordination advances, capacity increases Brazil's influence. If it fails, capacity protects critical services and reduces dependency."}</div>
+    <div class="callout">{pt ? "A estratégia precisa funcionar nos dois cenários. Se o acordo internacional avançar, a capacidade aumenta nossa influência. Se falhar, ela protege serviços críticos e reduz a dependência." : es ? "La estrategia debe funcionar en ambos escenarios. Si el acuerdo internacional avanza, la capacidad aumenta nuestra influencia. Si falla, protege servicios críticos y reduce la dependencia." : "The strategy must work in both scenarios. If international coordination advances, capacity increases Brazil's influence. If it fails, capacity protects critical services and reduces dependency."}</div>
     <div class="strategy-list">
       {items.map((item, index) => <article class="strategy-item">
         <span class="strategy-number">{String(index + 1).padStart(2, "0")}</span>
@@ -21,15 +22,15 @@ const items = strategyFor(locale);
     </div>
 
     <section class="narrow-content">
-      <h2>{pt ? "O significado de desacelerar" : "The meaning of slowdown"}</h2>
-      <p>{pt ? "Uma pausa genérica não oferece uma regra aplicável. O acordo precisa identificar capacidades, limiares e avaliações que acionem limites recíprocos, além das condições para retomar treinamento ou implantação." : "A generic pause offers no workable rule. An agreement needs capabilities, thresholds, and evaluations that trigger reciprocal limits, plus conditions for resuming training or deployment."}</p>
-      <p>{pt ? "A política para data centers também precisa de condições mensuráveis. Pilotos devem medir preço, acesso durante incidentes, consumo de água, custo da rede e empregos permanentes antes que benefícios se tornem direitos adquiridos." : "Data-center policy also needs measurable conditions. Pilots should measure price, access during incidents, water use, grid costs, and permanent jobs before benefits become entrenched."}</p>
+      <h2>{pt ? "O significado de desacelerar" : es ? "El significado de desacelerar" : "The meaning of slowdown"}</h2>
+      <p>{pt ? "Uma pausa genérica não oferece uma regra aplicável. O acordo precisa identificar capacidades, limiares e avaliações que acionem limites recíprocos, além das condições para retomar treinamento ou implantação." : es ? "Una pausa genérica no ofrece una regla aplicable. El acuerdo necesita identificar capacidades, umbrales y evaluaciones que activen límites recíprocos, además de las condiciones para reanudar el entrenamiento o la implantación." : "A generic pause offers no workable rule. An agreement needs capabilities, thresholds, and evaluations that trigger reciprocal limits, plus conditions for resuming training or deployment."}</p>
+      <p>{pt ? "A política para data centers também precisa de condições mensuráveis. Pilotos devem medir preço, acesso durante incidentes, consumo de água, custo da rede e empregos permanentes antes que benefícios se tornem direitos adquiridos." : es ? "La política de centros de datos también necesita condiciones medibles. Los pilotos deben medir precio, acceso durante incidentes, consumo de agua, costo de la red y empleos permanentes antes de que los beneficios se conviertan en derechos adquiridos." : "Data-center policy also needs measurable conditions. Pilots should measure price, access during incidents, water use, grid costs, and permanent jobs before benefits become entrenched."}</p>
     </section>
 
     <section class="narrow-content">
-      <h2>{pt ? "Da estratégia à carta" : "From strategy to letter"}</h2>
-      <p>{pt ? "A carta aberta traduz estes compromissos para candidatos e equipes de governo e define resultados que poderão ser cobrados durante o mandato." : "The open letter translates these commitments for candidates and transition teams and defines results that can be assessed during the next term."}</p>
-      <p><a class="button-link" href={routes[locale].letter}>{pt ? "Ler a carta aberta" : "Read the open letter"}</a></p>
+      <h2>{pt ? "Da estratégia à carta" : es ? "De la estrategia a la carta" : "From strategy to letter"}</h2>
+      <p>{pt ? "A carta aberta traduz estes compromissos para candidatos e equipes de governo e define resultados que poderão ser cobrados durante o mandato." : es ? "La carta abierta traduce estos compromisos para candidatos y equipos de gobierno y define resultados que podrán exigirse durante el mandato." : "The open letter translates these commitments for candidates and transition teams and defines results that can be assessed during the next term."}</p>
+      <p><a class="button-link" href={routes[locale].letter}>{pt ? "Ler a carta aberta" : es ? "Leer la carta abierta" : "Read the open letter"}</a></p>
     </section>
   </div>
 </BaseLayout>

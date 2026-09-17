@@ -12,18 +12,18 @@ const { locale, pageKey, markdownHref, candidate = false } = Astro.props;
 const copy = siteCopy[locale];
 const navKeys: ContentPageKey[] = ["scenario", "letter", "about"];
 const secondaryKeys: ContentPageKey[] = ["summary", "evidence"];
-const navLabel = (key: ContentPageKey) => key === "letter" ? (locale === "pt" ? "Carta e compromissos" : "Letter and commitments") : copy.nav[key as keyof typeof copy.nav];
-const navHref = (key: ContentPageKey) => key === "summary" ? (locale === "pt" ? "/#resumo-do-cenario" : "/en#resumo-do-cenario") : routes[locale][key];
+const navLabel = (key: ContentPageKey) => key === "letter" ? (locale === "pt" ? "Carta e compromissos" : locale === "es" ? "Carta y compromisos" : "Letter and commitments") : copy.nav[key as keyof typeof copy.nav];
+const navHref = (key: ContentPageKey) => key === "summary" ? (locale === "pt" ? "/#resumo-do-cenario" : `${locale === "es" ? "/es" : "/en"}#resumo-do-cenario`) : routes[locale][key];
 ---
 
 <header class="site-header">
   <div class="header-inner">
     <a class="wordmark" href={navHref("scenario")} aria-label={copy.title}>
-      <span class="wordmark-country">{locale === "pt" ? "BRASIL" : "BRAZIL"}</span>
+      <span class="wordmark-country">{locale === "en" ? "BRAZIL" : "BRASIL"}</span>
       <span class="wordmark-year">2030</span>
     </a>
 
-    <nav class="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : "Primary navigation"}>
+    <nav class="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : locale === "es" ? "Navegación principal" : "Primary navigation"}>
       {navKeys.map((key) => (
         <a href={navHref(key)} aria-current={pageKey === key ? "page" : undefined}>
           {navLabel(key)}
@@ -32,24 +32,26 @@ const navHref = (key: ContentPageKey) => key === "summary" ? (locale === "pt" ? 
     </nav>
 
     <div class="header-tools">
-      <a class="header-cta" href={`${routes[locale].letter}#assinar`}>{locale === "pt" ? "Assinar a carta" : "Sign the letter"}</a>
-      <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : "Language"}>
+      <a class="header-cta" href={`${routes[locale].letter}#assinar`}>{locale === "pt" ? "Assinar a carta" : locale === "es" ? "Firmar la carta" : "Sign the letter"}</a>
+      <div class="language-switch" aria-label={locale === "pt" ? "Idioma" : locale === "es" ? "Idioma" : "Language"}>
         <a href={routes.pt[pageKey]} lang="pt-BR" aria-current={locale === "pt" ? "true" : undefined}>PT</a>
         <span aria-hidden="true">/</span>
         <a href={routes.en[pageKey]} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
+        <span aria-hidden="true">/</span>
+        <a href={routes.es[pageKey]} lang="es" aria-current={locale === "es" ? "true" : undefined}>ES</a>
       </div>
-      {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : "Read this page as Markdown"}>MD</a>}
+      {markdownHref && <a class="format-link" href={markdownHref} aria-label={locale === "pt" ? "Ler esta página em Markdown" : locale === "es" ? "Leer esta página en Markdown" : "Read this page as Markdown"}>MD</a>}
       <details class="mobile-menu">
         <summary aria-label={copy.menu}><span></span><span></span><span></span></summary>
-        <nav aria-label={candidate ? "Navegação completa" : locale === "pt" ? "Navegação móvel" : "Mobile navigation"}>
+        <nav aria-label={candidate ? "Navegação completa" : locale === "pt" ? "Navegação móvel" : locale === "es" ? "Navegación móvil" : "Mobile navigation"}>
           {navKeys.map((key) => (
             <a href={navHref(key)} aria-current={pageKey === key ? "page" : undefined}>
               {navLabel(key)}
             </a>
           ))}
           {secondaryKeys.map((key) => <a href={navHref(key)}>{copy.nav[key as keyof typeof copy.nav]}</a>)}
-          <a href={`${routes[locale].letter}#assinar`}>{locale === "pt" ? "Assinar a carta" : "Sign the letter"}</a>
-          {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : "Read as Markdown"}</a>}
+          <a href={`${routes[locale].letter}#assinar`}>{locale === "pt" ? "Assinar a carta" : locale === "es" ? "Firmar la carta" : "Sign the letter"}</a>
+          {markdownHref && <a href={markdownHref}>{locale === "pt" ? "Ler em Markdown" : locale === "es" ? "Leer en Markdown" : "Read as Markdown"}</a>}
         </nav>
       </details>
     </div>

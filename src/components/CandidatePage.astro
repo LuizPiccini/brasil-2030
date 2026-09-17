@@ -3,8 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CandidateDashboard from "./CandidateDashboard.astro";
 import ScenarioPt, { getHeadings as getHeadingsPt } from "../content/scenario-candidate-pt.md";
 import ScenarioEn, { getHeadings as getHeadingsEn } from "../content/scenario-candidate-en.md";
+import ScenarioEs, { getHeadings as getHeadingsEs } from "../content/scenario-candidate-es.md";
 import sourcePt from "../content/scenario-candidate-pt.md?raw";
 import sourceEn from "../content/scenario-candidate-en.md?raw";
+import sourceEs from "../content/scenario-candidate-es.md?raw";
 import { candidateIntroduction, candidateReadingTime } from "../data/candidate-reading-time";
 import { markdownRoutes, type Locale } from "../data/site";
 import "../styles/candidate.css";
@@ -12,13 +14,18 @@ import "../styles/candidate.css";
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
+const es = locale === "es";
 
-const CandidateContent = pt ? ScenarioPt : ScenarioEn;
-const headings = (pt ? getHeadingsPt() : getHeadingsEn()).filter(({ depth }) => depth === 2);
-const { minutes } = candidateReadingTime(pt ? sourcePt : sourceEn, locale);
+const CandidateContent = pt ? ScenarioPt : es ? ScenarioEs : ScenarioEn;
+const headings = (pt ? getHeadingsPt() : es ? getHeadingsEs() : getHeadingsEn()).filter(({ depth }) => depth === 2);
+const { minutes } = candidateReadingTime(pt ? sourcePt : es ? sourceEs : sourceEn, locale);
 
 // The five year chapters are followed by three unnumbered sections; label them by position.
-const tailLabels = pt ? ["Escolhas", "Apêndice", "Fontes"] : ["Choices", "Appendix", "Sources"];
+const tailLabels = pt
+  ? ["Escolhas", "Apêndice", "Fontes"]
+  : es
+    ? ["Decisiones", "Apéndice", "Fuentes"]
+    : ["Choices", "Appendix", "Sources"];
 const chapters = headings.map((heading, index) => ({
   ...heading,
   year: heading.text.match(/^20\d{2}/)?.[0] ?? tailLabels[index - 5],
@@ -38,7 +45,20 @@ const text = pt
       nextYear: "Próximo ano: 2027",
       initialState: "Projetos em preparação · Acesso a regulamentar",
     }
-  : {
+  : es
+    ? {
+        title: "El costo del atraso en la era de la IA",
+        description: "Un escenario para Brasil entre 2026 y 2030: la carrera de la IA se desacelera, pero el país llega al acuerdo sin haber preparado sus alternativas.",
+        proseLabel: "El costo del atraso en la era de la IA: texto completo",
+        timeline: "Línea de tiempo",
+        readingTime: `Cerca de ${minutes} min de lectura`,
+        readingTimeHint: "Introducción y narrativa de 2026–2030, a 210 palabras por minuto. No incluye el resumen, los cuadros, las notas, las recomendaciones ni el apéndice.",
+        disclaimer: "Este es un escenario, no una predicción. Los personajes son ficticios; los acontecimientos futuros exploran opciones y consecuencias posibles. Las fuentes del punto de partida están en las notas.",
+        previousYear: "Año anterior",
+        nextYear: "Año siguiente: 2027",
+        initialState: "Proyectos en preparación · Acceso sin regular",
+      }
+    : {
       title: "The Cost of Delay in the AI Era",
       description: "A scenario for Brazil between 2026 and 2030: the AI race slows down, but the country reaches the agreement without having prepared its alternatives.",
       proseLabel: "The Cost of Delay in the AI Era: full text",
@@ -62,7 +82,7 @@ const text = pt
 >
   <div class="reading-layout">
     <section class="candidate-opening" aria-labelledby="candidate-title">
-      <h1 id="candidate-title">{pt ? "Brasil 2030" : "Brazil 2030"}<span>{text.title}</span></h1>
+      <h1 id="candidate-title">{pt || es ? "Brasil 2030" : "Brazil 2030"}<span>{text.title}</span></h1>
       {candidateIntroduction[locale].map((paragraph) => <p class="candidate-deck">{paragraph}</p>)}
       <p class="candidate-reading-time" title={text.readingTimeHint}>{text.readingTime}</p>
       <p class="candidate-disclaimer">{text.disclaimer}</p>

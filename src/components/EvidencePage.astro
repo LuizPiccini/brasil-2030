@@ -6,43 +6,48 @@ import { evidenceFor } from "../data/evidence";
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const pt = locale === "pt";
+const es = locale === "es";
 const evidence = evidenceFor(locale);
-const labels = pt ? {claim:"Afirmação", type:"Tipo", source:"Fonte", confidence:"Confiança", checked:"Verificada", all:"Todas", facts:"Fatos", estimates:"Estimativas", scenario:"Cenário", open:"Abertas"} : {claim:"Claim", type:"Type", source:"Source", confidence:"Confidence", checked:"Checked", all:"All", facts:"Facts", estimates:"Estimates", scenario:"Scenario", open:"Open"};
+const labels = pt
+  ? {claim:"Afirmação", type:"Tipo", source:"Fonte", confidence:"Confiança", checked:"Verificada", all:"Todas", facts:"Fatos", estimates:"Estimativas", scenario:"Cenário", open:"Abertas"}
+  : es
+  ? {claim:"Afirmación", type:"Tipo", source:"Fuente", confidence:"Confianza", checked:"Verificado el", all:"Todas", facts:"Hechos", estimates:"Estimaciones", scenario:"Escenario", open:"Abiertas"}
+  : {claim:"Claim", type:"Type", source:"Source", confidence:"Confidence", checked:"Checked", all:"All", facts:"Facts", estimates:"Estimates", scenario:"Scenario", open:"Open"};
 ---
-<BaseLayout locale={locale} pageKey="evidence" markdownHref={markdownRoutes[locale].evidence} title={pt ? "Evidências" : "Evidence"}>
-  <PageHero compact locale={locale} eyebrow={pt ? "Registro de afirmações" : "Claim register"} title={pt ? "O que sabemos. O que inventamos." : "What we know. What we invented."} intro={pt ? "Cada afirmação recebe uma fonte, uma categoria e uma data de verificação. O site mantém as invenções do cenário visíveis em vez de apresentá-las como fatos." : "Each claim carries a source, a category, and a review date. The site keeps scenario inventions visible instead of presenting them as facts."} />
+<BaseLayout locale={locale} pageKey="evidence" markdownHref={markdownRoutes[locale].evidence} title={pt ? "Evidências" : es ? "Evidencias" : "Evidence"}>
+  <PageHero compact locale={locale} eyebrow={pt ? "Registro de afirmações" : es ? "Registro de afirmaciones" : "Claim register"} title={pt ? "O que sabemos. O que inventamos." : es ? "Lo que sabemos. Lo que inventamos." : "What we know. What we invented."} intro={pt ? "Cada afirmação recebe uma fonte, uma categoria e uma data de verificação. O site mantém as invenções do cenário visíveis em vez de apresentá-las como fatos." : es ? "Cada afirmación lleva una fuente, una categoría y una fecha de verificación. El sitio mantiene visibles las invenciones del escenario en lugar de presentarlas como hechos." : "Each claim carries a source, a category, and a review date. The site keeps scenario inventions visible instead of presenting them as facts."} />
   <div class="page-content">
     <div class="evidence-toolbar">
-      <div class="evidence-filter" role="group" aria-label={pt ? "Filtrar evidências" : "Filter evidence"} hidden>
+      <div class="evidence-filter" role="group" aria-label={pt ? "Filtrar evidências" : es ? "Filtrar evidencias" : "Filter evidence"} hidden>
         <button class="filter-button" type="button" data-filter="all" aria-pressed="true">{labels.all}</button>
         <button class="filter-button" type="button" data-filter="fact" aria-pressed="false">{labels.facts}</button>
         <button class="filter-button" type="button" data-filter="estimate" aria-pressed="false">{labels.estimates}</button>
         <button class="filter-button" type="button" data-filter="scenario" aria-pressed="false">{labels.scenario}</button>
         <button class="filter-button" type="button" data-filter="open" aria-pressed="false">{labels.open}</button>
       </div>
-      <span class="status-line" data-evidence-count data-one={pt ? "item" : "item"} data-many={pt ? "itens" : "items"} aria-live="polite" aria-atomic="true"><span class="status-dot"></span><span data-count-text>{evidence.length} {pt ? "itens" : "items"}</span></span>
+      <span class="status-line" data-evidence-count data-one={pt ? "item" : es ? "elemento" : "item"} data-many={pt ? "itens" : es ? "elementos" : "items"} aria-live="polite" aria-atomic="true"><span class="status-dot"></span><span data-count-text>{evidence.length} {pt ? "itens" : es ? "elementos" : "items"}</span></span>
     </div>
     <table class="evidence-table">
       <thead><tr><th>{labels.claim}</th><th>{labels.type}</th><th>{labels.source}</th><th>{labels.confidence}</th><th>{labels.checked}</th></tr></thead>
       <tbody>
         {evidence.map((item) => <tr data-evidence-kind={item.kind}>
-          <td data-label={labels.claim}>{pt ? item.claimPt : item.claimEn}</td>
-          <td data-label={labels.type}><span class={`tag ${item.kind}`}>{pt ? item.labelPt : item.labelEn}</span></td>
+          <td data-label={labels.claim}>{pt ? item.claimPt : es ? item.claimEs : item.claimEn}</td>
+          <td data-label={labels.type}><span class={`tag ${item.kind}`}>{pt ? item.labelPt : es ? item.labelEs : item.labelEn}</span></td>
           <td data-label={labels.source}><a href={item.url}>{item.source}</a></td>
-          <td data-label={labels.confidence} class="confidence">{pt ? item.confidencePt : item.confidenceEn}</td>
+          <td data-label={labels.confidence} class="confidence">{pt ? item.confidencePt : es ? item.confidenceEs : item.confidenceEn}</td>
           <td data-label={labels.checked}>{item.checked}</td>
         </tr>)}
       </tbody>
     </table>
 
     <section id={pt ? "metodo" : "method"} class="narrow-content">
-      <h2>{pt ? "Método" : "Method"}</h2>
-      <p>{pt ? "A equipe separa fatos observados, estimativas dos autores, premissas emprestadas de outros cenários e invenções narrativas. Uma estimativa não ganha confiança por aparecer ao lado de um número preciso." : "The team separates observed facts, author estimates, assumptions borrowed from other scenarios, and narrative inventions. An estimate does not gain confidence because it appears beside a precise number."}</p>
-      <p>{pt ? "A faixa de 0,1% a 0,5% para a participação brasileira em computação combina dados de carga de data centers e indicadores de supercomputação. Ela não mede o estoque privado de aceleradores e deve permanecer rotulada como hipótese." : "The 0.1% to 0.5% range for Brazil's compute share combines data-center load and supercomputing indicators. It does not measure the private accelerator stock and must remain labeled as a hypothesis."}</p>
+      <h2>{pt ? "Método" : es ? "Método" : "Method"}</h2>
+      <p>{pt ? "A equipe separa fatos observados, estimativas dos autores, premissas emprestadas de outros cenários e invenções narrativas. Uma estimativa não ganha confiança por aparecer ao lado de um número preciso." : es ? "El equipo separa hechos observados, estimaciones de los autores, premisas tomadas de otros escenarios e invenciones narrativas. Una estimación no gana confianza por aparecer junto a un número preciso." : "The team separates observed facts, author estimates, assumptions borrowed from other scenarios, and narrative inventions. An estimate does not gain confidence because it appears beside a precise number."}</p>
+      <p>{pt ? "A faixa de 0,1% a 0,5% para a participação brasileira em computação combina dados de carga de data centers e indicadores de supercomputação. Ela não mede o estoque privado de aceleradores e deve permanecer rotulada como hipótese." : es ? "El rango de 0,1% a 0,5% para la participación brasileña en cómputo combina datos de carga de centros de datos e indicadores de supercomputación. No mide el stock privado de aceleradores y debe permanecer etiquetado como hipótesis." : "The 0.1% to 0.5% range for Brazil's compute share combines data-center load and supercomputing indicators. It does not measure the private accelerator stock and must remain labeled as a hypothesis."}</p>
     </section>
-    <section id={pt ? "lacunas" : "open-gaps"} class="narrow-content">
-      <h2>{pt ? "Lacunas abertas" : "Open gaps"}</h2>
-      <p>{pt ? "O modelo de Pedro definirá as trajetórias de capacidade até 2030. A equipe ainda precisa especificar os limiares de uma desaceleração verificável, rever o status do REDATA, confirmar termos públicos de Pecém e validar os instrumentos jurídicos sugeridos na Estratégia." : "Pedro's model will define capacity trajectories through 2030. The team still needs to specify thresholds for a verifiable slowdown, refresh REDATA's status, confirm public Pecém terms, and review the legal instruments proposed in the Strategy."}</p>
+    <section id={pt ? "lacunas" : es ? "brechas" : "open-gaps"} class="narrow-content">
+      <h2>{pt ? "Lacunas abertas" : es ? "Brechas abiertas" : "Open gaps"}</h2>
+      <p>{pt ? "O modelo de Pedro definirá as trajetórias de capacidade até 2030. A equipe ainda precisa especificar os limiares de uma desaceleração verificável, rever o status do REDATA, confirmar termos públicos de Pecém e validar os instrumentos jurídicos sugeridos na Estratégia." : es ? "El modelo de Pedro definirá las trayectorias de capacidad hasta 2030. El equipo aún necesita especificar los umbrales de una desaceleración verificable, revisar el estado del REDATA, confirmar los términos públicos de Pecém y validar los instrumentos jurídicos sugeridos en la Estrategia." : "Pedro's model will define capacity trajectories through 2030. The team still needs to specify thresholds for a verifiable slowdown, refresh REDATA's status, confirm public Pecém terms, and review the legal instruments proposed in the Strategy."}</p>
     </section>
   </div>
   <script is:inline>

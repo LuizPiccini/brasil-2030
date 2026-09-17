@@ -9,12 +9,17 @@ export const candidateIntroduction: Record<Locale, string[]> = {
     'Artificial intelligence is already reshaping work, security, and relations between countries. Brazil is not prepared for these changes, and the decisions of the next few years will have permanent consequences for the country.',
     'We wrote this scenario because Brazil\'s trajectory worries us. In it, we follow the country through 2030 to show what can happen if we keep ignoring or mishandling the decisions that matter. We want to bring Brazilians together around this discussion, understand our options, and make choices about artificial intelligence a national priority.',
   ],
+  es: [
+    'La inteligencia artificial ya está transformando el trabajo, la seguridad y las relaciones entre países. Brasil no está preparado para estos cambios, y las decisiones de los próximos años tendrán consecuencias permanentes para el país.',
+    'Escribimos este escenario porque la trayectoria brasileña nos preocupa. En él, acompañamos a Brasil hasta 2030 para mostrar lo que puede suceder si seguimos ignorando o decidiendo mal lo importante. Queremos reunir a los brasileños en torno a esta discusión, entender nuestras posibilidades y convertir las decisiones sobre inteligencia artificial en una prioridad nacional.',
+  ],
 };
 
 /** Where the narrative proper begins and ends, per edition. */
 const boundaries: Record<Locale, { start: string; end: string }> = {
   pt: { start: '## 2026:', end: '\n## O que poderia ter sido diferente' },
   en: { start: '## 2026:', end: '\n## What could have been different' },
+  es: { start: '## 2026:', end: '\n## Lo que podría haber sido diferente' },
 };
 
 /** Introduction and 2026-2030 only; optional apparatus never inflates the estimate. */

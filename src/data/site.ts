@@ -1,6 +1,6 @@
 import { buildDateLabel } from "./build-info.mjs";
 
-export type Locale = "pt" | "en";
+export type Locale = "pt" | "en" | "es";
 export type ContentPageKey = "scenario" | "summary" | "evidence" | "strategy" | "letter" | "about";
 export type PageKey = ContentPageKey | "signatories" | "privacy";
 
@@ -52,6 +52,28 @@ export const siteCopy = {
     skip: "Skip to content",
     footerNote: "A strategy for reducing global risk and preserving Brazilian choices through 2030.",
   },
+  es: {
+    locale: "es",
+    shortLocale: "ES",
+    title: "Brasil 2030: El costo del retraso en la era de la IA",
+    description: "Un escenario sobre lo que le sucede a Brasil hasta 2030 si las decisiones sobre inteligencia artificial siguen siendo postergadas.",
+    status: "Actualizado",
+    updated: buildDateLabel.es,
+    nav: {
+      scenario: "Escenarios",
+      summary: "Resumen",
+      evidence: "Evidencias",
+      strategy: "Estrategia",
+      letter: "Carta",
+      about: "Sobre",
+      signatories: "Firmantes",
+      privacy: "Privacidad",
+    },
+    menu: "Menú",
+    format: "Markdown",
+    skip: "Ir al contenido",
+    footerNote: "Una estrategia para reducir riesgos globales y preservar las elecciones brasileñas hasta 2030.",
+  },
 } as const;
 
 export const routes: Record<Locale, Record<PageKey, string>> = {
@@ -75,6 +97,16 @@ export const routes: Record<Locale, Record<PageKey, string>> = {
     signatories: "/en/signatories",
     privacy: "/en/privacy",
   },
+  es: {
+    scenario: "/es",
+    summary: "/es/resumen",
+    evidence: "/es/evidencias",
+    strategy: "/es/estrategia",
+    letter: "/es/carta-abierta",
+    about: "/es/sobre",
+    signatories: "/es/signatarios",
+    privacy: "/es/privacidad",
+  },
 };
 
 export const markdownRoutes: Record<Locale, Record<ContentPageKey, string>> = {
@@ -93,6 +125,14 @@ export const markdownRoutes: Record<Locale, Record<ContentPageKey, string>> = {
     strategy: "/en/strategy.md",
     letter: "/en/open-letter.md",
     about: "/en/about.md",
+  },
+  es: {
+    scenario: "/es/escenario.md",
+    summary: "/es/resumen.md",
+    evidence: "/es/evidencias.md",
+    strategy: "/es/estrategia.md",
+    letter: "/es/carta-abierta.md",
+    about: "/es/sobre.md",
   },
 };
 

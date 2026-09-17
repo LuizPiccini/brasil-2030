@@ -34,7 +34,7 @@ Escolhemos acompanhar uma trajetória ruim para examinar como o país pode chega
 
 ### Ivan M. Franco
 
-Trouxe ao grupo uma proposta anterior, Brasil 2028, que ajudou a iniciar este projeto.
+É organizador nacional do Altruísmo Efetivo Brasil, CVO e sócio da Little Brown Mouse Audiovisual, onde lidera iniciativas de inovação e posicionamento em inteligência artificial. Tem mais de 20 anos de experiência em produção audiovisual, comunicação e educação. Nos últimos anos passou a se dedicar também à construção de comunidades, organização de eventos, e à comunicação sobre segurança de IA. Formado em Cinema pela UFSCar, com MBA em Data Science e Inteligência Artificial pela PUCRS.
 
 ## Como construímos o cenário
 

@@ -8,7 +8,7 @@ export const GET = () => {
 
   const body = `# ${siteCopy.pt.title}
 
-> A 2026-2030 narrative about Brazil, AI risk and geopolitical dependence. The Portuguese narrative is the current edition. English pages remain an earlier edition.
+> A 2026-2030 narrative about Brazil, AI risk and geopolitical dependence. The Portuguese narrative is the current edition. English pages remain an earlier edition. Spanish pages translate the current Portuguese edition.
 
 ## Portuguese, default
 
@@ -28,9 +28,18 @@ export const GET = () => {
 - [Open letter](${site}/en/open-letter.md)
 - [About and method](${site}/en/about.md)
 
+## Spanish, translation of the current Portuguese edition
+
+- [Escenario completo](${site}/es/escenario.md)
+- [Resumen](${site}/es/resumen.md)
+- [Evidencias](${site}/es/evidencias.md)
+- [Estrategia](${site}/es/estrategia.md)
+- [Carta y compromisos](${site}/es/carta-abierta.md)
+- [Sobre y método](${site}/es/sobre.md)
+
 ## Evidence warning
 
-The current Portuguese narrative distinguishes observed starting conditions from future scenario events in its notes and sources. It is a scenario, not a prediction. The earlier English edition retains two branches and must not be treated as the current translation. The REDATA advocacy pages were retired; REDATA now appears only as a documented 2026 event inside the narrative and the evidence register.
+The current Portuguese narrative distinguishes observed starting conditions from future scenario events in its notes and sources. It is a scenario, not a prediction. The earlier English edition retains two branches and must not be treated as the current translation. The Spanish edition translates the Portuguese narrative. The REDATA advocacy pages were retired; REDATA now appears only as a documented 2026 event inside the narrative and the evidence register.
 `;
 
   return new Response(body, {

@@ -67,7 +67,7 @@ test("canonical URLs and the Markdown index follow the published origin", () => 
   );
 });
 
-test("English visitors get the English 404", async () => {
+test("English and Spanish visitors get their localized 404", async () => {
   let requested = [];
   const env = {
     ASSETS: {
@@ -76,6 +76,12 @@ test("English visitors get the English 404", async () => {
         requested.push(path);
         if (path === "/en/404/index.html") {
           return new Response("<h1>This page does not exist.</h1>", {
+            status: 200,
+            headers: { "Content-Type": "text/html" },
+          });
+        }
+        if (path === "/es/404/index.html") {
+          return new Response("<h1>Esta página no existe.</h1>", {
             status: 200,
             headers: { "Content-Type": "text/html" },
           });
@@ -93,12 +99,19 @@ test("English visitors get the English 404", async () => {
   assert.match(await response.text(), /This page does not exist/);
   assert.ok(requested.includes("/en/404/index.html"));
 
-  // Portuguese misses keep the Portuguese page and must not reach the English one.
+  requested = [];
+  const es = await worker.fetch(new Request("https://brasil-2030.com/es/inexistente"), env);
+  assert.equal(es.status, 404);
+  assert.match(await es.text(), /Esta página no existe/);
+  assert.ok(requested.includes("/es/404/index.html"));
+
+  // Portuguese misses keep the Portuguese page and must not reach the localized ones.
   requested = [];
   const pt = await worker.fetch(new Request("https://brasil-2030.com/inexistente"), env);
   assert.equal(pt.status, 404);
   assert.match(await pt.text(), /Esta página não existe/);
   assert.equal(requested.includes("/en/404/index.html"), false);
+  assert.equal(requested.includes("/es/404/index.html"), false);
 });
 
 test("HSTS is sent on production only, never on staging", async () => {
@@ -123,11 +136,11 @@ test("the sitemap lists every indexable page and no excluded one", () => {
   for (const loc of listed) {
     assert.ok(loc.startsWith(origin), `${loc} does not use the published origin`);
   }
-  for (const page of [`${origin}/`, `${origin}/en`, `${origin}/evidencias`, `${origin}/en/evidence`]) {
+  for (const page of [`${origin}/`, `${origin}/en`, `${origin}/es`, `${origin}/evidencias`, `${origin}/en/evidence`, `${origin}/es/evidencias`]) {
     assert.ok(listed.includes(page), `the sitemap must list ${page}`);
   }
   // Redirects, error pages and placeholders stay out.
-  for (const excluded of ["/apoie", "/candidato", "/en/404", "/signatarios", "/en/signatories"]) {
+  for (const excluded of ["/apoie", "/candidato", "/en/404", "/signatarios", "/en/signatories", "/es/404", "/es/signatarios"]) {
     assert.equal(listed.includes(`${origin}${excluded}`), false, `${excluded} must not be advertised`);
   }
   if (PUBLICATION_OPEN) assert.match(read("robots.txt"), /Sitemap: /);
@@ -143,8 +156,8 @@ test("the asset cache buster is derived, not a forgotten string", async () => {
   assert.match(requested.searchParams.get("__asset_revision") ?? "", /^\d{4}-\d{2}-\d{2}$/);
 });
 
-test("the privacy page names a contact for deletion in both editions", () => {
-  for (const [route, marker] of [["privacidade/index.html", /exclusão/], ["en/privacy/index.html", /deletion/]]) {
+test("the privacy page names a contact for deletion in all editions", () => {
+  for (const [route, marker] of [["privacidade/index.html", /exclusão/], ["en/privacy/index.html", /deletion/], ["es/privacidad/index.html", /eliminación|borrado/i]]) {
     const html = read(route);
     assert.match(html, /luiz@piccini\.app/, `${route} must name the deletion contact`);
     assert.match(html, marker);
@@ -152,10 +165,12 @@ test("the privacy page names a contact for deletion in both editions", () => {
   // Reachable from anywhere.
   assert.match(read("index.html"), /href="\/privacidade"/);
   assert.match(read("en/index.html"), /href="\/en\/privacy"/);
+  assert.match(read("es/index.html"), /href="\/es\/privacidad"/);
 });
 
 test("pages that need JavaScript say so", () => {
   assert.match(read("index.html"), /<noscript>/, "the scenario panel degrades and must explain it");
   assert.match(read("carta-aberta/index.html"), /<noscript>/, "the signing form does nothing without JS");
   assert.match(read("en/open-letter/index.html"), /<noscript>/);
+  assert.match(read("es/carta-abierta/index.html"), /<noscript>/);
 });

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { routes } from "../../data/site";
+---
+<BaseLayout
+  locale="es"
+  pageKey="signatories"
+  title="Firmantes"
+  description="La lista de firmantes de la carta y sus compromisos se abrirá tras la revisión."
+>
+  <PageHero
+    compact
+    locale="es"
+    eyebrow="Apoyo público"
+    title="La lista aún no está abierta"
+    intro="La lista de firmantes de la carta se publicará tras la revisión editorial. Nadie ha firmado todavía."
+  />
+  <div class="page-content narrow-content">
+    <h2>Lo que aparecerá aquí</h2>
+    <p>
+      Nombre y tipo de adhesión, una vez verificados. Los compromisos de candidaturas y las
+      representaciones institucionales se verifican antes de la publicación. Los correos
+      electrónicos nunca se publican.
+    </p>
+    <h2>Mientras tanto</h2>
+    <p class="hero-actions">
+      <a class="button-link primary" href={`${routes.es.letter}#assinar`}>Leer la carta y sus compromisos</a>
+      <a class="button-link" href={routes.es.strategy}>Leer la estrategia</a>
+    </p>
+  </div>
+</BaseLayout>
