@@ -16,17 +16,13 @@ Escolhemos acompanhar uma trajetória ruim para examinar como o país pode chega
 
 ### Luiz Piccini
 
-É Head of Product na Tela, onde desenvolve produtos para ajudar empresas a aproveitar a inteligência artificial. Antes, trabalhou na Bain & Company e na Wildlife Studios, participou da criação de Tennis Clash, criou e dirigiu Sky Warriors e fundou a publicadora de jogos Falco. Escreve Calibrating Posteriors sobre tecnologia e as decisões que tomamos em torno dela.
+É Head of Product no Tela, onde desenvolve produtos para ajudar grandes empresas a aproveitar melhor a inteligência artificial. Antes, trabalhou na Bain & Company e na Wildlife Studios, participou da criação de Tennis Clash, criou e dirigiu Sky Warriors e fundou a publicadora de jogos Falco. É formado em Engenharia de Produção pela Poli-USP com Master of Science em Engenharia e Gestão pelo Politecnico di Torino, e escreve sobre tecnologia em Calibrating Posteriors.
 
-No Brasil 2030, trabalha no cenário, na síntese e na edição.
-
-[Site pessoal](https://piccini.app/) · [Calibrating Posteriors](https://calibratingposteriors.piccini.app/)
+[Site pessoal](https://piccini.app/) · [Calibrating Posteriors](https://calibratingposteriors.piccini.app/) · [LinkedIn](https://www.linkedin.com/in/luiz-piccini/) · [GitHub](https://github.com/LuizPiccini)
 
 ### Danilo Naiff
 
-É formado em Engenharia Mecânica e Matemática pela UFRJ, onde também concluiu o mestrado em Matemática. Sua pesquisa de doutorado em Engenharia Mecânica trabalha com modelos generativos para meios porosos. Participou de projetos e programas de pesquisa e formação em segurança de IA, incluindo o SERI MATS e o ML4G.
-
-No Brasil 2030, trabalha na escrita do cenário e na cronologia.
+É formado em Engenharia de Materiais e Matemática pela UFRJ, onde também concluiu o mestrado em Matemática e o doutorado em Engenharia Mecânica. Sua pesquisa se concentra em aprendizado de máquina para aplicações em escoamento de fluidos, mas também trabalhou em áreas como finanças e transportes. Participou de projetos e programas de pesquisa e formação em segurança de IA, incluindo o SERI MATS e o ML4G.
 
 [Site pessoal](https://dfnaiff.github.io/) · [LinkedIn](https://www.linkedin.com/in/danilo-naiff/)
 
@@ -34,13 +30,11 @@ No Brasil 2030, trabalha na escrita do cenário e na cronologia.
 
 É CTO da Cumbuca, fintech dedicada a Open Finance e integrações financeiras customizadas. Empreende desde 2019 e trabalhou como engenheiro de software em startups no Brasil e no Vale do Silício, após uma passagem pela pesquisa em visão computacional. Sua experiência inclui o uso intensivo de IA em uma equipe pequena que opera no setor financeiro.
 
-No Brasil 2030, trabalha no modelo de computação e data centers.
-
 [LinkedIn](https://linkedin.com/in/pcstl) · [GitHub](https://github.com/coproduto)
 
 ### Ivan M. Franco
 
-Trouxe ao grupo uma proposta anterior, Brasil 2028, que ajudou a iniciar este projeto. No Brasil 2030, coordena os marcos de trabalho, a organização da revisão por leitores e o planejamento de divulgação.
+Trouxe ao grupo uma proposta anterior, Brasil 2028, que ajudou a iniciar este projeto.
 
 ## Como construímos o cenário
 
