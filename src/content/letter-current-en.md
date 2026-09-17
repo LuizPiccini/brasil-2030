@@ -26,7 +26,7 @@ Projects should report water consumption and sourcing, local impacts, emissions,
 
 ## How to track the commitments
 
-We ask each candidacy to name the responsible agencies, the first deadlines, and how it will report back. In government, publishing identified dependencies without exposing vulnerabilities, the results of continuity exercises, capacity available for contracting in Brazil, and the cost of incentives will make it possible to assess what was delivered.
+We ask each campaign to name the responsible agencies, the first deadlines, and how it will report back. In government, publishing identified dependencies without exposing vulnerabilities, the results of continuity exercises, capacity available for contracting in Brazil, and the cost of incentives will make it possible to assess what was delivered.
 
 Signing this letter does not represent an endorsement of any candidacy, party, or supplier. Reviewing the research does not imply signing the letter. Individual support also does not represent the position of any institution.
 
